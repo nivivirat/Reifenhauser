@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily: {
       display: ["Tinos", "serif"],
+      poppins: ["Poppins","sans-serif"]
     },
     extend: {
       colors: {

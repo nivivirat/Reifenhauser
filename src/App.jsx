@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="font-poppins">
         <Header /> {/* Render the Header component outside of <Routes> */}
 
         <Routes>
