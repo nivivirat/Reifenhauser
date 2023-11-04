@@ -50,7 +50,7 @@ export default function Header() {
                 </div>
                 <div className={`md:hidden w-[250px] fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className='w-[100%] h-full p-4'>
-                        <div className='flex flex-col h-[90%] justify-between'>
+                        <div className='flex flex-col h-[90%] justify-betweenP'>
                             <ul className='flex flex-col gap-8'>
                                 <li><a href='#'>About Us</a></li>
                                 <li><a href='#'>Services</a></li>

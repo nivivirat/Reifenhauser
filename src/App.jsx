@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <BrowserRouter>
-      <div className="font-poppins">
+      <div className="font-poppins w-screen overflow-clip">
         <Header /> {/* Render the Header component outside of <Routes> */}
 
         <Routes>
