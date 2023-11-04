@@ -12,7 +12,7 @@ function App() {
         <Routes>
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
-          <Route path="/" element={<ContactUs />} />
+          <Route path="/contactUs" element={<ContactUs />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}

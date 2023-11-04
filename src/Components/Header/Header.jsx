@@ -34,7 +34,7 @@ export default function Header() {
                     <a href='#' className='hover:text-primary'>
                         Careers
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/contactUs' className='hover:text-primary'>
                         Contact us
                     </a>
                 </div>
