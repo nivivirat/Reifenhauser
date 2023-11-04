@@ -6,7 +6,7 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <div className='w-screen border-b border-[#b8becb]'>
+        <div className='w-screen md:border-b shadow-md md:border-[#b8becb]'>
             <div className='w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5'>
                 <div className=''>
                     <img className='sm:h-[70px] sm:w-[120px] h-12 w-20' src='https://res.cloudinary.com/dzhdarh4q/image/upload/v1699014385/Reifenhauser/ReifenhauserLogo_hhc7wi.svg' alt='Logo' />
@@ -48,9 +48,9 @@ export default function Header() {
                         <p className='text-[#285196]'>+91 9322338451</p>
                     </div>
                 </div>
-                <div className={`md:hidden w-[250px] fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className='w-[100%] h-full p-4'>
-                        <div className='flex flex-col h-[90%] justify-betweenP'>
+                        <div className='flex flex-col h-[90%] justify-between'>
                             <ul className='flex flex-col gap-8'>
                                 <li><a href='#'>About Us</a></li>
                                 <li><a href='#'>Services</a></li>

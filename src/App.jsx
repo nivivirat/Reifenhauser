@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
+import ContactUs from './Components/ContactUs/ContactUs';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
+          <Route path="/" element={<ContactUs />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
