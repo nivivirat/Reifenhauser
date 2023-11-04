@@ -16,22 +16,22 @@ export default function Header() {
                 </div>
 
                 <div className='md:flex hidden space-x-5 lg:space-x-6 xl:space-x-16 text-[12px] lg:text-[18px] text-[#666666] font-semibold'>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/aboutUs' className='hover:text-primary'>
                         About Us
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/services' className='hover:text-primary'>
                         Services
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/principals' className='hover:text-primary'>
                         Principals
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/events' className='hover:text-primary'>
                         Events
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/media' className='hover:text-primary'>
                         Media
                     </a>
-                    <a href='#' className='hover:text-primary'>
+                    <a href='/careers' className='hover:text-primary'>
                         Careers
                     </a>
                     <a href='/contactUs' className='hover:text-primary'>
@@ -52,13 +52,13 @@ export default function Header() {
                     <div className='w-[100%] h-full p-4'>
                         <div className='flex flex-col h-[90%] justify-between'>
                             <ul className='flex flex-col gap-8'>
-                                <li><a href='#'>About Us</a></li>
-                                <li><a href='#'>Services</a></li>
-                                <li><a href='#'>Principals</a></li>
-                                <li><a href='#'>Events</a></li>
-                                <li><a href='#'>Media</a></li>
-                                <li><a href='#'>Careers</a></li>
-                                <li><a href='#'>Contact us</a></li>
+                                <li><a href='/aboutUs'>About Us</a></li>
+                                <li><a href='/services'>Services</a></li>
+                                <li><a href='/principals'>Principals</a></li>
+                                <li><a href='/events'>Events</a></li>
+                                <li><a href='/media'>Media</a></li>
+                                <li><a href='/careers'>Careers</a></li>
+                                <li><a href='/contactUs'>Contact us</a></li>
                             </ul>
                             <div className='xl:w-[250px] lg:w-[230px] flex flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
                                 <div className=''>
