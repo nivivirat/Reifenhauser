@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/ContactUs/ContactUs';
 import Principals from './Components/Principals/Principals';
 import AboutUs from './Components/AboutUs/AboutUs';
+import Home from './Components/Home/Home';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/principals" element={<Principals />} />
           <Route path="/aboutUs" element={<AboutUs />} />
