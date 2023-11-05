@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/ContactUs/ContactUs';
-import AboutUs from './Components/AboutUs/AboutUs';
+import Principals from './Components/Principals/Principals';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
           <Route path="/contactUs" element={<ContactUs />} />
-          <Route path="/AboutUs" element={<AboutUs />} />
+          <Route path="/Principals" element={<Principals />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}

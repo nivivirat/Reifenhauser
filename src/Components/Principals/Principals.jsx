@@ -1,5 +1,5 @@
-import ourPrincipal from '../../assets/Images/AboutUs/OurPrincipal/ourPrincipal.svg'
-import Rlogo from '../../assets/Images/AboutUs/Rlogo.svg'
+import ourPrincipal from '../../assets/Images/Principals/OurPrincipal/ourPrincipal.svg'
+import Rlogo from '../../assets/Images/Principals/Rlogo.svg'
 import extrusionmachinaryLink from './Data/extrusionmachinaryLink.json';
 import CompanyDataExec from './Data/CompanyDataExec.json';
 import convertingMachinaryData from './Data/convertingMachinaryData.json'
@@ -9,7 +9,7 @@ import ExtrusionMachineryCard from './ExtrusionMachineryCard';
 import CompanyCardsEcec from './CompanyCardsEcec';
 import React from 'react';
 
-export default function AboutUs() {
+export default function Principals() {
     return (
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8">
 
