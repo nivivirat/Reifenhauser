@@ -1,6 +1,6 @@
 import ContactUsForm from "./ContactUsForm"
 import headOffice from '../../assets/Images/ContactUs/headOffice.svg'
-import phone from '../../assets/Images/ContactUs/phone.svg'
+import phone from '../../assets/Images/ContactUs/phone1.svg'
 import map from '../../assets/Images/ContactUs/map.svg'
 import bluebg from '../../assets/Images/ContactUs/bluebg.svg'
 import { Icon } from "@iconify/react"
