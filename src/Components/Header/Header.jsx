@@ -7,8 +7,6 @@ export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const location = useLocation(); // Get the current location
 
-    console.log(location);
-
     function handleLogoClick() {
         window.location.href = '/'
     }
@@ -77,7 +75,7 @@ export default function Header() {
                         <p className='text-[#285196]'>+91 9322338451</p>
                     </div>
                 </div>
-                <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0 z-50' : 'translate-x-full z-0'}`}>
                     <div className='w-[100%] h-full p-4'>
                         <div className='flex flex-col h-[90%] justify-between'>
                             <ul className='flex flex-col gap-8'>
