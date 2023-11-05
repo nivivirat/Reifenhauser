@@ -85,10 +85,10 @@ export default function AboutUs() {
 
             {/* mission & vission */}
 
-            <div className='flex flex-col lg:flex-row md:justify-between md:px-0 lg:px[10px] xl:px-[100px] md:mt-10'>
+            <div className='flex flex-col lg:flex-row gap-10 lg:gap-0 md:justify-between md:px-0 lg:px[10px] xl:px-[100px] md:mt-10'>
 
                 {/* vision */}
-                <div className='overflow-hidden relative md:w-[400px] h-[350px] w-[100%] text-white rounded-lg bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500'>
+                <div className='overflow-hidden relative md:w-[400px] h-[390px] lg:h-[350px] w-[100%] text-white rounded-lg bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500'>
                     <div className='absolute -right-10 -top-10 text-[200px] text-white opacity-25 '>
                         <Icon icon="ph:binoculars-light" />
                     </div>
