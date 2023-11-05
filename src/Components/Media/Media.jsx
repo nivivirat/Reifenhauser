@@ -1,4 +1,3 @@
-
 import './Media.css';
 import React from 'react';
 import rimg from '../../assets/Images/Media/R.svg'

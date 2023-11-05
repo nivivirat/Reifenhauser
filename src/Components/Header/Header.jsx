@@ -1,14 +1,22 @@
-import { useState } from 'react';
 import { Icon } from '@iconify/react';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import header_phone from '../../assets/Images/Header/header_phone.svg';
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const location = useLocation(); // Get the current location
+
+    console.log(location);
+
+    function handleLogoClick() {
+        window.location.href = '/'
+    }
 
     return (
         <div className='w-screen md:border-b shadow-md md:border-[#b8becb]'>
             <div className='w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5'>
-                <div className=''>
+                <div className='cursor-pointer' onClick={handleLogoClick}>
                     <img className='sm:h-[70px] sm:w-[120px] h-12 w-20' src='https://res.cloudinary.com/dzhdarh4q/image/upload/v1699014385/Reifenhauser/ReifenhauserLogo_hhc7wi.svg' alt='Logo' />
                     <p className="sm:pl-[15%] font-display text-primary italic text-[12px] sm:text-14 leading-normal tracking-tighter font-serif">
                         That Extra Mile!
@@ -16,25 +24,46 @@ export default function Header() {
                 </div>
 
                 <div className='md:flex hidden space-x-5 lg:space-x-6 xl:space-x-16 text-[12px] lg:text-[18px] text-[#666666] font-semibold'>
-                    <a href='/aboutUs' className='hover:text-primary'>
+                    <a
+                        href='/aboutUs'
+                        className={`hover:text-primary ${location.pathname === '/aboutUs' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/aboutUs'
+                    >
                         About Us
                     </a>
-                    <a href='/services' className='hover:text-primary'>
+                    <a
+                        href='/services'
+                        className={`hover:text-primary ${location.pathname === '/services' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/services'
+                    >
                         Services
                     </a>
-                    <a href='/principals' className='hover:text-primary'>
+                    <a
+                        href='/principals'
+                        className={`hover:text-primary ${location.pathname === '/principals' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/principals'
+                    >
                         Principals
                     </a>
-                    <a href='/events' className='hover:text-primary'>
+                    <a
+                        href='/events'
+                        className={`hover:text-primary ${location.pathname === '/events' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/events'
+                    >
                         Events
                     </a>
-                    <a href='/media' className='hover:text-primary'>
+                    <a
+                        href='/media'
+                        className={`hover:text-primary ${location.pathname === '/media' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/media'
+                    >
                         Media
                     </a>
-                    <a href='/careers' className='hover:text-primary'>
+                    <a
+                        href='/careers'
+                        className={`hover:text-primary ${location.pathname === '/careers' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/careers'
+                    >
                         Careers
                     </a>
-                    <a href='/contactUs' className='hover:text-primary'>
+                    <a
+                        href='/contactUs'
+                        className={`hover:text-primary ${location.pathname === '/contactUs' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/contactUs'
+                    >
                         Contact us
                     </a>
                 </div>

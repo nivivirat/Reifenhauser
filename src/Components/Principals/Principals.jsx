@@ -11,7 +11,7 @@ import React from 'react';
 
 export default function Principals() {
     return (
-        <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8">
+        <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
 
             {/* our principals */}
             <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[150px]">
