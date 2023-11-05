@@ -1,0 +1,136 @@
+.App {
+    text-align: center;
+  }
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  
+  
+  .ll{
+    text-align:left;
+    margin:5% 20%;
+  }
+  .q{
+    color:#053F9B;
+    font-weight:600;
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+  
+      right:-15%;
+      overflow:hidden;
+    }
+    .fm{
+      width:30%;
+      height:30%;
+      margin:5% 10%;
+    }
+  
+  @media (max-width: 799px) {
+    .bn {
+  @@ -65,6 +77,11 @@
+      display:none;
+  
+    }
+    .fm{
+      width:60%;
+      height:40%;
+      margin:5% 22%;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+  @@ -75,92 +92,3 @@
+      transform: rotate(360deg);
+    }
+  
+  .bn{
+    margin-top:2%;
+    margin-right:75%;
+    color:#013A98;
+  }
+  .nm{
+    color:#183B56;
+    margin-left:15%;
+    margin-right:15%;
+  
+  }
+  .nnm{
+    color:#183B56;
+    margin-left:15%;
+    margin-right:15%;
+    text-align:left;
+  }
+  .kl{
+    margin-left:15%;
+    margin-right:15%;
+  
+    color:#183B56;
+  }
+  .kkl{
+    margin-left:15%;
+    margin-right:15%;
+  
+    color:#183B56;
+    text-align:left;
+  }
+  .kk{
+    color:#0078A6;
+  }
+  .ima{
+    margin:5%;
+    width:60%;
+  }
+  .jk{
+    margin-top:10%;
+    margin-left:-55%;
+    color:#183B56;
+  }
+  .sd{
+    height:100%;
+    margin-right:-45%;
+  
+  }
+  .fg{
+    margin-left:10%;
+  }
+  .a{
+    margin-left:0;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 600;
+  }
+  .aa{
+    margin-left:0;
+    margin-top:-1%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 100;
+  }
+  .aaa{
+    margin-left:80%;
+    margin-top:-12%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 600;
+  }
+  
+  .za{
+    margin-left:0%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+  
+  
+  }
