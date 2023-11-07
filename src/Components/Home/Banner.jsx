@@ -40,7 +40,7 @@ export default function Banner() {
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
                 <div className='absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
-                        <img src={thirtyYears} className='md:h-[190px]'></img>
+                        <img src={thirtyYears} className='lg:h-[180px] md:h-[140px]'></img>
                         :
                         <div className='md:text-[20px] xl:text-[50px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
@@ -58,7 +58,7 @@ export default function Banner() {
                     </div>
 
 
-                    <div className='mt-10 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
+                    <div className='mt-10 md:mt-5 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
                         Know More
                     </div>
 
@@ -75,8 +75,8 @@ export default function Banner() {
                     </div>
 
 
-                    <div className='md:absolute md:block left-[73%] bottom-0 hidden text-center'>
-                        <div className='text-white'>SCROLL</div>
+                    <div className='md:absolute md:block left-[75%] lg:bottom-0 -bottom-5 hidden text-center'>
+                        <div className='text-white text-[12px]'>SCROLL</div>
                         <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
                             <div>
                                 <div className='border-2 h-0 w-3 border-white rotate-90 mt-5 ml-2'></div>
