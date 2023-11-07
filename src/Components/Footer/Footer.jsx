@@ -76,15 +76,15 @@ export default function Footer() {
                 <div className='flex flex-col gap-3'>
                     <p className='text-[12px]'>Connect with us on</p>
                     <div className='flex flex-row gap-2'>
-                        <div className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
+                        <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
                             <Icon icon="mdi:linkedin" />
-                        </div>
-                        <div className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
+                        </a>
+                        <a href='https://www.facebook.com/RIML01' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
                             <Icon icon="uil:facebook" />
-                        </div>
-                        <div className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
+                        </a>
+                        <a href='https://www.instagram.com/rimplindia/' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
                             <Icon icon="iconoir:instagram" />
-                        </div>
+                        </a>
                     </div>
                 </div>
 

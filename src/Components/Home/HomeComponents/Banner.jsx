@@ -1,10 +1,10 @@
 import { Icon } from '@iconify/react';
 import { useState, useEffect } from 'react';
-import thirtyYears from '../../assets/Images/Home/30years.svg';
-import bannerbg from '../../assets/Images/Home/bannerbg.svg';
-import bannerbgmobile from '../../assets/Images/Home/bannerbgmobile.svg';
-import r from '../../assets/Images/Home/r.svg';
-import bannerData from './data/bannerData.json';
+import thirtyYears from '../../../assets/Images/Home/30years.svg';
+import bannerbg from '../../../assets/Images/Home/bannerbg.svg';
+import bannerbgmobile from '../../../assets/Images/Home/bannerbgmobile.svg';
+import r from '../../../assets/Images/Home/r.svg';
+import bannerData from '../data/bannerData.json';
 
 export default function Banner() {
     const [currentSection, setCurrentSection] = useState(1);
@@ -75,7 +75,7 @@ export default function Banner() {
                     </div>
 
 
-                    <div className='md:absolute md:block left-[75%] lg:bottom-0 -bottom-5 hidden text-center'>
+                    <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
                         <div className='text-white text-[12px]'>SCROLL</div>
                         <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
                             <div>
