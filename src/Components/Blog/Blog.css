@@ -1,0 +1,127 @@
+@media (min-width: 800px) {
+    .bn {
+      text-align:center;
+    }
+    .kl{
+      text-align:center;
+    }
+    .we{
+      position:absolute;
+      left:-10%;
+    }
+    .wwe{
+      position:absolute;
+      right:-15%;
+      overflow:hidden;
+    }
+  }
+  @media (max-width: 799px) {
+    .bn {
+      text-align:left;
+     
+    }
+    .kl{
+      text-align:left;
+      
+    }
+    .we{
+      position:absolute;
+      display:none;
+    }
+    .wwe{
+      position:absolute;
+      display:none;
+  
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .bn{
+    margin-top:2%;
+    margin-right:75%;
+    color:#013A98;
+  }
+  .nm{
+    color:#183B56;
+    margin-left:15%;
+    margin-right:15%;
+    
+  }
+  .nnm{
+    color:#183B56;
+    margin-left:15%;
+    margin-right:15%;
+    text-align:left;
+  }
+  .kl{
+    margin-left:15%;
+    margin-right:15%;
+    
+    color:#183B56;
+  }
+  .kkl{
+    margin-left:15%;
+    margin-right:15%;
+    
+    color:#183B56;
+    text-align:left;
+  }
+  .kk{
+    color:#0078A6;
+  }
+  .ima{
+    margin:5%;
+    width:60%;
+  }
+  .jk{
+    margin-top:10%;
+    margin-left:-55%;
+    color:#183B56;
+  }
+  .sd{
+    height:100%;
+    margin-right:-45%;
+   
+  }
+  .fg{
+    margin-left:10%;
+  }
+  .a{
+    margin-left:0;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 600;
+  }
+  .aa{
+    margin-left:0;
+    margin-top:-1%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 100;
+  }
+  .aaa{
+    margin-left:80%;
+    margin-top:-12%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+    font-weight: 600;
+  }
+  
+  .za{
+    margin-left:0%;
+    color: #183B56;
+    font-family: Poppins;
+    text-align:left;
+   
+  
+  }
