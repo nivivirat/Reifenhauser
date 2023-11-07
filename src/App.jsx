@@ -7,6 +7,7 @@ import Services from './Components/Services/Services';
 import Media from './Components/Media/Media';
 import AboutUs from './Components/AboutUs/AboutUs';
 import Home from './Components/Home/Home';
+import Events from './Components/Events/Events'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/media" element={<Media />} />
           <Route path="/principals" element={<Principals />} />
           <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/events" element={<Events />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
