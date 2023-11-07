@@ -21,7 +21,7 @@ export function CardWithLink({ description, buttonText, pos, kl }) {
       )}
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
-          <Typography variant="text" className="flex items-center gap-2 test1">
+          <Typography variant="text" className="flex items-center gap-2 pl-16 test1">
             {buttonText}
             {/* Your existing SVG component */}
           </Typography>
