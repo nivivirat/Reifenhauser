@@ -2,12 +2,15 @@ import AboutUs from './HomeComponents/AboutUs'
 import Banner from './HomeComponents/Banner'
 import HomePrincipals from './HomeComponents/HomePrincipals'
 import HomeServices from './HomeComponents/HomeServices'
+import HomeTestimonials from './HomeComponents/HomeTestimonials'
+import HomeGlobal from './HomeComponents/HomeGlobal'
+import Newsletter from './HomeComponents/Newsletter'
 
 export default function Home() {
 
 
     return (
-        <div className='xl:p-10 p-3 flex flex-col xl:gap-[70px] lg:gap-[30px] md:gap-[20px] gap-[10px]'>
+        <div className='flex flex-col xl:gap-[70px] lg:gap-[30px] md:gap-[20px] gap-[10px]'>
             {/* banner */}
             <Banner />
 
@@ -24,11 +27,14 @@ export default function Home() {
 
 
             {/* tesimonials */}
-            <div></div>
+            <HomeTestimonials />
 
 
             {/* global */}
-            <div></div>
+            <HomeGlobal />
+
+            <Newsletter />
+
         </div>
     )
 }

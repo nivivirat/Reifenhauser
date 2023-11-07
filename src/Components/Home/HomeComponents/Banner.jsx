@@ -34,8 +34,8 @@ export default function Banner() {
     }, [currentSection]);
     
     return (
-        <div>
-            <div className="rounded-lg relative">
+        <div className='xl:p-10 p-3'>
+            <div className="rounded-lg relative overflow-clip">
                 <img src={bannerbg} className='md:relative md:block hidden md:h-auto md:w-auto h-[400px] object-cover object-right'></img>
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
                 <div className='absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>

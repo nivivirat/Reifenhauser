@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react'
 
 export default function HomeServices() {
     return (
-        <div className="flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5">
+        <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5">
             <div className="text-primary flex flex-row justify-between">
 
                 <a href='/services' className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Services</a>

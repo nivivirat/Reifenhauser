@@ -5,7 +5,7 @@ import companies from '../../../assets/Images/Home/aboutUs/companies.svg'
 export default function AboutUs() {
     return (
         <div>
-            <div className='flex md:flex-row flex-col place-items-center xl:gap-0 gap-10'>
+            <div className='xl:p-10 p-3 flex md:flex-row flex-col place-items-center xl:gap-0 gap-10'>
                 <div className='xl:w-[45%] w-full flex flex-col xl:gap-4 gap-[10px]'>
                     {/* connect with us */}
                     <div className='xl:rounded-[35px] rounded-[20px] shadow-lg relative'>
