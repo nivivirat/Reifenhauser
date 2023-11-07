@@ -33,11 +33,13 @@ export default function Footer() {
                 <div className='md:w-[70%] w-[100%] flex flex-row md:justify-center gap-[15%] md:gap-[20%] lg:gap-[30%] xl:gap-[50%] justify-between'>
                     <div>
                         <ul className='flex flex-col gap-4 font-semibold'>
-                            <li><a href='#'>Services</a></li>
-                            <li><a href='#'>Articles</a></li>
-                            <li><a href='#'>Careers</a></li>
-                            <li><a href='#'>About Us</a></li>
-                            <li><a href='#'>Events</a></li>
+                            <li><a href='/services'>Services</a></li>
+                            <li><a href='/articles'>Articles</a></li>
+                            <li><a href='/careers'>Careers</a></li>
+                            <li><a href='/aboutUs'>About Us</a></li>
+                            <li><a href='/events'>Events</a></li>
+                            <li><a href='/testimonials'>Testimonials</a></li>
+                            <li><a href='/blogs'>Blogs</a></li>
                         </ul>
                     </div>
                     <div>
