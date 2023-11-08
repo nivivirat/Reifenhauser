@@ -2,8 +2,8 @@ import React from 'react';
 import './Events.css'; // You can create a CSS file for styling
 import eventsData from './eventsData.json';
 import eventsData2 from './eventsData2.json';
-
-
+import eventsData3 from './eventsData3.json';
+import evim from '../../assets/Images/Events/event1.svg';
 const Events = () => {
   const containerStyle = {
     display: 'flex',
@@ -11,20 +11,22 @@ const Events = () => {
      // Set the direction to column for the image and sections to be stacked vertically
   };
   const sectionStyle = {
-    backgroundColor: '#b0c4de',
+    // backgroundColor: '#b0c4de',
+    margin:'2% auto',
     color: 'white',
     padding: '20px',
-    margin: '10px 0', // Add margin at the top and bottom to create space between sections
+     // Add margin at the top and bottom to create space between sections
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    margin:'1%',
+    width:'95%',
+    // margin:'auto',
   };
   const sectionStyle2 = {
     display: 'flex',
     flexDirection: 'row', // Change the direction to row for horizontal layout
-    backgroundColor: '#b0c4de',
+    // backgroundColor: '#b0c4de',
     color: 'white',
     padding: '20px',
     margin: '10px 0', // Add margin at the top and bottom to create space between sections
@@ -40,7 +42,7 @@ const Events = () => {
   };
 
   const cardStyle = {
-    backgroundColor: '#b0c4de',
+    // backgroundColor: '#b0c4de',
     flex: 1,
     padding: '20px',
     margin: '10px',
@@ -90,7 +92,7 @@ const Events = () => {
           src="https://s3-alpha-sig.figma.com/img/6ee1/0b62/ecc1bf59244a34938d24ec38f4f58645?Expires=1700438400&Signature=llKCabxnB-vH2PDu0uOJzNoQOVk~hUT-3qjW36BiuAarXbsyEHHCn7CrXduw-Nwk0GlD31rhtbvoYaDTQ-hCETLObjBWHGcb4PRtauILxi2DBGM55giWzwnVe0bIwSrfWMQo2B6WNuDyA8DFgOi8cGOJZydC4C6FyyYoLEj~H2B-BDq4ZAh3gFQcK~znYm609DkXaaQCiYX82OAQUgEp~BcwD3VthUnTdH5G8WSnJKB7IZa~~0MclJDgCyMOzXmT4OmBhvfwhS-lEHn7Na-z1hDhy3a-l5PjtHFCfN3K~nmGgYDBllOYpTKs3WZechOGCyyAsch6h-n4Djrw5fGPmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt="Rendezvous Image"
           style={imageStyle}
-          class="event1"
+          className="event1"
         />
         <div className="event9" style={textInsideImage} >
           <p>Join us for a friendly rendezvous</p>
@@ -98,7 +100,8 @@ const Events = () => {
       </div>
       <div className="event3 text-2xl">Events 2023</div>
       {eventsData.map((event, index) => (
-        <div key={index} style={sectionStyle}>
+        <div key={index} style={sectionStyle} className="event100">
+          <img className="eventi" src={evim}></img>
           <div style={columnStyle}>
             <h2>Event Name</h2>
             <p>{event.eventName}</p>
@@ -115,7 +118,8 @@ const Events = () => {
       ))}
       <div className="event3 text-2xl">Events 2024</div>
       {eventsData2.map((event, index) => (
-        <div key={index} style={sectionStyle}>
+        <div key={index} style={sectionStyle} className="event100">
+          <img className="eventi" src={evim}></img>
           <div style={columnStyle}>
             <h2>Event Name</h2>
             <p>{event.eventName}</p>
@@ -131,9 +135,10 @@ const Events = () => {
         </div>
       ))}
       <div className="event3 text-2xl">Archives of past events</div>
-      <div style={cardContainerStyle}>
-        {eventsData.map((event, index) => (
-          <div key={index} style={cardStyle}>
+      <div style={cardContainerStyle} >
+        {eventsData3.map((event, index) => (
+          <div key={index} style={cardStyle} className="event45">
+           
             <div style={columnStyle}>
               <h2>Event Name</h2>
               <p>{event.eventName}</p>
@@ -146,6 +151,7 @@ const Events = () => {
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
+            <img className="eventj" src={evim}></img>
           </div>
         ))}
       </div>
