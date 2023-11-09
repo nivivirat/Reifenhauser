@@ -32,7 +32,7 @@ export default function Banner() {
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [currentSection]);
-    
+
     return (
         <div className='xl:p-10 p-3'>
             <div className="rounded-lg relative overflow-clip">
@@ -90,9 +90,21 @@ export default function Banner() {
                 </div>
 
 
-                <div className='absolute text-white sm:right-[5%] xl-right-[4%] md:right-[6%] sm:bottom-0 right-[8%] bottom-[6%] z-0 opacity-80'>
-                    <p className='text-[10px] font-medium md:text-[12px] lg:text-[20px]'>Number of Installations</p>
-                    <p className='text-[30px] font-semibold'>250+</p>
+                <div className='absolute flex flex-row justify-center place-items-center md:gap-10 text-white sm:right-[5%] xl-right-[4%] md:right-[6%] sm:bottom-0 right-[8%] xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[6%] z-0 opacity-80'>
+                    <div>
+                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[20px]'>Number of Installations</p>
+                        <p className='text-[30px] font-semibold'>250+</p>
+                    </div>
+                    <div className='md:flex flex-col gap-2 hidden'>
+                        <div
+                            className="bg-white md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer"
+                        ></div>
+                        <div
+                            className="bg-[#5997ff] md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer"
+                        ></div>
+
+                    </div>
+
                 </div>
 
 
