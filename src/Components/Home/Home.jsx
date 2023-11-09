@@ -10,7 +10,7 @@ export default function Home() {
 
 
     return (
-        <div className='flex flex-col xl:gap-[70px] lg:gap-[30px] md:gap-[20px] gap-[10px]'>
+        <div className='flex flex-col xl:gap-[5P0px] lg:gap-[30px] md:gap-[20px] gap-[10px]'>
             {/* banner */}
             <Banner />
 

@@ -3,16 +3,16 @@ import { Icon } from "@iconify/react"
 
 export default function HomePrincipals() {
     return (
-        <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5">
+        <div className="xl:p-16 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10">
             <div className="bg-gradient-to-r from-blue-800 to-teal-100 text-transparent bg-clip-text">
                 <p className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Principals</p>
             </div>
 
             {/* content */}
-            <div className="xl:text-[30px] lg:text-[28px] md:text-[26px] text-3xl font-semibold">
-                <div className="hidden md:block leading-normal">
-                    <span className="">Through the years, we have earned trust of technology-led organizations </span>
-                    <span className="text-primary">Through the years, we have earned trust of </span>
+            <div className="xl:text-[40px] lg:text-[28px] md:text-[26px] text-3xl font-medium w-full">
+                <div className="hidden md:block leading-snug">
+                    <span className="">Through the years, we have earned trust of  </span>
+                    <span className="text-primary">technology-led organizations </span>
                     <span className="">across the various </span>
                     <span className="text-primary">segments of the industry.</span>
                 </div>
