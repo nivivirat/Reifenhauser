@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import one from '../../assets/Images/Careers/one.svg';
 import grpImg from '../../assets/Images/Careers/grpImg.svg';
-import managingDirector from '../../assets/Images/Careers/managingDirector.svg';
+import managingDirector from '../../assets/Images/Careers/managingDir.svg';
 import resume from '../../assets/Images/Careers/resume.svg';
 import { Icon } from '@iconify/react';
 

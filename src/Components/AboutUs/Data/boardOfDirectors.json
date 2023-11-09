@@ -1,33 +1,33 @@
 [
-    {
-      "name": "Mr. Manish Mehta",
-      "role": "Managing Director",
-      "img": "manish_mehta"
-    },
-    {
-      "name": "Mrs. Usha Mehta",
-      "role": "Managing Director",
-      "img": "usha_mehta"
-    },
-    {
-      "name": "Mr. Hamir Mehta",
-      "role": "Director",
-      "img": "hamir_mehta"
-    },
-    {
-      "name": "Mr. Ulrich Reifenhäuser",
-      "role": "Chairman",
-      "img": "ulrich_reifenhäuser"
-    },
-    {
-      "name": "Mr. Bernd Reifenhäuser",
-      "role": "Director",
-      "img": "bernd_reifenhäuser"
-    },
-    {
-      "name": "Dr. Volkmar Kurk",
-      "role": "Chairman",
-      "img": "volkmar_kurk"
-    }
-  ]
-  
+  {
+    "name": "Mr. Manish Mehta",
+    "role": "Managing Director",
+    "img": "manish_mehta"
+  },
+  {
+    "name": "Mr. Ulrich Reifenhäuser",
+    "role": "Chairman",
+    "img": "ulrich_reifenhäuser"
+  },
+  {
+    "name": "Mrs. Usha Mehta",
+    "role": "Managing Director",
+    "img": "usha_mehta"
+  },
+  {
+    "name": "Mr. Bernd Reifenhäuser",
+    "role": "Director",
+    "img": "bernd_reifenhäuser"
+  },
+  {
+    "name": "Mr. Hamir Mehta",
+    "role": "Director",
+    "img": "hamir_mehta"
+  },
+
+  {
+    "name": "Dr. Volkmar Kurk",
+    "role": "Chairman",
+    "img": "volkmar_kurk"
+  }
+]
