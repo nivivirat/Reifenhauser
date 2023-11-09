@@ -27,7 +27,7 @@ export default function CardComponent() {
         <>
             <div className="grid gap-2 lg:grid-cols-4 media15">
                 {posts.map((items, key) => (
-                    <div className="w-full rounded-lg shadow-md lg:max-w-sm media13" key={key}>
+                    <div className="w-full rounded-lg rounded-md rounded-sm shadow-md lg:max-w-sm md:max-w-sm sm:max-w-sm  media13" key={key}>
                         <img
                             className="object-cover w-full h-48"
                             src={items.img}
