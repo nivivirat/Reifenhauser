@@ -16,7 +16,7 @@ export default function Principals() {
             {/* our principals */}
             <div className="w-full flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[150px]">
                 <div className="flex flex-col lg:w-[45%]">
-                    <div className="lg:hidden flex-row flex gap-1">
+                    <div className="md:hidden flex-row flex gap-1">
                         <p className="text-[#999999]">Home-</p>
                         <p className="text-primary font-semibold">Contact Us</p>
                     </div>
