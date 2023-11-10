@@ -9,7 +9,7 @@ import {
 } from "@material-tailwind/react";
 import './Test.css'
 
-export function CardWithLink({ description, buttonText, pos, kl }) {
+export function CardWithLink({ description, buttonText, pos, kl, poss, buttonTextt }) {
   return (
     <Card className="mt-12 w-96 border border-blue-500">
       {description && (
@@ -21,20 +21,30 @@ export function CardWithLink({ description, buttonText, pos, kl }) {
       )}
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
-          <Typography variant="text" className="flex items-center gap-2 pl-16 test1">
+        <Typography variant="text" className="flex items-center gap-2 test1">
             {buttonText}
             {/* Your existing SVG component */}
           </Typography>
-          <Typography variant="text" className="flex items-center gap-2 test2">
+          <Typography variant="text" className="flex items-center gap-2 test90">
+            {buttonTextt}
+            {/* Your existing SVG component */}
+          </Typography>
+      <Typography variant="text" className="flex items-left gap-2 test2">
             {pos}
             
           </Typography>
-          <Typography variant="text" className="test3">
+          <Typography variant="text" className="flex items-right gap-2 test3">
             {kl}
             
           </Typography>
+          <Typography variant="text" className="flex items-right gap-2 test4">
+            {poss}
+            
+          </Typography>
+          
         </a>
       </CardFooter>
+    
     </Card>
   );
 }

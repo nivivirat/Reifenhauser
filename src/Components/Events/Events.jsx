@@ -4,6 +4,7 @@ import eventsData from './eventsData.json';
 import eventsData2 from './eventsData2.json';
 import eventsData3 from './eventsData3.json';
 import evim from '../../assets/Images/Events/event1.svg';
+import even from '../../assets/Images/Events/event2.svg'
 const Events = () => {
   const containerStyle = {
     display: 'flex',
@@ -38,7 +39,8 @@ const Events = () => {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    width: '100%', // Set the width to 100%
+    width: '85%', // Set the width to 100%
+    marginLeft:'2%',
   };
 
   const cardStyle = {
@@ -100,14 +102,14 @@ const Events = () => {
       </div>
       <div className="event3 text-2xl">Events 2023</div>
       {eventsData.map((event, index) => (
-        <div key={index} style={sectionStyle} className="event100">
+        <div key={index} style={sectionStyle} className="text-xl event100">
           <img className="eventi" src={evim}></img>
           <div style={columnStyle}>
             <h2>Event Name</h2>
             <p>{event.eventName}</p>
           </div>
           <div style={columnStyle}>
-            <h2>Location</h2>
+            <h2>Locations</h2>
             <p>{event.location}</p>
           </div>
           <div style={columnStyle}>
@@ -118,14 +120,14 @@ const Events = () => {
       ))}
       <div className="event3 text-2xl">Events 2024</div>
       {eventsData2.map((event, index) => (
-        <div key={index} style={sectionStyle} className="event100">
+        <div key={index} style={sectionStyle} className="text-xl event100">
           <img className="eventi" src={evim}></img>
           <div style={columnStyle}>
             <h2>Event Name</h2>
             <p>{event.eventName}</p>
           </div>
           <div style={columnStyle}>
-            <h2>Location</h2>
+            <h2>Locations</h2>
             <p>{event.location}</p>
           </div>
           <div style={columnStyle}>
@@ -137,21 +139,21 @@ const Events = () => {
       <div className="event3 text-2xl">Archives of past events</div>
       <div style={cardContainerStyle} >
         {eventsData3.map((event, index) => (
-          <div key={index} style={cardStyle} className="event45">
+          <div key={index} style={cardStyle} className="text-xl  event45">
            
             <div style={columnStyle}>
               <h2>Event Name</h2>
               <p>{event.eventName}</p>
-            </div>
+            </div><br></br>
             <div style={columnStyle}>
-              <h2>Location</h2>
+              <h2>Locations</h2>
               <p>{event.location}</p>
-            </div>
+            </div><br></br>
             <div style={columnStyle}>
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
-            <img className="eventj" src={evim}></img>
+            <img className="eventj" src={even}></img>
           </div>
         ))}
       </div>
