@@ -36,7 +36,7 @@ export default function AboutUs() {
 
                         <div className='w-[48%] rounded-[20px] shadow-lg relative'>
                             <div className='xl:h-[300px] h-[150px]'>
-                                <img className='h-full w-full object-cover xl:rounded-[35px] rounded-[20px]' src={companies}></img>
+                                <img className='h-full w-full object-cover rounded-[20px]' src={companies}></img>
                             </div>
 
                             <div className='flex flex-row justify-center place-items-end text-[#295DB1] font-normal absolute bottom-[40%] xl:right-[1%] xl:p-9 p-4 tracking-wide'>

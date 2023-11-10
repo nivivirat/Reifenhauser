@@ -47,19 +47,22 @@ export default function Banner() {
                     <div className='xl:text-[30px] md:text-[16px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
                     <div className='flex mt-10 lg:mt-[80px]'>
-                        {bannerData.map((_, index) => (
                             <div
-                                key={index}
-                                className={`md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer ${currentSection === index ? 'bg-white' : 'bg-[#275DB6]'
-                                    }`}
-                                onClick={() => setCurrentSection(index)}
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"       
                             ></div>
-                        ))}
+                            <div
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"       
+                            ></div>
+                            <div
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"       
+                            ></div>
                     </div>
 
 
                     <div className='mt-10 md:mt-5 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
-                        Know More
+                        <a className='h-full w-full' href="/aboutUs">
+                            Know More
+                        </a>
                     </div>
 
                     {/* Previous and Next buttons */}

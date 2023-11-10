@@ -45,11 +45,11 @@ export default function Footer() {
                     <div>
                         <p className='font-semibold pb-8 uppercase'>Our Principals</p>
                         <ul className='flex flex-col gap-4 font-semibold'>
-                            <li><a href='#'>Extrusion Machinery</a></li>
-                            <li><a href='#'>Converting Machinery</a></li>
-                            <li><a href='#'>Packaging Machinery</a></li>
-                            <li><a href='#'>Blow Moulding</a></li>
-                            <li><a href='#'>Ancillary</a></li>
+                            <li><a href='/principals'>Extrusion Machinery</a></li>
+                            <li><a href='/principals'>Converting Machinery</a></li>
+                            <li><a href='/principals'>Packaging Machinery</a></li>
+                            <li><a href='/principals'>Blow Moulding</a></li>
+                            <li><a href='/principals'>Ancillary</a></li>
                         </ul>
                     </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className='flex flex-col gap-3'>
+                <div className='flex flex-col gap-3 justify-start'>
                     <p className='text-[12px]'>Connect with us on</p>
                     <div className='flex flex-row gap-2'>
                         <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>

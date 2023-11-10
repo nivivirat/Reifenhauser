@@ -48,36 +48,36 @@ export default function HomeServices() {
 
                 {/* Rectangle */}
                 <div className='md:w-[45%]'>
-                    <div className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
                         <p>Preventive Maintenance Service</p>
                         <div className="text-black md:text-xl">
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
-                    </div>
+                    </a>
 
-                    <div className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
                         <p>AMC (Annual Maintenance Contract)</p>
                         <div className="text-black md:text-xl">
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 {/* Rectangle */}
                 <div className='md:w-[48%]'>
-                    <div className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
                         <p>Breakdown Maintenance</p>
                         <div className="text-black md:text-xl">
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
-                    </div>
+                    </a>
 
-                    <div className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
                         <p>Installation & Commissioning</p>
                         <div className="text-black md:text-xl">
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 {/* Card */}
@@ -92,7 +92,7 @@ export default function HomeServices() {
                     <div className='md:w-[45%] w-[49%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[200px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
                         {/* <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div> */}
                         <div className='font-bold lg:text-[40px] md:text-[30px] text-white'>30+</div>
-                        <div className='lg:text-[14px] md:text-[10px] text-[10px] text-white font-thin'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
+                        <div className='lg:text-[14px] md:text-[10px] text-[10px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
                         <img src={people} className='opacity-90 h-24 w-24 absolute top-0 right-0'></img>
                     </div>
                 </div>
