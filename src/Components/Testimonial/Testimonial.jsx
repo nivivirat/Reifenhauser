@@ -1,7 +1,7 @@
 import React from 'react';
 import { CardWithLink } from './CardWithLink';
 import cardContent from './Content.json';
-
+import Testo from'../../assets/Images/Testimonial/Test11.svg'
 function Testimonial() {
   return (
     <div className="App">
@@ -22,8 +22,10 @@ function Testimonial() {
             // title={card.title}
             description={card.description}
             buttonText={card.buttonText}
+            buttonTextt={card.buttonTextt}
             pos={card.pos}
             kl={card.kl}
+            poss={card.poss}
           />
         ))}
       </div>
