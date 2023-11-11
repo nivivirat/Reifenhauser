@@ -11,10 +11,10 @@ export default function HomePrincipals() {
             {/* content */}
             <div className="xl:text-[40px] lg:text-[28px] md:text-[26px] text-3xl font-medium w-full">
                 <div className="hidden md:block leading-snug">
-                    <span className="">Through the years, we have earned trust of  </span>
-                    <span className="text-primary">technology-led organizations </span>
-                    <span className="">across the various </span>
-                    <span className="text-primary">segments of the industry.</span>
+                    <span className="">Through the years, we have earned trust </span>
+                    <span className="text-primary">across the various technology-led organizations </span>
+                    <span className="">segments of the industry. </span>
+                    {/* <span className="text-primary">segments of the industry.</span> */}
                 </div>
 
                 <div className="md:hidden block">
