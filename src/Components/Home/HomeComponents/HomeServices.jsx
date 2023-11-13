@@ -81,7 +81,7 @@ export default function HomeServices() {
                 </div>
 
                 {/* Card */}
-                <div className='md:w-[48%] w-full flex flex-row gap-4'>
+                <div className='md:w-[45%] w-full flex flex-row gap-4'>
                     <div className='w-[44%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[200px] h-[150px]'>
                         <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div>
                         <div className='font-bold lg:text-[40px] md:text-[30px]'>90%</div>
@@ -89,8 +89,8 @@ export default function HomeServices() {
                         <img src={heart} className='h-24 w-24 absolute top-0 right-0'></img>
                     </div>
 
-                    <div className='md:w-[45%] w-[49%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[200px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
-                        {/* <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div> */}
+                    <div className='md:w-[54%] w-[49%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[200px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
+                        <div className='lg:text-2xl md:text-xl text-[12px] opacity-0'>SATISFIED</div>
                         <div className='font-bold lg:text-[40px] md:text-[30px] text-white'>30+</div>
                         <div className='lg:text-[14px] md:text-[10px] text-[10px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
                         <img src={people} className='opacity-90 h-24 w-24 absolute top-0 right-0'></img>
