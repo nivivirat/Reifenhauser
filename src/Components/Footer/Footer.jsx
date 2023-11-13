@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 export default function Footer() {
     return (
-        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[450px] md:p-14 p-10 w-full'>
+        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[450px] md:p-14 md:px-24 p-10 w-full'>
 
             {/* top */}
             <div className='flex md:flex-row flex-col-reverse justify-between h-[90%] w-full'>
@@ -32,7 +32,7 @@ export default function Footer() {
 
                 <div className='md:w-[70%] w-[100%] flex flex-row md:justify-center gap-[15%] md:gap-[20%] lg:gap-[30%] xl:gap-[50%] justify-between'>
                     <div>
-                        <ul className='flex flex-col gap-4 font-semibold'>
+                        <ul className='flex flex-col gap-3 font-semibold'>
                             <li><a href='/services'>Services</a></li>
                             <li><a href='/articles'>Articles</a></li>
                             <li><a href='/careers'>Careers</a></li>
@@ -41,6 +41,20 @@ export default function Footer() {
                             <li><a href='/testimonials'>Testimonials</a></li>
                             <li><a href='/blogs'>Blogs</a></li>
                         </ul>
+                        <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
+                            <p className='text-[12px]'>Connect with us on</p>
+                            <div className='flex flex-row gap-2'>
+                                <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
+                                    <Icon icon="mdi:linkedin" />
+                                </a>
+                                <a href='https://www.facebook.com/RIML01' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
+                                    <Icon icon="uil:facebook" />
+                                </a>
+                                <a href='https://www.instagram.com/rimplindia/' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
+                                    <Icon icon="iconoir:instagram" />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <div>
                         <p className='font-semibold pb-8 uppercase'>Our Principals</p>
@@ -59,7 +73,7 @@ export default function Footer() {
 
 
             {/* bottom */}
-            <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[250px]'>
+            <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[225px]'>
                 <div className='bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
                     <div className='flex flex-row p-4'>
                         <p className='md:text-[22px] text-[18px] font-semibold'>Contact Us</p>
@@ -73,7 +87,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className='flex flex-col gap-3 justify-start'>
+                <div className='flex lg:hidden flex-col gap-3 justify-start'>
                     <p className='text-[12px]'>Connect with us on</p>
                     <div className='flex flex-row gap-2'>
                         <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
