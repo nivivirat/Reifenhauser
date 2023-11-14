@@ -40,7 +40,7 @@ export default function Banner() {
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
                 <div className='absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
-                        <img src={thirtyYears} className='lg:h-[180px] md:h-[140px]'></img>
+                        <img src={thirtyYears} className='lg:h-[220px] md:h-[140px]'></img>
                         :
                         <div className='md:text-[20px] xl:text-[50px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
