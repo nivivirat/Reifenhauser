@@ -3,7 +3,10 @@ import './Blog.css';
 import img from "./images/Image.svg"
 import testimonials from "./testimonials.json";
 import Slider from "./slider";
-import rimg from "./images/R.svg"
+import rimg from "./images/R.svg";
+import img1 from "./images/Image.png";
+import img2 from "./images/Image (1).png";
+import img3 from "./images/Image (1).svg"
 function Blog() {
   return (
     <div className="App">
@@ -21,7 +24,7 @@ function Blog() {
  23 Oct 2017 | 6 Mins read - By Abhay Avadhani
  </p>
  <img className ="wwe" src={rimg} alt ="image"></img>
-<center><img className="ima"  src="https://s3-alpha-sig.figma.com/img/80cc/c55b/b6ca2c4e7525f68f6dea0caebecb5cb8?Expires=1700438400&Signature=QYD0SdtpOI1Kal-QI-xIhfhTG7H6Z~6wB4I9JOvWfRkBj23NuFcjDnLGdIQCIco~rKakZ1jk~Q7kmdw3FyeBWfoaw50EFUf5yZSkBiUxK4gFPQWI~SZkh4O8NsXwapEFAKdbr0jQS5gZ-TSx-xL7whrM8UbGk~Djk88f2su15IsKWvlEyN1M26fIQ-pY2xddATVTbm52FG5zQkGTIeVhzuKvos31K1Y9-YdXwPMK5yDH~sfNzHw0ne1fz7xtM7rogvg3FEXpYEfJjrTWV~cAsvBfHS-VbbnyS9uRJY3n-2Cca2yn3HyvCI~k7gx1M-6Zr-aF57vXEiGYdu5-VHg~Iw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="image"></img></center>
+<center><img className="ima h-96 w-120"  src={img3} alt="image"></img></center>
 <p className="text-xl mt-8 nnm"><strong>
 Abhay Avadhani (AA): How is flexo competing with gravure on things like speed to market, sustainability?Manish Mehta (MM):
 </strong></p>

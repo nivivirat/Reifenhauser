@@ -157,6 +157,7 @@
   text-align:left;
   /* margin-left:3%; */
   margin-top:2%;
+  padding-left:4%;
   color: #5A7184;
   font-weight: 700;
 }
@@ -172,6 +173,10 @@
   height:25%;
   margin-left:70%;
   margin-top:-16%;
+}
+.media77{
+  background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));
+  text:white;
 }
 .media12{
   margin-left:70%;
