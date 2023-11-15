@@ -76,10 +76,11 @@ const Events = () => {
     
   };
 
-  const textInsideImage = {
+ const textInsideImage = {
+    marginLeft:'2%',
     position: 'relative',
     top: '-70%',
-    left: '15%',
+    left: '18%',
     transform: 'translate(-50%, -50%)',
     fontSize: '24px',
     fontWeight: 'bold',
