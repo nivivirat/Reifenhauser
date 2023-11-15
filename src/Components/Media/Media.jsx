@@ -17,7 +17,7 @@ import {
 export default function Media() {
   return (
     <div className="App">
-      <div className="text-4xl flex-flex media1"><strong>MEDIA</strong></div>
+      <div className="flex-flex media1">Media</div>
       <div className="text-xl flex-flex media2">Glimpse through the round up of the latest  trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3">News & Updates</div>
       <div className="text-xl flex-flex media4">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
