@@ -17,12 +17,14 @@ export default function HomeTestimonials() {
             <div className="flex flex-wrap justify-center gap-4">
                 {first3Cards.map((card, index) => (
                     <CardWithLink
-                        key={index}
-                        // title={card.title}
-                        description={card.description}
-                        buttonText={card.buttonText}
-                        pos={card.pos}
-                        kl={card.kl}
+                    key={index}
+                    // title={card.title}
+                    description={card.description}
+                    buttonText={card.buttonText}
+                    buttonTextt={card.buttonTextt}
+                    pos={card.pos}
+                    kl={card.kl}
+                    poss={card.poss}
                     />
                 ))}
             </div>
