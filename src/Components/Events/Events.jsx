@@ -49,6 +49,7 @@ const Events = () => {
     padding: '20px',
     margin: '10px',
     borderRadius: '8px',
+    height:'300px'
   };
 
   const columnStyle = {
@@ -76,7 +77,7 @@ const Events = () => {
     
   };
 
- const textInsideImage = {
+  const textInsideImage = {
     marginLeft:'2%',
     position: 'relative',
     top: '-70%',
