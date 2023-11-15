@@ -109,8 +109,23 @@
 }
 .media1{
   margin: 5% auto;
-  text-weight:100;
-  color: #013A98;
+  font-family: Poppins;
+font-size: 50px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+  /* text-weight:700; */
+  /* color: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%)); */
+  background: linear-gradient(90deg, #013A98 0%, #449DD1 100%);
+  
+  /* Apply background-clip to text */
+  background-clip: text;
+  -webkit-background-clip: text;
+  
+  /* Set text color to transparent to make the text visible through the gradient */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
 }
 .media2{
   margin-top:-4%;
