@@ -95,7 +95,11 @@ const Events = () => {
         <img
           src="https://s3-alpha-sig.figma.com/img/6ee1/0b62/ecc1bf59244a34938d24ec38f4f58645?Expires=1700438400&Signature=llKCabxnB-vH2PDu0uOJzNoQOVk~hUT-3qjW36BiuAarXbsyEHHCn7CrXduw-Nwk0GlD31rhtbvoYaDTQ-hCETLObjBWHGcb4PRtauILxi2DBGM55giWzwnVe0bIwSrfWMQo2B6WNuDyA8DFgOi8cGOJZydC4C6FyyYoLEj~H2B-BDq4ZAh3gFQcK~znYm609DkXaaQCiYX82OAQUgEp~BcwD3VthUnTdH5G8WSnJKB7IZa~~0MclJDgCyMOzXmT4OmBhvfwhS-lEHn7Na-z1hDhy3a-l5PjtHFCfN3K~nmGgYDBllOYpTKs3WZechOGCyyAsch6h-n4Djrw5fGPmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
           alt="Rendezvous Image"
-          style={imageStyle}
+          style={{
+            ...imageStyle,
+            objectFit: "cover", // Maintain aspect ratio while covering the container
+            objectPosition: "center", // Show the middle part of the image
+          }}
           className="event1"
         />
         <div className="event9" style={textInsideImage} >
