@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <div className="App">
 
-    <div className="flex flex-col rounded-lg rounded-md bg-white md:max-w-full md:flex-row mm">
+    <div className="flex flex-col rounded-lg rounded-md bg-white md:max-w-full lg:max-w-full  md:flex-row mm">
               <div className="flex flex-col p-6 q">
 
                 <h5 className="mb-2 text-5xl leading-tight q ll">

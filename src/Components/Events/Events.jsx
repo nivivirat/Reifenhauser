@@ -77,9 +77,9 @@ const Events = () => {
   };
 
   const textInsideImage = {
-    position: 'absolute',
-    top: '20%',
-    left: '18%',
+    position: 'relative',
+    top: '-70%',
+    left: '15%',
     transform: 'translate(-50%, -50%)',
     fontSize: '24px',
     fontWeight: 'bold',
