@@ -78,7 +78,7 @@ const Events = () => {
   };
 
   const textInsideImage = {
-    marginLeft:'2%',
+    marginLeft:'3px',
     position: 'relative',
     top: '-70%',
     left: '18%',
@@ -98,7 +98,7 @@ const Events = () => {
           style={{
             ...imageStyle,
             objectFit: "cover", // Maintain aspect ratio while covering the container
-            objectPosition: "center", // Show the middle part of the image
+            objectPosition: "center 75%", // Show the image midway between center and bottom
           }}
           className="event1"
         />
