@@ -1,115 +1,172 @@
-.App {
-    text-align: center;
-    font-family: sans-serif;
-  }
-  
-  .events-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  .event {
-    width: 300px;
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
-  
-  .event h3 {
-    font-size: 18px;
-    margin-bottom: 5px;
-  }
-  
-  .event p {
-    font-size: 14px;
-    margin-bottom: 0;
-  }
-  
-  .event img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .event1{
-    background: #013A98;
-    opacity:0.9999999999;
-  }
-  .image-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #013A98;
-    z-index:1;
-    object-fit: cover;
-    opacity: 0.7; /* Adjust the opacity as needed */
-    border-radius: 8px;
-    border-radius: 24px;
+import React from 'react';
+import './Events.css'; // You can create a CSS file for styling
+import eventsData from './eventsData.json';
+import eventsData2 from './eventsData2.json';
+import eventsData3 from './eventsData3.json';
+import evim from '../../assets/Images/Events/event1.svg';
+import even from '../../assets/Images/Events/event2.svg'
+const Events = () => {
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+     // Set the direction to column for the image and sections to be stacked vertically
+  };
+  const sectionStyle = {
+    // backgroundColor: '#b0c4de',
+    margin:'2% auto',
+    color: 'white',
+    padding: '20px',
+     // Add margin at the top and bottom to create space between sections
+    borderRadius: '8px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width:'95%',
+    // margin:'auto',
+  };
+  const sectionStyle2 = {
+    display: 'flex',
+    flexDirection: 'row', // Change the direction to row for horizontal layout
+    // backgroundColor: '#b0c4de',
+    color: 'white',
+    padding: '20px',
+    margin: '10px 0', // Add margin at the top and bottom to create space between sections
+    borderRadius: '8px',
+    
+  };
 
-  }
-  .event9{
-    z-index:'3',
+  const cardContainerStyle = {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '85%', // Set the width to 100%
+    marginLeft:'2%',
+  };
+
+  const cardStyle = {
+    // backgroundColor: '#b0c4de',
+    flex: 1,
+    padding: '20px',
+    margin: '10px',
+    borderRadius: '8px',
+    height:'300px'
+  };
+
+  const columnStyle = {
+    display: 'flex',
+    flexDirection: 'column', // Set the direction to column for vertical layout inside each card
+    color: '#013A98',
+    fontWeight: 'bold',
+    marginBottom: '10px',
     
-  }
-  .event3{
+    // Add margin at the bottom of each column
+  };
+
+  const imageContainerStyle = {
+    textAlign: 'center',
+    position: 'relative',
+    height: '30vh',
+    margin: '1%', // Set the margin to 1% from all directions
+  };
+
+  const imageStyle = {
+    width: '100%',
+    height: '100%',
+    borderRadius: '8px',
+    position: 'relative',
     
-    position:relative;
-    left:2%;
-    font-weight:700;
-  
-  }
-  .event100{
-    border-radius: 24px;
-border: 1px solid rgba(1, 58, 152, 0.18);
-background: rgba(1, 58, 152, 0.12);
-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-margin:auto;
-/* text-size:200px; */
-  }
-  .event45{
-    border: 1px solid rgba(1, 58, 152, 0.18);
-background: rgba(1, 58, 152, 0.12);
-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
-margin:auto;
-  }
-  @media (min-width: 1200px) {
-  .eventi{
-    z-index:-1;
-    position:absolute;
-    margin:auto;
-    left:2.5%;
-    overflow:hidden;
-    /* width:6.35%; */
-    width:60px;
-    height:85px;
-  }
-  .eventj{
-    z-index:-1;
-    /* position:absolute; */
-    /* overflow:hidden; */
-    position:relative;
-    right:-3%;
-    top:-2%;
-    width:46%;
-    /* height:20%; */
-    margin-left:58%;
-    margin-top:-50%;
-    
-    /* left:89%; */
-  }
+  };
+
+  const textInsideImage = {
+    marginLeft:'2%',
+    position: 'relative',
+    top: '-70%',
+    left: '18%',
+    transform: 'translate(-50%, -50%)',
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: 'white',
+    zIndex:'2',
+  };
+
+  return (
+    <div>
+      <div style={imageContainerStyle} className="image-container">
+        <img
+          src="https://s3-alpha-sig.figma.com/img/6ee1/0b62/ecc1bf59244a34938d24ec38f4f58645?Expires=1700438400&Signature=llKCabxnB-vH2PDu0uOJzNoQOVk~hUT-3qjW36BiuAarXbsyEHHCn7CrXduw-Nwk0GlD31rhtbvoYaDTQ-hCETLObjBWHGcb4PRtauILxi2DBGM55giWzwnVe0bIwSrfWMQo2B6WNuDyA8DFgOi8cGOJZydC4C6FyyYoLEj~H2B-BDq4ZAh3gFQcK~znYm609DkXaaQCiYX82OAQUgEp~BcwD3VthUnTdH5G8WSnJKB7IZa~~0MclJDgCyMOzXmT4OmBhvfwhS-lEHn7Na-z1hDhy3a-l5PjtHFCfN3K~nmGgYDBllOYpTKs3WZechOGCyyAsch6h-n4Djrw5fGPmA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+          alt="Rendezvous Image"
+          style={{
+            ...imageStyle,
+            objectFit: "cover", // Maintain aspect ratio while covering the container
+            objectPosition: "center", // Show the middle part of the image
+          }}
+          className="event1"
+        />
+        <div className="event9" style={textInsideImage} >
+          <p>Join us for a friendly rendezvous</p>
+        </div>
+      </div>
+      <div className="event3 text-2xl">Events 2023</div>
+      {eventsData.map((event, index) => (
+        <div key={index} style={sectionStyle} className="text-xl event100">
+          <img className="eventi" src={evim}></img>
+          <div style={columnStyle}>
+            <h2>Event Name</h2>
+            <p>{event.eventName}</p>
+          </div>
+          <div style={columnStyle}>
+            <h2>Locations</h2>
+            <p>{event.location}</p>
+          </div>
+          <div style={columnStyle}>
+            <h2>Date</h2>
+            <p>{event.date}</p>
+          </div>
+        </div>
+      ))}
+      <div className="event3 text-2xl">Events 2024</div>
+      {eventsData2.map((event, index) => (
+        <div key={index} style={sectionStyle} className="text-xl event100">
+          <img className="eventi" src={evim}></img>
+          <div style={columnStyle}>
+            <h2>Event Name</h2>
+            <p>{event.eventName}</p>
+          </div>
+          <div style={columnStyle}>
+            <h2>Locations</h2>
+            <p>{event.location}</p>
+          </div>
+          <div style={columnStyle}>
+            <h2>Date</h2>
+            <p>{event.date}</p>
+          </div>
+        </div>
+      ))}
+      <div className="event3 text-2xl">Archives of past events</div>
+      <div style={cardContainerStyle} >
+        {eventsData3.map((event, index) => (
+          <div key={index} style={cardStyle} className="text-xl  event45">
+           
+            <div style={columnStyle}>
+              <h2>Event Name</h2>
+              <p>{event.eventName}</p>
+            </div><br></br>
+            <div style={columnStyle}>
+              <h2>Locations</h2>
+              <p>{event.location}</p>
+            </div><br></br>
+            <div style={columnStyle}>
+              <h2>Date</h2>
+              <p>{event.date}</p>
+            </div>
+            <img className="eventj" src={even}></img>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
-@media (max-width: 1199px) {
-  .eventi{
-    position:absolute;
-    display:none;
-  }
-  .eventj{
-    z-index:-1;
-    position:absolute;
-    display:none;
-  }
-}
+;
+
+export default Events;
+
