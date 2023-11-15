@@ -92,9 +92,10 @@ margin:auto;
     /* position:absolute; */
     /* overflow:hidden; */
     position:relative;
-    right:8%;
-    top:14%;
-    width:56%;
+    right:-3%;
+    top:-2%;
+    width:46%;
+    /* height:20%; */
     margin-left:58%;
     margin-top:-50%;
     
