@@ -7,17 +7,23 @@ import r from '../../../assets/Images/Home/r.svg';
 import bannerData from '../data/bannerData.json';
 
 export default function Banner() {
-    const [currentSection, setCurrentSection] = useState(1);
+    const [currentSection, setCurrentSection] = useState(0);
 
     const handleNextSection = () => {
         if (currentSection < bannerData.length - 1) {
             setCurrentSection(currentSection + 1);
+        }
+        else {
+            setCurrentSection(0)
         }
     };
 
     const handlePrevSection = () => {
         if (currentSection > 0) {
             setCurrentSection(currentSection - 1);
+        }
+        else {
+            setCurrentSection(2);
         }
     };
 
@@ -47,15 +53,15 @@ export default function Banner() {
                     <div className='xl:text-[30px] md:text-[16px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
                     <div className='flex mt-10 lg:mt-[80px]'>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"       
-                            ></div>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"       
-                            ></div>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"       
-                            ></div>
+                        <div
+                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"
+                        ></div>
+                        <div
+                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
+                        ></div>
+                        <div
+                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
+                        ></div>
                     </div>
 
 
@@ -66,7 +72,7 @@ export default function Banner() {
                     </div>
 
                     {/* Previous and Next buttons */}
-                    <div className='md:absolute md:block left-[70%] bottom-[20%] hidden '>
+                    <div className='md:absolute md:flex flex-col place-items-center gap-5 left-[70%] bottom-[2%] hidden '>
                         <div className='flex flex-row gap-5'>
                             <div className='rounded-full border-2 text-white -rotate-90 border-white p-2' onClick={handlePrevSection} disabled={currentSection === 0}>
                                 <Icon icon="prime:arrow-up" />
@@ -75,17 +81,25 @@ export default function Banner() {
                                 <Icon icon="prime:arrow-up" />
                             </div>
                         </div>
+                        <div>
+                            <div className='text-white text-[12px]'>SCROLL</div>
+                            <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-1.5'>
+                                <div className=''>
+                                    <div className='border-2 h-0 w-3 border-white rotate-90 mt-5 ml-2'></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
 
-                    <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
+                    {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
                         <div className='text-white text-[12px]'>SCROLL</div>
                         <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
                             <div>
                                 <div className='border-2 h-0 w-3 border-white rotate-90 mt-5 ml-2'></div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='h-full absolute sm:right-[100px] md:right-0 right-0 top-0 z-0 opacity-80'>
