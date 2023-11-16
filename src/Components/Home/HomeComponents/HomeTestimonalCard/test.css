@@ -17,6 +17,25 @@
   }
 }
 
+/* Custom CSS */
+
+/* Update existing styles and add new styles */
+.w-card {
+  width: 35%; /* Each card takes 35% of the screen width */
+  flex: none; /* Prevent the cards from stretching */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+/* Flex row layout for the cards */
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem; /* Adjust the gap between cards as needed */
+  overflow-x: auto; /* Enable horizontal scrolling for overflow */
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
 .ll {
   text-align: left;
   margin: 5% 20%;
@@ -113,20 +132,24 @@
   color: #013a98;
 }
 
-.test3 {
-  position: absolute;
-  bottom: 2%;
-  right: 3%;
-  font-weight: 700;
-  color: #013a98;
-}
-
 .test4 {
   position: absolute;
-  bottom: 2%;
-
+  bottom: 25%; /* Adjust the vertical position */
+  right: 3%; /* Adjust the horizontal position */
   font-weight: 700;
   color: #013a98;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Set vertical layout */
+}
+
+.test3 {
+  position: absolute;
+  bottom: 100%; /* Adjust the vertical position */
+  right: 3%; /* Adjust the horizontal position */
+  font-weight: 700;
+  color: #013a98;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Set vertical layout */
 }
 
 .test90 {

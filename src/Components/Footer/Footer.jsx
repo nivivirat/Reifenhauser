@@ -30,7 +30,7 @@ export default function Footer() {
                 </div>
 
 
-                <div className='md:w-[70%] w-[100%] flex flex-row md:justify-center gap-[15%] md:gap-[20%] lg:gap-[30%] xl:gap-[50%] justify-between'>
+                <div className='md:w-[70%] md:mt-4 w-[100%] flex flex-row md:justify-center gap-[15%] md:gap-[20%] lg:gap-[30%] xl:gap-[50%] justify-between'>
                     <div>
                         <ul className='flex flex-col gap-3 font-semibold'>
                             <li><a href='/services'>Services</a></li>
@@ -41,7 +41,7 @@ export default function Footer() {
                             <li><a href='/testimonials'>Testimonials</a></li>
                             <li><a href='/blogs'>Blogs</a></li>
                         </ul>
-                        <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
+                        <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9     xl:mt-4'>
                             <p className='text-[12px]'>Connect with us on</p>
                             <div className='flex flex-row gap-2'>
                                 <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
@@ -74,7 +74,7 @@ export default function Footer() {
 
             {/* bottom */}
             <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[225px]'>
-                <div className='bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
+                <a href='/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
                     <div className='flex flex-row p-4'>
                         <p className='md:text-[22px] text-[18px] font-semibold'>Contact Us</p>
                         <div className='text-[25px]'>
@@ -84,7 +84,7 @@ export default function Footer() {
                     <div className='text-[100px] opacity-40 pt-5'>
                         <Icon icon="material-symbols:call-outline" />
                     </div>
-                </div>
+                </a>
 
 
                 <div className='flex lg:hidden flex-col gap-3 justify-start'>

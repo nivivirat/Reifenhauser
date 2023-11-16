@@ -16,10 +16,10 @@ export default function DirectorCard({ name, role, img }) {
     }
     return (
         <div className="flex flex-col justify-center place-items-center">
-            <div>
-                <img src={images[img]} className="rounded-full md:h-[200px] h-[110px] w-auto bg-[#9bc1ff] md:w-[200px]"></img>
+            <div className="">
+                <img src={images[img]} className="rounded-full md:pt-5 border-[#9bc1ff] md:h-[200px] h-[110px] w-auto bg-[#9bc1ff] md:w-[200px]"></img>
             </div>
-            <p className="md:text-[20px] text-[12px] text-[#295DB1] font-semibold">{name}</p>
+            <p className="md:text-[20px] text-[12px] text-[#295DB1] font-semibold mt-[24px]">{name}</p>
             <p className="md:text-[16px] text-[12px] text-[#295DB1]">{role}</p>
         </div>
     )
