@@ -147,7 +147,7 @@ const Events = () => {
         {eventsData3.map((event, index) => (
           <div key={index} style={cardStyle} className="text-xl  event45">
            
-            <div style={columnStyle}>
+            <div style={columnStyle} className="event41">
               <h2>Event Name</h2>
               <p>{event.eventName}</p>
             </div><br></br>
