@@ -44,35 +44,48 @@ export default function Banner() {
             <div className="rounded-lg relative overflow-clip">
                 <img src={bannerbg} className='md:relative md:block hidden md:h-auto md:w-auto h-[400px] object-cover object-right'></img>
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
-                <div className='absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
+                <div className='xl:p-5 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
-                        <img src={thirtyYears} className='lg:h-[220px] md:h-[140px]'></img>
+                        <img src={thirtyYears} className='lg:h-[220px] md:h-[140px] sm:h-[120px]'></img>
                         :
-                        <div className='md:text-[20px] xl:text-[50px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
+                        <div className='md:text-[25px] sm:text-[20px] xl:text-[50px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
-                    <div className='xl:text-[30px] md:text-[16px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
+                    <div className='xl:text-[30px] md:text-[16px] sm:text-[18px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
-                    <div className='flex mt-10 lg:mt-[80px]'>
-                        <div
-                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"
-                        ></div>
-                        <div
-                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
-                        ></div>
-                        <div
-                            className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
-                        ></div>
-                    </div>
+                    {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
+                        <div className='text-white text-[12px]'>SCROLL</div>
+                        <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
+                            <div>
+                                <div className='border-2 h-0 w-3 border-white rotate-90 mt-5 ml-2'></div>
+                            </div>
+                        </div>
+                    </div> */}
+                </div>
+
+                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[2%] lg:bottom-[15%] md:bottom-[3%] sm:bottom-[5%] bottom-[10%] left-[6%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
+                    <div>
+                        <div className='flex mt-10 lg:mt-[80px]'>
+                            <div
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"
+                            ></div>
+                            <div
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
+                            ></div>
+                            <div
+                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
+                            ></div>
+                        </div>
 
 
-                    <div className='mt-10 md:mt-5 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
-                        <a className='h-full w-full' href="/aboutUs">
-                            Know More
-                        </a>
+                        <div className='mt-10 md:mt-5 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
+                            <a className='h-full w-full' href="/aboutUs">
+                                Know More
+                            </a>
+                        </div>
                     </div>
 
                     {/* Previous and Next buttons */}
-                    <div className='md:absolute md:flex flex-col place-items-center gap-5 left-[70%] bottom-[2%] hidden '>
+                    <div className='md:flex flex-col place-items-center gap-5 left-[70%] bottom-[2%] hidden lg:mt-[35%] md:mt-[15%]'>
                         <div className='flex flex-row gap-5'>
                             <div className='rounded-full border-2 text-white -rotate-90 border-white p-2' onClick={handlePrevSection} disabled={currentSection === 0}>
                                 <Icon icon="prime:arrow-up" />
@@ -90,16 +103,6 @@ export default function Banner() {
                             </div>
                         </div>
                     </div>
-
-
-                    {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
-                        <div className='text-white text-[12px]'>SCROLL</div>
-                        <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
-                            <div>
-                                <div className='border-2 h-0 w-3 border-white rotate-90 mt-5 ml-2'></div>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
 
                 <div className='h-full absolute sm:right-[100px] md:right-0 right-0 top-0 z-0 opacity-80'>
