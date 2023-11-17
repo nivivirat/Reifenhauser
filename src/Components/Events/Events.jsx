@@ -159,7 +159,7 @@ const Events = () => {
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
-            <img className="eventj" src={even}></img>
+            <img className="eventj flex-flex-col" src={even}></img>
           </div>
         ))}
       </div>
