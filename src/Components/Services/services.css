@@ -3,6 +3,19 @@
     margin:0;
     padding:0;
   }
+  .ggg{
+    width:90%;
+  }
+  .ss{
+    position:relative;
+    top:-16%;
+    left:16%;
+  }
+.ggh{
+  position:relative;
+    top:-16%;
+}
+
   .App-logo {
     height: 40vmin;
     pointer-events: none;
@@ -33,7 +46,7 @@
       margin:5% 5%;
     }
     .mm{
-      margin: 2% 10%;
+      margin: -2% -6%;
     }
   
   @media (max-width: 800px) {
@@ -45,7 +58,7 @@
     .fm{
       width:60%;
       height:40%;
-      margin:5% 22%;
+      margin:5% 2%;
     }
     .ll{
       text-align:left;
@@ -58,15 +71,21 @@ font-weight: 400;
 
     }
     .mm{
-      margin:2%;
+      margin:-2%;
     }
   }
   @media (min-width: 801px) {
     
- 
+    .ha{
+      position:relative;
+      left:-30%;
+      top:5%;
+    }
     .ll{
       text-align:left;
-      margin:5% 8%;
+      margin:0 -2%;
+      /* padding:0 -3%; */
+      width:90%;
     }
   }
   @keyframes App-logo-spin {
@@ -91,6 +110,8 @@ font-weight: 400;
     margin-right:15%;
     text-align:left;
   }
+
+
   .kl{
     margin-left:15%;
     margin-right:15%;
