@@ -62,7 +62,7 @@ export default function Banner() {
                     </div> */}
                 </div>
 
-                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[2%] lg:bottom-[15%] md:bottom-[3%] sm:bottom-[5%] bottom-[10%] left-[6%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
+                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[2%] lg:bottom-[15%] xl:pl-10 lg:pl-4 md:pl-4 pl-4 md:bottom-[3%] sm:bottom-[5%] bottom-[10%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
                     <div>
                         <div className='flex mt-10 lg:mt-[80px]'>
                             <div

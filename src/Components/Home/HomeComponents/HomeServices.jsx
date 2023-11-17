@@ -25,17 +25,17 @@ export default function HomeServices() {
                     <span className='text-primary'>customer service excellence </span>
                 </div>
 
-                <div className="hidden md:flex h-[60px] flex-row gap-2 justify-center place-items-center rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[20%] w-[40%]">
+                <a href='/services' className="hidden md:flex h-[60px] flex-row gap-2 justify-center place-items-center rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[20%] w-[40%]">
                     <img src={customerService} className='h-8 w-8'></img>
                     <p className='text-white text-[16px]'>24 x 7 Service Available</p>
-                </div>
+                </a>
             </div>
 
 
             {/* main */}
             <div className='flex md:flex-wrap md:flex-row flex-col gap-6'>
                 {/* Global Service */}
-                <div className='flex flex-row md:gap-5 gap-3 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-400 md:w-[48%] md:h-[200px] h-[150px] md:p-6 p-3'>
+                <a href='/services' className='flex flex-row md:gap-5 gap-3 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-400 md:w-[48%] md:h-[200px] h-[150px] md:p-6 p-3'>
                     <div className='w-[50%] h-full'>
                         <img src={service} className='w-full h-full rounded-2xl object-cover'></img>
                     </div>
@@ -44,7 +44,7 @@ export default function HomeServices() {
                         <p className='font-extralight md:text-[16px] text-[12px]'>We're not just a service provider; we're pioneers, shaping tomorrow through foresight and adapting to emerging trends.</p>
                     </div>
 
-                </div>
+                </a>
 
                 {/* Rectangle */}
                 <div className='md:w-[45%]'>
