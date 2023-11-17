@@ -100,15 +100,19 @@ margin:auto;
   .eventj{
     z-index:1;
     /* position:absolute; */
-    /* overflow:hidden; */
+    overflow:hidden;
     position:relative;
-    right:-3%;
-    top:-19%;
+    right:1vh;
+    left:0.7vh;
+    bottom:57px;
     width:46%;
+    height:239px;
     /* height:20%; */
     margin-left:58%;
-    margin-top:-50%;
-    
+    margin-top:-180px;
+    display: flex;
+    flexDirection: row;
+    justifyContent: 'space-between';
     /* left:89%; */
   }
 }
