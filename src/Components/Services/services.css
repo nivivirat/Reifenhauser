@@ -61,6 +61,13 @@
     .ll{
       text-align:left;
       margin:5% 8%;
+        color: #000;
+font-family: Poppins;
+font-size: 26px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.26px;
     }
   }
   @keyframes App-logo-spin {
