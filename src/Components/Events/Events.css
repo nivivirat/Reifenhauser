@@ -88,18 +88,31 @@ margin:auto;
     width:60px;
     height:85px;
   }
+  .event41 {
+    display: inline-flex;
+    flex-direction: column; /* Align items vertically */
+    align-items: flex-start; /* Adjust alignment as needed */
+    width: 90%; /* Set your desired width */
+    height: 30%; /* Set your desired height */
+    /* Add other styles as needed */
+  }
+  
   .eventj{
-    z-index:-1;
+    z-index:1;
     /* position:absolute; */
-    /* overflow:hidden; */
+    overflow:hidden;
     position:relative;
-    right:-3%;
-    top:-2%;
+    right:1vh;
+    left:0.7vh;
+    bottom:57px;
     width:46%;
+    height:239px;
     /* height:20%; */
     margin-left:58%;
-    margin-top:-50%;
-    
+    margin-top:-180px;
+    display: flex;
+    flexDirection: row;
+    justifyContent: 'space-between';
     /* left:89%; */
   }
 }
