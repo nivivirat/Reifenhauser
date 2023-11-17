@@ -12,7 +12,7 @@ export default function Services() {
     <div className="App">
 
     <div className="flex flex-col rounded-lg rounded-md bg-white md:max-w-full lg:max-w-full  md:flex-row mm">
-              <div className="flex flex-col p-6 q">
+              <div className="flex flex-col p-6 ">
 
                 <h5 className="mb-2 text-5xl leading-tight q ll">
                 Our Services
@@ -25,7 +25,7 @@ export default function Services() {
               <img className="fm" src ={Serv} alt="image"></img>
             </div>
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col q p-6">
+              <div className="flex flex-col  p-6">
 
                 <h5 className="mb-2 text-5xl leading-tight q ll">
                 Global Services
@@ -41,11 +41,11 @@ export default function Services() {
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
             <img className="fm" src ={Serv2} alt="image"></img>
               <br></br><br></br><br></br>
-              <div className="flex flex-col q p-6">
+              <div className="flex flex-col  p-6">
 
 
 
-                <h5 className="mb-2 text-5xl w leading-tight ll">
+                <h5 className="mb-2 text-5xl w leading-tight q ll">
                 Breakdown Maintenance
                 </h5>
                 <p className="mb-4 text-2xs mr-20 leading-tight  ll">
@@ -54,7 +54,7 @@ export default function Services() {
                 </div>
                 </div>
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col p-6 q">
+              <div className="flex flex-col p-6 ">
 
                 <h5 className="mb-2 text-5xl q leading-tight ll">
                 Installation & Commission
@@ -70,11 +70,11 @@ export default function Services() {
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
             <img className="fm" src ={Serv4} alt="image"></img>
               <br></br><br></br><br></br>
-              <div className="flex flex-col q p-6">
+              <div className="flex flex-col  p-6">
 
 
 
-                <h5 className="mb-2 text-5xl w leading-tight ll">
+                <h5 className="mb-2 text-5xl w leading-tight q ll">
                 Preventive Maintenance Services
                 </h5>
                 <p className="mb-4 text-2xs mr-20 leading-tight  ll">
@@ -83,10 +83,10 @@ export default function Services() {
                 </div>
              </div>
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col q p-6">
+              <div className="flex flex-col  p-6">
 
-                <h5 className="mb-2 text-5xl leading-tight ll">
-                AMC</h5><h5 className="mb-2 text-xl leading-tight ll"> (Annual Maintenance Contract)
+                <h5 className="mb-2 text-5xl leading-tight q ll">
+                AMC</h5><h5 className="mb-2 text-xl leading-tight q ll"> (Annual Maintenance Contract)
                 </h5>
                 <p className="mb-4 text-2xs mr-20 leading-tight  ll">
                 When your company is concerned with repairs as well as maintenance of machineries, our experienced engineers are agile at every instance. Our team never violates the terms of the contract and fails to offer services as per the agreement. We always assure you with maximum uptime as the team keeps itself updated with new technical developments. Above all, we abide by the terms of the contract and plan all types of maintenance even when unexpected failures of machineries arise. Our satisfaction lies only when the customer is more than happy with the services our engineers offer.
