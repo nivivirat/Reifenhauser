@@ -54,7 +54,7 @@ export default function Services() {
                 </div>
                 </div>
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col p-6">
+              <div className="flex flex-col p-6 q">
 
                 <h5 className="mb-2 text-5xl q leading-tight ll">
                 Installation & Commission
