@@ -10,13 +10,13 @@ export default function Footer() {
                 <div className='md:w-[30%] w-[100%] md:mt-0 mt-10 flex flex-col gap-5'>
                     <p className='text-white'>CONTACT US</p>
 
-                    <div className='flex flex-row bg-base w-[200px] lg:w-[220px]  md:w-[220px] text-[30px] xl:w-[220px] xl:h-[70px] md:gap-4 rounded-lg justify-center place-items-center p-5'>
+                    <a href="https://wa.me/919322338451" target="_blank" rel="noopener noreferrer" className='flex flex-row bg-base w-[200px] lg:w-[220px]  md:w-[220px] text-[30px] xl:w-[220px] xl:h-[70px] md:gap-4 rounded-lg justify-center place-items-center p-5'>
                         <Icon icon="logos:whatsapp-icon" />
                         <div className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                             <p className='text-[#011C51]'>Say Hello!!</p>
                             <p className='text-[#285196]'>+91 9322338451</p>
                         </div>
-                    </div>
+                    </a>
 
                     <div className='flex md:flex-col flex-col gap-5'>
                         <div className='flex md:flex-row flex-row place-items-center gap-3'>

@@ -8,6 +8,18 @@ import bannerData from '../data/bannerData.json';
 
 export default function Banner() {
     const [currentSection, setCurrentSection] = useState(0);
+    const [downCurrentSection, setDownCurrentSection] = useState(0);
+
+    const downData = [
+        {
+            top: "Number of Installations",
+            bottom: "1000",
+        },
+        {
+            top: "Testimonials Received",
+            bottom: "25",
+        }
+    ]
 
     const handleNextSection = () => {
         if (currentSection < bannerData.length - 1) {
@@ -39,18 +51,30 @@ export default function Banner() {
         return () => clearInterval(interval); // Cleanup on unmount
     }, [currentSection]);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (downCurrentSection === 0) {
+                setDownCurrentSection(1);
+            } else {
+                setDownCurrentSection(0);
+            }
+        }, 3000); // 3000 milliseconds (3 seconds)
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, [downCurrentSection]);
+
     return (
-        <div className='xl:p-10 p-3'>
-            <div className="rounded-lg relative overflow-clip">
-                <img src={bannerbg} className='md:relative md:block hidden md:h-auto md:w-auto h-[400px] object-cover object-right'></img>
+        <div className='xl:p-10 p-3 md:h-full'>
+            <div className="rounded-lg relative overflow-clip md:h-[95%]">
+                <img src={bannerbg} className='md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
-                <div className='xl:p-5 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
+                <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
                         <img src={thirtyYears} className='lg:h-[220px] md:h-[140px] sm:h-[120px]'></img>
                         :
-                        <div className='md:text-[25px] sm:text-[20px] xl:text-[50px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
+                        <div className='md:text-[25px] sm:text-[20px] xl:text-[45px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
-                    <div className='2xl:text-[30px] xl:text-[26px] md:text-[16px] sm:text-[18px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
+                    <div className='2xl:text-[30px] xl:text-[24px] md:text-[16px] sm:text-[18px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
                     {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
                         <div className='text-white text-[12px]'>SCROLL</div>
@@ -62,22 +86,21 @@ export default function Banner() {
                     </div> */}
                 </div>
 
-                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[2%] lg:bottom-[15%] xl:pl-10 lg:pl-4 md:pl-4 pl-4 md:bottom-[3%] sm:bottom-[5%] bottom-[10%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
+                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[1%] lg:bottom-[15%] xl:pl-10 lg:pl-4 md:pl-4 pl-4 md:bottom-[3%] sm:bottom-[5%] bottom-[10%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
                     <div>
                         <div className='flex mt-10 lg:mt-[80px]'>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-white"
-                            ></div>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
-                            ></div>
-                            <div
-                                className="md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer bg-[#275DB6]"
-                            ></div>
+                            {bannerData.map((_, index) => (
+                                <div
+                                    key={index}
+                                    className={`md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer ${currentSection === index ? 'bg-white' : 'bg-[#275DB6]'
+                                        }`}
+                                    onClick={() => setCurrentSection(index)}
+                                ></div>
+                            ))}
                         </div>
 
 
-                        <div className='mt-10 md:mt-5 bg-white lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
+                        <div className='mt-10 md:mt-5 bg-white xl:mt-[40px] lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
                             <a className='h-full w-full' href="/aboutUs">
                                 Know More
                             </a>
@@ -85,7 +108,7 @@ export default function Banner() {
                     </div>
 
                     {/* Previous and Next buttons */}
-                    <div className='md:flex flex-col place-items-center gap-5 left-[70%] bottom-[2%] hidden lg:mt-[35%] md:mt-[15%]'>
+                    <div className='lg:flex flex-col place-items-center gap-5 lg:left-[70%] md:left-[20%] bottom-[2%] hidden lg:mt-[35%] md:mt-[15%]'>
                         <div className='flex flex-row gap-5'>
                             <div className='rounded-full border-2 text-white -rotate-90 border-white p-2' onClick={handlePrevSection} disabled={currentSection === 0}>
                                 <Icon icon="prime:arrow-up" />
@@ -107,22 +130,30 @@ export default function Banner() {
 
                 <div className='h-full absolute sm:right-[100px] md:right-0 right-0 top-0 z-0 opacity-80'>
                     {/* <img src={r} className='md:h-[250px] xl:h-[50%] h-[299px] lg:h-[350px]'></img> */}
-                    <img src={r} className='xl:h-[74%] h-[74%]'></img>
+                    <img src={r} className='xl:h-[71%] h-[74%]'></img>
                 </div>
 
 
                 <div className='absolute flex flex-row justify-center place-items-center md:gap-10 text-white sm:right-[5%] xl-right-[4%] md:right-[6%] sm:bottom-0 right-[8%] xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[6%] z-0 opacity-80'>
                     <div>
-                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[20px]'>Number of Installations</p>
-                        <p className='text-[30px] font-semibold'>250+</p>
+                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[20px]'>{downData[downCurrentSection].top}</p>
+                        <p className='text-[30px] font-semibold'>{downData[downCurrentSection].bottom}</p>
                     </div>
                     <div className='md:flex flex-col gap-2 hidden'>
-                        <div
+                        {/* <div
                             className="bg-white md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer"
                         ></div>
                         <div
                             className="bg-[#5997ff] md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer"
-                        ></div>
+                        ></div> */}
+
+                        {downData.map((_, index) => (
+                            <div
+                                key={index}
+                                className={`md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer ${downCurrentSection === index ? 'bg-white' : 'bg-[#5997ff]'
+                                    }`}
+                            ></div>
+                        ))}
 
                     </div>
 
