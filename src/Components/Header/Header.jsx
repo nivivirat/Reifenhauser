@@ -66,7 +66,7 @@ export default function Header() {
                     </a>
                 </div>
 
-                <div className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-2'>
+                <a href='https://wa.me/919322338451'  target="_blank" rel="noopener noreferrer" className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-2'>
                     <div className=''>
                         <img src={header_phone} alt='Phone' />
                     </div>
@@ -74,7 +74,7 @@ export default function Header() {
                         <p className='text-[#011C51]'>Service Helpline</p>
                         <p className='text-[#285196]'>+91 9322338451</p>
                     </div>
-                </div>
+                </a>
                 <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0 z-50' : 'translate-x-full z-0'}`}>
                     <div className='w-[100%] h-full p-4'>
                         <div className='flex flex-col h-[90%] justify-between'>
