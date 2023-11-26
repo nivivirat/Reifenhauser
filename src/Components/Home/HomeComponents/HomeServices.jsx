@@ -84,15 +84,15 @@ export default function HomeServices() {
                 <div className='md:w-[45%] w-full flex flex-row gap-4'>
                     <div className='w-[44%] rounded-3xl shadow-lg font-medium relative p-6 pb-10 md:h-[210px] h-[150px]'>
                         <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div>
-                        <div className='lg:text-[40px] md:text-[30px] text-[#242424] font-poppins text-6xl font-medium leading-normal'>90%</div>
-                        <div className='lg:text-[14px] md:text-[10px] text-[10px]'>Our consistent record of client satisfaction speaks loudly to the quality and reliability of our services.</div>
+                        <div className='lg:text-[40px] md:text-[30px] text-[#242424] font-poppins text-3xl font-medium leading-normal'>90%</div>
+                        <div className='lg:text-[14px] md:text-[10px] text-[8px]'>Our consistent record of client satisfaction speaks loudly to the quality and reliability of our services.</div>
                         <img src={heart} className='h-24 w-24 absolute top-0 right-0'></img>
                     </div>
 
                     <div className='md:w-[54%] w-[49%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[210px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
                         <div className='lg:text-2xl md:text-xl text-[12px] opacity-0'>SATISFIED</div>
-                        <div className='lg:text-[40px] md:text-[30px] text-white text-5xl font-medium leading-10 tracking-tighter'>30+</div>
-                        <div className='lg:text-[14px] md:text-[10px] text-[10px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
+                        <div className='lg:text-[40px] md:text-[30px] text-white text-3xl font-medium leading-10 tracking-tighter'>30+</div>
+                        <div className='lg:text-[14px] md:text-[10px] text-[8px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
                         <img src={people} className='opacity-90 h-24 w-24 absolute top-0 right-0'></img>
                     </div>
                 </div>
