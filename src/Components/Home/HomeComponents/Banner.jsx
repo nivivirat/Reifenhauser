@@ -130,7 +130,7 @@ export default function Banner() {
 
                 <div className='h-full absolute sm:right-[100px] md:right-0 right-0 top-0 z-0 opacity-80'>
                     {/* <img src={r} className='md:h-[250px] xl:h-[50%] h-[299px] lg:h-[350px]'></img> */}
-                    <img src={r} className='xl:h-[71%] h-[74%]'></img>
+                    <img src={r} className='xl:h-[71%] 2xl:h-[74%] sm:h-[74%] h-[74%]'></img>
                 </div>
 
 
