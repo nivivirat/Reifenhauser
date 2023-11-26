@@ -80,6 +80,8 @@ export default function Principals() {
                                     key={index}
                                     companyName={machinery.company_name}
                                     img={machinery.img}
+                                    backContent={machinery.backContent}
+                                    backLink={machinery.backLink}
                                 />
                             )
                         ))}
@@ -102,6 +104,8 @@ export default function Principals() {
                                 key={index}
                                 companyName={machinery.company_name}
                                 img={machinery.img}
+                                backContent={machinery.backContent}
+                                backLink={machinery.backLink}
                             />
                         )
                     ))}
@@ -122,6 +126,8 @@ export default function Principals() {
                                 key={index}
                                 companyName={machinery.company_name}
                                 img={machinery.img}
+                                backContent={machinery.backContent}
+                                backLink={machinery.backLink}
                             />
                         )
                     ))}
@@ -142,6 +148,8 @@ export default function Principals() {
                                 key={index}
                                 companyName={machinery.company_name}
                                 img={machinery.img}
+                                backContent={machinery.backContent}
+                                backLink={machinery.backLink}
                             />
                         )
                     ))}

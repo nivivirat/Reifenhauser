@@ -1,35 +1,51 @@
 [
     {
       "company_name": "Acigraf, Italy",
-      "img": "acigraf"
+      "img": "acigraf",
+      "backContent":"Acigraf Graphic Equipments S.r.l, Italy Cylinder Preparations",
+      "backLink":"www.acigraf.com"
     },
     {
       "company_name": "AV Flexologic, Netherland",
-      "img": "av_flexologic"
+      "img": "av_flexologic",
+      "backContent":"AV Flexologic B.V, Netherland Plate mounting Solutions",
+      "backLink":"www.flexologic.nl"
     },
     {
       "company_name": "Esko, Israel",
-      "img": "esko"
+      "img": "esko",
+      "backContent":"Esko, Belgium Print Inspection system",
+      "backLink":"www.esko.com/en"
     },
     {
       "company_name": "Grafotronic, Sweden",
-      "img": "grafotronic"
+      "img": "grafotronic",
+      "backContent":"Grafotronic, Sweden Narrow web Finishing Machines",
+      "backLink":"www.grafotronic.se"
     },
     {
       "company_name": "MERO SPA, Italy",
-      "img": "mero_spa"
+      "img": "mero_spa",
+      "backContent":"MERO SPA, Italy Corona Treaters",
+      "backLink":"www.mero.it"
     },
     {
       "company_name": "Praxair, USA",
-      "img": "praxair"
+      "img": "praxair",
+      "backContent":"Praxair, USA Anilox Rolls",
+      "backLink":"www.praxairsurfacetechnologies.com"
     },
     {
       "company_name": "Reprochem, Italy",
-      "img": "reprochem"
+      "img": "reprochem",
+      "backContent":"Reprochem, Italy Rotogravure Cylinders",
+      "backLink":"www.reprochem.it"
     },
     {
       "company_name": "Synaptik Lamination S.L., Catalonia",
-      "img": "synaptik_lamination"
+      "img": "synaptik_lamination",
+      "backContent":"Synaptik Lamination S.L, Sant Gregori Real time coating weight measurement system for lamination process",
+      "backLink":"www.synaptik.cat/en"
     }
   ]
   
