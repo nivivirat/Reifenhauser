@@ -25,7 +25,7 @@ export default function Footer() {
                             </div>
                             <p>hello@reifenhauserindia.com</p>
                         </div>
-                        <p>229, Udyog Bhavan, Sonawala Road, Opp Bridge Warsi, Goregaon East, Mumbai, Maharashtra 400063, India</p>
+                        <p>229, Udyog Bhavan, Sonawala Road, Goregaon East, Mumbai, Maharashtra 400063, India</p>
                     </div>
                 </div>
 

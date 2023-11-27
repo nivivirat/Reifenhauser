@@ -1,5 +1,5 @@
-import newsletter from '../../../assets/Images/Home/newsletter/newsletter.svg'
-import { Icon } from '@iconify/react'
+import newsletter from '../../../assets/Images/Home/newsletter/newsletter.svg';
+import { Icon } from '@iconify/react';
 
 export default function Newsletter() {
     return (
@@ -13,16 +13,16 @@ export default function Newsletter() {
                     </div>
 
                     <div className='md:pb-0 pb-2 md:w-[30%] w-full flex flex-col md:justify-normal justify-center place-items-center gap-4 md:mr-[10%]'>
-                        <div className='flex flex-row justify-between bg-white text-primary md:w-[400px] w-[90%] md:p-3 p-2 px-5 rounded-xl'>
-                            <p className=''>E-mail</p>
+                        <div className='flex flex-row justify-between place-items-center bg-white text-primary md:w-[400px] w-[90%] md:p-3 p-2 px-5 rounded-xl'>
+                            <input type='email' placeholder='E-mail' className='w-full outline-none placeholder:text-primary' />
                             <Icon icon="material-symbols-light:keyboard-arrow-right" />
                         </div>
-                        <div className='flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%]  p-1 px-2 rounded-xl'>
-                            <p className=''>Submit</p>
+                        <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%]  p-1 px-2 rounded-xl'>
+                            <button className='cursor-pointer'>Submit</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

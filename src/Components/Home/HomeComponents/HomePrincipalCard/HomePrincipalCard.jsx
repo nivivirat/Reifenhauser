@@ -7,7 +7,7 @@ export default function HomePincipalCard({ content }) {
                 <Icon icon="uil:setting" />
             </div>
             <p className="text-white md:text-2xl">{content}</p>
-            <div className="text-white md:text-3xl">
+            <div className="text-white md:text-3xl transition-transform duration-300 ease-in-out hover:rotate-45">
                 <Icon icon="iconoir:arrow-tr" />
             </div>
         </a>

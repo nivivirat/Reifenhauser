@@ -13,11 +13,11 @@ export default function Banner() {
     const downData = [
         {
             top: "Number of Installations",
-            bottom: "1000",
+            bottom: "1000+",
         },
         {
             top: "Testimonials Received",
-            bottom: "25",
+            bottom: "25+",
         }
     ]
 
@@ -70,9 +70,9 @@ export default function Banner() {
                 <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
                 <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] w-[55%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
-                        <img src={thirtyYears} className='lg:h-[220px] md:h-[140px] sm:h-[120px]'></img>
+                        <img src={thirtyYears} className='lg:h-[180px] md:h-[140px] sm:h-[120px]'></img>
                         :
-                        <div className='md:text-[25px] sm:text-[20px] xl:text-[45px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
+                        <div className='md:text-[25px] sm:text-[20px] xl:text-[40px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
                     <div className='2xl:text-[30px] xl:text-[24px] md:text-[16px] sm:text-[18px] text-[16px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
@@ -86,7 +86,7 @@ export default function Banner() {
                     </div> */}
                 </div>
 
-                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[1%] lg:bottom-[15%] xl:pl-10 lg:pl-4 md:pl-4 pl-4 md:bottom-[3%] sm:bottom-[5%] bottom-[10%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
+                <div className='xl:p-5 absolute 2xl:bottom-[6%] xl:bottom-[0%] lg:bottom-[15%] xl:pl-10 lg:pl-4 md:pl-4 pl-4 md:bottom-[3%] sm:bottom-[5%] bottom-[10%] flex flex-row 2xl:gap-[180%] xl:gap-[150%] lg:gap-[130%] md:gap-[80%]'>
                     <div>
                         <div className='flex mt-10 lg:mt-[80px]'>
                             {bannerData.map((_, index) => (
@@ -128,9 +128,10 @@ export default function Banner() {
                     </div>
                 </div>
 
-                <div className='h-full absolute sm:right-[100px] md:right-0 right-0 top-0 z-0 opacity-80'>
-                    {/* <img src={r} className='md:h-[250px] xl:h-[50%] h-[299px] lg:h-[350px]'></img> */}
-                    <img src={r} className='xl:h-[71%] 2xl:h-[74%] sm:h-[74%] h-[74%]'></img>
+                <div className='h-full absolute sm:right-[100px] md:right-[3%] right-0 bottom-0 overflow-hidden z-0 opacity-80'>
+                    <div className='xl:h-[71%] 2xl:h-[74%] sm:h-[74%] h-[74%]'>
+                        <img src={r} className='h-full w-full'></img>
+                    </div>
                 </div>
 
 

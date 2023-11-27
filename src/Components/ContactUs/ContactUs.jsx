@@ -37,12 +37,16 @@ export default function ContactUs() {
                     </div>
 
                     <div className="grid lg:grid-cols-1 grid-cols-2 gap-8">
-                        <div className="w-full lg:w-2/5 lg:w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <div className="flex flex-row items-center gap-2">
                                 <img src={headOffice} alt="Head Office" className="w-8 h-8" />
                                 <p className="text-primary lg:text-2xl font-semibold text-xl">Head Office</p>
                             </div>
-                            <p className="text-[12px] lg:text-[16px]">229, Udyog Bhavan, Sonawala Road, Opp Bridge Warsi, Goregaon East, Mumbai, Maharashtra 400063, India</p>
+                            <div>
+                                <p className="text-[12px] lg:text-[16px]">229, Udyog Bhavan, Sonawala Road, </p>
+                                <p className="text-[12px] lg:text-[16px]">Goregaon East, Mumbai, </p>
+                                <p className="text-[12px] lg:text-[16px]">Maharashtra 400063, India</p>
+                            </div>
                         </div>
 
                         {/* only for mobile */}
@@ -69,7 +73,7 @@ export default function ContactUs() {
                                     <img src={phone} alt="Email" className="w-8 h-8" />
                                     <p className="text-primary lg:text-2xl font-semibold text-xl">Email</p>
                                 </div>
-                                <p>info@reifenhauserindia.com</p>
+                                <p>hello@reifenhauserindia.com</p>
                             </div>
                         </div>
 
@@ -109,9 +113,11 @@ export default function ContactUs() {
             </div>
 
             {/* google map */}
-            <div className="lg:p-10 p-2 lg:mt-16">
+            <div className="lg:p-10 p-2 mt-3 lg:mt-16 md:h-[500px] h-[200px]">
                 {/* <GoogleMap /> */}
-                <img src={map} className="rounded-lg"></img>
+                <div className="h-full w-full">
+                    <iframe className="h-full w-full rounded-lg shadow-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.750602849548!2d72.8484055752075!3d19.16239118206004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b64d5011d99b%3A0x4eab1a26e4f94aec!2sReifenhauser%20India%20Marketing%20Private%20Limited!5e0!3m2!1sen!2sin!4v1700726050980!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </div>
     )
