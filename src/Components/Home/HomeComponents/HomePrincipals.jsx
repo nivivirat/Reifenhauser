@@ -11,9 +11,9 @@ export default function HomePrincipals() {
             {/* content */}
             <div className="xl:text-[40px] lg:text-[28px] md:text-[26px] text-3xl font-medium w-full">
                 <div className="hidden md:block leading-snug">
-                    <span className="">Through the years, we have earned trust </span>
-                    <span className="text-primary">across the various technology-led organizations </span>
-                    <span className="">segments of the industry. </span>
+                    <span className="">Over the years, we have gained trust across </span>
+                    <span className="text-primary">various segments of the technology-led organizations </span>
+                    <span className="">in the industry. </span>
                     {/* <span className="text-primary">segments of the industry.</span> */}
                 </div>
 

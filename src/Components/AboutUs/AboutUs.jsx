@@ -24,14 +24,16 @@ export default function AboutUs() {
             <div className="flex md:flex-row flex-col gap-5 md:gap-0">
 
                 <div className="md:w-[65%] whitespace-normal">
-                    <div className="md:text-[23px] text-[26px] font-semibold w-[90%]">
-                        <span className="text-black">We excel in crafting superior packaging solutions and enhancing</span>
-                        <span className="text-[#777777]">&nbsp; customer experiences through our exceptional after-sales service.</span>
+                    <div className="md:text-[20px] text-[26px] font-semibold w-[90%]">
+                        <span className="text-black">At Reifenhauser India, our expertise lies in facilitating global companies'</span>
+                        <span className="text-[#777777]">&nbsp; access to the Indian Subcontinent with cutting-edge machinery.</span>
                     </div>
                 </div>
 
                 <div className="text-black opacity-50 md:w-[35%] pr-10">
-                    <p className="md:text-[13px] text-[15px]">RIMPL has been milestones ahead with stupendous business growth. As we ascend high, we have progressed immensely in the competitive world.</p>
+                    <p className="md:text-[13px] text-[15px]">As we ascend high, we have progressed immensely in the competitive world.
+                        Our primary focus rests on showcasing our excellence in service, unparalleled after-sales support, and comprehensive Annual Maintenance Contracts (AMCs).
+                    </p>
                 </div>
 
             </div>
@@ -66,17 +68,17 @@ export default function AboutUs() {
                 <div className='md:gap-10 gap-2 flex flex-col md:text-[16px] text-[18px] md:pr-[100px] font-medium'>
                     <div className='text-primary'>
                         <p>
-                            Since its establishment in 1994, Reifenhäuser (India) Marketing Private Limited (RIMPL) was managed by Mr. Manish Mehta & family as a joint venture closely with Reifenhäuser GmbH & Co. KG Maschinenfabrik.
+                            Since its establishment in 1994, Reifenhäuser (India) Marketing Private Limited (RIMPL) is managed by Mr. Manish Mehta & family in a close joint venture with Reifenhäuser GmbH & Co. KG Maschinenfabrik.
                         </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            At the nascent phase, RIMPL was proactively engaged in unleashing the power of plastic extrusion machines India and in other countries. Moving ahead, the vision of our founder, Mr. Manish Metha, introduced new technologies to India and around the globe ranging across Plastic Extrusion, Converting, Injection Molding & Labels Industry.
+                            From its inception, RIMPL proactively engaged in harnessing the potential of plastic extrusion machines in India and worldwide. Under the visionary leadership of our founder, Mr. Manish Mehta, we continually introduce new technologies to India and the global market, spanning Plastic Extrusion, Converting & Labels Industry.
                         </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            While the team continues to deliver unparalleled services, RIMPL has triumphed miles ahead along with stellar after sales services and preventative maintenance for machinery globally.
+                            Continuing our legacy, RIMPL excels in delivering unparalleled services, offering exceptional after-sales support, and providing preventative maintenance for machinery on a global scale.
                         </p>
                     </div>
 
