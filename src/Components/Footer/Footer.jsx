@@ -34,7 +34,7 @@ export default function Footer() {
                     <div>
                         <ul className='flex flex-col gap-3 font-semibold'>
                             <li><a href='/services'>Services</a></li>
-                            <li><a href='/articles'>Articles</a></li>
+                            <li><a href='/blogs'>Articles</a></li>
                             <li><a href='/careers'>Careers</a></li>
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
@@ -57,7 +57,9 @@ export default function Footer() {
                         </div>
                     </div>
                     <div>
-                        <p className='font-semibold pb-8 uppercase'>Our Principals</p>
+                        <p className='font-semibold pb-8 uppercase'>
+                            <a href='/principals' className=''>Our Principals</a>
+                        </p>
                         <ul className='flex flex-col gap-4 font-semibold'>
                             <li><a href='/principals'>Extrusion Machinery</a></li>
                             <li><a href='/principals'>Converting Machinery</a></li>
