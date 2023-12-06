@@ -24,6 +24,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Sri Lanka' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Sri Lanka')}
+                        onMouseEnter={() => handleLocationClick('Sri Lanka')}
                     >
                         Sri Lanka
                     </p>
@@ -38,6 +39,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Chennai' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Chennai')}
+                        onMouseEnter={() => handleLocationClick('Chennai')}
                     >
                         Chennai
                     </p>
@@ -52,6 +54,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Bengaluru' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Bengaluru')}
+                        onMouseEnter={() => handleLocationClick('Bengaluru')}
                     >
                         Bengaluru
                     </p>
@@ -66,6 +69,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Hyderabad' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Hyderabad')}
+                        onMouseEnter={() => handleLocationClick('Hyderabad')}
                     >
                         Hyderabad
                     </p>
@@ -80,6 +84,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Pune' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Pune')}
+                        onMouseEnter={() => handleLocationClick('Pune')}
                     >
                         Pune
                     </p>
@@ -94,6 +99,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Mumbai' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Mumbai')}
+                        onMouseEnter={() => handleLocationClick('Mumbai')}
                     >
                         Mumbai
                     </p>
@@ -108,6 +114,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Ahmedabad' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:md:text-[10px] text-[8px] px-2 py-0.5 rounded-2xl md:pb-0`}
                         onClick={() => handleLocationClick('Ahmedabad')}
+                        onMouseEnter={() => handleLocationClick('Ahmedabad')}
                     >
                         Ahmedabad
                     </p>
@@ -122,6 +129,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Kolkata' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Kolkata')}
+                        onMouseEnter={() => handleLocationClick('Kolkata')}
                     >
                         Kolkata
                     </p>
@@ -136,6 +144,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Bangladesh' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:md:text-[10px] text-[8px] px-2 py-0.5 rounded-2xl`}
                         onClick={() => handleLocationClick('Bangladesh')}
+                        onMouseEnter={() => handleLocationClick('Bangladesh')}
                     >
                         Bangladesh
                     </p>
@@ -150,6 +159,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Delhi' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Delhi')}
+                        onMouseEnter={() => handleLocationClick('Delhi')}
                     >
                         Delhi
                     </p>
@@ -164,6 +174,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Jammu' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Jammu')}
+                        onMouseEnter={() => handleLocationClick('Jammu')}
                     >
                         Jammu
                     </p>
@@ -178,6 +189,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Nepal' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Nepal')}
+                        onMouseEnter={() => handleLocationClick('Nepal')}
                     >
                         Nepal
                     </p>
@@ -192,6 +204,7 @@ export default function HomeGlobal() {
                             selectedLocation === 'Kanpur' ? 'bg-white text-primary' : 'bg-[#295db1] text-white'
                         } md:text-[10px] text-[8px] px-2 py-0.5 md:pb-0 rounded-2xl`}
                         onClick={() => handleLocationClick('Kanpur')}
+                        onMouseEnter={() => handleLocationClick('Kanpur')}
                     >
                         Kanpur
                     </p>
