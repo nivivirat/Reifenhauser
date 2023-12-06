@@ -18,7 +18,7 @@ export default function Services() {
                 Our Services
                 </h5>
                 <p className="text-xl  leading-tight w ll">
-                As we deliver insights to companies regarding the current trends and the ever evolving needs of the industry, we strive to offer innovative solutions. While we work with an undaunted team spirit, we also serve organizations established in the Indian subcontinent. Our services assure process excellence to a considerable extent.
+                At Reifenhauser India, we diligently focus on providing comprehensive support, catering to the evolving needs of the industry and ensuring operational excellence for our clients in the Indian subcontinent.
                 </p>
               </div>
               
@@ -34,7 +34,7 @@ export default function Services() {
                 Global Services
                 </h5>
                 <p className=" text-xl leading-tight  ll">
-                Our commitment to absolute support makes sure that our clients receive 24 x 7 after-sales service and stays updated with the industry trends. Our team also offers technical guidance while ordering spare parts, top-tier machinery refurbishments, and machine upgrades when it’s a need on the shop floor.
+                We are committed to offering continuous 24x7 after-sales support, keeping our clients abreast of industry trends. Our dedicated team provides expert technical guidance for spare parts procurement, top-tier machinery refurbishments, necessary upgrades, and meticulous breakdown maintenance.
                 </p>
 
               </div>
@@ -64,7 +64,7 @@ export default function Services() {
                 Installation & Commission
                 </h5>
                 <p className="mb-4 text-xl mr-20  leading-tight  ll">
-                When your company makes a purchase, our engineers are proactive in installing the machinery. Moving forward, the engineers not only install the machinery but also ensure that it is operating smoothly after considering the environment and the conditions of the site. Commissioning of machinery is yet another service our engineers offer meticulously. Once the engineer installs the machine, he always spends ample time for its operational readiness. Even after taking the machinery through this phase, we spend some time imparting knowledge on using the machinery competently.
+                Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions. Meticulously handling machinery commissioning, they guarantee operational readiness, providing comprehensive training for competent machinery utilization. Simultaneously, we conduct scheduled preventive maintenance, addressing issues systematically to minimize unforeseen failures and ensure prolonged machinery lifespan. This approach aims at reducing backlogs, assuring uninterrupted operations, and maintaining process excellence.
                 </p>
               </div><br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
@@ -93,7 +93,7 @@ export default function Services() {
                 AMC</h5><h5 className="text-xl ss leading-tight q ll"> (Annual Maintenance Contract)
                 </h5>
                 <p className="mb-4 text-xl mr-20 leading-tight ggh ll">
-                When your company is concerned with repairs as well as maintenance of machineries, our experienced engineers are agile at every instance. Our team never violates the terms of the contract and fails to offer services as per the agreement. We always assure you with maximum uptime as the team keeps itself updated with new technical developments. Above all, we abide by the terms of the contract and plan all types of maintenance even when unexpected failures of machineries arise. Our satisfaction lies only when the customer is more than happy with the services our engineers offer.
+                We provide comprehensive repair and maintenance services, adhering to our commitments made as per contract terms. We prioritize maximum uptime, continually updating our technical expertise and planning for periodic maintenance to avoid unexpected machinery failures. Customer satisfaction is paramount, ensuring services exceed expectations.
                 </p>
                 
              
