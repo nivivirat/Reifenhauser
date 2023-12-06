@@ -17,7 +17,7 @@ export default function Newsletter() {
                             <input type='email' placeholder='E-mail' className='w-full outline-none placeholder:text-primary' />
                             <Icon icon="material-symbols-light:keyboard-arrow-right" />
                         </div>
-                        <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%]  p-1 px-2 rounded-xl'>
+                        <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%] md:mb-0 mb-4 p-1 px-2 rounded-xl'>
                             <button className='cursor-pointer'>Submit</button>
                         </div>
                     </div>
