@@ -3,7 +3,7 @@
       "author": "Majority of peole will work in jobs that don’t exist today.",
       "title": "Future of Work",
       "content": "Multi-dose container for eye drops",
-      "imgSrc": "../../assets/Images/Blogs/Base.svg",
+      "imgSrc": "../../src/assets/Images/Blogs/Base.svg",
       "name": "Lina Hicks",
       "position":"verified user",
       "date":"2 May"
@@ -12,7 +12,7 @@
         "author": "Thanks to never-ending piles of data & the amount of insight",
         "title": "Future of Data",
         "content": "Multi-dose container for eye drops",
-        "imgSrc": "../../assets/Images/Blogs/Base (1).svg",
+        "imgSrc": "../../src/assets/Images/Blogs/Base (1).svg",
         "name": "Tyler Murray",
         "position":"Tyler Murray",
         "date":"2 May"
@@ -22,7 +22,7 @@
         "author": "A constant ability to learn will be on the most crucial skills",
         "title": "Future of Learning",
         "content": "Multi-dose container for eye drops",
-        "imgSrc": "../../assets/Images/Blogs/Base (2).svg",
+        "imgSrc": "../../src/assets/Images/Blogs/Base (2).svg",
         "name": "Warren Casey",
         "position":"Warren Casey",
         "date":"2 May"
