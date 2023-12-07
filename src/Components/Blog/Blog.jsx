@@ -7,7 +7,26 @@ import rimg from "./images/R.svg";
 import img1 from "./images/Image.png";
 import img2 from "./images/Image (1).png";
 import img3 from "./images/Image (1).svg"
+import fgt from '../../assets/Images/Media/Base.svg'
+import b1 from "../../assets/Images/Blogs/Base.svg";
+import b2 from "../../assets/Images/Blogs/Base (1).svg";
+import b3 from "../../assets/Images/Blogs/Base (2).svg";
 function Blog() {
+ 
+  
+  const images = {
+    b1,
+    b2,
+    b3,
+};
+
+  const getImagePath = (imgSrc) => {
+    if (imgSrc.startsWith('http')) {
+      return imgSrc; // External image, use absolute URL
+    } else {
+      return process.env.PUBLIC_URL + imgSrc; // Relative path in the public folder
+    }
+  };
   return (
     <div className="App">
      
@@ -82,55 +101,36 @@ On the other side Flexo printing technology as well as machines can use water ba
  </p>
  <p className="text-2xl mt-8 jk">Related Blogs</p>
  <div className="w-screen fg">
-        <Slider options={{ align: "center" }}>
-          {testimonials.map((testimonial, i) => (
-            // 3. flex-[0_0_50%] set the width of each card to 50% of the viewport
-            // for mobile devices we use 90% width
-            <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
-              <div className="h-80 py-4 px-4 bg-white shadow-lg rounded-lg my-20">
+ <Slider options={{ align: "center" }}>
+        {testimonials.map((testimonial, i) => (
+          <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
+            <div className="h-80 py-4 px-4 bg-white shadow-lg rounded-lg my-20">
               <div className="flex justify-center md:justify-end -mt-16">
-              <div style={{ height: '30vh', width: '100%' }}>
-    <img
-      className="object-cover border-2 border-indigo-500 w-full h-full"
-      src={testimonial.imgSrc}
-      alt={testimonial.imgSrc}
-    />
-  </div>
-</div>
-
-      
-        {/* <h2 className="text-[#8AA6AA] text-3xl font-semibold">{props.title}</h2> */}
-        <div>
-          <div  className="asdf">
-        {/* <h3 className="mb-4 border-b pb-4 text-3xl leading-tight text-[#8AA6AA] df asdf"><img className="w-150 h-30 object-cover " src={pharma} alt={pharma}></img> &nbsp;Pharma</h3> */}
-        {/* <spacer></spacer> */}
-        
-        </div>
-        <h3 className="mt-2 text-gray-600 kkk za" ><strong>{{...testimonial}.title}</strong></h3>
-        {/* <h5 className="mt-2 text-gray-600 text-md kkk"><strong>{{...testimonial}.content}</strong></h5> */}
-        <h5 className="mt-2 text-gray-600 kkk za" >{{...testimonial}.author}</h5>
-        <h5 className="mt-2 text-gray-600 kkk a" >{{...testimonial}.name}</h5>
-        <h5 className="mt-2 text-gray-600 kkk aa" ><em>{{...testimonial}.position}</em></h5>
-        <h5 className="mt-2 text-gray-600 kkk aaa" >{{...testimonial}.date}</h5>
-      </div>
-      {/* <div className ="mt-2 text-gray-600flex justify-end mt-4 pyu text-[#8AA6AA]">Blow-Fill-Seal, Technology </div>
-      <div className="flex justify-end mt-4 mt-2">
-      <div className="flex flex-row place-items-center gap-3">
-                    <a className="text-[#8AA6AA] font-extrabold">Read more</a>
-                    <img
-                      src={arrow_right}
-                      className="bg-[#8AA6AA] h-6 p-0.5 rounded-full"
-                      alt="Read more"
-                    />
-        
-        </div>
-        
-      </div> */}
-    </div>
+                <div style={{ height: '30vh', width: '100%' }}>
+                <img
+                    className="object-cover border-2 border-indigo-500 w-full h-full"
+                    src={testimonial.imgSrc}
+                     alt={testimonial.title}
+                  />
+                </div>
+              </div>
+              <div>
+                <div className="asdf"></div>
+                <h3 className="mt-2 text-gray-600 kkk za">
+                  <strong>{testimonial.title}</strong>
+                </h3>
+                <h5 className="mt-2 text-gray-600 kkk za">{testimonial.author}</h5>
+                <h5 className="mt-2 text-gray-600 kkk a">{testimonial.name}</h5>
+                <h5 className="mt-2 text-gray-600 kkk aa">
+                  <em>{testimonial.position}</em>
+                </h5>
+                <h5 className="mt-2 text-gray-600 kkk aaa">{testimonial.date}</h5>
+              </div>
             </div>
-          ))}
-        </Slider>
-      </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
     </div>
   );
 }
