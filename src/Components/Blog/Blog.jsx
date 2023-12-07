@@ -7,26 +7,16 @@ import rimg from "./images/R.svg";
 import img1 from "./images/Image.png";
 import img2 from "./images/Image (1).png";
 import img3 from "./images/Image (1).svg"
-
+import fgt from '../../assets/Images/Media/Base.svg'
 
 import b2 from "../../assets/Images/Blogs/Base (1).svg";
 import b3 from "../../assets/Images/Blogs/Base (2).svg";
 function Blog() {
  
   
-  const images = {
-    b1,
-    b2,
-    b3,
-};
 
-  const getImagePath = (imgSrc) => {
-    if (imgSrc.startsWith('http')) {
-      return imgSrc; // External image, use absolute URL
-    } else {
-      return process.env.PUBLIC_URL + imgSrc; // Relative path in the public folder
-    }
-  };
+
+
   return (
     <div className="App">
      
