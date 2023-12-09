@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "title": "Global Services"
+    },
+    {
+      "id": 2,
+      "title": "Preventive Maintenance Service"
+    },
+    {
+      "id": 3,
+      "title": "AMC (Annual Maintenance Contract)"
+    },
+    {
+      "id": 4,
+      "title": "Breakdown Maintenance"
+    },
+    {
+      "id": 5,
+      "title": "Installation & Commissioning"
+    }
+]
+  

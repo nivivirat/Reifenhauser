@@ -1,10 +1,43 @@
+import { useEffect, useState } from 'react'
 import customerService from '../../../assets/Images/Home/services/customerService.svg'
-import service from '../../../assets/Images/Home/services/serviceimg.svg'
-import people from '../../../assets/Images/Home/services/people.svg'
 import heart from '../../../assets/Images/Home/services/heart.svg'
-import { Icon } from '@iconify/react'
+import people from '../../../assets/Images/Home/services/people.svg'
+import BlueCard from './HomeServicesCard/BlueCard'
+import GreyCard from './HomeServicesCard/GreyCard'
+import HomeServiceData from './HomeServicesCard/HomeServiceData.json'
 
 export default function HomeServices() {
+
+    const initialData = [
+        { "id": 1, "title": "Global Services" },
+        { "id": 2, "title": "Preventive Maintenance Service" },
+        { "id": 3, "title": "AMC (Annual Maintenance Contract)" },
+        { "id": 4, "title": "Breakdown Maintenance" },
+        { "id": 5, "title": "Installation & Commissioning" }
+    ];
+
+    const [homeServiceData, setHomeServiceData] = useState(initialData);
+    const [selected, setSelected] = useState("Global Services");
+
+    const handleLocationClick = (location) => {
+        setSelected(location);
+    };
+
+    const handleHover = (id) => {
+        if (id === 4 || id === 5) {
+            const newData = homeServiceData.map(item => {
+                if (item.id === 4) return homeServiceData.find(el => el.id === 5);
+                if (item.id === 5) return homeServiceData.find(el => el.id === 4);
+                return item;
+            });
+            setHomeServiceData(newData);
+        }
+    };
+    useEffect(() => {
+        handleHover()
+    }, [selected, homeServiceData]);
+
+
     return (
         <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10">
             <div className="text-primary flex flex-row justify-between">
@@ -33,52 +66,25 @@ export default function HomeServices() {
 
 
             {/* main */}
-            <div className='flex md:flex-wrap md:flex-row flex-col gap-6'>
+            <div className='md:w-[100%] md:h-[450px] flex md:flex-wrap md:flex-col flex-col gap-6'>
                 {/* Global Service */}
-                <a href='/services' className='flex flex-row md:gap-5 gap-3 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-400 md:w-[48%] md:h-[200px] h-[150px] md:p-6 p-3'>
-                    <div className='w-[50%] h-full'>
-                        <img src={service} className='w-full h-full rounded-2xl object-cover'></img>
+                {HomeServiceData.map((card, index) => (
+                    <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleLocationClick(card.title) && handleHover(card.id)}>
+                        {selected === card.title ? (
+                            card.id !== 4 ? (
+                                <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                            ) : (
+                                <div>
+                                    <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} />
+                                    <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                                    {/* return the map function, the map must not iterate after this */}
+                                </div>
+                            )
+                        ) : (
+                            <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                        )}
                     </div>
-                    <div className='text-white md:w-[60%] w-[50%] md:justify-between flex flex-col'>
-                        <p className='font-semibold'>Global Service</p>
-                        <p className='font-extralight md:text-[16px] text-[12px]'>We're not just a service provider; we're pioneers, shaping tomorrow through foresight and adapting to emerging trends.</p>
-                    </div>
-
-                </a>
-
-                {/* Rectangle */}
-                <div className='md:w-[45%]'>
-                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[90px] flex flex-row justify-between place-items-center md:p-7 p-3'>
-                        <p>Preventive Maintenance Service</p>
-                        <div className="text-black md:text-xl">
-                            <Icon icon="iconoir:arrow-tr" />
-                        </div>
-                    </a>
-
-                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
-                        <p>AMC (Annual Maintenance Contract)</p>
-                        <div className="text-black md:text-xl">
-                            <Icon icon="iconoir:arrow-tr" />
-                        </div>
-                    </a>
-                </div>
-
-                {/* Rectangle */}
-                <div className='md:w-[48%]'>
-                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[100px] flex flex-row justify-between place-items-center md:p-7 p-3'>
-                        <p>Breakdown Maintenance</p>
-                        <div className="text-black md:text-xl">
-                            <Icon icon="iconoir:arrow-tr" />
-                        </div>
-                    </a>
-
-                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
-                        <p>Installation & Commissioning</p>
-                        <div className="text-black md:text-xl">
-                            <Icon icon="iconoir:arrow-tr" />
-                        </div>
-                    </a>
-                </div>
+                ))}
 
                 {/* Card */}
                 <div className='md:w-[45%] w-full flex flex-row gap-4'>
