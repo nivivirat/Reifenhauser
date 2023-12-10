@@ -132,3 +132,11 @@ margin:auto;
   display:none;
 }
 }
+.cvv{
+  font-size:10px;
+}
+.bbb{
+  position:relative;
+  top:-40%;
+  left:50%;
+}
