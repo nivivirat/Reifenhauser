@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import customerService from '../../../assets/Images/Home/services/customerService.svg'
 import heart from '../../../assets/Images/Home/services/heart.svg'
 import people from '../../../assets/Images/Home/services/people.svg'
@@ -8,35 +8,26 @@ import HomeServiceData from './HomeServicesCard/HomeServiceData.json'
 
 export default function HomeServices() {
 
-    const initialData = [
-        { "id": 1, "title": "Global Services" },
-        { "id": 2, "title": "Preventive Maintenance Service" },
-        { "id": 3, "title": "AMC (Annual Maintenance Contract)" },
-        { "id": 4, "title": "Breakdown Maintenance" },
-        { "id": 5, "title": "Installation & Commissioning" }
-    ];
-
-    const [homeServiceData, setHomeServiceData] = useState(initialData);
     const [selected, setSelected] = useState("Global Services");
+    const [delayedAction, setDelayedAction] = useState(null);
 
     const handleLocationClick = (location) => {
         setSelected(location);
     };
 
-    const handleHover = (id) => {
-        if (id === 4 || id === 5) {
-            const newData = homeServiceData.map(item => {
-                if (item.id === 4) return homeServiceData.find(el => el.id === 5);
-                if (item.id === 5) return homeServiceData.find(el => el.id === 4);
-                return item;
-            });
-            setHomeServiceData(newData);
+    const handleDelayedLocationClick = (location) => {
+        // Clear any existing delayed action
+        if (delayedAction) {
+            clearTimeout(delayedAction);
         }
-    };
-    useEffect(() => {
-        handleHover()
-    }, [selected, homeServiceData]);
 
+        // Set the new delayed action
+        const timeoutId = setTimeout(() => {
+            handleLocationClick(location);
+        }, 1000); // 1 second delay
+
+        setDelayedAction(timeoutId);
+    };
 
     return (
         <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10">
@@ -66,22 +57,38 @@ export default function HomeServices() {
 
 
             {/* main */}
-            <div className='md:w-[100%] md:h-[450px] flex md:flex-wrap md:flex-col flex-col gap-6'>
+            <div className='md:w-[100%] md:h-[460px] flex md:flex-wrap md:flex-col flex-col gap-6'>
                 {/* Global Service */}
                 {HomeServiceData.map((card, index) => (
-                    <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleLocationClick(card.title) && handleHover(card.id)}>
+                    <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
                         {selected === card.title ? (
                             card.id !== 4 ? (
                                 <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
                             ) : (
                                 <div>
-                                    <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} />
+                                    {/* <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} /> */}
                                     <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                                    {/* <div className='h-full bg-black'></div> */}
                                     {/* return the map function, the map must not iterate after this */}
                                 </div>
                             )
                         ) : (
-                            <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                            selected === "Breakdown Maintenance" && card.id === 5 ?
+                                (
+                                    <></>
+                                ) : (
+                                    selected === "Breakdown Maintenance" && card.id === 3 ?
+                                        (
+                                            <div>
+                                                <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                                                <div className='md:mt-[30px] mt-[20px]'>
+                                                    <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} />
+                                                </div>
+                                            </div>
+                                        ) : (
+                                            <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                                        )
+                                )
                         )}
                     </div>
                 ))}
