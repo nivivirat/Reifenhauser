@@ -4,7 +4,8 @@ import eventsData from './eventsData.json';
 import eventsData2 from './eventsData2.json';
 import eventsData3 from './eventsData3.json';
 import evim from '../../assets/Images/Events/event1.svg';
-import even from '../../assets/Images/Events/event2.svg';
+import even11 from '../../assets/Images/Events/Rectangle 6264 (2).svg';
+import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
 import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 
@@ -93,6 +94,23 @@ const Events = () => {
     width: '250px',
     height:'200px',
     zIndex: '5',
+  };
+  const hoverInfoStyle2 = {
+    position: 'absolute',
+    top: '30%',
+    left: '50%',
+    font: '3px',
+    transform: 'translateX(-50%)',
+    padding: '20px',
+    backgroundColor: '#013A98',
+    borderRadius: '8px',
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+    display: 'none',
+    width: '250px',
+    height:'200px',
+    zIndex: '5',
+    color:'white',
   };
 
   const triangleStyle = {
@@ -255,10 +273,12 @@ const Events = () => {
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
-            <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-            <div style={hoverInfoStyle} className="hover-info">
-              <p>Additional Info</p>
-              <img src={even} alt="Additional Info Image" className="w-16 h-16 mt-2" />
+            {/* <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" /> */}
+            <div style={hoverInfoStyle2} className="hover-info cvv">
+              <p>Team Reifenhauser India proudly showcased it's Principles at India's Premier Labeling Event!
+#LabelExpo2022</p>
+              <img src={even11} alt="Additional Info Image" className="w-24 h-16 mt-2" />
+              <img src={even12} alt="Additional Info Image " className="w-24 h-16 mb-2 bbb" />
             </div>
           </div>
         ))}
