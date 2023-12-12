@@ -39,8 +39,8 @@ export default function AboutUs() {
             </div>
 
 
-            <div className='md:flex hidden md:flex-row lg:gap-[100px] md:gap-[70px] justify-between md:overflow-auto overflow-x-scroll'>
-                <div className='md:w-[60%] w-full'>
+            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll'>
+                <div className='md:w-[70%] w-full'>
                     <div className="md:overflow-hidden">
                         <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right' alt="Image 1" />
                     </div>
