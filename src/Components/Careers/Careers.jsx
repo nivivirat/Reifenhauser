@@ -4,13 +4,17 @@ import grpImg from '../../assets/Images/Careers/grpImg.svg';
 import managingDirector from '../../assets/Images/Careers/managingDir.svg';
 import resume from '../../assets/Images/Careers/resume.svg';
 import { Icon } from '@iconify/react';
-import { db } from '../../../firebase'; // Import db from the Firebase configuration file
+import { db } from '../../../firebase';
 import { getDatabase, ref, push, set } from 'firebase/database';
-import { getStorage, ref as storageRef, uploadBytes } from 'firebase/storage'; // Import getStorage here
+import bluetick from '../../assets/Images/Careers/bluetick.svg'
+import { getStorage, ref as storageRef, uploadBytes } from 'firebase/storage'; // Import ref from firebase/storage
 
 export default function Careers() {
     const [showForm, setShowForm] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [fileName, setFileName] = useState('');
+    const [formSuccess, setFormSuccess] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const toggleForm = () => {
         setShowForm(!showForm);
@@ -21,10 +25,12 @@ export default function Careers() {
     const handleFileChange = (event) => {
         const uploadedFile = event.target.files[0];
         setFile(uploadedFile);
+        setFileName(uploadedFile.name); // Set the file name for display
     };
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setLoading(true);
 
         // Reference to the careers node in the Realtime Database
         const careersRef = ref(db, 'careers');
@@ -49,19 +55,29 @@ export default function Careers() {
             const newCareerRef = push(careersRef);
             await set(newCareerRef, formData);
 
-            // Handle file upload using Firebase Storage
+            // Get the unique ID generated for the form data
+            const formUID = newCareerRef.key;
+
+            // Save a reference to the file in the database
+            await set(ref(db, `resumes/${formUID}`), { fileURL: `resumes/${formUID}` });
+
+            // Handle file upload using Firebase Storage with the folder named after the form's UID
             const storage = getStorage(); // Create storage instance
-            const storageRef = storage.ref();
-            const fileRef = storageRef.child(`resumes/${file.name}`);
-            await fileRef.put(file);
+            const folderRef = storageRef(storage, `resumes/${formUID}/${file.name}`); // Folder named after the form UID
+            await uploadBytes(folderRef, file);
 
             // Reset form and state
             setErrorMessage('');
             setFile(null);
             event.target.reset();
-            setShowForm(false);
 
-            alert('Form submitted successfully!');
+            setLoading(false);
+            setFormSuccess(true)
+
+            setTimeout(() => {
+                setFormSuccess(false);
+            }, 3000);
+
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('An error occurred while processing your request');
@@ -95,43 +111,83 @@ export default function Careers() {
             </div>
 
             {showForm && (
-                <div className='fixed md:top-[40%] top-[25%] left-[10%] w-[80%] md:h-[50%] h-[70%] flex items-center justify-center z-20'>
-                    <div className='bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-5'>
-                        <div className='flex flex-row justify-center'>
-                            <p className='w-[90%] text-center text-primary font-semibold md:text-[18px]'>Please fill the details and submit your resume. We shall get back to you in case our team shortlists your profile</p>
-                            <div className='w-[10px] text-xl cursor-pointer md:ml-2' onClick={toggleForm}>
-                                <Icon icon="ph:x" />
+
+                !formSuccess ?
+                    (
+                        <div className='fixed md:top-[40%] top-[25%] left-[10%] w-[80%] md:h-[50%] h-[70%] flex items-center justify-center z-20'>
+                            <div className='bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-5'>
+                                <div className='flex flex-row justify-center'>
+                                    <p className='w-[90%] text-center text-primary font-semibold md:text-[18px]'>Please fill the details and submit your resume. We shall get back to you in case our team shortlists your profile</p>
+                                    <div className='w-[10px] text-xl cursor-pointer md:ml-2' onClick={toggleForm}>
+                                        <Icon icon="ph:x" />
+                                    </div>
+                                </div>
+                                <form className='flex flex-col justify-center place-items-center md:px-10' onSubmit={handleSubmit}>
+                                    {/* <label htmlFor='name'>Name*</label> */}
+
+                                    <div className='w-full flex flex-row justify-between'>
+                                        <input type='text' id='name' className='border-b border-black p-2 w-[40%] mb-4' required placeholder='Name*' />
+
+                                        {/* <label htmlFor='number'></label> */}
+                                        <input
+                                            type='tel'
+                                            id='number'
+                                            className='border-b border-black p-2 w-[40%] mb-4'
+                                            required
+                                            placeholder='Number*'
+                                            pattern='[0-9]{10}'
+                                            title='Please enter a 10-digit phone number'
+                                        />
+                                    </div>
+
+                                    {/* <label htmlFor='email'></label> */}
+                                    <div className='w-full'>
+                                        <input type='email' id='email' className='border-b border-black p-2 w-[40%] mb-4' required placeholder='Email Address*' />
+                                    </div>
+
+                                    {/* <label htmlFor='message'></label> */}
+                                    <textarea id='message' className='border-b border-black p-3 w-full mb-4 bg-[#f5f7fb] md:h-[100px]' placeholder='Message'></textarea>
+
+                                    <div className={`md:py-4 relative flex place-items-center justify-center cursor-pointer border border-gray-400 w-full rounded-lg ${file ? 'bg-[#cfe1ff]' : ''}`}>
+                                        <input
+                                            type='file'
+                                            id='resume'
+                                            onChange={handleFileChange}
+                                            accept='.pdf,.doc,.docx'
+                                            title="There aren't any files chosen yet."
+                                            placeholder='upload'
+                                            className='z-20 cursor-pointer opacity-0 border border-gray-300 w-full mb-4'
+                                        />
+                                        <div className='flex flex-row absolute top-7 gap-2 opacity-30 z-10 place-items-center justify-center'>
+                                            <img src={resume} alt='Resume' />
+                                            <p className={`${file ? 'text-primary' : ''}`}>{fileName || 'Upload Your Resume'}</p> {/* Apply primary color if file is uploaded */}
+                                        </div>
+                                    </div>
+
+                                    {errorMessage && (
+                                        <p className='text-red-500 text-sm mt-2 mb-4'>{errorMessage}</p>
+                                    )}
+
+                                    <button
+                                        className={`text-white px-4 py-2 rounded-md md:mt-5 mt-2 w-full md:w-[30%] ${loading ? 'bg-gray-400 cursor-not-allowed' : 'bg-gradient-to-r from-blue-900 to-blue-400'
+                                            }`}
+                                        type='submit'
+                                        disabled={loading} // Disable button when loading
+                                    >
+                                        {loading ? 'Loading...' : 'Submit'}
+                                    </button>
+                                </form>
                             </div>
                         </div>
-                        <form className='flex flex-col justify-center place-items-center md:px-10' onSubmit={handleSubmit}>
-                            {/* <label htmlFor='name'>Name*</label> */}
-                            <input type='text' id='name' className='border-b border-black p-2 w-full mb-4' required placeholder='Name*' />
-
-                            {/* <label htmlFor='number'></label> */}
-                            <input type='tel' id='number' className='border-b border-black p-2 w-full mb-4' required placeholder='Number*' />
-
-                            {/* <label htmlFor='email'></label> */}
-                            <input type='email' id='email' className='border-b border-black p-2 w-full mb-4' required placeholder='Email Address*' />
-
-                            {/* <label htmlFor='message'></label> */}
-                            <textarea id='message' className='border-b border-black p-2 w-full mb-4 bg-[#f5f7fb]' placeholder='Message'></textarea>
-
-                            <div className='relative flex place-items-center justify-center cursor-pointer border border-gray-400 w-full rounded-lg'>
-                                <input type='file' id='resume' onChange={handleFileChange} accept='.pdf,.doc,.docx' title="There aren't any files chosen yet." placeholder='upload' className='z-20 cursor-pointer opacity-0 border border-gray-300 w-full mb-4' accept='.pdf,.doc,.docx' title="There aren't any files chosen yet." />
-                                <div className='flex flex-row absolute top-3 gap-2 opacity-30 z-10 place-items-center justify-center'>
-                                    <img src={resume}></img>
-                                    <p>Upload Your Resume</p>
-                                </div>
+                    ) : (
+                        <div className='fixed md:top-[40%] top-[25%] left-[10%] w-[80%] md:h-[50%] h-[70%] flex items-center justify-center z-20'>
+                            <div className='w-full h-full bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-7 place-items-center justify-center'>
+                                <img src={bluetick} className='md:h-[100px] md:w-[100px]'></img>
+                                <p className='text-xl text-primary'>You have submitted your profile successfully.</p>
                             </div>
+                        </div>
+                    )
 
-                            {errorMessage && (
-                                <p className='text-red-500 text-sm mt-2 mb-4'>{errorMessage}</p>
-                            )}
-
-                            <button className='text-white px-4 py-2 rounded-md md:mt-5 mt-2 w-full md:w-[30%] bg-gradient-to-r from-blue-900 to-blue-400' type='submit'>Submit</button>
-                        </form>
-                    </div>
-                </div>
             )}
         </div>
     );
