@@ -17,9 +17,9 @@ const Events = () => {
   };
 
   const sectionStyle = {
-    margin: '2% auto',
+    margin: '1% auto',
     color: 'white',
-    padding: '20px',
+    padding: '10px',
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'row',
@@ -52,6 +52,20 @@ const Events = () => {
     color: '#013A98',
     fontWeight: 'bold',
     marginBottom: '10px',
+    textAlign: 'left',
+    width: '25%',
+  
+  };
+
+  const columnStyle3 = {
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#013A98',
+    fontWeight: 'bold',
+    marginBottom: '10px',
+    textAlign: 'left',
+    
+  
   };
 
   const imageContainerStyle = {
@@ -257,19 +271,19 @@ const Events = () => {
           <div
             key={index}
             style={cardStyle}
-            className="text-xl  event45 relative group"
+            className=" event45 relative group"
             onMouseEnter={handleUpperCardHover}
             onMouseLeave={handleUpperCardLeave}
           >
-            <div style={columnStyle} className="event41">
+            <div style={columnStyle3} className="event41">
               <h2>Event Name</h2>
               <p>{event.eventName}</p>
             </div>
-            <div style={columnStyle}>
+            <div style={columnStyle3}>
               <h2>Locations</h2>
               <p>{event.location}</p>
             </div>
-            <div style={columnStyle}>
+            <div style={columnStyle3}>
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
