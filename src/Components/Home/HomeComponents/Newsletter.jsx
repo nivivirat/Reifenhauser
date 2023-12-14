@@ -1,12 +1,13 @@
 import { Icon } from '@iconify/react';
 import { get, push, ref, set } from "firebase/database";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { db } from '../../../../firebase';
 import newsletter from '../../../assets/Images/Home/newsletter/newsletter.svg';
 
 export default function Newsletter() {
-
     const [email, setEmail] = useState('');
+    const [showEmailInput, setShowEmailInput] = useState(true);
+    const [successMessage, setSuccessMessage] = useState('');
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -23,19 +24,35 @@ export default function Newsletter() {
                 if (!emails || !Object.values(emails).some((entry) => entry === email)) {
                     const newEmail = push(emailRef);
                     await set(newEmail, email);
-                    alert('Email submitted successfully!');
+                    setSuccessMessage('Email submitted successfully!');
+
+                    // Hide the email input after successful submission
+                    setShowEmailInput(false);
+
+                    // Clear success message after 3 seconds
+                    setTimeout(() => {
+                        setSuccessMessage('');
+                        setShowEmailInput(true);
+                    }, 3000);
                 } else {
-                    alert('Email already exists in the database!');
+                    setSuccessMessage('Email is already subscribed to our newsletter !');
+
+                    setShowEmailInput(false);
+
+                    // Clear success message after 3 seconds
+                    setTimeout(() => {
+                        setSuccessMessage('');
+                        setShowEmailInput(true);
+                    }, 3000);
                 }
             } catch (error) {
                 console.error('Error fetching data:', error);
-                alert('An error occurred while processing your request');
-            }
-            finally {
+                setSuccessMessage('An error occurred while processing your request');
+            } finally {
                 setEmail('');
             }
         } else {
-            alert('Please enter a valid email address!');
+            setSuccessMessage('Please enter a valid email address!');
         }
     };
 
@@ -49,15 +66,21 @@ export default function Newsletter() {
                         <p className='text-[12px] md:text-[16px]'>Stay updated with what’s happening in the packaging industry.</p>
                     </div>
 
-                    <div className='md:pb-0 pb-2 md:w-[30%] w-full flex flex-col md:justify-normal justify-center place-items-center gap-4 md:mr-[10%]'>
-                        <div className='flex flex-row justify-between place-items-center bg-white text-primary md:w-[400px] w-[90%] md:p-3 p-2 px-5 rounded-xl'>
-                            <input type='email' value={email} onChange={handleEmailChange} placeholder='E-mail' className='w-full outline-none placeholder:text-primary' />
-                            <Icon icon="material-symbols-light:keyboard-arrow-right" />
+                    {showEmailInput ? (
+                        <div className='md:pb-0 pb-2 md:w-[30%] w-full flex flex-col md:justify-normal justify-center place-items-center gap-4 md:mr-[10%]'>
+                            <div className='flex flex-row justify-between place-items-center bg-white text-primary md:w-[400px] w-[90%] md:p-3 p-2 px-5 rounded-xl'>
+                                <input type='email' value={email} onChange={handleEmailChange} placeholder='E-mail' className='w-full outline-none placeholder:text-primary' />
+                                <Icon icon="material-symbols-light:keyboard-arrow-right" />
+                            </div>
+                            <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%] md:mb-0 mb-4 p-1 px-2 rounded-xl'>
+                                <button onClick={handleSubmit} className='cursor-pointer'>Submit</button>
+                            </div>
                         </div>
-                        <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%] md:mb-0 mb-4 p-1 px-2 rounded-xl'>
-                            <button onClick={handleSubmit} className='cursor-pointer'>Submit</button>
+                    ) : (
+                        <div className="md:w-[30%] md:mr-[10%] flex flex-col justify-center items-center w-full h-full text-center">
+                            <p className="text-white">{successMessage}</p>
                         </div>
-                    </div>
+                    )}
                 </div>
             </div>
         </div>

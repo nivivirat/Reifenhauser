@@ -1,12 +1,16 @@
 import { useState } from "react";
+import { db } from '../../../firebase'
+import { get, push, ref, set } from "firebase/database";
 
 export default function ContactUsForm() {
+
+    const [loading, setLoading] = useState(false);
+    const [successMessage, setSuccessMessage] = useState("");
+
     const [formData, setFormData] = useState({
         firstName: "",
-        lastName: "",
         phoneNumber: "",
         email: "",
-        serviceInterestedIn: "",
         message: "",
     });
 
@@ -20,22 +24,47 @@ export default function ContactUsForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can handle the form submission, e.g., sending data to a server
+
+        const { firstName, phoneNumber, email, message } = formData;
+
+        if (!firstName || !phoneNumber || !email || !message) {
+            alert("Please fill in all mandatory fields.");
+            return;
+        }
+
         console.log(formData);
-        // Reset the form after submission
-        setFormData({
-            firstName: "",
-            phoneNumber: "",
-            email: "",
-            message: "",
-        });
+
+        const contactUsRef = ref(db, 'contactUs');
+
+        if (contactUsRef) {
+            push(contactUsRef, formData)
+                .then(() => {
+                    console.log("Form data saved successfully");
+                    setSuccessMessage("Submitted successfully");
+                    // Reset the form after submission
+                    setFormData({
+                        firstName: "",
+                        phoneNumber: "",
+                        email: "",
+                        message: "",
+                    });
+
+                    setTimeout(() => {
+                        setSuccessMessage("");
+                    }, 3000);
+                })
+                .catch((error) => {
+                    console.error("Error saving form data:", error);
+                    // setSuccessMessage("Submitted successfully");
+                });
+        }
     };
 
     return (
         <div className="lg:w-[90%] w-full h-full bg-white border border-[#a0a0a0] md:p-10 p-7 md:rounded-[30px] rounded-[20px]">
             <form
                 onSubmit={handleSubmit}
-                    className="flex flex-col gap-4"
+                className="flex flex-col gap-4"
             >
                 <div className="md:flex md:space-x-4">
                     <div className="w-full">
@@ -61,7 +90,11 @@ export default function ContactUsForm() {
                             placeholder="Phone Number"
                             value={formData.phoneNumber}
                             onChange={handleInputChange}
+                            pattern="[0-9]{10}"
+                            title="Please enter a 10-digit phone number"
+                            maxLength={10}
                             className="w-full border border-[#a0a0a0] rounded-md p-2"
+                            required // If you want to make this field mandatory
                         />
                     </div>
                     <div className="md:w-1/2 w-[48%]">
@@ -95,12 +128,20 @@ export default function ContactUsForm() {
                     ></textarea>
                 </div>
 
+                {successMessage && (
+                    <span className="mt-1 text-green-600">
+                        {successMessage}
+                    </span>
+                )}
                 <button
                     type="submit"
-                    className="bg-[#285196] text-white px-4 py-2 w-full md:w-full rounded-[50px]"
+                    className={`bg-[#285196] text-white px-4 py-2 w-full md:w-full rounded-[50px] ${loading ? 'cursor-not-allowed bg-blue-200' : ''
+                        }`}
+                    disabled={loading}
                 >
                     Submit
                 </button>
+
             </form>
 
         </div>

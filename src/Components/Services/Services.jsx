@@ -9,8 +9,7 @@ import Serv5 from '../../assets/Images/Services/Frame 21509 (4).svg';
 
 export default function Services() {
   return (
-    <div className="App">
-
+    <div className="App mt-[40px]">
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6">
 

@@ -16,9 +16,13 @@ export default function Banner() {
             bottom: "1000+",
         },
         {
-            top: "Testimonials Received",
-            bottom: "25+",
+            top: "Number of Installations",
+            bottom: "1000+",
         }
+        // {
+        //     top: "Testimonials Received",
+        //     bottom: "25+",
+        // }
     ]
 
     const handleNextSection = () => {

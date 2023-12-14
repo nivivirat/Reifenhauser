@@ -6,7 +6,6 @@ import bluebg from '../../assets/Images/ContactUs/bluebg.svg'
 import { Icon } from "@iconify/react"
 import GoogleMap from "./GoogleMap"
 
-
 export default function ContactUs() {
     return (
         <div className="lg:p-10 p-5">
