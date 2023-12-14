@@ -16,7 +16,7 @@ export function CardWithLink({ description, buttonText, pos, kl, poss, buttonTex
         <CardBody>
           {/* Your existing SVG and Typography components */}
           
-          <Typography>{description}</Typography>
+          <Typography className="text-left">{description}</Typography>
         </CardBody>
       )}
       <CardFooter className="pt-0">
