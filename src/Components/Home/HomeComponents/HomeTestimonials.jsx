@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
 // import  { HomeTestimonialCard }  from './HomeTestimonalCard/HomeTestimonialCard';
 import Slider from './HomeTestimonalCard/Slider';
-import { CardWithLink } from '../../Testimonial/CardWithLink';
+import { CWL } from '../../Testimonial/CWL';
 import "./Test1.css"
 import {
     Card,
@@ -26,13 +26,13 @@ export default function HomeTestimonials() {
                 <span>say about us</span>
             </div>
 
-            <div className="text-[#6B6B78]">
+            <div className="text-[#6B6B78] text-xs">
            <Slider options={{ align: "center" }}>
           
             {cardContent.map((card, index) => (
-                 <div key={index} className="flex-[0_0_90%] md:flex-[0_0_23%] h-196">
-                 <div className="py-4 px-4  my-20">
-          <CardWithLink
+                 <div key={index} className="flex-[0_0_70%] md:flex-[0_0_30%]">
+                 <div >
+          <CWL
             key={index}
             // title={card.title}
             description={card.description}
