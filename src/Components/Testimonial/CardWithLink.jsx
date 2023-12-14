@@ -11,12 +11,12 @@ import './Test.css'
 
 export function CardWithLink({ description, buttonText, pos, kl, poss, buttonTextt }) {
   return (
-    <Card className="mt-12 w-96 border border-blue-500">
+    <Card className="mt-12 w-96 h-96 border border-blue-500">
       {description && (
         <CardBody>
           {/* Your existing SVG and Typography components */}
           
-          <Typography>{description}</Typography>
+          <Typography className="text-left">{description}</Typography>
         </CardBody>
       )}
       <CardFooter className="pt-0">

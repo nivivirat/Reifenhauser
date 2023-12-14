@@ -8,6 +8,7 @@ import even11 from '../../assets/Images/Events/Rectangle 6264 (2).svg';
 import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
 import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
+import even from "./Vector (1).svg";
 
 const Events = () => {
   const containerStyle = {
@@ -17,9 +18,9 @@ const Events = () => {
   };
 
   const sectionStyle = {
-    margin: '2% auto',
+    margin: '1% auto',
     color: 'white',
-    padding: '20px',
+    padding: '10px',
     borderRadius: '8px',
     display: 'flex',
     flexDirection: 'row',
@@ -34,6 +35,7 @@ const Events = () => {
     justifyContent: 'space-between',
     width: '85%',
     marginLeft: '2%',
+    
   };
 
   const cardStyle = {
@@ -44,6 +46,7 @@ const Events = () => {
     height: '300px',
     position: 'relative',
     overflow: 'hidden',
+    
   };
 
   const columnStyle = {
@@ -51,7 +54,21 @@ const Events = () => {
     flexDirection: 'column',
     color: '#013A98',
     fontWeight: 'bold',
-    marginBottom: '10px',
+    marginTop: '1%',
+    textAlign: 'left',
+    width: '25%',
+  
+  };
+
+  const columnStyle3 = {
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#013A98',
+    fontWeight: 'bold',
+ 
+    textAlign: 'left',
+    
+  
   };
 
   const imageContainerStyle = {
@@ -198,7 +215,7 @@ const Events = () => {
         <div
           key={index}
           style={sectionStyle}
-          className="text-xl event100 group"
+          className="text-2xs event100 group"
           onMouseEnter={handleUpperCardHover}
           onMouseLeave={handleUpperCardLeave}
         >
@@ -211,6 +228,7 @@ const Events = () => {
             <h2>Locations</h2>
             <p>{event.location}</p>
           </div>
+     
           <div style={columnStyle}>
             <h2>Date</h2>
             <p>{event.date}</p>
@@ -227,7 +245,7 @@ const Events = () => {
         <div
           key={index}
           style={sectionStyle}
-          className="text-xl event100 group"
+          className="text-2xs event100 group"
           onMouseEnter={handleUpperCardHover}
           onMouseLeave={handleUpperCardLeave}
         >
@@ -257,23 +275,24 @@ const Events = () => {
           <div
             key={index}
             style={cardStyle}
-            className="text-xl  event45 relative group"
+            className=" event45 relative group"
             onMouseEnter={handleUpperCardHover}
             onMouseLeave={handleUpperCardLeave}
           >
-            <div style={columnStyle} className="event41">
+            <div style={columnStyle3} className="event41">
               <h2>Event Name</h2>
               <p>{event.eventName}</p>
             </div>
-            <div style={columnStyle}>
+            <div style={columnStyle3} className="event411">
               <h2>Locations</h2>
               <p>{event.location}</p>
             </div>
-            <div style={columnStyle}>
+            <br></br><br></br>
+            <div style={columnStyle3} className="event412">
               <h2>Date</h2>
               <p>{event.date}</p>
             </div>
-            {/* <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" /> */}
+            <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
             <div style={hoverInfoStyle2} className="hover-info cvv">
               <p>Team Reifenhauser India proudly showcased it's Principles at India's Premier Labeling Event!
 #LabelExpo2022</p>
