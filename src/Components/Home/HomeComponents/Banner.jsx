@@ -114,10 +114,10 @@ export default function Banner() {
                     {/* Previous and Next buttons */}
                     <div className='lg:flex flex-col place-items-center gap-5 lg:left-[70%] md:left-[20%] bottom-[2%] hidden lg:mt-[35%] md:mt-[15%]'>
                         <div className='flex flex-row gap-5'>
-                            <div className='rounded-full border-2 text-white -rotate-90 border-white p-2' onClick={handlePrevSection} disabled={currentSection === 0}>
+                            <div className='opacity-0 rounded-full border-2 text-white -rotate-90 border-white p-2' onClick={handlePrevSection} disabled={currentSection === 0}>
                                 <Icon icon="prime:arrow-up" />
                             </div>
-                            <div className='rounded-full border-2 text-white rotate-90 border-white p-2' onClick={handleNextSection} disabled={currentSection === bannerData.length - 1}>
+                            <div className='opacity-0 rounded-full border-2 text-white rotate-90 border-white p-2' onClick={handleNextSection} disabled={currentSection === bannerData.length - 1}>
                                 <Icon icon="prime:arrow-up" />
                             </div>
                         </div>
@@ -152,13 +152,13 @@ export default function Banner() {
                             className="bg-[#5997ff] md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer"
                         ></div> */}
 
-                        {downData.map((_, index) => (
+                        {/* {downData.map((_, index) => (
                             <div
                                 key={index}
                                 className={`md:w-2 md:h-2 w-4 h-1 rounded-full cursor-pointer ${downCurrentSection === index ? 'bg-white' : 'bg-[#5997ff]'
                                     }`}
                             ></div>
-                        ))}
+                        ))} */}
 
                     </div>
 

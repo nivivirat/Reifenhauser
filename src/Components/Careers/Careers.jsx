@@ -7,7 +7,7 @@ import { Icon } from '@iconify/react';
 import { db } from '../../../firebase';
 import { getDatabase, ref, push, set } from 'firebase/database';
 import bluetick from '../../assets/Images/Careers/bluetick.svg'
-import { getStorage, ref as storageRef, uploadBytes } from 'firebase/storage'; // Import ref from firebase/storage
+import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import ref from firebase/storage
 
 export default function Careers() {
     const [showForm, setShowForm] = useState(false);
@@ -31,10 +31,10 @@ export default function Careers() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         setLoading(true);
-
+        
         // Reference to the careers node in the Realtime Database
         const careersRef = ref(db, 'careers');
-
+        
         // Form data
         const formData = {
             name: event.target.name.value,
@@ -42,47 +42,60 @@ export default function Careers() {
             email: event.target.email.value,
             message: event.target.message.value,
         };
-
+        
         // Check if all fields are filled
         const fieldsFilled = Object.values(formData).every((value) => value.trim() !== '');
+
+        console.log(formData);
         if (!fieldsFilled || !file) {
             setErrorMessage('All fields are mandatory, including the file.');
+            setLoading(false);
             return;
         }
-
+        
         try {
             // Push form data to the database
             const newCareerRef = push(careersRef);
             await set(newCareerRef, formData);
-
+        
             // Get the unique ID generated for the form data
             const formUID = newCareerRef.key;
-
+        
             // Save a reference to the file in the database
             await set(ref(db, `resumes/${formUID}`), { fileURL: `resumes/${formUID}` });
-
+        
             // Handle file upload using Firebase Storage with the folder named after the form's UID
             const storage = getStorage(); // Create storage instance
             const folderRef = storageRef(storage, `resumes/${formUID}/${file.name}`); // Folder named after the form UID
             await uploadBytes(folderRef, file);
-
+        
+            // Get the download URL of the uploaded file
+            const downloadURL = await getDownloadURL(folderRef);
+        
+            // Update the formData object with the download URL
+            formData.fileDownloadURL = downloadURL; // Update the fileDownloadURL
+        
+            // Update the form data in the database with the fileDownloadURL
+            await set(newCareerRef, formData); // Update the form data in the database
+        
             // Reset form and state
             setErrorMessage('');
             setFile(null);
             event.target.reset();
-
+        
             setLoading(false);
-            setFormSuccess(true)
-
+            setFormSuccess(true);
+        
             setTimeout(() => {
                 setFormSuccess(false);
             }, 3000);
-
+        
         } catch (error) {
             console.error('Error submitting form:', error);
             alert('An error occurred while processing your request');
         }
     };
+    
 
     return (
         <div className='lg:p-10 p-5 flex flex-col lg:gap-10 gap-8'>
@@ -125,14 +138,14 @@ export default function Careers() {
                                 <form className='flex flex-col justify-center place-items-center md:px-10' onSubmit={handleSubmit}>
                                     {/* <label htmlFor='name'>Name*</label> */}
 
-                                    <div className='w-full flex flex-row justify-between'>
-                                        <input type='text' id='name' className='border-b border-black p-2 w-[40%] mb-4' required placeholder='Name*' />
+                                    <div className='w-full flex md:flex-row flex-col md:justify-between'>
+                                        <input type='text' id='name' className='border-b border-black p-2 md:w-[40%] w-full mb-4' required placeholder='Name*' />
 
                                         {/* <label htmlFor='number'></label> */}
                                         <input
                                             type='tel'
                                             id='number'
-                                            className='border-b border-black p-2 w-[40%] mb-4'
+                                            className='border-b border-black p-2 md:w-[40%] w-full mb-4'
                                             required
                                             placeholder='Number*'
                                             pattern='[0-9]{10}'
@@ -142,7 +155,7 @@ export default function Careers() {
 
                                     {/* <label htmlFor='email'></label> */}
                                     <div className='w-full'>
-                                        <input type='email' id='email' className='border-b border-black p-2 w-[40%] mb-4' required placeholder='Email Address*' />
+                                        <input type='email' id='email' className='border-b border-black p-2 md:w-[40%] w-full mb-4' required placeholder='Email Address*' />
                                     </div>
 
                                     {/* <label htmlFor='message'></label> */}
@@ -158,7 +171,7 @@ export default function Careers() {
                                             placeholder='upload'
                                             className='z-20 cursor-pointer opacity-0 border border-gray-300 w-full mb-4'
                                         />
-                                        <div className='flex flex-row absolute top-7 gap-2 opacity-30 z-10 place-items-center justify-center'>
+                                        <div className='flex flex-row absolute md:top-7 top-3 gap-2 opacity-30 z-10 place-items-center justify-center'>
                                             <img src={resume} alt='Resume' />
                                             <p className={`${file ? 'text-primary' : ''}`}>{fileName || 'Upload Your Resume'}</p> {/* Apply primary color if file is uploaded */}
                                         </div>

@@ -8,6 +8,7 @@ export default function Newsletter() {
     const [email, setEmail] = useState('');
     const [showEmailInput, setShowEmailInput] = useState(true);
     const [successMessage, setSuccessMessage] = useState('');
+    const [loading, setLoading] = useState(false); // New loading state
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value);
@@ -15,6 +16,7 @@ export default function Newsletter() {
 
     const handleSubmit = async () => {
         if (email.trim() !== '') {
+            setLoading(true); // Set loading to true on button click
             const emailRef = ref(db, 'newsletter-subscription');
 
             try {
@@ -25,26 +27,18 @@ export default function Newsletter() {
                     const newEmail = push(emailRef);
                     await set(newEmail, email);
                     setSuccessMessage('Email submitted successfully!');
-
-                    // Hide the email input after successful submission
                     setShowEmailInput(false);
-
-                    // Clear success message after 3 seconds
-                    setTimeout(() => {
-                        setSuccessMessage('');
-                        setShowEmailInput(true);
-                    }, 3000);
                 } else {
                     setSuccessMessage('Email is already subscribed to our newsletter !');
-
                     setShowEmailInput(false);
-
-                    // Clear success message after 3 seconds
-                    setTimeout(() => {
-                        setSuccessMessage('');
-                        setShowEmailInput(true);
-                    }, 3000);
                 }
+
+                // Clear success message and show email input after 3 seconds
+                setTimeout(() => {
+                    setSuccessMessage('');
+                    setShowEmailInput(true);
+                    setLoading(false); // Reset loading to false after 3 seconds
+                }, 3000);
             } catch (error) {
                 console.error('Error fetching data:', error);
                 setSuccessMessage('An error occurred while processing your request');
@@ -72,8 +66,10 @@ export default function Newsletter() {
                                 <input type='email' value={email} onChange={handleEmailChange} placeholder='E-mail' className='w-full outline-none placeholder:text-primary' />
                                 <Icon icon="material-symbols-light:keyboard-arrow-right" />
                             </div>
-                            <div className='cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%] md:mb-0 mb-4 p-1 px-2 rounded-xl'>
-                                <button onClick={handleSubmit} className='cursor-pointer'>Submit</button>
+                            <div className={`cursor-pointer flex flex-row justify-center bg-white text-primary md:w-[400px] w-[90%] md:mb-0 mb-4 p-1 px-2 rounded-xl ${loading ? 'opacity-50' : ''}`}>
+                                <button onClick={handleSubmit} className='cursor-pointer w-full h-full' disabled={loading}>
+                                    {loading ? 'Loading...' : 'Submit'}
+                                </button>
                             </div>
                         </div>
                     ) : (
