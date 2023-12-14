@@ -3,18 +3,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Media.css';
-import img3 from'../../assets/Images/Media/Rectangle 6270.svg';
+import img1 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.02 1.svg';
+import img2 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 1.svg';
+import img3 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 2.svg';
+import img4 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.04 1.svg';
 
 export default function CardComponent() {
     const posts = [
         {
             title: "Lorem epsom dedor ↗",
-            img: img3,
+            img: img1,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
         {
             title: "Lorem epsom dedor ↗ ",
-            img: img3,
+            img: img2,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
         {
@@ -24,7 +27,7 @@ export default function CardComponent() {
         },
         {
             title: "Lorem epsom dedor ↗",
-            img: img3,
+            img: img4,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
     ];
