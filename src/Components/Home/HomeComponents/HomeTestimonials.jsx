@@ -1,7 +1,19 @@
-import cardContent from './HomeTestimonalCard/content.json'
+import cardContent from '../../Testimonial/Content.json'
+import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
-import { HomeTestimonialCard } from './HomeTestimonalCard/HomeTestimonialCard';
+// import  { HomeTestimonialCard }  from './HomeTestimonalCard/HomeTestimonialCard';
+import Slider from './HomeTestimonalCard/Slider';
+import { CardWithLink } from '../../Testimonial/CardWithLink';
+import "./Test1.css"
+import {
+    Card,
+    CardBody,
+    CardFooter,
+    Typography,
+    Button,
+} from "@material-tailwind/react";
 
+// import { CardWithLink } from '../../Testimonial/CardWithLink';
 export default function HomeTestimonials() {
     // Use slice to get the first 3 items in the array
     const first3Cards = cardContent.slice(0, 3);
@@ -14,22 +26,29 @@ export default function HomeTestimonials() {
                 <span>say about us</span>
             </div>
 
-            <div className="flex justify-center gap-4 text-[#6B6B78] pl-10">
-                {first3Cards.map((card, index) => (
-                    <HomeTestimonialCard
-                    key={index}
-                    // title={card.title}
-                    description={card.description}
-                    buttonText={card.buttonText}
-                    buttonTextt={card.buttonTextt}
-                    pos={card.pos}
-                    kl={card.kl}
-                    poss={card.poss}
-                    />
-                ))}
+            <div className="text-[#6B6B78]">
+           <Slider options={{ align: "center" }}>
+          
+            {cardContent.map((card, index) => (
+                 <div key={index} className="flex-[0_0_90%] md:flex-[0_0_23%] h-196">
+                 <div className="py-4 px-4  my-20">
+          <CardWithLink
+            key={index}
+            // title={card.title}
+            description={card.description}
+            // buttonText={card.buttonText}
+            buttonTextt={card.buttonTextt}
+            pos={card.pos}
+            kl={card.kl}
+            poss={card.poss}
+          />
+           </div></div>
+        ))}
+       
+        </Slider>
             </div>
 
-            <div className="w-full flex justify-center place-items-center mt-10 mb-6 md:mb-10 ">
+            <div className="w-full flex justify-center place-items-center mt-10 md:mb-10">
                 <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
                     <p>View All Testimonials</p>
                     <div className="text-primary md:text-xl">
@@ -41,3 +60,8 @@ export default function HomeTestimonials() {
         </div>
     );
 }
+HomeTestimonials.propTypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    buttonText: PropTypes.string.isRequired,
+  };
