@@ -37,7 +37,7 @@
   opacity:0.9999999999;
 }
 .jkg{
-  height:200px;
+  height:150px;
   width:250px;
 }
 .image-container::before {
@@ -64,6 +64,7 @@
   position:relative;
   left:2%;
   font-weight:700;
+  text-align:left;
 
 }
 .event100{
@@ -90,7 +91,7 @@ margin:auto;
   overflow:hidden;
   /* width:6.35%; */
   width:60px;
-  height:85px;
+  height:75px;
 }
 .event41 {
   display: inline-flex;
