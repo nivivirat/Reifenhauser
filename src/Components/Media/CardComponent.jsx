@@ -56,7 +56,7 @@ export default function CardComponent() {
             <div className="md:hidden">
                 <Slider {...sliderSettings}>
                     {posts.map((items, key) => (
-                        <div className="w-full rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
+                        <div className="w-full  rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
                             <img
                                 className="object-cover w-full h-48"
                                 src={items.img}
@@ -73,22 +73,7 @@ export default function CardComponent() {
                 <br></br>
             </div>
             {/* Display individual cards for lg and larger screens */}
-            <div className="hidden md:flex gap-2 media15">
-                {posts.map((items, key) => (
-                    <div className="w-full rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
-                        <img
-                            className="object-cover w-full h-48"
-                            src={items.img}
-                            alt="image"
-                        />
-                        <div className="p-4">
-                            <h4 className="w-full rounded-lg rounded-md rounded-sm shadow-md text-xs font-semibold text-white">
-                                {items.title}
-                            </h4>
-                        </div>
-                    </div>
-                ))}
-            </div>
+        
         </div>
     );
 }
