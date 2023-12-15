@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  /* margin:0 -10%; */
+  /* margin-left:-.3%; */
 }
 
 .App-logo {
@@ -141,6 +143,16 @@ line-height: normal;
   font-weight: 600;
   font-family: Poppins;
 }
+@media (max-width: 499px) {
+.jj{
+  display:none;
+}
+.hhg{
+  visibility: hidden;
+  position: absolute;
+  /* visibility:hidden; */
+}
+}
 .media4{
   text-align:left;
   margin-left:3%;
@@ -149,9 +161,17 @@ line-height: normal;
   font-family: Poppins;
 }
 .media5{
-  margin:2%;
+  margin-top:2%;
+  /* margin-right:-9%; */
  height:100%;
-  width:90%;
+  width:98%;
+  font-family: Poppins;
+}
+@media (min-width: 500px) {
+.hhgg{
+  display:none;
+  visibility:hidden;
+}
 }
 .media7{
   text-align:left;
@@ -192,6 +212,7 @@ line-height: normal;
 .media77{
   background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));
   text:white;
+  margin-right:3%;
 }
 .media12{
   margin-left:70%;
@@ -207,6 +228,11 @@ line-height: normal;
 }
 .media17{
   text-align:left;
+  
+color: #5A7184;
+
+font-family: Poppins;
+
 }
 
 @media (max-width: 720px) {
