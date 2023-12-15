@@ -49,7 +49,7 @@
       margin: -2% -6%;
     }
   
-  @media (max-width: 800px) {
+  @media (max-width: 880px) {
     .bn {
  
       display:none;
@@ -74,7 +74,7 @@ font-weight: 400;
       margin:-2%;
     }
   }
-  @media (min-width: 801px) {
+  @media (min-width: 701px) {
     
     .ha{
       position:relative;
@@ -87,7 +87,29 @@ font-weight: 400;
       /* padding:0 -3%; */
       width:90%;
     }
+    .hj{
+      position:relative;
+      left:-50%;
+      
+    }
+    .nn{
+    position:relative;
+      left:70%;
+      }
   }
+
+  @media (max-width:855px) {
+    
+.mm{
+  margin:0 -20%;
+  font-family: Poppins;
+}
+.bnn{
+  position:relative;
+  left:0%;
+}
+  }
+
   @keyframes App-logo-spin {
 
       transform: rotate(360deg);
@@ -104,6 +126,7 @@ font-weight: 400;
     margin-right:15%;
   
   }
+
   .nnm{
     color:#183B56;
     margin-left:15%;
