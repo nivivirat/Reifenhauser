@@ -9,7 +9,8 @@ import Serv5 from '../../assets/Images/Services/Frame 21509 (4).svg';
 
 export default function Services() {
   return (
-    <div className="App mt-[40px]">
+    <div className="App">
+
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6">
 
@@ -42,19 +43,22 @@ export default function Services() {
             </div>
 
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm">
-            <img className="fm" src ={Serv2} alt="image"></img>
+            
              
-              <div className="flex flex-col  p-6">
+              <div className="flex flex-col  p-6 ">
 
 
 
-                <h5 className="mb-2 text-5xl ha leading-tight w q ll">
+                <h5 className="mb-2 text-5xl ha leading-tight w q ll nn">
                 Breakdown Maintenance
                 </h5>
-                <p className="text-xl ha leading-tight  ll">
+                <p className="text-xl ha leading-tight  ll nn">
                 With breakdown maintenance services, Reifenhauser India Marketing Pvt. Ltd. offers services whenever a component of the machinery is broken, seems faulty or is not functioning properly. Once such an instance arises on the shop floor, our experienced engineers plan well in advance and arrive at the location promptly. Way ahead, our engineers replace the component and make sure that the machinery is running smoothly and at the optimal capacity. This, ultimately, reduces the maintenance costs by minimizing the instances of preventive maintenance
                 </p>
                 </div>
+                <br></br><br></br>
+
+                <img className="fm hj" src ={Serv2} alt="image"></img>
                 </div>
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6 ">
@@ -71,25 +75,28 @@ export default function Services() {
             </div>
 
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm">
-            <img className="fm" src ={Serv4} alt="image"></img>
-              <br></br><br></br><br></br>
+           
               <div className="flex flex-col">
 
 
 
-                <h5 className="mb-2 text-5xl w ha leading-tight q ll">
+                <h5 className="mb-2 text-5xl w ha leading-tight q ll nn">
                 Preventive Maintenance Services
                 </h5>
-                <p className="mb-4 text-xl mr-20 ha leading-tight  ll">
+                <p className="mb-4 text-xl mr-20 ha leading-tight  ll nn">
                 While we diligently offer preventive maintenance services, our experienced and trained schedule maintenance of machineries on a regular basis. This mitigates the risk of unprecedented failures and assures process excellence to a considerable extent. Preventive maintenance also increases the life span of the machineries when they undergo repairs or replacement of any component. As the maintenance is conducted periodically, we follow a systematic approach that is aimed at minimizing or reducing failures. Eventually, our engineers make sure that there are no backlogs regarding preventive maintenance.
                 </p>
                 </div>
+                <br></br><br></br><br></br>
+                <img className="fm hj" src ={Serv4} alt="image"></img>
+              
+
              </div>
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col  p-6">
 
                 <h5 className="mb-2 text-5xl leading-tight q ll">
-                AMC</h5><h5 className="text-xl ss leading-tight q ll"> (Annual Maintenance Contract)
+                AMC</h5><h5 className="text-xl ss leading-tight q ll bnn"> (Annual Maintenance Contract)
                 </h5>
                 <p className="mb-4 text-xl mr-20 leading-tight ggh ll">
                 We provide comprehensive repair and maintenance services, adhering to our commitments made as per contract terms. We prioritize maximum uptime, continually updating our technical expertise and planning for periodic maintenance to avoid unexpected machinery failures. Customer satisfaction is paramount, ensuring services exceed expectations.
