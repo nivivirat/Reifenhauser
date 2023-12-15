@@ -11,7 +11,7 @@ import './Test.css'
 
 export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
   return (
-    <Card className="mt-2 w-128 h-56 border border-blue-500 vvvv">
+    <Card className="mt-2 w-128 h-80 lg:h-56 md:h-80 border border-blue-500 vvvv">
       {description && (
         <CardBody>
           {/* Your existing SVG and Typography components */}
