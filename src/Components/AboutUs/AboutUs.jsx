@@ -1,6 +1,7 @@
 import { Icon } from '@iconify/react'
 import aboutUs1 from '../../assets/Images/AboutUs/aboutUs1.svg'
 import aboutUs1mobile from '../../assets/Images/AboutUs/aboutUs1mobile.svg'
+import aboutUs2mobile from '../../assets/Images/AboutUs/aboutUs2mobile.jpg'
 import aboutUs2 from '../../assets/Images/AboutUs/aboutUs2.svg'
 import boardOfDirectors from './Data/boardOfDirectors.json'
 import DirectorCard from './DirectorCard'
@@ -52,9 +53,9 @@ export default function AboutUs() {
                 </div>
             </div>
 
-            <div className='md:hidden gap-5 flex flex-row overflow-x-scroll'>
+            <div className='md:hidden gap-3 flex flex-row overflow-x-scroll'>
                 <img src={aboutUs1mobile} alt="" />
-                <img src={aboutUs1mobile} alt="" />
+                <img src={aboutUs2mobile} alt="" className='rounded-xl pt-2'/>
             </div>
 
             {/* Our Story */}
