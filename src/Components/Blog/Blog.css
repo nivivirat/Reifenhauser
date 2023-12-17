@@ -109,9 +109,10 @@
     text-align:left;
     font-weight: 100;
   }
+
   .aaa{
     margin-left:80%;
-    margin-top:-12%;
+    margin-top:-20px;
     color: #183B56;
     font-family: Poppins;
     text-align:left;
@@ -125,4 +126,37 @@
     text-align:left;
    
   
+  }
+
+  @media (max-width: 600px) {
+   .ew{
+    text-align:left;
+    margin:0 1.8%;
+   }
+  .nm{
+    color: #183B56;
+
+
+font-style: normal;
+font-weight: 700;
+  }
+  .ima{
+    height:190%;
+    width:90%;
+    margin:-5% 0;
+  }
+  }
+  @media (min-width: 750px) and (max-width:950px) {
+
+    .aaa{
+      margin-left:80%;
+      margin-top:-30px;
+      color: #183B56;
+      font-family: Poppins;
+      text-align:left;
+      font-weight: 600;
+    }
+    .kkk{
+      text-size:20px;
+    }
   }
