@@ -138,7 +138,7 @@ export default function AboutUs() {
                 </div>
 
                 <div className='flex justify-center'>
-                    <div className='grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-3 lg:grid-flow-col md:gap-[100px] gap-10'>
+                    <div className='grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-3 lg:grid-flow-row md:gap-[100px] gap-10'>
                         {/* more cards */}
 
                         {boardOfDirectors.map((data, index) => (
