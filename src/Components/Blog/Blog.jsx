@@ -4,13 +4,10 @@ import img from "./images/Image.svg"
 import testimonials from "./testimonials.json";
 import Slider from "./slider";
 import rimg from "./images/R.svg";
-import img1 from "./images/Image.png";
-import img2 from "./images/Image (1).png";
+
 import img3 from "./images/Image (1).svg"
 
 
-import b2 from "../../assets/Images/Blogs/Base (1).svg";
-import b3 from "../../assets/Images/Blogs/Base (2).svg";
 function Blog() {
  
   
