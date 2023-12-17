@@ -127,7 +127,7 @@ export default function AboutUs() {
                 <div className='whitespace-normal font-semibold md:text-[35px] text-[20px] hidden md:block'>
                     <span className='text-black'>Meet the</span>
                     <span className='text-primary'>&nbsp;visionary minds</span>
-                    <span className='text-black'>&nbsp;who drive our business towards</span>
+                    <span className='text-black'>&nbsp;who drive our business <br></br>towards</span>
                     <span className='text-primary'>&nbsp;unparalleled success.</span>
                 </div>
 
