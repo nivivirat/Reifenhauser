@@ -38,7 +38,7 @@ function Blog() {
 Abhay Avadhani (AA): How is flexo competing with gravure on things like speed to market, sustainability?Manish Mehta (MM):
 </strong></p>
 
- <p className="text-2xs mt-8 kkl ew">
+ <p className="text-2xs  mt-8 kkl ew">
  With the help of flexo trade shops, a plate can be made available in less than four hours. Delivery in 24 hrs is quite normal in the flexo market. Whereas, a gravure cylinder would take at least four days to be delivered from the manufacturer to the converter. In most cases, if it is a matter of urgency then the brand owner either has to approach a converter who has a cylinder-making facility or move to flexo. It is much easier to manage promotions, minor changes and corrections in the job with flexo than gravure.
  </p>
  <p className="text-xl mt-8 nnm ew"><strong>
