@@ -67,9 +67,9 @@
     color:#183B56;
   }
   .kkl{
-    margin-left:15%;
-    margin-right:15%;
-    
+    margin-left:18%;
+    margin-right:20%;
+    width:95%;
     color:#183B56;
     text-align:left;
   }
@@ -131,7 +131,8 @@
   @media (max-width: 600px) {
    .ew{
     text-align:left;
-    margin:0 1.8%;
+    margin-left:2%;
+    margin-right:9%;    
    }
   .nm{
     color: #183B56;
