@@ -39,7 +39,7 @@ export default function HomePrincipals() {
             </div>
 
             <div className="w-full flex justify-center place-items-center">
-                <a href="/principals" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
+                <a href="/principals" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary">
                     <p>View All Principals</p>
                     <div className="text-primary md:text-xl">
                         <Icon icon="iconoir:arrow-tr" />

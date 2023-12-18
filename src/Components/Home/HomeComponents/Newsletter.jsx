@@ -56,8 +56,8 @@ export default function Newsletter() {
                 <div className='md:w-[80%] md:h-[180px] h-[230px] w-[75%] flex md:flex-row flex-col md:justify-between justify-center md:gap-0 gap-2 md:px-10 place-items-center md:p-5 m-3 relative bg-gradient-to-r from-blue-900 to-blue-400 rounded-2xl'>
                     <img src={newsletter} className='absolute right-0 bottom-0'></img>
                     <div className='flex flex-col md:p-0 p-5 gap-1'>
-                        <p className='font-semibold md:text-3xl text-[18px] lg:pr-[100px] pr-[100px]'>Subscribe Our Newsletter!</p>
-                        <p className='text-[12px] md:text-[12px] lg:text-[16px] lg:pr-[100px] pr-[100px]'>Stay updated with what’s happening in the packaging industry.</p>
+                        <p className='font-semibold md:text-3xl text-[18px] lg:pr-[100px] md:pr-[100px]'>Subscribe Our Newsletter!</p>
+                        <p className='text-[12px] md:text-[12px] lg:text-[16px] lg:pr-[100px] md:pr-[100px]'>Stay updated with what’s happening in the packaging industry.</p>
                     </div>
 
                     {showEmailInput ? (
