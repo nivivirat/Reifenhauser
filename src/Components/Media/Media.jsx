@@ -17,6 +17,10 @@ import {
 export default function Media() {
   return (
     <div className="App">
+       <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+                    <p className="text-[#999999]">Home-</p>
+                    <p className="text-primary font-semibold">Media</p>
+                </div>
       <div className="flex-flex media1">Media</div>
       <div className="text-xl flex-flex media2">Glimpse through the round up of the latest  trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3 jj">News & Updates</div>

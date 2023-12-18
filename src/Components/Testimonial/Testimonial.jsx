@@ -5,7 +5,10 @@ import Testo from'../../assets/Images/Testimonial/Test11.svg'
 function Testimonial() {
   return (
     <div className="App">
-
+      <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+                    <p className="text-[#999999]">Home-</p>
+                    <p className="text-primary font-semibold"> Testimonials</p>
+                </div>
       <p className="text-xl test11">
         Testimonials
       </p>

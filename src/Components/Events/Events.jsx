@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Events.css';
 import eventsData from './eventsData.json';
 import eventsData2 from './eventsData2.json';
@@ -9,8 +9,11 @@ import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
 import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
+import aq from "./abg.svg";
 
 const Events = () => {
+
+ 
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -23,15 +26,27 @@ const Events = () => {
     padding: '10px',
     borderRadius: '8px',
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
     width: '95%',
-    position: 'relative',
+    height:'45%',
+    // flexDirection: 'row',
+    justifyContent: 'space-between',
+  };
+  const sectionStyle2 = {
+    margin: '1% auto',
+    color: 'white',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'flex',
+    width: '95%',
+    height:'45%',
+    // flexDirection: 'row',
+    justifyContent: 'space-between',
+ 
   };
 
   const cardContainerStyle = {
     display: 'flex',
-    flexDirection: 'row',
+    
     justifyContent: 'space-between',
     width: '85%',
     marginLeft: '2%',
@@ -56,9 +71,9 @@ const Events = () => {
     fontWeight: 'bold',
     marginTop: '1%',
     textAlign: 'left',
-    width: '25%',
-  
+    //width:'75%',
   };
+  
 
   const columnStyle3 = {
     display: 'flex',
@@ -86,11 +101,11 @@ const Events = () => {
   };
 
   const textInsideImage = {
-    marginLeft: '3px',
-    position: 'relative',
-    top: '-70%',
-    left: '18%',
-    transform: 'translate(-50%, -50%)',
+    marginLeft: '3px%',
+    position: 'absolute',
+    top: '18%',
+    left: '6%',
+    // transform: 'translate(-50%, -50%)',
     fontSize: '24px',
     fontWeight: 'bold',
     color: 'white',
@@ -194,6 +209,10 @@ const Events = () => {
   };
 
   return (
+    <> <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+    <p className="text-[#999999]">Home-</p>
+    <p className="text-primary font-semibold">Events</p>
+</div>
     <div style={containerStyle}>
       <div style={imageContainerStyle} className="image-container">
         <img
@@ -210,29 +229,31 @@ const Events = () => {
           <p>Join us for a friendly rendezvous</p>
         </div>
       </div>
-      <div className="event3 text-2xl">Events 2023</div>
+      <div className="event3 text-3xl">Events 2023</div>
       {eventsData.map((event, index) => (
-        <div
-          key={index}
-          style={sectionStyle}
-          className="text-2xs event100 group"
-          onMouseEnter={handleUpperCardHover}
-          onMouseLeave={handleUpperCardLeave}
-        >
+     <div
+     key={index}
+     style={sectionStyle2}
+     className="section-container text-2xs event100 group ety"
+     onMouseEnter={handleUpperCardHover}
+     onMouseLeave={handleUpperCardLeave}
+   >    
           <img className="eventi" src={evim} alt="Event Image" />
+     
           <div style={columnStyle}>
-            <h2>Event Name</h2>
-            <p>{event.eventName}</p>
+            <h2  className="ety">Event Name</h2>
+            <p  className="ety">{event.eventName}</p>
           </div>
           <div style={columnStyle}>
-            <h2>Locations</h2>
-            <p>{event.location}</p>
+            <h2  className="ety">Locations</h2>
+            <p  className="ety">{event.location}</p>
           </div>
      
           <div style={columnStyle}>
-            <h2>Date</h2>
-            <p>{event.date}</p>
+            <h2  className="ety">Date</h2>
+            <p  className="ety">{event.date}</p>
           </div>
+          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
           <div style={hoverInfoStyle} className="hover-info">
             <div style={triangleStyle} className="triangle"></div>
             
@@ -240,28 +261,36 @@ const Events = () => {
           </div>
         </div>
       ))}
-      <div className="event3 text-2xl">Events 2024</div>
+      <div className="event3 text-3xl">Events 2024</div>
       {eventsData2.map((event, index) => (
         <div
           key={index}
-          style={sectionStyle}
-          className="text-2xs event100 group"
+          style={sectionStyle2}
+          className="text-2xs event100 group ety"
           onMouseEnter={handleUpperCardHover}
           onMouseLeave={handleUpperCardLeave}
         >
           <img className="eventi" src={evim} alt="Event Image" />
           <div style={columnStyle}>
-            <h2>Event Name</h2>
-            <p>{event.eventName}</p>
+            <div >
+            <h2 className="ety">Event Name</h2><div></div>
+            <p className="ety">{event.eventName}</p>
+            </div>
           </div>
           <div style={columnStyle}>
-            <h2>Locations</h2>
-            <p>{event.location}</p>
+            <div >
+            <h2 className="ety">Locations</h2><div>
+
+            <p className="ety">{event.location}</p></div>
+            </div>
           </div>
           <div style={columnStyle}>
-            <h2>Date</h2>
-            <p>{event.date}</p>
+            <div >
+            <h2 className="ety">Date</h2>
+            <p className="ety">{event.date}</p>
+            </div>
           </div>
+          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
           <div style={hoverInfoStyle} className="hover-info">
             <div style={triangleStyle} className="triangle"></div>
            
@@ -269,28 +298,28 @@ const Events = () => {
           </div>
         </div>
       ))}
-      <div className="event3 text-2xl">Archives of past events</div>
-      <div style={cardContainerStyle}>
+      <div className="event3 text-3xl">Archives of past events</div>
+      <div style={cardContainerStyle} className="lk">
         {eventsData3.map((event, index) => (
           <div
             key={index}
             style={cardStyle}
-            className=" event45 relative group"
+            className=" event45 relative group lm gggg flex flex-col"
             onMouseEnter={handleUpperCardHover}
             onMouseLeave={handleUpperCardLeave}
           >
-            <div style={columnStyle3} className="event41">
-              <h2>Event Name</h2>
-              <p>{event.eventName}</p>
+            <div style={columnStyle3} className="event41 lm">
+              <h2 className="lm">Event Name</h2>
+              <p className="lm">{event.eventName}</p>
             </div>
-            <div style={columnStyle3} className="event411">
-              <h2>Locations</h2>
-              <p>{event.location}</p>
+            <div style={columnStyle3} className="event411 lm">
+              <h2 className="lm">Locations</h2>
+              <p className="lm">{event.location}</p>
             </div>
             <br></br><br></br>
-            <div style={columnStyle3} className="event412">
-              <h2>Date</h2>
-              <p>{event.date}</p>
+            <div style={columnStyle3} className="event412 lm">
+              <h2 className="lm">Date</h2>
+              <p className="lm">{event.date}</p>
             </div>
             <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
             <div style={hoverInfoStyle2} className="hover-info cvv">
@@ -304,7 +333,8 @@ const Events = () => {
       </div>
       <br></br><br></br><br></br><br></br>
     </div>
+    </>
   );
-};
+}
 
 export default Events;
