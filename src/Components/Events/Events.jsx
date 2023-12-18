@@ -9,7 +9,7 @@ import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
 import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
-
+import aq from "./abg.svg";
 
 const Events = () => {
 
@@ -71,7 +71,7 @@ const Events = () => {
     fontWeight: 'bold',
     marginTop: '1%',
     textAlign: 'left',
-    width:'25%',
+    //width:'75%',
   };
   
 
@@ -229,7 +229,7 @@ const Events = () => {
           <p>Join us for a friendly rendezvous</p>
         </div>
       </div>
-      <div className="event3 text-2xl">Events 2023</div>
+      <div className="event3 text-3xl">Events 2023</div>
       {eventsData.map((event, index) => (
      <div
      key={index}
@@ -237,8 +237,9 @@ const Events = () => {
      className="section-container text-2xs event100 group ety"
      onMouseEnter={handleUpperCardHover}
      onMouseLeave={handleUpperCardLeave}
-   >
+   >    
           <img className="eventi" src={evim} alt="Event Image" />
+     
           <div style={columnStyle}>
             <h2  className="ety">Event Name</h2>
             <p  className="ety">{event.eventName}</p>
@@ -252,6 +253,7 @@ const Events = () => {
             <h2  className="ety">Date</h2>
             <p  className="ety">{event.date}</p>
           </div>
+          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
           <div style={hoverInfoStyle} className="hover-info">
             <div style={triangleStyle} className="triangle"></div>
             
@@ -259,7 +261,7 @@ const Events = () => {
           </div>
         </div>
       ))}
-      <div className="event3 text-2xl">Events 2024</div>
+      <div className="event3 text-3xl">Events 2024</div>
       {eventsData2.map((event, index) => (
         <div
           key={index}
@@ -288,6 +290,7 @@ const Events = () => {
             <p className="ety">{event.date}</p>
             </div>
           </div>
+          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
           <div style={hoverInfoStyle} className="hover-info">
             <div style={triangleStyle} className="triangle"></div>
            
@@ -295,7 +298,7 @@ const Events = () => {
           </div>
         </div>
       ))}
-      <div className="event3 text-2xl">Archives of past events</div>
+      <div className="event3 text-3xl">Archives of past events</div>
       <div style={cardContainerStyle} className="lk">
         {eventsData3.map((event, index) => (
           <div
@@ -310,7 +313,7 @@ const Events = () => {
               <p className="lm">{event.eventName}</p>
             </div>
             <div style={columnStyle3} className="event411 lm">
-              <h2 className="lm klj">Locations</h2>
+              <h2 className="lm">Locations</h2>
               <p className="lm">{event.location}</p>
             </div>
             <br></br><br></br>
