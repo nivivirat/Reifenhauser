@@ -36,15 +36,29 @@ export default function CardComponent() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
         responsive: [
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
-                    infinite: true,
+                    initialSlide: 0,
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    initialSlide: 0,
+                },
+            },
+            {
+                breakpoint: 1600,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                    initialSlide: 0,
                 },
             },
         ],
@@ -52,28 +66,22 @@ export default function CardComponent() {
 
     return (
         <div className="overflow-hidden">
-            {/* Apply the slider only for md or smaller screens */}
-            <div className="md:hidden">
-                <Slider {...sliderSettings}>
-                    {posts.map((items, key) => (
-                        <div className="w-full  rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
-                            <img
-                                className="object-cover w-full h-48"
-                                src={items.img}
-                                alt="image"
-                            />
-                            <div className="p-4">
-                                <h4 className=" text-xs font-semibold text-white media77">
-                                    {items.title}
-                                </h4><br></br>
-                            </div>
+            <Slider {...sliderSettings}>
+                {posts.map((items, key) => (
+                    <div className="w-96 ml-15 mr-15  rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
+                        <img
+                            className="object-cover w-full h-48"
+                            src={items.img}
+                            alt="image"
+                        />
+                        <div className="p-4">
+                            <h4 className="text-xs font-semibold text-white media77">
+                                {items.title}
+                            </h4><br></br>
                         </div>
-                    ))}
-                </Slider>
-                <br></br>
-            </div>
-            {/* Display individual cards for lg and larger screens */}
-        
+                    </div>
+                ))}
+            </Slider>
         </div>
     );
 }
