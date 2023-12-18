@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 export default function Footer() {
     return (
-        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[450px] md:p-14 md:px-24 p-10 w-full'>
+        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[450px] md:p-14 lg:px-24 md:px-10 p-10 w-full'>
 
             {/* top */}
             <div className='flex md:flex-row flex-col-reverse justify-between h-[90%] w-full'>
