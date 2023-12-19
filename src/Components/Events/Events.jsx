@@ -234,7 +234,7 @@ const Events = () => {
      <div
      key={index}
      style={sectionStyle2}
-     className="section-container event100 mb-10 group ety ght "
+     className="section-container event100 mb-10 group ety ght  animate__animated animate__fadeInRight animate__delay-1s"
      onMouseEnter={handleLowerCardHover}
      onMouseLeave={handleLowerCardLeave}
    >    
@@ -268,7 +268,7 @@ const Events = () => {
      <div
      key={index}
      style={sectionStyle2}
-     className="section-container text-2xs event100 group ety"
+     className="section-container text-2xs event100 group ety  animate__animated animate__fadeInLeft animate__delay-2s"
      onMouseEnter={handleLowerCardHover}
      onMouseLeave={handleLowerCardLeave}
    >    
@@ -302,7 +302,7 @@ const Events = () => {
           <div
             key={index}
             style={cardStyle}
-            className=" event45 relative group lm gggg flex flex-col"
+            className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-3s"
             onMouseEnter={handleUpperCardHover}
             onMouseLeave={handleUpperCardLeave}
           >
