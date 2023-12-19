@@ -34,12 +34,12 @@ export default function Footer() {
                     <div>
                         <ul className='flex flex-col gap-3 font-semibold'>
                             <li><a href='/services'>Services</a></li>
-                            <li><a href='/media'>Articles</a></li>
+                            <li><a href='/media'>Media</a></li>
                             <li><a href='/careers'>Careers</a></li>
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
                             <li><a href='/testimonials'>Testimonials</a></li>
-                            <li><a href='/blogs'>Blogs</a></li>
+                           
                         </ul>
                         <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9     xl:mt-4'>
                             <p className='text-[12px]'>Connect with us on</p>
