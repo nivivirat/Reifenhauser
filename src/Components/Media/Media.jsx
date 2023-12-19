@@ -49,7 +49,7 @@ export default function Media() {
               <Typography variant="h4" className="mb-8 media7 text-2xl">
                 Sustainable and tricky materials work well with CI flexo
               </Typography>
-              <Typography color="gray" className="mb-8 flex flex-col text-2xs justify-start media17">
+              <Typography color="gray" className="mb-8 media17 flex flex-col text-xl">
                 Manish Mehta, managing director, Reifenhäuser India talks about how gravure and CI flexo are competing in terms of space, speed, cost and more. He highlights the benefits of CI flexo trade shops which are scaling up the industry
               </Typography>
             </div>
@@ -103,6 +103,7 @@ export default function Media() {
       </div>
       <div className="text-3xl flex-flex media3">Let’s Connect</div>
       <div className="text-xl flex-flex media4">Here’s what we've been up to recently.</div>
+      <br></br>
       <CardComponent>
       </CardComponent>
 

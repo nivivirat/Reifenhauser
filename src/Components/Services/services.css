@@ -97,6 +97,10 @@ font-weight: 400;
     .nn{
     position:relative;
       left:70%;
+     
+      }
+      .mm{
+        margin-right:2px;
       }
   }
 
