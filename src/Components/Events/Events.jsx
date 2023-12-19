@@ -214,7 +214,7 @@ const Events = () => {
     <p className="text-primary font-semibold">Events</p>
 </div>
     <div style={containerStyle}>
-      <div style={imageContainerStyle} className="image-container">
+      <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeInDown animate__delay-0s">
         <img
           src={yu}
           alt="Rendezvous Image"
@@ -234,7 +234,7 @@ const Events = () => {
      <div
      key={index}
      style={sectionStyle2}
-     className="section-container event100 mb-10 group ety ght  animate__animated animate__fadeInRight animate__delay-1s"
+     className="section-container event100 mb-10 group ety ght "
      onMouseEnter={handleLowerCardHover}
      onMouseLeave={handleLowerCardLeave}
    >    
@@ -268,7 +268,7 @@ const Events = () => {
      <div
      key={index}
      style={sectionStyle2}
-     className="section-container text-2xs event100 group ety  animate__animated animate__fadeInLeft animate__delay-2s"
+     className="section-container text-2xs event100 group ety "
      onMouseEnter={handleLowerCardHover}
      onMouseLeave={handleLowerCardLeave}
    >    
@@ -302,7 +302,7 @@ const Events = () => {
           <div
             key={index}
             style={cardStyle}
-            className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-3s"
+            className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
             onMouseEnter={handleUpperCardHover}
             onMouseLeave={handleUpperCardLeave}
           >
