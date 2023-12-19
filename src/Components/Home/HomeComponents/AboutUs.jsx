@@ -6,7 +6,7 @@ export default function AboutUs() {
     return (
         <div>
             <div className='xl:p-10 p-3 flex md:flex-row flex-col place-items-center xl:gap-0 gap-10'>
-                <div className='xl:w-[45%] w-full flex flex-col xl:gap-4 gap-[10px]'>
+                <div className='xl:w-[45%] w-full flex flex-col xl:gap-4 gap-[10px] animated-box animate__animated animate__fadeInLeft'>
                     {/* connect with us */}
                     <div className='xl:rounded-[35px] rounded-[20px] shadow-lg relative'>
                         <div className='xl:h-[320px] lg:h-[300px] h-[200px] '>
@@ -64,11 +64,11 @@ export default function AboutUs() {
                 </div>
 
                 {/* about us part */}
-                <div className='xl:w-[55%] flex flex-col xl:gap-10 gap-4 xl:p-[30px]'>
+                <div className='xl:w-[55%] flex flex-col xl:gap-10 gap-4 xl:p-[30px] animated-box animate__animated animate__fadeInRight'>
                     <p className='xl:text-3xl text-2xl xl:font-normal font-medium text-primary'>About Us</p>
                     <div className='font-semibold xl:text-5xl text-3xl xl:leading-snug'>
-                        <span className='text-black'>We have gone beyond the industry's</span>
-                        <span className='text-primary'> conventional notion of service.</span>
+                        <span className='text-black'>We have surpassed the industry’s</span>
+                        <span className='text-primary'> conventional comprehension of service</span>
                     </div>
                     <a href='/aboutUs' className="flex justify-center place-items-center text-white text-[14px] p-3 rounded-xl xl:w-[25%] w-[40%] bg-gradient-to-r from-blue-900 to-blue-400">
                         Read more
