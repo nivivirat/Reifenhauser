@@ -1,36 +1,12 @@
-import { useState } from 'react'
 import customerService from '../../../assets/Images/Home/services/customerService.svg'
-import heart from '../../../assets/Images/Home/services/heart.svg'
+import service from '../../../assets/Images/Home/services/serviceimg.svg'
 import people from '../../../assets/Images/Home/services/people.svg'
-import BlueCard from './HomeServicesCard/BlueCard'
-import GreyCard from './HomeServicesCard/GreyCard'
-import HomeServiceData from './HomeServicesCard/HomeServiceData.json'
+import heart from '../../../assets/Images/Home/services/heart.svg'
+import { Icon } from '@iconify/react'
 
 export default function HomeServices() {
-
-    const [selected, setSelected] = useState("Global Services");
-    const [delayedAction, setDelayedAction] = useState(null);
-
-    const handleLocationClick = (location) => {
-        setSelected(location);
-    };
-
-    const handleDelayedLocationClick = (location) => {
-        // Clear any existing delayed action
-        if (delayedAction) {
-            clearTimeout(delayedAction);
-        }
-
-        // Set the new delayed action
-        const timeoutId = setTimeout(() => {
-            handleLocationClick(location);
-        }, 1000); // 1 second delay
-
-        setDelayedAction(timeoutId);
-    };
-
     return (
-        <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10">
+        <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeIn">
             <div className="text-primary flex flex-row justify-between">
 
                 <a href='/services' className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Services</a>
@@ -57,41 +33,52 @@ export default function HomeServices() {
 
 
             {/* main */}
-            <div className='md:w-[100%] md:h-[460px] flex md:flex-wrap md:flex-col flex-col gap-6'>
+            <div className='flex md:flex-wrap md:flex-row flex-col gap-6'>
                 {/* Global Service */}
-                {HomeServiceData.map((card, index) => (
-                    <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
-                        {selected === card.title ? (
-                            card.id !== 4 ? (
-                                <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                            ) : (
-                                <div>
-                                    {/* <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} /> */}
-                                    <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                    {/* <div className='h-full bg-black'></div> */}
-                                    {/* return the map function, the map must not iterate after this */}
-                                </div>
-                            )
-                        ) : (
-                            selected === "Breakdown Maintenance" && card.id === 5 ?
-                                (
-                                    <></>
-                                ) : (
-                                    selected === "Breakdown Maintenance" && card.id === 3 ?
-                                        (
-                                            <div>
-                                                <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                                <div className='md:mt-[30px] mt-[20px]'>
-                                                    <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} />
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                        )
-                                )
-                        )}
+                <a href='/services' className='flex flex-row md:gap-5 gap-3 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-400 md:w-[48%] md:h-[200px] h-[150px] md:p-6 p-3'>
+                    <div className='w-[50%] h-full'>
+                        <img src={service} className='w-full h-full rounded-2xl object-cover'></img>
                     </div>
-                ))}
+                    <div className='text-white md:w-[60%] w-[50%] md:justify-between flex flex-col'>
+                        <p className='font-semibold'>Global Service</p>
+                        <p className='font-extralight md:text-[16px] text-[12px]'>We're not just a service provider; we're pioneers, shaping tomorrow through foresight and adapting to emerging trends.</p>
+                    </div>
+
+                </a>
+
+                {/* Rectangle */}
+                <div className='md:w-[45%]'>
+                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[90px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                        <p>Preventive Maintenance Service</p>
+                        <div className="text-black md:text-xl">
+                            <Icon icon="iconoir:arrow-tr" />
+                        </div>
+                    </a>
+
+                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                        <p>AMC (Annual Maintenance Contract)</p>
+                        <div className="text-black md:text-xl">
+                            <Icon icon="iconoir:arrow-tr" />
+                        </div>
+                    </a>
+                </div>
+
+                {/* Rectangle */}
+                <div className='md:w-[48%]'>
+                    <a href='/services' className='md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[100px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                        <p>Breakdown Maintenance</p>
+                        <div className="text-black md:text-xl">
+                            <Icon icon="iconoir:arrow-tr" />
+                        </div>
+                    </a>
+
+                    <a href='/services' className='md:mt-[5%] mt-[5%] md:rounded-3xl rounded-xl bg-base md:w-[100%] md:h-[80px] flex flex-row justify-between place-items-center md:p-7 p-3'>
+                        <p>Installation & Commissioning</p>
+                        <div className="text-black md:text-xl">
+                            <Icon icon="iconoir:arrow-tr" />
+                        </div>
+                    </a>
+                </div>
 
                 {/* Card */}
                 <div className='md:w-[45%] w-full flex flex-row gap-4'>
