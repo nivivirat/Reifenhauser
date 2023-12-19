@@ -10,7 +10,7 @@ export default function AboutUs() {
     return (
         <div className="lg:p-10 p-5 flex flex-col gap-10 md:mx-[50px]">
 
-            <div className="lg:text-[20px] text-[16px]">
+            <div className="lg:text-[20px] text-[16px] ">
                 <p className="lg:block hidden text-primary font-semibold">About Us</p>
                 <div className="lg:hidden flex-row flex gap-1">
                     <p className="text-[#999999]">Home-</p>
@@ -25,13 +25,13 @@ export default function AboutUs() {
             <div className="flex md:flex-row flex-col gap-5 md:gap-0">
 
                 <div className="md:w-[65%] whitespace-normal">
-                    <div className="md:text-[20px] text-[26px] font-semibold w-[90%]">
-                        <span className="text-black">At Reifenhauser India, our expertise lies in facilitating global companies'</span>
+                    <div className="md:text-[20px] text-[26px] font-semibold w-[90%]  animate__animated animate__fadeInLeft animate__delay-0s">
+                        <span className="text-black ">At Reifenhauser India, our expertise lies in facilitating global companies'</span>
                         <span className="text-[#777777]">&nbsp; access to the Indian Subcontinent with cutting-edge machinery.</span>
                     </div>
                 </div>
 
-                <div className="text-black opacity-50 md:w-[35%] pr-10">
+                <div className="text-black opacity-50 md:w-[35%] pr-10 animate__animated animate__fadeInRight animate__delay-0s">
                     <p className="md:text-[13px] text-[15px]">As we ascend high, we have progressed immensely in the competitive world.
                         Our primary focus rests on showcasing our excellence in service, unparalleled after-sales support, and comprehensive Annual Maintenance Contracts (AMCs).
                     </p>
@@ -40,13 +40,13 @@ export default function AboutUs() {
             </div>
 
 
-            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll'>
+            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll  animate__animated animate__fadeInLeft animate__delay-0s'>
                 <div className='md:w-[70%] w-full'>
                     <div className="md:overflow-hidden">
                         <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right' alt="Image 1" />
                     </div>
                 </div>
-                <div className='md:w-[40%] w-full'>
+                <div className='md:w-[40%] w-full  animate__animated animate__fadeInRight animate__delay-0s'>
                     <div className="md:overflow-hidden overflow-x-scroll">
                         <img src={aboutUs2} className='md:h-[300px] lg:h-[400px] object-cover' alt="Image 2" />
                     </div>
@@ -59,7 +59,7 @@ export default function AboutUs() {
             </div>
 
             {/* Our Story */}
-            <div className='flex flex-col md:flex-row md:gap-10 gap-4 md:mt-10'>
+            <div className='flex flex-col md:flex-row md:gap-10 gap-4 md:mt-10  animate__animated animate__fadeInLeft animate__delay-1s'>
                 <div className='md:w-[100%]'>
                     <div>
                         <p className="text-primary font-semibold lg:text-[45px] text-[35px]">Our Story</p>
@@ -88,7 +88,7 @@ export default function AboutUs() {
 
             {/* mission & vission */}
 
-            <div className='flex flex-col lg:flex-row gap-10 lg:gap-0 md:justify-between md:px-0 lg:px[10px] xl:px-[100px] md:mt-10'>
+            <div className='flex flex-col lg:flex-row gap-10 lg:gap-0 md:justify-between md:px-0 lg:px[10px] xl:px-[100px] md:mt-10  animate__animated animate__fadeInRight animate__delay-2s'>
 
                 {/* vision */}
                 <div className='overflow-hidden relative md:w-[400px] h-[390px] lg:h-[350px] w-[100%] text-white rounded-lg bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500'>
@@ -104,7 +104,7 @@ export default function AboutUs() {
 
                 {/* mission */}
                 <div>
-                    <div className='overflow-hidden md:ml-[200px] md:mt-10 lg:ml-0 lg:mt-[200px] relative md:w-[400px] h-[350px] w-[100%] text-white rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800'>
+                    <div className='overflow-hidden md:ml-[200px] md:mt-10 lg:ml-0 lg:mt-[200px] relative md:w-[400px] h-[350px] w-[100%] text-white rounded-lg bg-gradient-to-r from-blue-950 via-blue-900 to-blue-800 '>
                         <div className='absolute -right-10 -top-10 text-[180px] text-white opacity-25 '>
                             <Icon icon="ic:outline-task-alt" />
                         </div>
@@ -117,7 +117,7 @@ export default function AboutUs() {
             </div>
 
             {/* Board of directors */}
-            <div className='flex flex-col md:gap-10 gap-5'>
+            <div className='flex flex-col md:gap-10 gap-5  animate__animated animate__fadeIn animate__delay-3s'>
                 <div className='md:w-[100%]'>
                     <div>
                         <p className="text-primary font-semibold lg:text-[45px] text-[20px]">Board of directors</p>
