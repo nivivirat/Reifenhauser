@@ -18,7 +18,7 @@ function Testimonial() {
       <p className="text-3xl mt-8 test12"><strong>See what our users say about us</strong>
       </p>
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
         {cardContent.map((card, index) => (
           <CardWithLink
             key={index}
