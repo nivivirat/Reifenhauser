@@ -33,7 +33,7 @@ function Blog() {
  23 Oct 2017 | 6 Mins read - By Abhay Avadhani
  </p>
  <img className ="wwe" src={rimg} alt ="image"></img>
-<center><img className="ima h-96 w-120 animated-box animate__animated animate__fadeIn"  src={img3} alt="image"></img></center>
+<center><img className="ima h-96 w-120 animated-box animate__animated animate__fadeInDown"  src={img3} alt="image"></img></center>
 <p className="text-xl mt-8 nnm ew"><strong>
 Abhay Avadhani (AA): How is flexo competing with gravure on things like speed to market, sustainability?Manish Mehta (MM):
 </strong></p>
@@ -126,3 +126,4 @@ On the other side Flexo printing technology as well as machines can use water ba
 }
 
 export default Blog;
+
