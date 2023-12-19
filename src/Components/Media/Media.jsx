@@ -47,8 +47,10 @@ export default function Media() {
                 FEATURED
               </Typography>
               <Typography variant="h4" className="mb-8 media7 text-2xl">
-                Sustainable and tricky materials work well with CI flexo
+              <a href='/blogs'>  Sustainable and tricky materials work well with CI flexo</a>
+               
               </Typography>
+              
               <Typography color="gray" className="mb-8 media17 flex flex-col text-xl">
                 Manish Mehta, managing director, Reifenhäuser India talks about how gravure and CI flexo are competing in terms of space, speed, cost and more. He highlights the benefits of CI flexo trade shops which are scaling up the industry
               </Typography>
@@ -78,6 +80,7 @@ export default function Media() {
           <CardBody>
 
             <Typography variant="h4" className="mb-2 media7 text-2xl">
+            <a href='/blogs'> Reifenhäuser India participates with principals at PlastIndia 2023</a>
               Reifenhäuser India participates with principals at PlastIndia 2023
             </Typography>
 
