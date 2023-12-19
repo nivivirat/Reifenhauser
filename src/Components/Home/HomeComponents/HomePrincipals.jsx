@@ -3,7 +3,7 @@ import { Icon } from "@iconify/react"
 
 export default function HomePrincipals() {
     return (
-        <div className="xl:p-16 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10">
+        <div className="xl:p-16 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-2s">
             <div className="bg-gradient-to-r from-blue-800 to-teal-100 text-transparent bg-clip-text">
                 <p className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Principals</p>
             </div>

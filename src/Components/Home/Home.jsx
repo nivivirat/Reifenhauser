@@ -18,7 +18,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className='md:-mt-[10%]'>
+            <div className='md:-mt-[10%] animated-box animate__animated animate__fadeInLeft animate__delay-1s'>
                 {/* about us */}
                 <AboutUs />
             </div>

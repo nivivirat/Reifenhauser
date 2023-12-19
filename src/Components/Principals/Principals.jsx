@@ -14,7 +14,7 @@ export default function Principals() {
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
 
             {/* our principals */}
-            <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px] animated-box animate__animated animate__fadeInLeft">
+            <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px] animated-box animate__animated animate__fadeInLeft animate__delay-1s">
                 <div className="flex flex-col lg:w-[55%]">
                     <div className="md:hidden flex-row flex gap-1">
                         <p className="text-[#999999]">Home-</p>

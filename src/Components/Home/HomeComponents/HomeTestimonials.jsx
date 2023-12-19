@@ -19,7 +19,7 @@ export default function HomeTestimonials() {
     const first3Cards = cardContent.slice(0, 3);
 
     return (
-        <div className="bg-base flex flex-col">
+        <div className="bg-base flex flex-col animated-box animate__animated animate__bounceInLeft animate__delay-5s">
             <div className="md:px-[6%] pt-10 p-5 font-semibold md:w-[40%] xl:text-3xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
                 <span>Here's what our </span>
                 <span className="text-primary">customers </span>

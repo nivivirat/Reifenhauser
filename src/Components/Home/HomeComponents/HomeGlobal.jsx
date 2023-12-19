@@ -12,7 +12,7 @@ export default function HomeGlobal() {
 
     return (
        
-        <div className='flex flex-col font-medium justify-center place-items-center md:gap-2 animated-box animate__animated animate__fadeIn'>
+        <div className='flex flex-col font-medium justify-center place-items-center md:gap-2 animate__animated animate__fadeIn animate__delay-6s'>
             <p className='text-primary text-[26px]'>Presence</p>
             <p className='lg:text-4xl md:text-2xl text-xl p-3 text-center tracking-wider'>
                 Ingraining technology in and around India since years
