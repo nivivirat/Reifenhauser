@@ -27,7 +27,7 @@ export default function Media() {
       <div className="text-xl flex-flex media4 jj">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
       <img className="media56" src={rimg} alt="image"></img>
       <div className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 mr--9">
-        <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5">
+        <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
           <CardHeader
             shadow={false}
             floated={false}
@@ -42,8 +42,8 @@ export default function Media() {
 
           </CardHeader>
           <CardBody>
-            <div className="flex flex-col justify-start p-2">
-            <Typography variant="h4" className="sm: mb-8 text-2xl w-32 h-8 text-[#1565D8] bg-[#E0E7F2] hhgg">
+            <div className="flex flex-col justify-start p-2 s">
+            <Typography variant="h4" className="sm: mb-8 text-2xl w-32 h-8 text-[#1565D8] bg-[#E0E7F2] hhgg ">
                 FEATURED
               </Typography>
               <Typography variant="h4" className="mb-8 media7 text-2xl">
@@ -64,7 +64,7 @@ export default function Media() {
       </div>
 
 
-      <div className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 hhg">
+      <div className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
         <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5">
           <CardHeader
             shadow={false}
