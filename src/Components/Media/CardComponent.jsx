@@ -82,6 +82,7 @@ export default function CardComponent() {
                     </div>
                 ))}
             </Slider>
+            <br></br><br></br>
         </div>
     );
 }

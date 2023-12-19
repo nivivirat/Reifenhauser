@@ -9,7 +9,7 @@ import Serv5 from '../../assets/Images/Services/Frame 21509 (4).svg';
 
 export default function Services() {
   return (
-    <div className="App">
+    <div className="App mt-20">
      <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
                     <p className="text-[#999999]">Home-</p>
                     <p className="text-primary font-semibold">Services</p>

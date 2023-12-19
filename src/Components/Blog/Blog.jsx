@@ -23,13 +23,13 @@ function Blog() {
     <p className="text-xl bn">
     Article View
 </p>
- <p className="text-2xl mt-8 nm ew"><strong>
+ <p className="text-2xl mt-8 rr nm ew"><strong>
  Manish Mehta: Sustainable and tricky materials work well with CI flexo</strong>
  </p>
- <p className="text-2xs mt-8 kl ew">
+ <p className="text-2xs mt-8 rr kl ew">
  Manish Mehta, managing director, Reifenhäuser India talks about how gravure and CI flexo are competing in terms of space, speed, cost and more. He highlights the benefits of CI flexo trade shops which is scaling up the industry
  </p>
- <p className="text-xs mt-4 kk ew">
+ <p className="text-xs mt-4 rr kk ew">
  23 Oct 2017 | 6 Mins read - By Abhay Avadhani
  </p>
  <img className ="wwe" src={rimg} alt ="image"></img>
@@ -94,7 +94,7 @@ On the other side Flexo printing technology as well as machines can use water ba
  <Slider options={{ align: "center" }}>
         {testimonials.map((testimonial, i) => (
           <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
-            <div className="h-96 py-4 px-4 bg-white shadow-lg rounded-lg my-20">
+            <div className="h-auto w-auto py-4 px-4 bg-white shadow-lg rounded-lg my-20">
               <div className="flex justify-center md:justify-end -mt-16">
                 <div style={{ height: '30vh', width: '100%' }}>
                 <img

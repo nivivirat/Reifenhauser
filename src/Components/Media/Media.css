@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin-left:5%;
   /* margin:0 -10%; */
   /* margin-left:-.3%; */
 }
@@ -207,7 +208,7 @@ line-height: normal;
   width:25%;
   height:25%;
   margin-left:70%;
-  margin-top:-16%;
+  margin-top:16%;
 }
 .media77{
   background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));
