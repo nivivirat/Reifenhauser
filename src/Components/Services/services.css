@@ -231,6 +231,12 @@ font-weight: 400;
       position:relative;
       left:-5%;
     }
+    .cfg{
+      margin-top:-30px;
+    }
+    .hui{
+      margin-top:30px;
+    }
     /* .ff{
       margin-top:-80%;
     } */
