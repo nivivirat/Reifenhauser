@@ -171,7 +171,7 @@ margin:auto;
   overflow:hidden;
   /* width:6.35%; */
   width:70px;
-  height:72px;
+  height:52px;
 }
 .event41 {
   display: inline-flex;
@@ -221,6 +221,7 @@ margin:auto;
   top:-40%;
   left:50%;
 }
+
 .qasd{
   font-size:12px;
 }
@@ -238,10 +239,16 @@ margin:auto;
   margin-top:-80px;
 }
 
+
 .vv{
   margin-top:5%;
 }
 }
 .aq{
   font-size:12px;
+}
+@media (max-width: 700px) {
+.ety{
+  margin-right:-90%;
+}
 }

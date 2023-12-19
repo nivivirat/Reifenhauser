@@ -27,7 +27,7 @@ const Events = () => {
     borderRadius: '8px',
     display: 'flex',
     width: '95%',
-    height:'45%',
+    height:'35%',
     // flexDirection: 'row',
     justifyContent: 'space-between',
   };
@@ -38,7 +38,7 @@ const Events = () => {
     borderRadius: '8px',
     display: 'flex',
     width: '95%',
-    height:'45%',
+    height:'35%',
     // flexDirection: 'row',
     justifyContent: 'space-between',
  
@@ -69,9 +69,9 @@ const Events = () => {
     flexDirection: 'column',
     color: '#013A98',
     fontWeight: 'bold',
-    marginTop: '1%',
+    marginTop: '-1%',
     textAlign: 'left',
-    //width:'75%',
+    width:'25%',
   };
   
 
@@ -229,12 +229,12 @@ const Events = () => {
           <p>Join us for a friendly rendezvous</p>
         </div>
       </div>
-      <div className="event3 text-3xl">Events 2023</div>
+      <div className="event3 text-3xl ">Events 2023</div>
       {eventsData.map((event, index) => (
      <div
      key={index}
      style={sectionStyle2}
-     className="section-container text-2xs event100 group ety"
+     className="section-container event100 mb-10 group ety ght "
      onMouseEnter={handleLowerCardHover}
      onMouseLeave={handleLowerCardLeave}
    >    
@@ -307,16 +307,16 @@ const Events = () => {
             onMouseLeave={handleUpperCardLeave}
           >
             <div style={columnStyle3} className="event41 lm">
-              <h2 className="lm">Event Name</h2>
+              <h2 className="lm qasd">Event Name</h2>
               <p className="lm">{event.eventName}</p>
             </div>
             <div style={columnStyle3} className="event411 lm">
-              <h2 className="lm mt-4">Locations</h2>
+              <h2 className="lm mt-4 qasd">Locations</h2>
               <p className="lm">{event.location}</p>
             </div>
             <br></br><br></br>
             <div style={columnStyle3} className="event412 lm">
-              <h2 className="lm">Date</h2>
+              <h2 className="lm qasd">Date</h2>
               <p className="lm">{event.date}</p>
             </div>
             <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
