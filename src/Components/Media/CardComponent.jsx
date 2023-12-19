@@ -65,7 +65,7 @@ export default function CardComponent() {
     };
 
     return (
-        <div className="overflow-hidden">
+        <div className="overflow-hidden  animated-box animate__animated animate__fadeIn animate__delay-3s">
             <Slider {...sliderSettings}>
                 {posts.map((items, key) => (
                     <div className="w-96 ml-15 mr-15  rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
