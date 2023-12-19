@@ -40,13 +40,13 @@ export default function AboutUs() {
             </div>
 
 
-            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll  animate__animated animate__fadeInLeft animate__delay-0s'>
+            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll  '>
                 <div className='md:w-[70%] w-full'>
                     <div className="md:overflow-hidden">
-                        <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right' alt="Image 1" />
+                        <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right animate__animated animate__fadeInLeft animate__delay-0s' alt="Image 1" />
                     </div>
                 </div>
-                <div className='md:w-[40%] w-full  animate__animated animate__fadeInRight animate__delay-0s'>
+                <div className='md:w-[40%] w-full  animate__animated animate__fadeInRight animate__delay-0s animate__animated animate__fadeInLeft animate__delay-0s'>
                     <div className="md:overflow-hidden overflow-x-scroll">
                         <img src={aboutUs2} className='md:h-[300px] lg:h-[400px] object-cover' alt="Image 2" />
                     </div>
