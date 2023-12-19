@@ -98,8 +98,8 @@ export default function Careers() {
     
 
     return (
-        <div className='lg:p-10 p-5 flex flex-col lg:gap-10 gap-8'>
-            <div className='bg-[#cfe1ff] lg:h-[500px] xl:h-[400px] h-[250px] lg:rounded-[25px] rounded-[20px] overflow-clip relative'>
+        <div className='lg:p-10 p-5 flex flex-col lg:gap-10 gap-8 animate__animated animate__fadeInLeft animate__delay-1s'>
+            <div className='bg-[#cfe1ff] lg:h-[500px] xl:h-[400px] h-[250px] lg:rounded-[25px] rounded-[20px] overflow-clip relative animated-box animate__animated animate__fadeInDown animate__delay-0s'>
                 <img src={one} className='h-full w-full md:object-cover' alt='One' />
                 <div className='absolute z-10 top-0 flex flex-col justify-center place-items-center w-full lg:gap-8 md:gap-6 gap-5 p-10'>
                     <div className='text-[#5997FF] lg:text-[18px]'>Careers</div>
