@@ -34,7 +34,7 @@ export default function Footer() {
                     <div>
                         <ul className='flex flex-col gap-3 font-semibold'>
                             <li><a href='/services'>Services</a></li>
-                            <li><a href='/blogs'>Articles</a></li>
+                            <li><a href='/media'>Articles</a></li>
                             <li><a href='/careers'>Careers</a></li>
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
