@@ -12,7 +12,7 @@ export default function ContactUs() {
 
             <div className="flex flex-row lg:gap-[10%]">
 
-                <div className="flex flex-col gap-8 lg:w-[45%]">
+                <div className="flex flex-col gap-8 lg:w-[45%] animate__animated animate__fadeInLeft animate__delay-0s">
                     <div className="lg:text-[20px] text-[16px]">
                         <p className="lg:block hidden text-primary font-semibold">Contact Us</p>
                         <div className="lg:hidden flex-row flex gap-1">
@@ -99,7 +99,7 @@ export default function ContactUs() {
 
                 </div>
 
-                <div className="lg:absolute lg:block z-0 right-0 hidden w-full pt-[10px]">
+                <div className="lg:absolute lg:block z-0 right-0 hidden w-full pt-[10px] animate__animated animate__fadeInRight animate__delay-0s">
                     <div className="relative">
                         <img src={bluebg} className="absolute z-0 h-[550px] right-0 top-0" alt="Background Image" />
                         <div className="absolute w-1/2 z-10 top-10 right-0">
