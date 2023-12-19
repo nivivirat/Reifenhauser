@@ -17,7 +17,7 @@ export default function Services() {
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6">
 
-                <h5 className="mb-2 text-5xl leading-tight q ll animated-box animate__animated animate__fadeInLeft">
+                <h5 className="mb-2 text-5xl text-4xl leading-tight q ll animated-box animate__animated animate__fadeInLeft">
                 Our Services
                 </h5>
                 <p className="text-xl  leading-tight w ll animated-box animate__animated animate__fadeInLeft">
@@ -33,10 +33,10 @@ export default function Services() {
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animated-box animate__animated animate__fadeInRight animate__delay-1s">
               <div className="flex flex-col  p-6 ">
 
-                <h5 className="mb-2 text-5xl leading-tight q ll ">
+                <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ll ">
                 Global Services
                 </h5>
-                <p className=" text-xl leading-tight  ll">
+                <p className=" text-xl md:2xs leading-tight  ll">
                 We are committed to offering continuous 24x7 after-sales support, keeping our clients abreast of industry trends. Our dedicated team provides expert technical guidance for spare parts procurement, top-tier machinery refurbishments, necessary upgrades, and meticulous breakdown maintenance.
                 </p>
 
@@ -52,7 +52,7 @@ export default function Services() {
 
 
 
-                <h5 className="mb-2 text-5xl ha leading-tight w q ll nn">
+                <h5 className="mb-2 lg:text-5xl text-4xl ha leading-tight w q ll nn">
                 Breakdown Maintenance
                 </h5>
                 <p className="text-xl ha leading-tight  ll nn">
@@ -66,7 +66,7 @@ export default function Services() {
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animate__animated animate__fadeInRight animate__delay-3s">
               <div className="flex flex-col p-6 ">
 
-                <h5 className="mb-2 text-5xl q leading-tight ll">
+                <h5 className="mb-2 lg:text-5xl text-4xl q leading-tight ll">
                 Installation & Commission
                 </h5>
                 <p className="mb-4 text-xl mr-20  leading-tight  ll">
@@ -83,7 +83,7 @@ export default function Services() {
 
 
 
-                <h5 className="mb-2 text-5xl w ha leading-tight q ll nn">
+                <h5 className="mb-2 lg:text-5xl text-4xl w ha leading-tight q ll nn">
                 Preventive Maintenance Services
                 </h5>
                 <p className="mb-4 text-xl mr-20 ha leading-tight  ll nn">
@@ -98,10 +98,10 @@ export default function Services() {
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animated-box animate__animated animate__fadeInRight  animate__delay-5s">
               <div className="flex flex-col  p-6">
 
-                <h5 className="mb-2 text-5xl leading-tight q ff ll">
+                <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ff cfg ll">
                 AMC</h5><h5 className="text-xl ss leading-tight q ll bnn"> (Annual Maintenance Contract)
                 </h5>
-                <p className="mb-4 text-xl mr-20 leading-tight ggh ll">
+                <p className="mb-4 text-xl mr-20 leading-tight ggh hui ll">
                 We provide comprehensive repair and maintenance services, adhering to our commitments made as per contract terms. We prioritize maximum uptime, continually updating our technical expertise and planning for periodic maintenance to avoid unexpected machinery failures. Customer satisfaction is paramount, ensuring services exceed expectations.
                 </p>
                 
