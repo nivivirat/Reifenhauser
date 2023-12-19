@@ -11,7 +11,7 @@ import './Test.css'
 
 export function CardWithLink({ description, buttonText, pos, kl, poss, buttonTextt }) {
   return (
-    <Card className="mt-12 ml-2 mr-2 sm:w-72 lg:w-96 md:w-96 border border-blue-500">
+    <Card className="mt-12  ml-2 mr-2 sm:w-72 lg:w-96 md:w-96 border border-blue-500  animate__animated animate__fadeInLeft animate__delay-0s">
       {description && (
         <CardBody>
           {/* Your existing SVG and Typography components */}
