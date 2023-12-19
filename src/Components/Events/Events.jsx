@@ -214,7 +214,7 @@ const Events = () => {
     <p className="text-primary font-semibold">Events</p>
 </div>
     <div style={containerStyle}>
-      <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeInDown animate__delay-0s">
+      <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeIn animate__delay-0s">
         <img
           src={yu}
           alt="Rendezvous Image"
