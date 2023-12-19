@@ -161,3 +161,51 @@ font-weight: 700;
       text-size:20px;
     }
   }
+
+
+
+  @media (min-width: 601px) {
+    .ew{
+     text-align:left;
+     margin-left:2%;
+     margin-right:9%;    
+    }
+   .nm{
+     color: #183B56;
+ 
+ 
+ font-style: normal;
+ font-weight: 700;
+   }
+ 
+   .rr{
+    text-align:center;
+   }
+   .kl{
+    margin:auto;
+    width:60%;
+   }
+   .kk{
+    margin-left:18%;
+    margin-right:-20%;
+    width:95%;
+    
+    text-align:center;
+   }
+   .kl{
+    margin-left:18%;
+    margin-right:-20%;
+    width:95%;
+    margin: 0 20%;
+  
+    text-align:center;
+   }
+   .ew{
+    margin-left:2%;
+    margin-right:9%;  
+   }
+   .ima{
+    position:relative;
+    left:2px;
+   }
+   } 
