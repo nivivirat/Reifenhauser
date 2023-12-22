@@ -110,7 +110,7 @@ export default function Media() {
         </Card></a>
       </div>
       <div className="text-3xl flex-flex media3">Let’s Connect</div>
-      <div className="text-[18px] flex-flex media4">Here’s what we've been up to recently.</div>
+      <div className="text-[18px] flex-flex media4 -mb-24">Here’s what we've been up to recently.</div>
       <br></br>
       <CardComponent>
       </CardComponent>
