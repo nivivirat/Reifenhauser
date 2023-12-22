@@ -37,7 +37,7 @@ export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
             {kl}
             
           </Typography>
-          <Typography variant="text" className="flex items-right gap-2 test4">
+          <Typography variant="text" className="flex items-right gap-2 test12">
             {poss}
             
           </Typography>
