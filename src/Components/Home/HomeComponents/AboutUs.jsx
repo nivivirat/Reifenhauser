@@ -40,7 +40,7 @@ export default function AboutUs() {
                             </div>
 
                             <div className='flex flex-row justify-center place-items-end text-[#295DB1] font-normal absolute bottom-[40%] xl:right-[1%] xl:p-9 p-4 tracking-wide'>
-                                <span className='xl:text-[45px] text-[20px] font-bold'>29</span>
+                                <span className='xl:text-[45px] text-[20px] font-bold'>30</span>
                                 <span className='xl:text-[25px] pb-[4%] font-normal'>&nbsp;Companies</span>
                             </div>
 
@@ -55,7 +55,7 @@ export default function AboutUs() {
                                 <iframe className='h-full w-full object-cover xl:rounded-[35px] rounded-[20px]' src="https://lottie.host/?file=2f1c7a11-438a-4f0a-8709-6af229d0cc9b/tt8ngeo14t.json"></iframe>
                             </div>
 
-                            <div className='flex  flex-row justify-center place-items-center text-[#295DB1] font-semibold absolute bottom-0 right-[8%] xl:text-[16px] text-[15px] left-0 xl:p-6 p-4 tracking-wide'>
+                            <div className='flex  flex-row justify-center place-items-center text-[#295DB1] font-semibold absolute bottom-0 right-[8%] xl:text-[18px] text-[15px] left-0 xl:p-6 p-4 tracking-wide'>
                                 <p className='bg-gradient-to-r from-blue-900 to-blue-700 text-transparent bg-clip-text'>24 x 7 Service</p>
                             </div>
                         </div>
@@ -66,8 +66,8 @@ export default function AboutUs() {
                 {/* about us part */}
                 <div className='xl:w-[55%] flex flex-col xl:gap-10 gap-4 xl:p-[30px]'>
                     <p className='xl:text-3xl text-2xl xl:font-normal font-medium text-primary'>About Us</p>
-                    <div className='font-semibold xl:text-5xl text-3xl xl:leading-snug'>
-                        <span className='text-black'>We have gone beyond the industry's</span>
+                    <div className='font-semibold xl:text-4xl text-3xl xl:leading-snug'>
+                        <span className='text-black'>At RIMPL, we have gone beyond the industry's</span>
                         <span className='text-primary'> conventional notion of service.</span>
                     </div>
                     <a href='/aboutUs' className="flex justify-center place-items-center text-white text-[14px] p-3 rounded-xl xl:w-[25%] w-[40%] bg-gradient-to-r from-blue-900 to-blue-400">

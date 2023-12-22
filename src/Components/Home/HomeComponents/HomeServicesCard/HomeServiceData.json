@@ -1,23 +1,23 @@
 [
     {
       "id": 1,
-      "title": "Global Services"
+      "title": "Global Services",
+      "img": "GlobalServices"
     },
     {
       "id": 2,
-      "title": "Preventive Maintenance Service"
+      "title": "Breakdown Maintenance",
+      "img" : "BreakdownMaintenance"
     },
     {
       "id": 3,
-      "title": "AMC (Annual Maintenance Contract)"
+      "title": "Installation & Commissioning",
+      "img": "Installation_Commissioning"
     },
     {
       "id": 4,
-      "title": "Breakdown Maintenance"
-    },
-    {
-      "id": 5,
-      "title": "Installation & Commissioning"
+      "title": "Preventive Maintenance Service & AMC",
+      "img":"PMS_AMC"
     }
 ]
   

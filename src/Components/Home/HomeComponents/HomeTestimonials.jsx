@@ -23,10 +23,11 @@ export default function HomeTestimonials() {
 
     return (
         <div className="bg-base flex flex-col">
-            <div className="md:px-[6%] pt-10 p-5 font-semibold md:w-[40%] xl:text-3xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
+            <div className="md:px-[6%] pt-10 p-5 font-semibold md:w-[80%] xl:text-4xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
                 <span>Here's what our </span>
                 <span className="text-primary">customers </span>
-                <span>say about us</span>
+                <span>say </span>
+                <div className='pt-4'>about us</div>
             </div>
 
             <div className="text-[#6B6B78] text-xs">

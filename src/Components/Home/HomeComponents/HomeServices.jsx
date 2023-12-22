@@ -30,7 +30,7 @@ export default function HomeServices() {
     };
 
     return (
-        <div className="xl:p-10 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-3s">
+        <div className="xl:p-10 xl:pb-0 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-3s">
             <div className="text-primary flex flex-row justify-between">
 
                 <a href='/services' className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Services</a>
@@ -44,7 +44,7 @@ export default function HomeServices() {
 
             {/* content */}
             <div className='flex flex-row gap-10'>
-                <div className='md:w-[70%] md:leading-snug xl:text-[30px] lg:text-[28px] md:text-[26px] text-3xl font-semibold'>
+                <div className='md:w-[70%] md:leading-[55px] xl:text-[2.25rem] lg:text-[28px] md:text-[26px] text-3xl font-medium'>
                     <span className=''>It's a fundamental part of our DNA, propelling us toward </span>
                     <span className='text-primary'>customer service excellence </span>
                 </div>
@@ -57,53 +57,33 @@ export default function HomeServices() {
 
 
             {/* main */}
-            <div className='md:w-[100%] md:h-[460px] flex md:flex-wrap md:flex-col flex-col gap-6'>
+            <div className='md:w-[100%] md:h-[440px] flex md:flex-wrap md:flex-col flex-col gap-6'>
+            {/* <div className='md:w-[100%] md:h-[400px] grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-2 lg:grid-flow-row md:gap-[100px]'> */}
                 {/* Global Service */}
                 {HomeServiceData.map((card, index) => (
                     <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
                         {selected === card.title ? (
-                            card.id !== 4 ? (
-                                <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                            ) : (
-                                <div>
-                                    {/* <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} /> */}
-                                    <BlueCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                    {/* <div className='h-full bg-black'></div> */}
-                                    {/* return the map function, the map must not iterate after this */}
-                                </div>
+                            <BlueCard content={card.title} img={card.img} selected={selected} handleLocationClick={handleLocationClick} />
+                        )
+                            :
+                            (
+                                <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
                             )
-                        ) : (
-                            selected === "Breakdown Maintenance" && card.id === 5 ?
-                                (
-                                    <></>
-                                ) : (
-                                    selected === "Breakdown Maintenance" && card.id === 3 ?
-                                        (
-                                            <div>
-                                                <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                                <div className='md:mt-[30px] mt-[20px]'>
-                                                    <GreyCard content={"Installation & Commissioning"} selected={selected} handleLocationClick={handleLocationClick} />
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
-                                        )
-                                )
-                        )}
+                        }
                     </div>
                 ))}
 
                 {/* Card */}
-                <div className='md:w-[45%] w-full flex flex-row gap-4'>
-                    <div className='w-[44%] rounded-3xl shadow-lg font-medium relative p-6 pb-10 md:h-[210px] h-[150px]'>
+                <div className='md:w-[100%] w-full flex flex-row gap-4'>
+                    {/* <div className='w-[44%] rounded-3xl shadow-lg font-medium relative p-6 pb-10 md:h-[210px] h-[150px]'>
                         <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div>
                         <div className='lg:text-[40px] md:text-[30px] text-[#242424] font-poppins text-3xl font-medium leading-normal'>90%</div>
                         <div className='lg:text-[14px] md:text-[10px] text-[8px]'>Our consistent record of client satisfaction speaks loudly to the quality and reliability of our services.</div>
                         <img src={heart} className='h-24 w-24 absolute top-0 right-0'></img>
-                    </div>
+                    </div> */}
 
-                    <div className='md:w-[54%] w-[49%] rounded-3xl shadow-lg font-medium relative p-6 md:h-[210px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
-                        <div className='lg:text-2xl md:text-xl text-[12px] opacity-0'>SATISFIED</div>
+                    <div className='md:w-[47%] w-[49%] flex flex-row gap-10 rounded-3xl shadow-lg font-medium relative px-6 py-3 justify-center place-items-center md:h-[90px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
+                        {/* <div className='lg:text-2xl md:text-xl text-[12px] opacity-0'>SATISFIED</div> */}
                         <div className='lg:text-[40px] md:text-[30px] text-white text-3xl font-medium leading-10 tracking-tighter'>30+</div>
                         <div className='lg:text-[14px] md:text-[10px] text-[8px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
                         <img src={people} className='opacity-90 h-24 w-24 absolute top-0 right-0'></img>

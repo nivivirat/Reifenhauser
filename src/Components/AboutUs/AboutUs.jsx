@@ -56,8 +56,8 @@ export default function AboutUs() {
             </div>
 
             <div className='md:hidden gap-3 flex flex-row overflow-x-scroll h-[150px] w-screen'>
-                <img src={aboutUs1} alt="" className='object-cover'/>
-                <img src={aboutUs2} alt="" className=''/>
+                <img src={aboutUs1} alt="" className='object-cover' />
+                <img src={aboutUs2} alt="" className='' />
             </div>
 
             {/* Our Story */}
@@ -76,12 +76,12 @@ export default function AboutUs() {
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            From its inception, RIMPL proactively engaged in harnessing the potential of plastic extrusion machines in India and worldwide. Under the visionary leadership of our founder, Mr. Manish Mehta, we continually introduce new technologies to India and the global market, spanning Plastic Extrusion, Converting & Labels Industry.
+                            From its inception, RIMPL has proactively engaged in harnessing the potential of plastic extrusion machines in India and worldwide. Under the visionary leadership of our founder, Mr. Manish Mehta, we continually introduce new technologies to the Indian subcontinent. We possess extensive expertise that spans multiple industries, including Plastic Extrusion, Converting and Labels, Paper, as well as Wire & Cable.
                         </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            Continuing our legacy, RIMPL excels in delivering unparalleled services, offering exceptional after-sales support, and providing preventative maintenance for machinery on a global scale.
+                            We aim to provide innovative solutions that contribute to our sustainable future at RIMPL. We are introducing 'Disruptive Technologies,' expanding the minds and horizons of our customers while guiding them toward new arenas and helping them venture into new avenues.
                         </p>
                     </div>
 

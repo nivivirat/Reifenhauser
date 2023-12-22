@@ -7,18 +7,18 @@ export default function HomePrincipals() {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
-        <div className="xl:p-16 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-2s">
+        <div className="xl:p-16 xl:pb-0 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-2s">
             <div className="bg-gradient-to-r from-blue-800 to-teal-100 text-transparent bg-clip-text">
                 <p className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Principals</p>
             </div>
 
             {/* content */}
-            <div className="xl:text-[40px] lg:text-[28px] md:text-[26px] text-3xl font-medium w-full">
+            <div className="xl:text-4xl text-3xl lg:text-[28px] md:text-[26px] font-medium w-full">
                 <div className="hidden md:block leading-snug">
-                    <span className="">Over the years, we have gained trust across </span>
-                    <span className="text-primary">various segments of the technology-led organizations </span>
-                    <span className="">in the industry. </span>
-                    {/* <span className="text-primary">segments of the industry.</span> */}
+                    <span className="">Through the years, we have earned trust of </span>
+                    <span className="text-primary">technology-led organizations </span>
+                    <span className="">across the various</span>
+                    <span className="text-primary"> segments of the industry.</span>
                 </div>
 
                 <div className="md:hidden block">
