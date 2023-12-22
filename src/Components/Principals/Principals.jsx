@@ -21,8 +21,8 @@ export default function Principals() {
                         <p className="text-primary font-semibold">Contact Us</p>
                     </div>
 
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Our Principals</p>
-                    <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[20px] lg:mt-4">An undaunted team spirit always stirs up to serve diverse organizations established in the Indian subcontinent competently. Here’s a glimpse of our principals which have embraced cutting edge technology for a better future.</p>
+                   <p className="mt-2 text-primary font-semibold text-5xl mb-4 ">Our Principals</p> 
+                   <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">An undaunted team spirit always stirs up to serve diverse organizations established in the Indian subcontinent competently. Here’s a glimpse of our principals which have embraced cutting edge technology for a better future.</p>
                 </div>
 
                 <img src={ourPrincipal} className='h-[400px] animate__animated animate__fadeInRight'></img>
