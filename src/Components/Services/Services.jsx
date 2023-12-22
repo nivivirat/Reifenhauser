@@ -17,7 +17,7 @@ export default function Services() {
                 <div className="tr">
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6">
-
+<br></br>
                 <h5 className="mb-2 text-5xl text-4xl leading-tight q ll animated-box animate__animated animate__fadeInLeft">
                 Our Services
                 </h5>
@@ -33,7 +33,7 @@ export default function Services() {
             <hr className="ggg h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-200"></hr>
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col  p-6 ">
-
+<br></br>
                 <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ll ">
                 Global Services
                 </h5>
@@ -66,7 +66,7 @@ export default function Services() {
                 </div>
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6 ">
-
+<br></br>
                 <h5 className="mb-2 lg:text-5xl text-4xl q leading-tight ll">
                 Installation, Commission and Preventive Maintenance
                 </h5>
@@ -81,7 +81,7 @@ export default function Services() {
            
               <div className="flex flex-col">
 
-
+<br></br>
 
                 <h5 className="mb-2 lg:text-5xl text-4xl w ha leading-tight q ll nn">
                 Annual Maintenance Contract (AMC)
