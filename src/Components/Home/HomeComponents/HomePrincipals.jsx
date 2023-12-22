@@ -14,19 +14,19 @@ export default function HomePrincipals() {
 
             {/* content */}
             <div className="xl:text-4xl text-3xl lg:text-[28px] md:text-[26px] font-medium w-full">
-                <div className="hidden md:block leading-snug">
+                <div className="md:leading-snug">
                     <span className="">Through the years, we have earned trust of </span>
                     <span className="text-primary">technology-led organizations </span>
                     <span className="">across the various</span>
                     <span className="text-primary"> segments of the industry.</span>
                 </div>
 
-                <div className="md:hidden block">
+                {/* <div className="md:hidden block">
                     <span className="">Through the years, we have earned trust of </span>
                     <span className="text-primary">numerous organizations </span>
                     <span className="">across the </span>
                     <span className="text-primary">manufacturing industry.</span>
-                </div>
+                </div> */}
             </div>
 
             {/* card */}

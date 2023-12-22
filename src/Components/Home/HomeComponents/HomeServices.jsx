@@ -58,10 +58,10 @@ export default function HomeServices() {
 
             {/* main */}
             <div className='md:w-[100%] md:h-[440px] flex md:flex-wrap md:flex-col flex-col gap-6'>
-            {/* <div className='md:w-[100%] md:h-[400px] grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-2 lg:grid-flow-row md:gap-[100px]'> */}
+                {/* <div className='md:w-[100%] md:h-[400px] grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-2 lg:grid-flow-row md:gap-[100px]'> */}
                 {/* Global Service */}
                 {HomeServiceData.map((card, index) => (
-                    <div className='md:w-[47%]' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
+                    <div className='md:w-[47%] md:block hidden' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
                         {selected === card.title ? (
                             <BlueCard content={card.title} img={card.img} selected={selected} handleLocationClick={handleLocationClick} />
                         )
@@ -73,23 +73,30 @@ export default function HomeServices() {
                     </div>
                 ))}
 
+                <div className='md:hidden block'>
+                    <BlueCard content="Global Services" img="GlobalServices" selected={selected} handleLocationClick={handleLocationClick} />
+                </div>
+                <div className='md:hidden block'>
+                    <GreyCard content="Breakdown Maintenance" img="BreakdownMaintenance" selected={selected} handleLocationClick={handleLocationClick} />
+                </div>
+                <div className='md:hidden block'>
+                    <GreyCard content="Installation & Commissioning" img="Installation_Commissioning" selected={selected} handleLocationClick={handleLocationClick} />
+                </div>
+                <div className='md:hidden block'>
+                    <GreyCard content="Preventive Maintenance Service & AMC" img="PMS_AMC" selected={selected} handleLocationClick={handleLocationClick} />
+                </div>
+
                 {/* Card */}
                 <div className='md:w-[100%] w-full flex flex-row gap-4'>
-                    {/* <div className='w-[44%] rounded-3xl shadow-lg font-medium relative p-6 pb-10 md:h-[210px] h-[150px]'>
-                        <div className='lg:text-2xl md:text-xl text-[12px]'>SATISFIED</div>
-                        <div className='lg:text-[40px] md:text-[30px] text-[#242424] font-poppins text-3xl font-medium leading-normal'>90%</div>
-                        <div className='lg:text-[14px] md:text-[10px] text-[8px]'>Our consistent record of client satisfaction speaks loudly to the quality and reliability of our services.</div>
-                        <img src={heart} className='h-24 w-24 absolute top-0 right-0'></img>
-                    </div> */}
-
-                    <div className='md:w-[47%] w-[49%] flex flex-row gap-10 rounded-3xl shadow-lg font-medium relative px-6 py-3 justify-center place-items-center md:h-[90px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
+                    <div className='md:w-[47%] w-[100%] flex flex-row gap-10 rounded-3xl shadow-lg font-medium relative px-6 py-3 justify-center place-items-center md:h-[90px] h-[150px] bg-gradient-to-r from-blue-900 to-blue-400'>
                         {/* <div className='lg:text-2xl md:text-xl text-[12px] opacity-0'>SATISFIED</div> */}
-                        <div className='lg:text-[40px] md:text-[30px] text-white text-3xl font-medium leading-10 tracking-tighter'>30+</div>
-                        <div className='lg:text-[14px] md:text-[10px] text-[8px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
+                        <div className='lg:text-[40px] md:text-[30px] text-white text-4xl font-medium leading-10 tracking-tighter'>30+</div>
+                        <div className='lg:text-[14px] md:text-[10px] text-[12px] text-white font-normal'>Our unwavering dedication shines through with a team of 30+ internationally trained technical experts, ensuring exceptional customer service.</div>
                         <img src={people} className='opacity-90 h-24 w-24 absolute top-0 right-0'></img>
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
