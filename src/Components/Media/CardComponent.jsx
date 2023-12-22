@@ -67,7 +67,7 @@ export default function CardComponent() {
 
     return (
         // <div className="md:px-14  px-4 gap-10 flex flex-col">
-        <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mb-24 overflow-x-auto">
+        <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mb-24 -mx-4 overflow-x-auto">
   <Slider options={{ align: "center" }}>
     {posts.map((testimonial, i) => (
       <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
