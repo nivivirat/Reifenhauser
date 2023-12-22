@@ -24,23 +24,24 @@ export default function AboutUs() {
 
             <div className="flex md:flex-row flex-col gap-5 md:gap-0">
 
-                <div className="md:w-[65%] whitespace-normal">
-                    <div className="md:text-[20px] text-[26px] font-semibold w-[90%]  animate__animated animate__fadeInLeft animate__delay-0s">
-                        <span className="text-black ">At Reifenhauser India, our expertise lies in facilitating global companies'</span>
-                        <span className="text-[#777777]">&nbsp; access to the Indian Subcontinent with cutting-edge machinery.</span>
+                <div className="md:w-[100%] whitespace-normal">
+                    <div className="font-semibold w-[90%] animate__animated animate__fadeInLeft animate__delay-0s">
+                        <div className="text-black lg:text-[24px] md:text-[20px] text-[26px]">At RIMPL, we have gone beyond the industry's conventional notion of service.</div>
+                        <div className="text-[#777777] text-[12px]">Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge</div>
+                        <div className='text-[#777777] text-[12px]'>machinery</div>
                     </div>
                 </div>
 
-                <div className="text-black opacity-50 md:w-[35%] pr-10 animate__animated animate__fadeInRight animate__delay-0s">
+                {/* <div className="text-black opacity-50 md:w-[35%] pr-10 animate__animated animate__fadeInRight animate__delay-0s">
                     <p className="md:text-[13px] text-[15px]">As we ascend high, we have progressed immensely in the competitive world.
                         Our primary focus rests on showcasing our excellence in service, unparalleled after-sales support, and comprehensive Annual Maintenance Contracts (AMCs).
                     </p>
-                </div>
+                </div> */}
 
             </div>
 
 
-            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll  '>
+            <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll'>
                 <div className='md:w-[70%] w-full'>
                     <div className="md:overflow-hidden">
                         <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right animate__animated animate__fadeInLeft animate__delay-0s' alt="Image 1" />
@@ -59,7 +60,7 @@ export default function AboutUs() {
             </div>
 
             {/* Our Story */}
-            <div className='flex flex-col md:flex-row md:gap-10 gap-4 md:mt-10  animate__animated animate__fadeInLeft animate__delay-1s'>
+            <div className='flex flex-col md:flex-row md:gap-10 gap-4 md:mt-10'>
                 <div className='md:w-[100%]'>
                     <div>
                         <p className="text-primary font-semibold lg:text-[45px] text-[35px]">Our Story</p>
