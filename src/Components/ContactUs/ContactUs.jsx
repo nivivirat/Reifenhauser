@@ -87,7 +87,7 @@ export default function ContactUs() {
                             <p>Chennai</p>
                             <p>Delhi</p>
                         </div>
-                        <div className="flex flex-row justify-between px-4">
+                        <div className="flex flex-row justify-between">
                             <p>Hyderabad</p>
                             <p>Jammu</p>
                             <p>Kanpur</p>

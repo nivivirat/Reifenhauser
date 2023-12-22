@@ -15,7 +15,7 @@ export default function AboutUs() {
 
                         <div className='absolute top-0 left-0 xl:font-medium xl:p-9 lg:p-7 md:p-5 p-4 leading-8 text-white xl:text-4xl lg:text-4xl text-xl tracking-wide'>
                             <div className=''>
-                                <p className=''>Connect with us for augmenting a difference in the packaging industry</p>
+                                <p className=''>Connect with us to make a meaningful impact across various industries we specialize in.</p>
                             </div>
                         </div>
 

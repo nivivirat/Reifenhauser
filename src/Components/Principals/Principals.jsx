@@ -14,27 +14,27 @@ export default function Principals() {
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
 
             {/* our principals */}
-            <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px] animated-box animate__animated animate__fadeInLeft animate__delay-1s">
-                <div className="flex flex-col lg:w-[55%]">
+            <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px]">
+                <div className="flex flex-col lg:w-[55%] animated-box animate__animated animate__fadeInLeft">
                     <div className="md:hidden flex-row flex gap-1">
                         <p className="text-[#999999]">Home-</p>
                         <p className="text-primary font-semibold">Contact Us</p>
                     </div>
 
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Our Principals</p>
-                    <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[22px] lg:mt-4">An undaunted team spirit always stirs up to serve diverse organizations established in the Indian subcontinent competently. Here’s a glimpse of our principals which have embraced cutting edge technology for a better future.</p>
+                    <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[20px] lg:mt-4">An undaunted team spirit always stirs up to serve diverse organizations established in the Indian subcontinent competently. Here’s a glimpse of our principals which have embraced cutting edge technology for a better future.</p>
                 </div>
 
-                <img src={ourPrincipal} className='h-[400px] animated-box animate__animated animate__fadeInDown'></img>
+                <img src={ourPrincipal} className='h-[400px] animate__animated animate__fadeInRight'></img>
             </div>
 
             {/* Extrusion Machinery  */}
-            <div className='flex flex-col lg:gap-24 gap-16 xl:mt-10 animated-box animate__animated animate__fadeInRightBig animate__delay-1s'>
+            <div className='flex flex-col lg:gap-24 gap-16 xl:mt-10'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Extrusion Machinery</p>
                 </div>
 
-                <div className='flex flex-col lg:gap-24 gap-16 animated-box animate__animated animate__bounceInLeft animate__delay-2s'>
+                <div className='flex flex-col lg:gap-24 gap-16'>
                     <div className='flex flex-col lg:flex-row'>
                         <div className='flex flex-row justify-between'>
                             <img src={Rlogo} className='w-[35%] md:w-[10%] sm:w-[15%] lg:w-full'></img>
@@ -47,7 +47,7 @@ export default function Principals() {
                             </div>
                         </div>
                         {/* <div className='grid grid-rows-3'> */}
-                        <div className='grid lg:grid-rows-2 lg:grid-flow-col lg:px-10 lg:gap-10 gap-5 grid-cols-2 md:grid-cols-2 animated-box animate__animated animate__fadeInLeft animate__delay-2s'>
+                        <div className='grid lg:grid-rows-2 lg:grid-flow-col lg:px-10 lg:gap-10 gap-5 grid-cols-2 md:grid-cols-2'>
                             {/* cards */}
                             <div className='hidden lg:block'>
                                 <ExtrusionMachineryCard
@@ -71,7 +71,7 @@ export default function Principals() {
                         </div>
                     </div>
 
-                    <div className='grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-3 lg:grid-flow-col animated-box animate__animated animate__fadeInRight animate__delay-3s'>
+                    <div className='grid lg:grid-rows-2 grid-cols-2 lg:grid-cols-3 lg:grid-flow-col'>
                         {/* more cards */}
 
                         {CompanyDataExec.map((machinery, index) => (
@@ -91,7 +91,7 @@ export default function Principals() {
             </div>
 
             {/* companies */}
-            <div className='flex flex-col lg:gap-22 gap-16 animated-box animate__animated animate__bounceInRight animate__delay-4s'>
+            <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Converting Machinery</p>
                 </div>
@@ -113,7 +113,7 @@ export default function Principals() {
             </div>
 
             {/* Ancillary */}
-            <div className='flex flex-col lg:gap-22 gap-16 animated-box animate__animated animate__fadeInRight animate__delay-5s'>
+            <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Ancillary</p>
                 </div>
@@ -135,7 +135,7 @@ export default function Principals() {
             </div>
 
             {/* Slitting, Metallizing & Coating */}
-            <div className='flex flex-col lg:gap-22 gap-16 animated-box animate__animated animate__fadeInLeft animate__delay-6s'>
+            <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting, Metallizing & Coating</p>
                 </div>
