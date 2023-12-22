@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { CardWithLink } from './CardWithLink';
 import cardContent from './Content.json';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
 import Testo from '../../assets/Images/Testimonial/Test11.svg';
 import { Icon } from '@iconify/react';
 function Testimonial() {
-  const initialDisplayLimit = 3;
-  const loadMoreIncrement = 2;
+  const initialDisplayLimit = 6;
+  const loadMoreIncrement = 3;
 
   const [displayLimit, setDisplayLimit] = useState(initialDisplayLimit);
 
@@ -20,7 +20,6 @@ function Testimonial() {
       });
     }
   };
-  
 
   return (
     <div className="App">
@@ -56,7 +55,7 @@ function Testimonial() {
             className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary"
           >
             Load More
-            <div className="text-primary md:text-xl">
+                 <div className="text-primary md:text-xl">
     <Icon icon="iconoir:arrow-tr" />
   </div>
           </button>
@@ -66,7 +65,7 @@ function Testimonial() {
         </div>
       )}
 
-      <ToastContainer />
+     
     </div>
   );
 }
