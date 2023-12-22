@@ -76,9 +76,9 @@ export default function Banner() {
                     {currentSection === 0 ?
                         <img src={thirtyYears} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]'></img>
                         :
-                        <div className='md:text-[25px] sm:text-[20px] xl:text-[40px] text-[18px] lg:text-[35px] text-white font-semibold'>{bannerData[currentSection].text}</div>
+                        <div className='md:text-[25px] sm:text-[20px] xl:text-[35px] text-[18px] lg:text-[30px] text-white font-semibold'>{bannerData[currentSection].text}</div>
                     }
-                    <div className='2xl:text-[28px] xl:text-[22px] md:text-[16px] sm:text-[18px] text-[13px] lg:text-[18px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
+                    <div className='2xl:text-[24px] xl:text-[20px] md:text-[16px] sm:text-[18px] text-[13px] lg:text-[17px] text-white font-thin mt-5'>{bannerData[currentSection].subtext}</div>
 
                     {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
                         <div className='text-white text-[12px]'>SCROLL</div>

@@ -27,8 +27,9 @@ export default function AboutUs() {
                 <div className="md:w-[100%] whitespace-normal">
                     <div className="font-semibold w-[90%] animate__animated animate__fadeInLeft animate__delay-0s">
                         <div className="text-black lg:text-[24px] md:text-[20px] text-[26px]">At RIMPL, we have gone beyond the industry's conventional notion of service.</div>
-                        <div className="text-[#777777] text-[12px]">Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge</div>
-                        <div className='text-[#777777] text-[12px]'>machinery</div>
+                        <div className="text-[#777777] text-[12px] hidden md:block">Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge</div>
+                        <div className='text-[#777777] text-[12px] hidden md:block'>machinery</div>
+                        <div className='text-[#777777] text-[12px] md:hidden block'>Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge machinery</div>
                     </div>
                 </div>
 
@@ -47,16 +48,16 @@ export default function AboutUs() {
                         <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right animate__animated animate__fadeInLeft animate__delay-0s' alt="Image 1" />
                     </div>
                 </div>
-                <div className='md:w-[40%] w-full  animate__animated animate__fadeInRight animate__delay-0s animate__animated animate__fadeInLeft animate__delay-0s'>
+                <div className='md:w-[40%] w-full animate__animated animate__fadeInRight animate__delay-0s animate__animated animate__fadeInLeft animate__delay-0s'>
                     <div className="md:overflow-hidden overflow-x-scroll">
                         <img src={aboutUs2} className='md:h-[300px] lg:h-[400px] object-cover' alt="Image 2" />
                     </div>
                 </div>
             </div>
 
-            <div className='md:hidden gap-3 flex flex-row overflow-x-scroll'>
-                <img src={aboutUs1mobile} alt="" />
-                <img src={aboutUs2mobile} alt="" className='rounded-xl pt-2'/>
+            <div className='md:hidden gap-3 flex flex-row overflow-x-scroll h-[150px] w-screen'>
+                <img src={aboutUs1} alt="" className='object-cover'/>
+                <img src={aboutUs2} alt="" className=''/>
             </div>
 
             {/* Our Story */}
