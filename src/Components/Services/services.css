@@ -3,6 +3,16 @@
     margin:0;
     padding:0;
   }
+  @media (max-width: 750px) {
+    .tr {
+    margin-left:-23%;
+    margin-right:-15%;
+    font-size:18px;
+    }
+
+
+
+  }
   .ggg{
     width:90%;
   }
