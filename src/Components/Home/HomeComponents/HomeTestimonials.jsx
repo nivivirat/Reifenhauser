@@ -1,6 +1,7 @@
 import cardContent from '../../Testimonial/Content.json'
 import PropTypes from 'prop-types';
 import { Icon } from '@iconify/react';
+import { useState } from 'react';
 // import  { HomeTestimonialCard }  from './HomeTestimonalCard/HomeTestimonialCard';
 import Slider from './HomeTestimonalCard/Slider';
 import { CWL } from '../../Testimonial/CWL';
@@ -15,6 +16,8 @@ import {
 
 // import { CardWithLink } from '../../Testimonial/CardWithLink';
 export default function HomeTestimonials() {
+
+    const [isHovered, setIsHovered] = useState(false);
     // Use slice to get the first 3 items in the array
     const first3Cards = cardContent.slice(0, 6);
 
@@ -48,10 +51,13 @@ export default function HomeTestimonials() {
         </Slider>
             </div>
 
-            <div className="w-full flex justify-center place-items-center mt-10 md:mb-10">
+            <div className="w-full flex justify-center place-items-center mt-10 md:mb-10"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}>
                 <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary">
                     <p>View All Testimonials</p>
-                    <div className="text-primary md:text-xl">
+                    <div className={`text-primary md:text-xl transition-transform duration-300 ease-in-out ${isHovered ? 'rotate-45' : ''
+                        }`}>
                         <Icon icon="iconoir:arrow-tr" />
                     </div>
                 </a>

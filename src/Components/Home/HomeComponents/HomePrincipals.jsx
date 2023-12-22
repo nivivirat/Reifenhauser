@@ -1,7 +1,11 @@
 import HomePrincipalCard from "./HomePrincipalCard/HomePrincipalCard"
 import { Icon } from "@iconify/react"
+import { useState } from "react";
 
 export default function HomePrincipals() {
+
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
         <div className="xl:p-16 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-2s">
             <div className="bg-gradient-to-r from-blue-800 to-teal-100 text-transparent bg-clip-text">
@@ -38,16 +42,20 @@ export default function HomePrincipals() {
 
             </div>
 
-            <div className="w-full flex justify-center place-items-center">
+            <div className="w-full flex justify-center place-items-center"
+                onMouseEnter={() => setIsHovered(true)}
+                onMouseLeave={() => setIsHovered(false)}>
                 <a href="/principals" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary">
                     <p>View All Principals</p>
-                    <div className="text-primary md:text-xl">
+                    {/* <div className="text-primary md:text-xl"> */}
+                    <div className={`text-primary md:text-xl transition-transform duration-300 ease-in-out ${isHovered ? 'rotate-45' : ''
+                        }`}>
                         <Icon icon="iconoir:arrow-tr" />
                     </div>
                 </a>
-            </div>
+            </div >
 
 
-        </div>
+        </div >
     )
 }
