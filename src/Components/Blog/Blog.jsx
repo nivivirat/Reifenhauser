@@ -89,9 +89,9 @@ On the other side Flexo printing technology as well as machines can use water ba
  <p className="text-2xs mt-8 kkl ew animate__animated animate__fadeInRight animate__delay-5s">
  Today quite a number of trade shops as well as the plate suppliers are introducing different kinds of dots and different combinations of screens . Add to that a stronger dot with a longer life , the combination of AM and FM screens and higher LPI , is actually making it difficult to distinguish if the job has been printed by gravure or flexo, unless seen minutely with a magnifying glass. Of late, there is a lot of traction for hybrid dot screens introduced by some trades shops, but as we see in the market, most work with combinations best suitable for the job/motif to be printed.
  </p>
- <p className="text-2xl mt-8 jk">Related Blogs</p>
+ {/* <p className="text-2xl mt-8 jk">Related Blogs</p> */}
  <div className="w-screen fg md:text-xs text-2xs animate__animated animate__fadeInRight animate__delay-3s">
- <Slider options={{ align: "center" }}>
+ {/* <Slider options={{ align: "center" }}>
         {testimonials.map((testimonial, i) => (
           <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
             <div className="h-auto w-auto py-4 px-4 bg-white shadow-lg rounded-lg my-20">
@@ -119,11 +119,10 @@ On the other side Flexo printing technology as well as machines can use water ba
             </div>
           </div>
         ))}
-      </Slider>
+      </Slider> */}
     </div>
     </div>
   );
 }
 
 export default Blog;
-
