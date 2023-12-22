@@ -21,7 +21,7 @@ export default function Services() {
                 Our Services
                 </h5>
                 <p className="text-xl  leading-tight w ll animated-box animate__animated animate__fadeInLeft">
-                At Reifenhauser India, we diligently focus on providing comprehensive support, catering to the evolving needs of the industry and ensuring operational excellence for our clients in the Indian subcontinent.
+                 At RIMPL, our commitment extends to offering comprehensive on-site technical support, aligning with the industry's dynamic requirements and ensuring operational excellence for our clients.
                 </p>
               </div>
               
@@ -37,7 +37,7 @@ export default function Services() {
                 Global Services
                 </h5>
                 <p className=" text-xl md:2xs leading-tight  ll">
-                We are committed to offering continuous 24x7 after-sales support, keeping our clients abreast of industry trends. Our dedicated team provides expert technical guidance for spare parts procurement, top-tier machinery refurbishments, necessary upgrades, and meticulous breakdown maintenance.
+                In our commitment to excellence, we assure seamless 24x7 after-sales support. Our dedicated team offers expert technical guidance for spare parts procurement, top-tier machinery refurbishments, essential upgrades, and meticulous breakdown maintenance, ensuring uninterrupted operational efficiency for our clients.
                 </p>
 
               </div>
@@ -67,10 +67,9 @@ export default function Services() {
               <div className="flex flex-col p-6 ">
 
                 <h5 className="mb-2 lg:text-5xl text-4xl q leading-tight ll">
-                Installation & Commission
+                Installation, Commission and Preventive Maintenance
                 </h5>
-                <p className="mb-4 text-xl mr-20  leading-tight  ll">
-                Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions. Meticulously handling machinery commissioning, they guarantee operational readiness, providing comprehensive training for competent machinery utilization. Simultaneously, we conduct scheduled preventive maintenance, addressing issues systematically to minimize unforeseen failures and ensure prolonged machinery lifespan. This approach aims at reducing backlogs, assuring uninterrupted operations, and maintaining process excellence.
+                <p className="mb-4 text-xl mr-20  leading-tight  ll">Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions. Meticulously handling machinery commissioning, they guarantee operational readiness, providing comprehensive training for competent machinery utilization. Simultaneously, we conduct scheduled preventive maintenance, addressing issues systematically to minimize unforeseen failures and ensure prolonged machinery lifespan. This approach aims at reducing backlogs, assuring uninterrupted operations, and maintaining process excellence.Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions. Meticulously handling machinery commissioning, they guarantee operational readiness, providing comprehensive training for competent machinery utilization. Simultaneously, we conduct scheduled preventive maintenance, addressing issues systematically to minimize unforeseen failures and ensure prolonged machinery lifespan. This approach aims at reducing backlogs, assuring uninterrupted operations, and maintaining process excellence.
                 </p>
               </div><br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
@@ -84,10 +83,10 @@ export default function Services() {
 
 
                 <h5 className="mb-2 lg:text-5xl text-4xl w ha leading-tight q ll nn">
-                Preventive Maintenance Services
+                Annual Maintenance Contract (AMC)
                 </h5>
                 <p className="mb-4 text-xl mr-20 ha leading-tight  ll nn">
-                While we diligently offer preventive maintenance services, our experienced and trained schedule maintenance of machineries on a regular basis. This mitigates the risk of unprecedented failures and assures process excellence to a considerable extent. Preventive maintenance also increases the life span of the machineries when they undergo repairs or replacement of any component. As the maintenance is conducted periodically, we follow a systematic approach that is aimed at minimizing or reducing failures. Eventually, our engineers make sure that there are no backlogs regarding preventive maintenance.
+                We provide comprehensive repair and maintenance services, adhering to our commitments made as per contract terms. We prioritize maximum uptime, continually updating our technical expertise and planning for periodic maintenance to avoid unexpected machinery failures. Customer satisfaction is paramount, ensuring services exceed expectations.
                 </p>
                 </div>
                 <br></br><br></br><br></br>
@@ -95,7 +94,7 @@ export default function Services() {
               
 
              </div>
-            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm ">
+            {/* <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm ">
               <div className="flex flex-col  p-6">
 
                 <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ff cfg ll">
@@ -109,7 +108,7 @@ export default function Services() {
     </div>
     <img className="fm animated-box animate__animated animate__fadeInRight  animate__delay-5s" src ={Serv5} alt="image"></img>
               <br></br><br></br><br></br>
-    </div>
+    </div> */}
     </div>
   );
 }
