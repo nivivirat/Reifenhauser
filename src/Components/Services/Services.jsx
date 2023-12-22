@@ -61,7 +61,7 @@ export default function Services() {
                 </div>
                 <br></br><br></br>
 
-                <img className="fm hj bbg  animated-box animate__animated animate__fadeInLeft animate__delay-2s" src ={Serv2} alt="image"></img>
+                <img className="fm hj bbg  animated-box animate__animated animate__fadeInLeft animate__delay-2s" src ={Serv1} alt="image"></img>
                 </div>
                 <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6 ">
@@ -73,7 +73,7 @@ export default function Services() {
                 </p>
               </div><br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
-              <img className="fm  animate__animated animate__fadeInRight animate__delay-3s" src ={Serv3} alt="image"></img>
+              <img className="fm  animate__animated animate__fadeInRight animate__delay-3s" src ={Serv2} alt="image"></img>
             </div>
 
             <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm  ">
@@ -90,7 +90,7 @@ export default function Services() {
                 </p>
                 </div>
                 <br></br><br></br><br></br>
-                <img className="fm hj bbg animated-box animate__animated animate__fadeInLeft animate__delay-4s" src ={Serv4} alt="image"></img>
+                <img className="fm hj bbg animated-box animate__animated animate__fadeInLeft animate__delay-4s" src ={Serv3} alt="image"></img>
               
 
              </div>
