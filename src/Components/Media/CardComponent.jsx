@@ -67,10 +67,10 @@ export default function CardComponent() {
 
     return (
         // <div className="md:px-14  px-4 gap-10 flex flex-col">
-        <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mx-2 -mb-24">
-      <Slider options={{ align: "center" }}>
-        {posts.map((testimonial, i) => (
-         <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
+        <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mb-24 overflow-x-auto">
+  <Slider options={{ align: "center" }}>
+    {posts.map((testimonial, i) => (
+      <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
          <div className="h-auto w-auto  bg-white shadow-lg rounded-lg my-40">
          <div className="flex justify-center md:justify-end -mt-16 relative">
   <div style={{ height: '100%', width: '100%' }} className="relative">
