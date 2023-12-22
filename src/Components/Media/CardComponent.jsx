@@ -1,5 +1,5 @@
 import React from "react";
-import Slider from "../Blog/slider";
+import Slider from "../Blog/slider1";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Media.css';
