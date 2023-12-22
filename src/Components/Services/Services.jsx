@@ -30,7 +30,7 @@ export default function Services() {
               <img className="fm animate__animated animate__fadeInRight" src ={Serv} alt="image"></img>
             </div>
             <hr className="ggg h-1 mx-auto my-4 bg-gray-100 border-0 rounded md:my-10 dark:bg-gray-200"></hr>
-            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animated-box animate__animated animate__fadeInRight animate__delay-1s">
+            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col  p-6 ">
 
                 <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ll ">
@@ -42,10 +42,10 @@ export default function Services() {
 
               </div>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
-              <img className="fm" src ={Serv1} alt="image"></img>
+              <img className="fm  animated-box animate__animated animate__fadeInRight animate__delay-1s" src ={Serv1} alt="image"></img>
             </div>
 
-            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm animated-box animate__animated animate__fadeInLeft animate__delay-2s">
+            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm">
             
              
               <div className="flex flex-col  p-6 ">
@@ -61,9 +61,9 @@ export default function Services() {
                 </div>
                 <br></br><br></br>
 
-                <img className="fm hj bbg" src ={Serv2} alt="image"></img>
+                <img className="fm hj bbg  animated-box animate__animated animate__fadeInLeft animate__delay-2s" src ={Serv2} alt="image"></img>
                 </div>
-                <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animate__animated animate__fadeInRight animate__delay-3s">
+                <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm">
               <div className="flex flex-col p-6 ">
 
                 <h5 className="mb-2 lg:text-5xl text-4xl q leading-tight ll">
@@ -74,10 +74,10 @@ export default function Services() {
                 </p>
               </div><br></br><br></br><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
-              <img className="fm" src ={Serv3} alt="image"></img>
+              <img className="fm  animate__animated animate__fadeInRight animate__delay-3s" src ={Serv3} alt="image"></img>
             </div>
 
-            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm  animated-box animate__animated animate__fadeInLeft animate__delay-4s">
+            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-10xl md:flex-row mm  ">
            
               <div className="flex flex-col">
 
@@ -91,11 +91,11 @@ export default function Services() {
                 </p>
                 </div>
                 <br></br><br></br><br></br>
-                <img className="fm hj bbg" src ={Serv4} alt="image"></img>
+                <img className="fm hj bbg animated-box animate__animated animate__fadeInLeft animate__delay-4s" src ={Serv4} alt="image"></img>
               
 
              </div>
-            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm animated-box animate__animated animate__fadeInRight  animate__delay-5s">
+            <br></br><div className="flex flex-col rounded-lg bg-white md:max-w-8xl md:flex-row mm ">
               <div className="flex flex-col  p-6">
 
                 <h5 className="mb-2 lg:text-5xl text-4xl leading-tight q ff cfg ll">
@@ -107,7 +107,7 @@ export default function Services() {
                 
              
     </div>
-    <img className="fm" src ={Serv5} alt="image"></img>
+    <img className="fm animated-box animate__animated animate__fadeInRight  animate__delay-5s" src ={Serv5} alt="image"></img>
               <br></br><br></br><br></br>
     </div>
     </div>

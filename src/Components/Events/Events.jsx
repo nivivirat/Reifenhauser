@@ -129,7 +129,7 @@ const Events = () => {
   };
   const hoverInfoStyle2 = {
     position: 'absolute',
-    top: '30%',
+    top: '0%',
     left: '50%',
     font: '3px',
     transform: 'translateX(-50%)',
@@ -139,8 +139,8 @@ const Events = () => {
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
     textAlign: 'center',
     display: 'none',
-    width: '250px',
-    height:'200px',
+    width: '100%',
+    height:'100%',
     zIndex: '5',
     color:'white',
   };
@@ -323,8 +323,8 @@ const Events = () => {
             <div style={hoverInfoStyle2} className="hover-info cvv">
               <p>Team Reifenhauser India proudly showcased it's Principles at India's Premier Labeling Event!
 #LabelExpo2022</p>
-              <img src={even11} alt="Additional Info Image" className="w-24 h-16 mt-2" />
-              <img src={even12} alt="Additional Info Image " className="w-24 h-16 mb-2 bbb" />
+              <img src={even11} alt="Additional Info Image" className="gggp ti " />
+              <img src={even12} alt="Additional Info Image " className=" ti bbb " />
             </div>
           </div>
         ))}

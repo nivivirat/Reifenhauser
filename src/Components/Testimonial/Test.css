@@ -109,11 +109,26 @@
   /* margin-bottom: 5%; */
   position: absolute;
   bottom: 10%;
-  right: 8%;
+  right: 8px;
   /* left:30%; */
   /* Adjust bottom property */
   font-weight: 700;
   color: #013a98;
+}
+.test32{
+  position: absolute;
+  bottom: 12%;
+  /* left:40%; */
+  right:3%;
+  font-weight: 700;
+  color: #013a98;
+}
+.test12{
+  position: absolute;
+  bottom: 18px;
+  left:40%;
+  right:-15%;
+  /* margin-right:-20%; */
 }
 
 .test3 {

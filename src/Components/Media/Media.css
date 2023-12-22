@@ -9,7 +9,12 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.jk{
+  display:flex;
+}
+.fg{
+  margin-left:-10%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -214,7 +219,12 @@ line-height: normal;
   background: var(--Linear, linear-gradient(90deg, #013A98 0%, #449DD1 100%));
   text:white;
   margin-right:3%;
+  
 }
+div.relative:hover h3 {
+  opacity: 1;
+}
+
 .media12{
   margin-left:70%;
   margin-top:2%;

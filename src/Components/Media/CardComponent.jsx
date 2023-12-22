@@ -1,8 +1,9 @@
 import React from "react";
-import Slider from "react-slick";
+import Slider from "../Blog/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Media.css';
+import '../Blog/Blog.css'
 import img1 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.02 1.svg';
 import img2 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 1.svg';
 import img3 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 2.svg';
@@ -56,8 +57,8 @@ export default function CardComponent() {
             {
                 breakpoint: 1600,
                 settings: {
-                    slidesToShow: 4,
-                    slidesToScroll: 4,
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
                     initialSlide: 0,
                 },
             },
@@ -65,23 +66,37 @@ export default function CardComponent() {
     };
 
     return (
-        <div className="overflow-hidden  animated-box animate__animated animate__fadeIn animate__delay-3s">
-            <Slider {...sliderSettings}>
-                {posts.map((items, key) => (
-                    <div className="w-96 ml-15 mr-15  rounded-lg rounded-md rounded-sm shadow-md media77" key={key}>
-                        <img
-                            className="object-cover w-full h-48"
-                            src={items.img}
-                            alt="image"
-                        />
-                        <div className="p-4">
-                            <h4 className="text-xs font-semibold text-white media77">
-                                {items.title}
-                            </h4><br></br>
-                        </div>
-                    </div>
-                ))}
-            </Slider>
+        // <div className="md:px-14  px-4 gap-10 flex flex-col">
+        <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mx-2">
+      <Slider options={{ align: "center" }}>
+        {posts.map((testimonial, i) => (
+         <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%]">
+         <div className="h-auto w-auto  bg-white shadow-lg rounded-lg my-40">
+         <div className="flex justify-center md:justify-end -mt-16 relative">
+  <div style={{ height: '100%', width: '100%' }} className="relative">
+    <img
+      className="object-cover border-2 border-indigo-500 w-full h-full"
+      src={testimonial.img}
+      alt={testimonial.title}
+    />
+    <h3 className="text-xs h-12 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300">
+     <br></br> {testimonial.title}
+    </h3>
+  </div>
+</div>
+
+              
+              <div>
+              
+                           
+        
+                {/* <h5 className="text-gray-600 kkk aaa">{testimonial.date}</h5> */}
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+{/* </div> */}
             <br></br><br></br>
         </div>
     );

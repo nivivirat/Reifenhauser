@@ -16,10 +16,10 @@ import {
 // import { CardWithLink } from '../../Testimonial/CardWithLink';
 export default function HomeTestimonials() {
     // Use slice to get the first 3 items in the array
-    const first3Cards = cardContent.slice(0, 3);
+    const first3Cards = cardContent.slice(0, 6);
 
     return (
-        <div className="bg-base flex flex-col animated-box animate__animated animate__bounceInLeft animate__delay-5s">
+        <div className="bg-base flex flex-col">
             <div className="md:px-[6%] pt-10 p-5 font-semibold md:w-[40%] xl:text-3xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
                 <span>Here's what our </span>
                 <span className="text-primary">customers </span>
@@ -29,7 +29,7 @@ export default function HomeTestimonials() {
             <div className="text-[#6B6B78] text-xs">
            <Slider options={{ align: "center" }}>
           
-            {cardContent.map((card, index) => (
+            {first3Cards.map((card, index) => (
                  <div key={index} className="flex-[0_0_70%] md:flex-[0_0_30%]">
                  <div >
           <CWL
