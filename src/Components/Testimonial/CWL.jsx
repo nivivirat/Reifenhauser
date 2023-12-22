@@ -10,6 +10,7 @@ import {
 import './Test.css'
 
 export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
+  
   return (
     <Card className="mt-2 w-128 h-80 lg:h-56 md:h-80 border border-blue-500 vvvv">
       {description && (
@@ -29,7 +30,7 @@ export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
             {buttonTextt}
             {/* Your existing SVG component */}
           </Typography>
-      <Typography variant="text" className="flex items-left gap-2 test2">
+      <Typography variant="text" className="flex items-left gap-2 test32">
             {pos}
             
           </Typography>
