@@ -6,6 +6,7 @@ const Slider = ({ children, options }) => {
   const [emblaRef, embla] = useEmblaCarousel({
     slidesToScroll: 1,
     align: "start",
+    loop: true, // Enable loop option
     ...options,
   });
 
@@ -15,8 +16,8 @@ const Slider = ({ children, options }) => {
       const intervalId = setInterval(() => {
         embla.scrollNext();
       }, 3000); // Adjust the interval as needed (e.g., 3000ms for 3 seconds)
-      
-      // Clear the interval when component is unmounted
+
+      // Clear the interval when the component is unmounted
       return () => clearInterval(intervalId);
     }
   }, [embla]);
