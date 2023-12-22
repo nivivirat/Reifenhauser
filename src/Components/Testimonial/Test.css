@@ -42,10 +42,10 @@
 
 @media (min-width: 800px) {
   .bn {
-    text-align: center;
+    text-align: left;
   }
   .kl {
-    text-align: center;
+    text-align: left;
   }
   .we {
     position: absolute;
@@ -62,6 +62,29 @@
     margin: 5% 10%;
   }
 }
+/* .we{
+  font-size:10px;
+}
+@media (max-width: 599px) {
+.we{
+  font-size:10px;
+}
+
+
+} */
+
+
+@media (max-width: 1000px) {
+.ol{
+  font-size:10px;
+  margin-left:-12%;
+}
+
+
+
+}
+
+
 @media (max-width: 799px) {
   .bn {
     text-align: left;
@@ -114,19 +137,39 @@
   /* Adjust bottom property */
   font-weight: 700;
   color: #013a98;
+  text-align:left;
 }
 .test32{
   position: absolute;
   bottom: 12%;
   /* left:40%; */
-  right:3%;
+  left:53%;
   font-weight: 700;
   color: #013a98;
+  text-align:left;
+}
+.test30{
+  position: absolute;
+  bottom: 8%;
+  /* left:40%; */
+  left:53%;
+  font-weight: 700;
+  color: #013a98;
+  text-align:left;
+}
+.test31{
+  position: absolute;
+  bottom: 15%;
+  /* left:40%; */
+  left:53%;
+  font-weight: 700;
+  color: #013a98;
+  text-align:left;
 }
 .test12{
   position: absolute;
   bottom: 18px;
-  left:40%;
+  left:53%;
   right:-15%;
   /* margin-right:-20%; */
 }
@@ -134,15 +177,16 @@
 .test3 {
   position: absolute;
   bottom: 2%;
-  right: 3%;
+  left:53%;
+  text-align:left;
   font-weight: 700;
   color: #013a98;
 }
 
 .test4 {
   position: absolute;
-  bottom: 2%;
-
+  bottom: 75%;
+text-align:left;
   font-weight: 700;
   color: #013a98;
 }
@@ -170,11 +214,25 @@
 }
 
 .test13 {
-  margin-left: 40%;
-  margin-right: 15%;
-  font-weight: 700;
+  text-align: center;
+position:relative;
+left:30%;
+
+font-weight: 800;
+  /* margin-right: 15%; */
+  /* margin:auto; */
+ 
   color: #013a98;
   background-color: #f1f2f4;
-  width: 20%;
+  
   border-radius: 25px;
+}
+
+.test112{
+  color: #013A98;
+text-align: center;
+
+
+font-weight: 800;
+
 }
