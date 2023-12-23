@@ -4,6 +4,11 @@ import thirtyYears from '../../../assets/Images/Home/30years.svg';
 import bannerbg from '../../../assets/Images/Home/bannerbg.svg';
 import bannerbgmobile from '../../../assets/Images/Home/bannerbgmobile.svg';
 import r from '../../../assets/Images/Home/r.svg';
+import r1 from '../../../assets/Images/Home/banner/MaskGroup1.svg';
+import r2 from '../../../assets/Images/Home/banner/MaskGroup2.svg';
+import r3 from '../../../assets/Images/Home/banner/MaskGroup3.svg';
+import r4 from '../../../assets/Images/Home/banner/MaskGroup4.svg';
+import r5 from '../../../assets/Images/Home/banner/MaskGroup5.svg';
 import bannerData from '../data/bannerData.json';
 
 export default function Banner() {
@@ -67,11 +72,30 @@ export default function Banner() {
         return () => clearInterval(interval); // Cleanup on unmount
     }, [downCurrentSection]);
 
+    // r img
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    const images = [r1, r2, r3, r4, r5];
+
+    useEffect(() => {
+        // Function to rotate images
+        const rotateImages = () => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        };
+
+        // Set interval to change images every 0.3 seconds
+        const interval = setInterval(rotateImages, 300);
+
+        // Cleanup interval on unmount
+        return () => clearInterval(interval);
+    }, [images.length]);
+
     return (
         <div className='xl:p-10 p-3 md:h-full'>
             <div className="rounded-lg relative overflow-clip md:h-[95%]">
                 <img src={bannerbg} className='md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
-                <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right rounded-xl'></img>
+                <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
                 <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] md:w-[55%] w-[75%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
                         <img src={thirtyYears} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]'></img>
@@ -133,8 +157,8 @@ export default function Banner() {
                 </div>
 
                 <div className='h-full absolute sm:right-[100px] md:right-[3%] right-0 bottom-0 overflow-hidden z-0 opacity-80'>
-                    <div className='xl:h-[71%] 2xl:h-[74%] sm:h-[74%] h-[74%]'>
-                        <img src={r} className='h-full w-full'></img>
+                    <div className='xl:h-[100%] h-[100%] md:pb-[156px] pb-[98px]'>
+                        <img src={images[currentImageIndex]} className='h-full w-full' alt={`r${currentImageIndex + 1}`} />
                     </div>
                 </div>
 
