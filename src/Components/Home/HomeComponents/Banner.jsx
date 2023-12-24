@@ -4,6 +4,8 @@ import thirtyYears from '../../../assets/Images/Home/30years.svg';
 import bannerbg from '../../../assets/Images/Home/bannerbg.svg';
 import bannerbgmobile from '../../../assets/Images/Home/bannerbgmobile.svg';
 import r from '../../../assets/Images/Home/r.svg';
+import bottomRightMobile from '../../../assets/Images/Home/bottomRightMobile.svg'
+import king from '../../../assets/Images/Home/pxfuel1.jpg';
 import r1 from '../../../assets/Images/Home/banner/MaskGroup1.svg';
 import r2 from '../../../assets/Images/Home/banner/MaskGroup2.svg';
 import r3 from '../../../assets/Images/Home/banner/MaskGroup3.svg';
@@ -94,8 +96,9 @@ export default function Banner() {
     return (
         <div className='xl:p-10 p-3 md:h-full'>
             <div className="rounded-lg relative overflow-clip md:h-[95%]">
-                <img src={bannerbg} className='md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
-                <img src={bannerbgmobile} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
+                {/* <img src={bannerbg} className=' md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img> */}
+                <img src={king} className=' bg-white md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
+                <img src={king} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
                 <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] md:w-[55%] w-[75%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
                         <img src={thirtyYears} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]'></img>
@@ -128,7 +131,7 @@ export default function Banner() {
                         </div>
 
 
-                        <div className='mt-10 md:mt-5 bg-white xl:mt-[40px] lg:mt-[60px] md:w-[150px] w-[120px] md:text-[18px] text-[12px] text-center rounded-lg md:p-4 p-2 text-[#00295F] font-bold'>
+                        <div className='mt-10 md:mt-5 bg-white xl:mt-[40px] lg:mt-[60px] md:w-[150px] sm:w-[120px] md:text-[18px] sm:text-[12px] text-[8px] text-center rounded-lg md:p-4 sm:p-2 p-1 text-[#00295F] font-bold'>
                             <a className='h-full w-full' href="/aboutUs">
                                 Know More
                             </a>
@@ -156,10 +159,10 @@ export default function Banner() {
                     </div>
                 </div>
 
-                <div className='h-full absolute sm:right-[100px] md:right-[3%] right-0 bottom-0 overflow-hidden z-0 opacity-80'>
-                    <div className='xl:h-[100%] h-[100%] md:pb-[156px] pb-[98px]'>
-                        <img src={images[currentImageIndex]} className='h-full w-full' alt={`r${currentImageIndex + 1}`} />
-                    </div>
+                <div className='h-full absolute  flex flex-col place-items-end justify-end right-0 bottom-0 overflow-hidden z-0 opacity-80'>
+                    <img src={images[currentImageIndex]} className='h-[70%] object-cover'></img>
+                    <img src={r} className='hidden md:block w-full h-[30%] object-cover '></img>
+                    <img src={bottomRightMobile} className='md:hidden block w-full h-[30%] object-cover '></img>
                 </div>
 
 

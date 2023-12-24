@@ -63,7 +63,7 @@ export default function HomeServices() {
                 {HomeServiceData.map((card, index) => (
                     <div className='md:w-[47%] md:block hidden' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
                         {selected === card.title ? (
-                            <BlueCard content={card.title} img={card.img} selected={selected} handleLocationClick={handleLocationClick} />
+                            <BlueCard title={card.title} content={card.content} img={card.img} selected={selected} handleLocationClick={handleLocationClick} />
                         )
                             :
                             (
@@ -74,7 +74,7 @@ export default function HomeServices() {
                 ))}
 
                 <div className='md:hidden block'>
-                    <BlueCard content="Global Services" img="GlobalServices" selected={selected} handleLocationClick={handleLocationClick} />
+                    <BlueCard title="Global Services" content="Continuous support, expert guidance for seamless machinery operations, ensuring efficiency." img="GlobalServices" selected={selected} handleLocationClick={handleLocationClick} />
                 </div>
                 <div className='md:hidden block'>
                     <GreyCard content="Breakdown Maintenance" img="BreakdownMaintenance" selected={selected} handleLocationClick={handleLocationClick} />
