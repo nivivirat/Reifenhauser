@@ -159,8 +159,8 @@ export default function Banner() {
                     </div>
                 </div>
 
-                <div className='h-full absolute  flex flex-col place-items-end justify-end right-0 bottom-0 overflow-hidden z-0 opacity-80'>
-                    <img src={images[currentImageIndex]} className='h-[70%] object-cover'></img>
+                <div className='h-full absolute  flex flex-col place-items-end justify-end right-0 bottom-0 overflow-hidden z-0'>
+                    <img src={images[currentImageIndex]} className='h-[70%] object-cover opacity-80'></img>
                     <img src={r} className='hidden md:block w-full h-[30%] object-cover '></img>
                     <img src={bottomRightMobile} className='md:hidden block w-full h-[30%] object-cover '></img>
                 </div>
