@@ -24,20 +24,29 @@ export default function ContactUsForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+    
         const { firstName, phoneNumber, email, message } = formData;
-
+    
         if (!firstName || !phoneNumber || !email || !message) {
             alert("Please fill in all mandatory fields.");
             return;
         }
-
+    
+        // Get the current timestamp
+        const timestamp = new Date().toISOString();
+    
         console.log(formData);
-
+    
         const contactUsRef = ref(db, 'contactUs');
-
+    
         if (contactUsRef) {
-            push(contactUsRef, formData)
+            // Include timestamp in the form data
+            const formDataWithTimestamp = {
+                ...formData,
+                timestamp: timestamp,
+            };
+    
+            push(contactUsRef, formDataWithTimestamp)
                 .then(() => {
                     console.log("Form data saved successfully");
                     setSuccessMessage("Submitted successfully");
@@ -48,7 +57,7 @@ export default function ContactUsForm() {
                         email: "",
                         message: "",
                     });
-
+    
                     setTimeout(() => {
                         setSuccessMessage("");
                     }, 3000);

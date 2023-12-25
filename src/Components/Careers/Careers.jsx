@@ -35,17 +35,21 @@ export default function Careers() {
         // Reference to the careers node in the Realtime Database
         const careersRef = ref(db, 'careers');
         
+        // Get the current timestamp
+        const timestamp = new Date().toISOString();
+        
         // Form data
         const formData = {
             name: event.target.name.value,
             number: event.target.number.value,
             email: event.target.email.value,
             message: event.target.message.value,
+            timestamp: timestamp, // Adding timestamp to the form data
         };
         
         // Check if all fields are filled
         const fieldsFilled = Object.values(formData).every((value) => value.trim() !== '');
-
+    
         console.log(formData);
         if (!fieldsFilled || !file) {
             setErrorMessage('All fields are mandatory, including the file.');
@@ -75,7 +79,7 @@ export default function Careers() {
             // Update the formData object with the download URL
             formData.fileDownloadURL = downloadURL; // Update the fileDownloadURL
         
-            // Update the form data in the database with the fileDownloadURL
+            // Update the form data in the database with the fileDownloadURL and timestamp
             await set(newCareerRef, formData); // Update the form data in the database
         
             // Reset form and state
@@ -95,6 +99,7 @@ export default function Careers() {
             alert('An error occurred while processing your request');
         }
     };
+    
     
 
     return (
