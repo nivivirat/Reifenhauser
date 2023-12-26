@@ -2,49 +2,52 @@
     {
       "company_name": "Acigraf, Italy",
       "img": "acigraf",
-      "backContent":"Acigraf Graphic Equipments S.r.l, Italy Cylinder Preparations",
+      "backContent":"Cylinder Preparations",
       "backLink":"www.acigraf.com"
-    },
-    {
-      "company_name": "AV Flexologic, Netherland",
-      "img": "av_flexologic",
-      "backContent":"AV Flexologic B.V, Netherland Plate mounting Solutions",
-      "backLink":"www.flexologic.nl"
-    },
-    {
-      "company_name": "Esko, Israel",
-      "img": "esko",
-      "backContent":"Esko, Belgium Print Inspection system",
-      "backLink":"www.esko.com/en"
-    },
-    {
-      "company_name": "Grafotronic, Sweden",
-      "img": "grafotronic",
-      "backContent":"Grafotronic, Sweden Narrow web Finishing Machines",
-      "backLink":"www.grafotronic.se"
     },
     {
       "company_name": "MERO SPA, Italy",
       "img": "mero_spa",
-      "backContent":"MERO SPA, Italy Corona Treaters",
+      "backContent":"Corona Treaters",
       "backLink":"www.mero.it"
+    },
+    {
+      "company_name": "AV Flexologic, Netherland",
+      "img": "av_flexologic",
+      "backContent":"Plate mounting Solutions",
+      "backLink":"www.flexologic.nl"
     },
     {
       "company_name": "Praxair, USA",
       "img": "praxair",
-      "backContent":"Praxair, USA Anilox Rolls",
+      "backContent":"Anilox Rolls",
       "backLink":"www.praxairsurfacetechnologies.com"
+    },
+    {
+      "company_name": "Esko, Israel",
+      "img": "esko",
+      "backContent":"Print Inspection system",
+      "backLink":"www.esko.com/en"
     },
     {
       "company_name": "Reprochem, Italy",
       "img": "reprochem",
-      "backContent":"Reprochem, Italy Rotogravure Cylinders",
+      "backContent":"Rotogravure Cylinders",
       "backLink":"www.reprochem.it"
     },
     {
+      "company_name": "Grafotronic, Sweden",
+      "img": "grafotronic",
+      "backContent":"Print Inspection system",
+      "backLink":"www.grafotronic.se"
+    },
+    
+    
+    
+    {
       "company_name": "Synaptik Lamination S.L., Catalonia",
       "img": "synaptik_lamination",
-      "backContent":"Synaptik Lamination S.L, Sant Gregori Real time coating weight measurement system for lamination process",
+      "backContent":" Real time coating weight measurement system for lamination process",
       "backLink":"www.synaptik.cat/en"
     }
   ]
