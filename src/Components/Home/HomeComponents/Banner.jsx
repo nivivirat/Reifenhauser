@@ -167,9 +167,9 @@ export default function Banner() {
 
 
                 <div className='absolute flex flex-row justify-center place-items-center md:gap-10 text-white sm:right-[5%] xl-right-[4%] md:right-[6%] sm:bottom-0 right-[8%] xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[6%] z-0 opacity-80'>
-                    <div>
-                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[20px]'>{downData[downCurrentSection].top}</p>
-                        <p className='text-[30px] font-semibold'>{downData[downCurrentSection].bottom}</p>
+                   <div>
+                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[18px]'>{downData[downCurrentSection].top}</p>
+                        <p className='text-[32px] font-semibold'>{downData[downCurrentSection].bottom}</p>
                     </div>
                     <div className='md:flex flex-col gap-2 hidden'>
                         {/* <div
