@@ -333,7 +333,7 @@ const Events = () => {
       <br></br><br></br><br></br><br></br>
     </div> */}
 
-    <div className="mt-12 mb-12 ml-12 mr-12 text-4xl">Coming Soon....</div>
+    <div className="mt-64 mb-64  text-4xl"><center>Coming Soon....</center></div>
     </>
   );
 }
