@@ -86,7 +86,7 @@ On the other side Flexo printing technology as well as machines can use water ba
  AA: How does screening impact the converters and what is the best technology out there?MM:
 </strong></p>
 
- <p className="text-2xs mt-8 kkl ew animate__animated animate__fadeInRight animate__delay-5s">
+ <p className="text-2xs mt-8 kkl  ew animate__animated animate__fadeInRight animate__delay-5s">
  Today quite a number of trade shops as well as the plate suppliers are introducing different kinds of dots and different combinations of screens . Add to that a stronger dot with a longer life , the combination of AM and FM screens and higher LPI , is actually making it difficult to distinguish if the job has been printed by gravure or flexo, unless seen minutely with a magnifying glass. Of late, there is a lot of traction for hybrid dot screens introduced by some trades shops, but as we see in the market, most work with combinations best suitable for the job/motif to be printed.
  </p>
  {/* <p className="text-2xl mt-8 jk">Related Blogs</p> */}
