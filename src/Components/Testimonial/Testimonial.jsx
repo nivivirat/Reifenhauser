@@ -28,7 +28,7 @@ function Testimonial() {
         <p className="text-primary font-semibold"> Testimonials</p>
       </div>
       <p className="text-xl test11">Testimonials</p>
-      <p className="text-2xs mt-8 test13">They already love our Services</p>
+      
       <p className="text-3xl mt-8 test112">
         <strong>See what our users say about us</strong>
       </p>
