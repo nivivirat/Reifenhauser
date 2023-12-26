@@ -30,7 +30,7 @@ import buhler from '../../assets/Images/Principals/SMC/buhler.svg'
 import ims from '../../assets/Images/Principals/SMC/ims.svg'
 import kroenert from '../../assets/Images/Principals/SMC/kroenert.svg'
 
-export default function CompanyCardsEcec({ companyName, img, backContent, backLink }) {
+export default function CompanyCardsEcec({ companyName, img, backContent, back2, back3, backLink }) {
 
     const [card, setCard] = useState(true);
 
@@ -93,6 +93,8 @@ export default function CompanyCardsEcec({ companyName, img, backContent, backLi
                     :
                     <div className='w-full flex-col gap-3 bg-[#e5eaea] border border-[#b3b3b3] rounded-[20px] flex justify-center place-items-center content-center h-[110px]'>
                         <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{backContent}</p>
+                        <p className='text-[#013A98] text-center text-[10px] px-4 -mt-3 -mb-3 font-medium'>{back2}</p>
+                        <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{back3}</p>
                         {formattedLink && <a href={formattedLink} target="_blank" rel="noopener noreferrer" className='text-black text-center text-[10px] underline px-4 font-medium'>{backLink}</a>}
                     </div>
                 }
