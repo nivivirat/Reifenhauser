@@ -97,8 +97,8 @@ export default function Banner() {
         <div className='xl:p-10 p-3 md:h-full'>
             <div className="rounded-lg relative overflow-clip md:h-[95%]">
                 {/* <img src={bannerbg} className=' md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img> */}
-                <img src={king} className=' bg-white md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
-                <img src={king} className='md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
+                <img src={king} className='pb-[1px] bg-white md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
+                <img src={king} className='pb-[1px] md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
                 <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] md:w-[55%] w-[75%] md:p-0 p-4 z-10'>
                     {currentSection === 0 ?
                         <img src={thirtyYears} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]'></img>
