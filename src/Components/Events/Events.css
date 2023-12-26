@@ -69,11 +69,7 @@
   flex-wrap: wrap;
 }
 
-.text-2xs {
-  width: calc(33.33% - 20px); /* Adjust the width as needed */
-  margin: 10px;
-  box-sizing: border-box;
-}
+
 @media (min-width: 451px) {
 .evento{
     position:absolute;
@@ -121,7 +117,7 @@
 }
 @media (max-width: 900px) {
   .text-2xs {
-    width: 100%;
+    width: 95%;
   }
   .bbb{
     position:relative;
