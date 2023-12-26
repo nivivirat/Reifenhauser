@@ -2,44 +2,49 @@
     {
       "company_name": "BLESSON China",
       "img": "blesson",
-      "backContent":"Battery separator film for Lithium-ion Battery, Socketing of Rigid pipes.",
+      "backContent":"Battery separator film for ",
+      "back2":"Lithium-ion Battery,",
+      "back3":"Socketing of Rigid pipes.",
       "backLink":"www.blesson.cn"
-    },
-    {
-      "company_name": "BUSS AG, Switzerland",
-      "img": "buss",
-      "backContent":"Buss AG, Switzerland Compounding Machines",
-      "backLink":"www.busscorp.com"
-    },
-    {
-      "company_name": "FIMIC, Italy",
-      "img": "fimic",
-      "backContent":"FIMIC, Italy Melt. Filters",
-      "backLink":"www.fimic.it"
-    },
-    {
-      "company_name": "Herbold Meckesheim GmbH, Germany",
-      "img": "herbold",
-      "backContent":"Herbold Meckesheim GmbH, Germany Washing Line for post-consumer and Industrial Plastic waste",
-      "backLink":"www.herbold.com"
     },
     {
       "company_name": "Kurre Systems, Germany",
       "img": "kurre",
-      "backContent":"Kurre Systems, Germany Systems for Wire and Cable Processing",
+      "backContent":"Systems for Wire and Cable Processing",
       "backLink":"www.kurre-systems.de"
+    },
+    {
+      "company_name": "BUSS AG, Switzerland",
+      "img": "buss",
+      "backContent":"Compounding Machines",
+      "backLink":"www.busscorp.com"
     },
     {
       "company_name": "Micheal Horauf Maschinenfabrik GmbH & Co. KG, Germany",
       "img": "horauf",
-      "backContent":"Michael Hörauf Maschinenfabrik GmbH & Co. KG, Germany Paper Cup Machinery",
+      "backContent":"Paper Cup Machinery",
       "backLink":"www.hoerauf.com"
+    },
+    {
+      "company_name": "FIMIC, Italy",
+      "img": "fimic",
+      "backContent":"Melt. Filters",
+      "backLink":"www.fimic.it"
     },
     {
       "company_name": "NGR, Austria",
       "img": "ngr",
-      "backContent":"NGR, Austria Recycling Machines",
+      "backContent":"Recycling Machines",
       "backLink":"www.ngr-world.com"
+    },
+    {
+      "company_name": "Herbold Meckesheim GmbH, Germany",
+      "img": "herbold",
+      "backContent":"Washing Line for post-consumer and Industrial Plastic waste",
+      "backLink":"www.herbold.com"
     }
+   
+    
+   
   ]
   
