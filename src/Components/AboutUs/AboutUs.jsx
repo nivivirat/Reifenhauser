@@ -68,23 +68,23 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className='md:gap-10 gap-2 flex flex-col md:text-[16px] text-[18px] md:pr-[100px] font-medium'>
+                <div className='md:gap-6 gap-2 flex flex-col md:text-[16px] text-[18px] md:pr-[100px] font-medium'>
                     <div className='text-primary'>
                         <p>
-                            Since its establishment in 1994, Reifenhäuser (India) Marketing Private Limited (RIMPL) is managed by Mr. Manish Mehta & family in a close joint venture with Reifenhäuser GmbH & Co. KG Maschinenfabrik.
-                        </p>
+                        Since its establishment in 1994, Reifenhäuser India Marketing Private Limited (RIMPL) has been under the management of Mr. Manish Mehta and his family, in close collaboration with Reifenhäuser GmbH & Co. KG Maschinenfabrik. </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            From its inception, RIMPL has proactively engaged in harnessing the potential of plastic extrusion machines in India and worldwide. Under the visionary leadership of our founder, Mr. Manish Mehta, we continually introduce new technologies to the Indian subcontinent. We possess extensive expertise that spans multiple industries, including Plastic Extrusion, Converting and Labels, Paper, as well as Wire & Cable.
-                        </p>
+                        From its inception, RIMPL has proactively harnessed the potential of plastic extrusion machines in India and globally. Guided by the visionary leadership of our founder, Mr. Manish Mehta, we continuously introduce cutting-edge technologies to the Indian subcontinent. Our extensive expertise spans multiple industries, including Plastic Extrusion, Converting and Labels, Paper, as well as Wire & Cable.   </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                            We aim to provide innovative solutions that contribute to our sustainable future at RIMPL. We are introducing 'Disruptive Technologies,' expanding the minds and horizons of our customers while guiding them toward new arenas and helping them venture into new avenues.
-                        </p>
+                        At RIMPL, we are introducing 'Disruptive Technologies,' expanding the minds and horizons of our customers, guiding them toward new arenas, and helping them venture into new avenues. </p>
                     </div>
-
+                    <div className='text-[#555555]'>
+                        <p>
+                        Moving beyond the conventional definition of service within the industry, we have transcended boundaries. We have assembled a 24X7, fully equipped after-sales service team, providing technical support and preventive maintenance for machines to all our customers. </p>
+                    </div>
                 </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function AboutUs() {
             <div className='flex flex-col md:gap-10 gap-5  animate__animated animate__fadeIn animate__delay-3s'>
                 <div className='md:w-[100%]'>
                     <div>
-                        <p className="text-primary font-semibold lg:text-[45px] text-[20px]">Board of directors</p>
+                        <p className="text-primary font-semibold lg:text-[45px] text-[20px]">Board of Directors</p>
                     </div>
                 </div>
 
