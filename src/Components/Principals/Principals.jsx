@@ -81,6 +81,8 @@ export default function Principals() {
                                     companyName={machinery.company_name}
                                     img={machinery.img}
                                     backContent={machinery.backContent}
+                                    back2={machinery.back2}
+                                    back3={machinery.back3}
                                     backLink={machinery.backLink}
                                 />
                             )
@@ -105,6 +107,7 @@ export default function Principals() {
                                 companyName={machinery.company_name}
                                 img={machinery.img}
                                 backContent={machinery.backContent}
+                                back2={machinery.back2}
                                 backLink={machinery.backLink}
                             />
                         )
@@ -137,7 +140,7 @@ export default function Principals() {
             {/* Slitting, Metallizing & Coating */}
             <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting, Metallizing & Coating</p>
+                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting &  Metallizing </p>
                 </div>
                 <div className='grid lg:grid-rows-1 grid-cols-2 lg:grid-cols-3 lg:grid-flow-col'>
                     {/* more cards */}
