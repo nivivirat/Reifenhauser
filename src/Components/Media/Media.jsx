@@ -66,7 +66,7 @@ export default function Media() {
       </div>
 
 
-      <div className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
+      <div className="flex flex-col rounded-lg h-96  md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
       <a href='/blogs'>
         <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5">
         
