@@ -2,49 +2,53 @@
     {
       "company_name": "Bobst Firenze S.R.L.",
       "img": "bobst",
-      "backContent":"Bobst Firenze S.r.l, Italy Narrow Mid - Web Printing & Converting",
+      "backContent":"Narrow Mid - Web Printing & Converting",
       "backLink":"www.bobst.com"
-    },
-    {
-      "company_name": "Comexi Group, Spain",
-      "img": "comexi",
-      "backContent":"Comexi Group, Spain CI Flexo and CI offest presses Solvent based and Solvent less laminators and coating. Digital Solutions,",
-      "backLink":"www.comexi.com"
-    },
-    {
-      "company_name": "Energy Sciences Inc, USA",
-      "img": "energy_sciences",
-      "backContent":"Energy Sciences Inc, USA Electron Beam Technology",
-      "backLink":"www.ebeam.com"
-    },
-    {
-      "company_name": "GIC, France",
-      "img": "gic",
-      "backContent":"GIC, France Finishing equipment for Labels ( RFID Tags, In Mould Labels)",
-      "backLink":"www.gic-online.com"
     },
     {
       "company_name": "Konica Minolta, India",
       "img": "konica_minolta",
-      "backContent":"Konica Minolta, India Digital Printing Solution",
+      "backContent":"Digital Printing Solution",
       "backLink":"www.konicaminolta.com"
+    },
+    {
+      "company_name": "Comexi Group, Spain",
+      "img": "comexi",
+      "backContent":"CI Flexo and CI offest presses Solvent based and Solvent less laminators and coating. Digital Solutions,",
+      "backLink":"www.comexi.com"
     },
     {
       "company_name": "Lang Laser System GmbH, Germany",
       "img": "lang_laser",
-      "backContent":"LMG GREEN, Italy Cleaning Solution for printing",
+      "backContent":"Cleaning Solution for printing",
       "backLink":"www.lmg.green/en"
+    },
+    {
+      "company_name": "Energy Sciences Inc, USA",
+      "img": "energy_sciences",
+      "backContent":"Electron Beam Technology",
+      "backLink":"www.ebeam.com"
     },
     {
       "company_name": "Pelican Rotoflex Pvt. Ltd., Rajkot (India)",
       "img": "pelican_rotoflex",
-      "backContent":"Pelican Rotoflex Pvt. Ltd, Rajkot (India) Rotogravure Printing Press,",
+      "backContent":"Rotogravure Printing Press,",
       "backLink":"www.pelican.in"
     },
     {
+      "company_name": "GIC, France",
+      "img": "gic",
+      "backContent":"Finishing equipment for Labels",
+      "back2": "( RFID Tags, In Mould Labels)",
+      "backLink":"www.gic-online.com"
+    },
+   
+   
+ 
+    {
       "company_name": "Totani Corporation, Japan",
       "img": "totani",
-      "backContent":"Totani Corporation, Japan Pouch Making Machine",
+      "backContent":"Pouch Making Machine",
       "backLink":"www.totani.co.jp"
     }
   ]
