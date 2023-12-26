@@ -40,13 +40,12 @@ export default function Header() {
                     >
                         Principals
                     </a>
-                    <ui
-                        href='/'
-                        className={`hover:text-primary ${location.pathname === '/' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/events'
+                    <a
+                        href='/events'
+                        className={`hover:text-primary ${location.pathname === '/events' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/events'
                     >
                         Events
-                        <p className="text-xs">(Coming Soon)</p>
-                    </ui>
+                    </a>
                     <a
                         href='/media'
                         className={`hover:text-primary ${location.pathname === '/media' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/media'
@@ -83,7 +82,7 @@ export default function Header() {
                                 <li><a href='/aboutUs'>About Us</a></li>
                                 <li><a href='/services'>Services</a></li>
                                 <li><a href='/principals'>Principals</a></li>
-                                <li>Events (Coming Soon)</li>
+                                <li><a href='/events'>Events</a></li>
                                 <li><a href='/media'>Media</a></li>
                                 <li><a href='/careers'>Careers</a></li>
                                 <li><a href='/contactUs'>Contact us</a></li>
