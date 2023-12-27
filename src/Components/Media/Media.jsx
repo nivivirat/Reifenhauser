@@ -23,8 +23,8 @@ export default function Media() {
                 </div>
       <div className="flex-flex media1">Media</div>
       <div className="text-[18px] flex-flex media2">Glimpse through the round up of the latest  trends in the packaging industry</div>
-      <div className="text-3xl flex-flex media3 jj">News & Updates</div>
-      <div className="text-[18px] flex-flex media4 jj">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
+      <div className="text-3xl flex-flex media3 ">News & Updates</div>
+      <div className="text-[18px] flex-flex media4 ">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
       <img className="media56" src={rimg} alt="image"></img>
       <div className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 mr--9">
       <a href='/blogs'>  <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
@@ -66,7 +66,7 @@ export default function Media() {
       </div>
 
 
-      <div className="flex flex-col rounded-lg h-96  md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
+      {/* <div className="flex flex-col rounded-lg h-96  md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
       <a href='/blogs'>
         <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5">
         
@@ -108,7 +108,7 @@ export default function Media() {
           </CardBody>
           
         </Card></a>
-      </div>
+      </div> */}
       <div className="text-3xl flex-flex media3">Let’s Connect</div>
       <div className="text-[18px] flex-flex media4 -mb-24">Here’s what we've been up to recently.</div>
       <br></br>
