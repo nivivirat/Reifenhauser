@@ -10,13 +10,13 @@ import Serv5 from '../../assets/Images/Services/Frame 21509 (4).svg';
 export default function Services() {
   return (
     <div className="App mt-20 ">
-     <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+     <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3 -mb-24">
                     <p className="text-[#999999]">Home-</p>
                     <p className="text-primary font-semibold">Services</p>
                 </div>
                 <div className="tr">
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col p-6">
+              <div className="flex flex-col p-6 ">
 <br></br><br></br>
                 <h5 className="mb-2 text-5xl text-4xl leading-tight q ll animated-box animate__animated animate__fadeInLeft">
                 Our Services
