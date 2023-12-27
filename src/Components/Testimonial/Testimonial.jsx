@@ -28,12 +28,12 @@ function Testimonial() {
         <p className="text-primary font-semibold"> Testimonials</p>
       </div>
       <p className="text-xl test11">Testimonials</p>
-      
+  
       <p className="text-3xl mt-8 test112">
         <strong>See what our users say about us</strong>
       </p>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-6">
+      <div className="flex flex-wrap justify-center gap-4 mb-6 h-auto">
         {cardContent.slice(0, displayLimit).map((card, index) => (
           <CardWithLink
             key={index}
