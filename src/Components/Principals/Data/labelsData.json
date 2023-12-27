@@ -1,0 +1,30 @@
+[
+  {
+    "company_name": "Bobst Firenze S.R.L., Italy",
+    "img": "bobst",
+    "backContent": "Narrow Mid - Web Printing &",
+    "back2": "Converting Machinery",
+    "backLink": "www.bobst.com"
+  },
+  {
+    "company_name": "Coatema Coating Machinery GmbH, Germany",
+    "img": "gic",
+    "backContent": "Finishing equipment for",
+    "back2": "Labels",
+    "back3":"( RFID Tags, In Mould Labels)",
+    "backLink": "www.gic-online.com"
+  },
+  {
+    "company_name": "Grafotronic, Sweden",
+    "img": "grafotronic",
+    "backContent": "Narrow web Finishing ",
+    "back2": "Machines",
+    "backLink": "www.grafotronic.se"
+  },
+  {
+    "company_name": "Konica Minolta, India",
+    "img": "konica_minolta",
+    "backContent": "Digital Printing Solution",
+    "backLink": "www.konicaminolta.com"
+  }
+]

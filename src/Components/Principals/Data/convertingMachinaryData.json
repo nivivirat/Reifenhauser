@@ -1,55 +1,40 @@
 [
-    {
-      "company_name": "Bobst Firenze S.R.L.",
-      "img": "bobst",
-      "backContent":"Narrow Mid - Web Printing & Converting",
-      "backLink":"www.bobst.com"
-    },
-    {
-      "company_name": "Konica Minolta, India",
-      "img": "konica_minolta",
-      "backContent":"Digital Printing Solution",
-      "backLink":"www.konicaminolta.com"
-    },
-    {
-      "company_name": "Comexi Group, Spain",
-      "img": "comexi",
-      "backContent":"CI Flexo and CI offest presses Solvent based and Solvent less laminators and coating. Digital Solutions,",
-      "backLink":"www.comexi.com"
-    },
-    {
-      "company_name": "Lang Laser System GmbH, Germany",
-      "img": "lang_laser",
-      "backContent":"Cleaning Solution for printing",
-      "backLink":"www.lmg.green/en"
-    },
-    {
-      "company_name": "Energy Sciences Inc, USA",
-      "img": "energy_sciences",
-      "backContent":"Electron Beam Technology",
-      "backLink":"www.ebeam.com"
-    },
-    {
-      "company_name": "Pelican Rotoflex Pvt. Ltd., Rajkot (India)",
-      "img": "pelican_rotoflex",
-      "backContent":"Rotogravure Printing Press,",
-      "backLink":"www.pelican.in"
-    },
-    {
-      "company_name": "GIC, France",
-      "img": "gic",
-      "backContent":"Finishing equipment for Labels",
-      "back2": "( RFID Tags, In Mould Labels)",
-      "backLink":"www.gic-online.com"
-    },
-   
-   
- 
-    {
-      "company_name": "Totani Corporation, Japan",
-      "img": "totani",
-      "backContent":"Pouch Making Machine",
-      "backLink":"www.totani.co.jp"
-    }
-  ]
-  
+  {
+    "company_name": "Coatema Coating Machinery GmbH, Germany",
+    "img": "coatema",
+    "backContent": "Coating Machines for Lab & Pilot ",
+    "back2":"Production",
+    "backLink": "www.coatema.de/en"
+  },
+  {
+    "company_name": "Comexi Group, Spain",
+    "img": "comexi",
+    "backContent": "CI Flexo and CI offest presses Solvent based and Solvent less laminators and coating. Digital Solutions,",
+    "backLink": "www.comexi.com"
+  },
+  {
+    "company_name": "Energy Sciences Inc, USA",
+    "img": "energy_sciences",
+    "backContent": "Electron Beam Technology",
+    "backLink": "www.ebeam.com"
+  },
+  {
+    "company_name": "Kroenert GmbH & Co. KG, Germany",
+    "img": "kroenert",
+    "backContent": "Coating Machines for Lab & Pilot ",
+    "back2": "Production",
+    "backLink": "www.bobst.com"
+  },
+  {
+    "company_name": "Pelican Rotoflex Pvt. Ltd., Rajkot (India)",
+    "img": "pelican_rotoflex",
+    "backContent": "Rotogravure Printing Press,",
+    "backLink": "www.pelican.in"
+  },
+  {
+    "company_name": "Totani Corporation, Japan",
+    "img": "totani",
+    "backContent": "Pouch Making Machine",
+    "backLink": "www.totani.co.jp"
+  }
+]

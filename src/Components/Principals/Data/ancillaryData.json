@@ -1,54 +1,51 @@
 [
-    {
-      "company_name": "Acigraf, Italy",
-      "img": "acigraf",
-      "backContent":"Cylinder Preparations",
-      "backLink":"www.acigraf.com"
-    },
-    {
-      "company_name": "MERO SPA, Italy",
-      "img": "mero_spa",
-      "backContent":"Corona Treaters",
-      "backLink":"www.mero.it"
-    },
-    {
-      "company_name": "AV Flexologic, Netherland",
-      "img": "av_flexologic",
-      "backContent":"Plate mounting Solutions",
-      "backLink":"www.flexologic.nl"
-    },
-    {
-      "company_name": "Praxair, USA",
-      "img": "praxair",
-      "backContent":"Anilox Rolls",
-      "backLink":"www.praxairsurfacetechnologies.com"
-    },
-    {
-      "company_name": "Esko, Israel",
-      "img": "esko",
-      "backContent":"Print Inspection system",
-      "backLink":"www.esko.com/en"
-    },
-    {
-      "company_name": "Reprochem, Italy",
-      "img": "reprochem",
-      "backContent":"Rotogravure Cylinders",
-      "backLink":"www.reprochem.it"
-    },
-    {
-      "company_name": "Grafotronic, Sweden",
-      "img": "grafotronic",
-      "backContent":"Print Inspection system",
-      "backLink":"www.grafotronic.se"
-    },
-    
-    
-    
-    {
-      "company_name": "Synaptik Lamination S.L., Catalonia",
-      "img": "synaptik_lamination",
-      "backContent":" Real time coating weight measurement system for lamination process",
-      "backLink":"www.synaptik.cat/en"
-    }
-  ]
-  
+  {
+    "company_name": "Acigraf Graphic Equipments S.r.l, Italy",
+    "img": "acigraf",
+    "backContent": "Cylinder Preparations",
+    "backLink": "www.acigraf.com"
+  },
+  {
+    "company_name": "AV Flexologic, Netherland",
+    "img": "av_flexologic",
+    "backContent": "Plate mounting Solutions",
+    "backLink": "www.flexologic.nl"
+  },
+  {
+    "company_name": "Esko, Israel",
+    "img": "esko",
+    "backContent": "Print Inspection system",
+    "backLink": "www.esko.com/en"
+  },
+  {
+    "company_name": "LMG Green, Italy",
+    "img": "lmg",
+    "backContent": "Cleaning Solutions for printing ",
+    "back2": "and Solvent recovery",
+    "backLink": "www.esko.com/en"
+  },
+  {
+    "company_name": "MERO SPA, Italy",
+    "img": "mero_spa",
+    "backContent": "Corona Treaters",
+    "backLink": "www.mero.it"
+  },
+  {
+    "company_name": "Praxair, USA",
+    "img": "praxair",
+    "backContent": "Anilox Rolls",
+    "backLink": "www.praxairsurfacetechnologies.com"
+  },
+  {
+    "company_name": "Reprochem, Italy",
+    "img": "reprochem",
+    "backContent": "Rotogravure Cylinders",
+    "backLink": "www.reprochem.it"
+  },
+  {
+    "company_name": "Synaptik Lamination S.L., Catalonia",
+    "img": "synaptik_lamination",
+    "backContent": " Real time coating weight measurement system for lamination process",
+    "backLink": "www.synaptik.cat/en"
+  }
+]

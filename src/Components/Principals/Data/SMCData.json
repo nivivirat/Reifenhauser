@@ -2,7 +2,9 @@
     {
       "company_name": "A.CELLI, Italy",
       "img": "acelli",
-      "backContent":"Slitters and Rewinders & Finishing lines for non wovens",
+      "backContent":"Slitters and Rewinders",
+      "back2":"& Finishing lines for",
+      "back3":"non wovens",
       "backLink":"www.acelli.it/en"
     },
     {
@@ -16,12 +18,6 @@
       "img": "ims",
       "backContent":"(Goebel IMS, LAEM IMS & ROTOMAC, Slitter & Rewinder",
       "backLink":"www.imstechnologies.com"
-    },
-    {
-      "company_name": "Kroenert GmbH & Co. KG, Germany",
-      "img": "kroenert",
-      "backContent":"Coating & Laminating Machines",
-      "backLink":"www.kroenert.de/en"
     }
   ]
   
