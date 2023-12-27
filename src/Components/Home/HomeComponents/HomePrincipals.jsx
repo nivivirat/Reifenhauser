@@ -38,7 +38,7 @@ export default function HomePrincipals() {
 
                 <HomePrincipalCard content={"Converting Machinery"} />
 
-                <HomePrincipalCard content={"Slitting, Metallizing & Coating"} />
+                <HomePrincipalCard content={"Slitting & Metallizing"} />
 
             </div>
 
