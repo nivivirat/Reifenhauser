@@ -69,7 +69,14 @@
     .fm{
       width:60%;
       height:40%;
-      margin:5% 2%;
+      margin:5% 2% 5% 2%;
+      position:relative;
+      top:-40px;
+      
+    }
+    .hj{
+      position:relative;
+      top:-80px;
     }
     .ll{
       text-align:left;
