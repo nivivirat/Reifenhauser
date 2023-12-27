@@ -72,7 +72,7 @@ export default function Services() {
                 </h5>
                 <p className="mb-4 text-[18px] mr-20  leading-tight  ll">Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions. Meticulously handling machinery commissioning, they guarantee operational readiness, providing comprehensive training for competent machinery utilization. Simultaneously, we conduct scheduled preventive maintenance, addressing issues systematically to minimize unforeseen failures and ensure prolonged machinery lifespan. This approach aims at reducing backlogs, assuring uninterrupted operations, and maintaining process excellence.Our proactive approach extends to the installation of purchased machinery. Our engineers ensure seamless operation, considering environmental and site conditions.
                 </p>
-              </div><br></br><br></br><br></br>
+              </div><br></br>
               {/* <br></br><br></br><br></br><br></br><br></br> */}
               <img className="fm  animate__animated animate__fadeInRight animate__delay-3s" src ={Serv4} alt="image"></img>
             </div>
