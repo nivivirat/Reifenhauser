@@ -115,7 +115,7 @@ export default function CompanyCardsEcec({ companyName, img, backContent, back2,
                         <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{backContent}</p>
                         <p className='text-[#013A98] text-center text-[10px] px-4 -mt-3 -mb-3 font-medium'>{back2}</p>
                         <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{back3}</p>
-                        {formattedLink && <a href={formattedLink} target="_blank" rel="noopener noreferrer" className='text-black text-center text-[10px] underline px-4 font-medium'>{backLink}</a>}
+                        {formattedLink && <a href={formattedLink} target="_blank" rel="noopener noreferrer" className='text-wrap break-words lg:w-[220px] w-[90%] text-black text-center text-[10px] underline font-medium '>{backLink}</a>}
                     </div>
                 }
             </div>

@@ -11,6 +11,7 @@ import Events from './Components/Events/Events';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Blog from './Components/Blog/Blog';
 import Careers from './Components/Careers/Careers';
+
 function App() {
   return (
     <BrowserRouter>
