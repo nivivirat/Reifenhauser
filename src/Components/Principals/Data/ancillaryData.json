@@ -12,7 +12,7 @@
     "backLink": "www.flexologic.nl"
   },
   {
-    "company_name": "Esko, Israel",
+    "company_name": "Esko, Belgium",
     "img": "esko",
     "backContent": "Print Inspection system",
     "backLink": "www.esko.com/en"
@@ -39,7 +39,8 @@
   {
     "company_name": "Reprochem, Italy",
     "img": "reprochem",
-    "backContent": "Rotogravure Cylinders",
+    "backContent": "Polishing stones & ",
+    "back2":"Chemicals",
     "backLink": "www.reprochem.it"
   },
   {

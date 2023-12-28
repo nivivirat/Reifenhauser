@@ -72,7 +72,7 @@ export default function Principals() {
                         </div>
                     </div>
 
-                    <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row'>
+                    <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
                         {/* more cards */}
 
                         {CompanyDataExec.map((machinery, index) => (
@@ -98,7 +98,7 @@ export default function Principals() {
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Converting Machinery</p>
                 </div>
-                <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row'>
+                <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
                     {/* more cards */}
 
                     {convertingMachinaryData.map((machinery, index) => (
@@ -122,7 +122,7 @@ export default function Principals() {
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Ancillary</p>
                 </div>
-                <div className='grid lg:grid-rows-2 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row'>
+                <div className='grid lg:grid-rows-2 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
                     {/* more cards */}
 
                     {ancillaryData.map((machinery, index) => (
@@ -146,7 +146,7 @@ export default function Principals() {
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting &  Metallizing </p>
                 </div>
-                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row'>
+                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
 
                     {/* more cards */}
 
@@ -170,9 +170,9 @@ export default function Principals() {
             {/* Labels */}
             <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels </p>
+                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels</p>
                 </div>
-                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row'>
+                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
 
                     {/* more cards */}
 
