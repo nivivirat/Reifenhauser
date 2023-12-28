@@ -37,16 +37,16 @@ export default function AboutUs() {
                         <div className='w-[48%] rounded-[20px] shadow-lg relative'>
                             <div className='xl:h-[300px] h-[150px]'>
                                 <img className='h-full w-full object-cover rounded-[20px]' src={companies}></img>
+                                <div className='flex flex-col h-full w-full justify-center place-items-center text-[#295DB1] font-normal absolute bottom-0 xl:p-9 p-4 tracking-wide'>
+                                    <span className='xl:text-[75px] md:text-[60px] text-[40px] font-bold'>30</span>
+                                    <span className='xl:text-[25px] pb-[4%] font-normal'>&nbsp;Companies</span>
+                                </div>
                             </div>
 
-                            <div className='flex flex-row justify-center place-items-end text-[#295DB1] font-normal absolute bottom-[40%] xl:right-[1%] xl:p-9 p-4 tracking-wide'>
-                                <span className='xl:text-[45px] text-[20px] font-bold'>30</span>
-                                <span className='xl:text-[25px] pb-[4%] font-normal'>&nbsp;Companies</span>
-                            </div>
 
-                            <div className='flex flex-row justify-center place-items-center text-[#295DB1] font-semibold absolute bottom-0 xl:text-[16px] text-[10px] left-0 xl:p-6 p-4 tracking-wide'>
+                            {/* <div className='flex flex-row justify-center place-items-center text-[#295DB1] font-semibold absolute bottom-0 xl:text-[16px] text-[10px] left-0 xl:p-6 p-4 tracking-wide'>
                                 <p className=''>Our team has served ingenious companies across the Asia Pacific region.</p>
-                            </div>
+                            </div> */}
                         </div>
 
 
