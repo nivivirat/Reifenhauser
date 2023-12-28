@@ -15,21 +15,22 @@
   {
     "company_name": "Energy Sciences Inc, USA",
     "img": "energy_sciences",
-    "backContent": "Electron Beam Technology",
+    "backContent": "Electron Beam",
+    "back2":"Technology",
     "backLink": "www.ebeam.com"
   },
   {
     "company_name": "Kroenert GmbH & Co. KG, Germany",
     "img": "kroenert",
-    "backContent": "Coating & Laminating Machines ",
+    "backContent": "Coating & Laminating Machines",
    
     "backLink": "www.kroenert.de/en"
   },
   {
     "company_name": "Pelican Rotoflex Pvt. Ltd., Rajkot (India)",
     "img": "pelican_rotoflex",
-    "backContent": "Rotogravure Printing Press, Solvent ",
-    "back2":"less and Solvent-Base Laminator, ",
+    "backContent": "Rotogravure Printing Press, Solvent",
+    "back2":"less and Solvent-Base Laminator,",
     "back3":"Converting, Coating & Laminating, Slitting",
     "backLink": "www.pelican.in"
   },
