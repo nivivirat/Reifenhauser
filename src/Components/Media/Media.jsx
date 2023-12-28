@@ -44,9 +44,9 @@ export default function Media() {
           <CardBody>
        
             <div className="flex flex-col justify-start p-2 s">
-            <Typography variant="h4" className="sm: mb-8 text-2xl w-32 h-8 text-[#1565D8] bg-[#E0E7F2] hhgg ">
+            {/* <Typography variant="h4" className="sm: mb-8 text-2xl w-32 h-8 text-[#1565D8] bg-[#E0E7F2] hhgg ">
                 FEATURED
-              </Typography>
+              </Typography> */}
               <Typography variant="h4" className="mb-8 media7 text-2xl">
               Sustainable and tricky materials work well with CI flexo
                
