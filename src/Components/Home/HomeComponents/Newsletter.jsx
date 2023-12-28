@@ -57,7 +57,7 @@ export default function Newsletter() {
                     <img src={newsletter} className='absolute right-0 bottom-0'></img>
                     <div className='flex flex-col md:p-0 p-5 gap-1'>
                         <p className='font-semibold md:text-3xl text-[18px] lg:pr-[100px] md:pr-[100px]'>Subscribe Our Newsletter!</p>
-                        <p className='text-[12px] md:text-[12px] lg:text-[16px] lg:pr-[100px] md:pr-[100px]'>Stay updated with what’s happening in the packaging industry.</p>
+                        <p className='text-[12px] md:text-[12px] lg:text-[16px] lg:pr-[100px] md:pr-[100px]'>Stay Tuned for regular updates</p>
                     </div>
 
                     {showEmailInput ? (

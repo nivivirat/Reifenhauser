@@ -57,7 +57,7 @@ export default function Banner() {
             } else {
                 setCurrentSection(0);
             }
-        }, 3000); // 3000 milliseconds (3 seconds)
+        }, 6000); // 3000 milliseconds (3 seconds)
 
         return () => clearInterval(interval); // Cleanup on unmount
     }, [currentSection]);
