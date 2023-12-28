@@ -48,7 +48,7 @@ export default function HomeTestimonials() {
             </div>
 
             <div className="w-full flex justify-center place-items-center mt-10 md:mb-10">
-                <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
+                <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 mb-6 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
                     <p>View All Testimonials</p>
                     <div className="text-primary md:text-xl">
                         <Icon icon="iconoir:arrow-tr" />
