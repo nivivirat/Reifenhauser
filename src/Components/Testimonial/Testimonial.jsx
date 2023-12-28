@@ -23,10 +23,10 @@ function Testimonial() {
 
   return (
     <div className="App">
-      <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+      {/* <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
         <p className="text-[#999999]">Home-</p>
         <p className="text-primary font-semibold"> Testimonials</p>
-      </div>
+      </div> */}
       <p className="text-xl test11">Testimonials</p>
   
       <p className="text-3xl mt-8 test112">

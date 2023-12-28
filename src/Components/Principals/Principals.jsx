@@ -17,10 +17,10 @@ export default function Principals() {
             {/* our principals */}
             <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px]">
                 <div className="flex flex-col lg:w-[55%] animated-box animate__animated animate__fadeInLeft">
-                    <div className="md:hidden flex-row flex gap-1">
+                    {/* <div className="md:hidden flex-row flex gap-1">
                         <p className="text-[#999999]">Home-</p>
                         <p className="text-primary font-semibold">Contact Us</p>
-                    </div>
+                    </div> */}
 
                     <p className="mt-2 text-primary font-semibold text-5xl mb-4 ">Our Principals</p>
                     <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">We extend our gratitude to our principals for entrusting us as the bridge between global innovation and the thriving industrial community. Our extensive expertise spans across multiple industries, including Plastic Extrusion, Converting and Labels, Paper, Wire, and Cable.</p>

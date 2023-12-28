@@ -10,13 +10,13 @@ export default function AboutUs() {
     return (
         <div className="lg:p-10 p-5 flex flex-col gap-10 md:mx-[50px]">
 
-            <div className="lg:text-[20px] text-[16px] ">
+            {/* <div className="lg:text-[20px] text-[16px] ">
                 <p className="lg:block hidden text-primary font-semibold">About Us</p>
                 <div className="lg:hidden flex-row flex gap-1">
                     <p className="text-[#999999]">Home-</p>
                     <p className="text-primary font-semibold">About Us</p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="md:hidden block text-primary font-semibold text-[24px]">
                 <p>About Us</p>

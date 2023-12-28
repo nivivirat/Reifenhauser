@@ -13,13 +13,13 @@ export default function ContactUs() {
             <div className="flex flex-row lg:gap-[10%]">
 
                 <div className="flex flex-col gap-8 lg:w-[45%] animate__animated animate__fadeInLeft animate__delay-0s">
-                    <div className="lg:text-[20px] text-[16px]">
+                    {/* <div className="lg:text-[20px] text-[16px]">
                         <p className="lg:block hidden text-primary font-semibold">Contact Us</p>
                         <div className="lg:hidden flex-row flex gap-1">
                             <p className="text-[#999999]">Home-</p>
                             <p className="text-primary font-semibold">Contact Us</p>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div>
                         <div className="font-semibold flex flex-row gap-1 lg:text-[30px] text-[24px]">
