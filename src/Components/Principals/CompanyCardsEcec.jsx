@@ -112,9 +112,9 @@ export default function CompanyCardsEcec({ companyName, img, backContent, back2,
                     <img src={images[img]} alt={companyName} className='w-24 h-auto' />
                     :
                     <div className='w-full flex-col gap-3 bg-[#e5eaea] border border-[#b3b3b3] rounded-[20px] flex justify-center place-items-center content-center h-[110px]'>
-                        <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{backContent}</p>
-                        <p className='text-[#013A98] text-center text-[10px] px-4 -mt-3 -mb-3 font-medium'>{back2}</p>
-                        <p className='text-[#013A98] text-center text-[10px] px-4 font-medium'>{back3}</p>
+                        <p className='text-[#013A98] text-center md:text-[10px] text-[9px] px-4 font-medium'>{backContent}</p>
+                        <p className='text-[#013A98] text-center md:text-[10px] text-[9px] px-4 -mt-3 -mb-3 font-medium'>{back2}</p>
+                        <p className='text-[#013A98] text-center md:text-[10px] text-[9px] px-4 font-medium'>{back3}</p>
                         {formattedLink && <a href={formattedLink} target="_blank" rel="noopener noreferrer" className='text-wrap break-words lg:w-[220px] w-[90%] text-black text-center text-[10px] underline font-medium '>{backLink}</a>}
                     </div>
                 }
