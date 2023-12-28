@@ -12,22 +12,22 @@ import img4 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.04 1.svg'
 export default function CardComponent() {
     const posts = [
         {
-            title: "Lorem epsom dedor ↗",
+            title: "",
             img: img1,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
         {
-            title: "Lorem epsom dedor ↗ ",
+            title: " ",
             img: img2,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
         {
-            title: "Lorem epsom dedor ↗",
+            title: "",
             img: img3,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
         {
-            title: "Lorem epsom dedor ↗",
+            title: "",
             img: img4,
             content: "react tailwind css card with image It is a long established fact that a reader will be distracted by the readable content"
         },
