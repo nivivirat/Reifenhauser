@@ -39,7 +39,7 @@ const Slider = ({ children, options }) => {
         if (emblaApi) {
           emblaApi.scrollNext();
         }
-      }, 5000); // Adjust the interval duration (in milliseconds) as needed
+      }, 4000); // Adjust the interval duration (in milliseconds) as needed
 
       emblaApi.on("scroll", handleScroll);
 
