@@ -14,7 +14,7 @@ export default function Footer() {
                         <Icon icon="logos:whatsapp-icon" />
                         <div className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                             <p className='text-[#011C51]'>Say Hello!!</p>
-                            <p className='text-[#285196]'>+91 9322338451</p>
+                            <p className='text-[#285196]'>+91 9322338415</p>
                         </div>
                     </a>
 
@@ -63,7 +63,6 @@ export default function Footer() {
                         <ul className='flex flex-col gap-4 font-semibold'>
                             <li><a href='/principals'>Extrusion Machinery</a></li>
                             <li><a href='/principals'>Converting Machinery</a></li>
-                            <li><a href='/principals'>Packaging Machinery</a></li>
                             <li><a href='/principals'>Ancillary</a></li>
                             <li><a href='/principals'>Labels</a></li>
                         </ul>

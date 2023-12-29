@@ -72,7 +72,7 @@ export default function Header() {
                     </div>
                     <div className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                         <p className='text-[#011C51]'>Service Helpline</p>
-                        <p className='text-[#285196]'>+91 9322338451</p>
+                        <p className='text-[#285196]'>+91 9322338415</p>
                     </div>
                 </a>
                 <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0 z-50' : 'translate-x-full z-0'}`}>
