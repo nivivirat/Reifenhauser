@@ -79,8 +79,8 @@ export default function Footer() {
                 <a href='/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
                     <div className='flex flex-row p-4 gap-5 place-items-center'>
                         <div>
-                            <p className='md:text-[16px] text-[18px] font-semibold'>Get in</p>
-                            <p className='md:text-[16px] text-[18px] font-semibold'>Touch With Us</p>
+                            <p className='md:text-[16px] text-[14px] font-semibold'>Get in</p>
+                            <p className='md:text-[16px] text-[14px] font-semibold'>Touch With Us</p>
                         </div>
                         <div className='text-[25px]'>
                             <Icon icon="iconoir:arrow-tr" />
