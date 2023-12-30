@@ -4,7 +4,6 @@ import phone from '../../assets/Images/ContactUs/phone1.svg'
 import map from '../../assets/Images/ContactUs/map.svg'
 import bluebg from '../../assets/Images/ContactUs/bluebg.svg'
 import { Icon } from "@iconify/react"
-import GoogleMap from "./GoogleMap"
 
 export default function ContactUs() {
     return (
