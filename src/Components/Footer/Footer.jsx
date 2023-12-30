@@ -8,7 +8,7 @@ export default function Footer() {
             <div className='flex md:flex-row flex-col-reverse justify-between h-[90%] w-full'>
 
                 <div className='md:w-[30%] w-[100%] md:mt-0 mt-10 flex flex-col gap-5'>
-                    <p className='text-white'>CONTACT US</p>
+                    <p className='text-white'>Get in Touch With Us</p>
 
                     <a href="https://wa.me/919322338451" target="_blank" rel="noopener noreferrer" className='flex flex-row bg-base w-[200px] lg:w-[220px]  md:w-[220px] text-[30px] xl:w-[220px] xl:h-[70px] md:gap-4 rounded-lg justify-center place-items-center p-5'>
                         <Icon icon="logos:whatsapp-icon" />
@@ -77,11 +77,8 @@ export default function Footer() {
             {/* bottom */}
             <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[225px]'>
                 <a href='/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
-                    <div className='flex flex-row p-4 gap-5 place-items-center'>
-                        <div>
-                            <p className='md:text-[16px] text-[14px] font-semibold'>Get in</p>
-                            <p className='md:text-[16px] text-[14px] font-semibold'>Touch With Us</p>
-                        </div>
+                    <div className='flex flex-row p-4'>
+                        <p className='md:text-[22px] text-[18px] font-semibold'>Contact Us</p>
                         <div className='text-[25px]'>
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
