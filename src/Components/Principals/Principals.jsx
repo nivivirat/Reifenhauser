@@ -77,7 +77,7 @@ export default function Principals() {
 
                         {CompanyDataExec.map((machinery, index) => (
                             (
-                                <CompanyCardsEcec
+                                <CowmpanyCardsEcec
                                     key={index}
                                     companyName={machinery.company_name}
                                     img={machinery.img}

@@ -39,7 +39,7 @@ export default function Footer() {
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
                             <li><a href='/testimonials'>Testimonials</a></li>
-                           
+
                         </ul>
                         <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9     xl:mt-4'>
                             <p className='text-[12px]'>Connect with us on</p>
@@ -64,6 +64,7 @@ export default function Footer() {
                             <li><a href='/principals'>Extrusion Machinery</a></li>
                             <li><a href='/principals'>Converting Machinery</a></li>
                             <li><a href='/principals'>Ancillary</a></li>
+                            <li><a href='/principals'>Slitting & Metallizing</a></li>
                             <li><a href='/principals'>Labels</a></li>
                         </ul>
                     </div>
@@ -76,8 +77,11 @@ export default function Footer() {
             {/* bottom */}
             <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[225px]'>
                 <a href='/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
-                    <div className='flex flex-row p-4'>
-                        <p className='md:text-[22px] text-[18px] font-semibold'>Contact Us</p>
+                    <div className='flex flex-row p-4 gap-5 place-items-center'>
+                        <div>
+                            <p className='md:text-[16px] text-[18px] font-semibold'>Get in</p>
+                            <p className='md:text-[16px] text-[18px] font-semibold'>Touch With Us</p>
+                        </div>
                         <div className='text-[25px]'>
                             <Icon icon="iconoir:arrow-tr" />
                         </div>
