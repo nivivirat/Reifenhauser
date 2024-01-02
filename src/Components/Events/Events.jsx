@@ -210,10 +210,7 @@ const Events = () => {
 
   return (
     <> 
-    <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
-    <p className="text-[#999999]">Home-</p>
-    <p className="text-primary font-semibold">Events</p>
-</div>
+    
     <div style={containerStyle}>
       <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeIn animate__delay-0s">
         <img
