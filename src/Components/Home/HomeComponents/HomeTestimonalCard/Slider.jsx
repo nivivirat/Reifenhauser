@@ -4,6 +4,7 @@ import useEmblaCarousel from "embla-carousel-react";
 const Slider = ({ children, options }) => {
   const [clonedSlides, setClonedSlides] = useState([]);
   const [iterationCount, setIterationCount] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   // Clone the initial set of slides and append them to create a loop
   useEffect(() => {
@@ -35,11 +36,13 @@ const Slider = ({ children, options }) => {
     };
 
     const startAutoScroll = () => {
-      intervalId = setInterval(() => {
-        if (emblaApi && !emblaApi.dragging) {
-          emblaApi.scrollNext();
-        }
-      }, 7000); // Adjust the interval duration (in milliseconds) as needed
+      if (!isHovered) {
+        intervalId = setInterval(() => {
+          if (emblaApi && !emblaApi.dragging) {
+            emblaApi.scrollNext();
+          }
+        }, 1000); // Adjust the interval duration (in milliseconds) as needed
+      }
     };
 
     if (emblaApi) {
@@ -63,12 +66,17 @@ const Slider = ({ children, options }) => {
         emblaApi.off("pointerUp");
       };
     }
-  }, [emblaApi, iterationCount]);
+  }, [emblaApi, iterationCount, isHovered]);
 
   return (
     // Set ref as emblaRef.
     // Make sure we have overflow-hidden and flex so that it displays properly
-    <div className="overflow-hidden" ref={emblaRef}>
+    <div
+      className="overflow-hidden"
+      ref={emblaRef}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="flex gap-10">{clonedSlides}</div>
     </div>
   );
