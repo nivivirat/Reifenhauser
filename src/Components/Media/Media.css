@@ -153,6 +153,20 @@ line-height: normal;
 .jj{
   display:none;
 }
+
+}
+
+@media (max-width: 850px) {
+
+.mml{
+  visibility: hidden;
+  position: absolute;
+}
+
+}
+
+
+@media (max-width: 750px) {
 .hhg{
   visibility: hidden;
   position: absolute;
