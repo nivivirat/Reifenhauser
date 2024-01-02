@@ -104,7 +104,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <p className='opacity-40 md:hidden block'>© 2023 — Copyright</p>
+                <p className='opacity-40 md:hidden block'>© 2024 — Copyright</p>
             </div>
         </div>
     )
