@@ -100,7 +100,7 @@ export default function Media() {
               width={96}
               className=" object-cover media11"
             />
-            <Typography variant="h4" className="mb-2 media12 text-xs">
+            <Typography variant="h4" className="mb-2 media12 text-xs mml">
               Packaging Southasia
             </Typography>
 
