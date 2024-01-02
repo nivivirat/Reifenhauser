@@ -34,19 +34,27 @@ const Slider = ({ children, options }) => {
       }
     };
 
-    if (emblaApi) {
+    const startAutoScroll = () => {
       intervalId = setInterval(() => {
         if (emblaApi) {
           emblaApi.scrollNext();
         }
-      }, 7000); // Adjust the interval duration (in milliseconds) as needed
+      }, 5000); // Adjust the interval duration (in milliseconds) as needed
+    };
+
+    if (emblaApi) {
+      startAutoScroll();
 
       emblaApi.on("scroll", handleScroll);
+      emblaApi.on("pointerDown", () => clearInterval(intervalId));
+      emblaApi.on("pointerUp", startAutoScroll);
 
-      // Clear the interval and remove the event listener on component unmount
+      // Clear the interval and remove the event listeners on component unmount
       return () => {
         clearInterval(intervalId);
         emblaApi.off("scroll", handleScroll);
+        emblaApi.off("pointerDown");
+        emblaApi.off("pointerUp");
       };
     }
   }, [emblaApi, iterationCount]);
