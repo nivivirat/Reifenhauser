@@ -210,7 +210,7 @@ const Events = () => {
 
   return (
     <> 
-    {/* <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
+    <div className="lg:hidden flex-row flex gap-1 ml-3 mt-3">
     <p className="text-[#999999]">Home-</p>
     <p className="text-primary font-semibold">Events</p>
 </div>
@@ -331,9 +331,9 @@ const Events = () => {
         ))}
       </div>
       <br></br><br></br><br></br><br></br>
-    </div> */}
+    </div> 
 
-    <div className="mt-64 mb-64  text-4xl"><center>Coming Soon....</center></div>
+    
     </>
   );
 }
