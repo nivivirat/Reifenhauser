@@ -53,7 +53,7 @@ export default function ContactUs() {
                                 <img src={phone} alt="Contact" className="w-8 h-8" />
                                 <p className="text-primary lg:text-2xl font-semibold text-xl">Contact</p>
                             </div>
-                            <p>+91 932 233 84 51</p>
+                            <p>+91 932 233 84 15</p>
                         </div>
 
                         {/* only for mobile */}
