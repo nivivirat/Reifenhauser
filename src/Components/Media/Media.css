@@ -166,13 +166,7 @@ line-height: normal;
 }
 
 
-@media (max-width: 750px) {
-.hhg{
-  visibility: hidden;
-  position: absolute;
-  /* visibility:hidden; */
-}
-}
+
 .media4{
   text-align:left;
   margin-left:3%;
@@ -187,7 +181,9 @@ line-height: normal;
   width:98%;
   font-family: Poppins;
 }
+@media (min-width: 500px) {
 
+}
 .media7{
   text-align:left;
   /* margin-left:3%; */
@@ -255,12 +251,19 @@ font-family: Poppins;
 
 }
 
+@media (max-width: 760px) {
+.yuo{
+  margin-top:350px;
+ }
+}
+
 @media (max-width: 720px) {
   .media6{
     width:120%;
     height:70%;
     margin-left:10%;
   }
+ 
 }
 @media (min-width: 720px) {
   .media6{
