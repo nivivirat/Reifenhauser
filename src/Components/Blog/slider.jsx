@@ -11,14 +11,40 @@ const Slider = ({ children, options }) => {
   });
 
   useEffect(() => {
+    let intervalId;
+
+    const handlePointerDown = () => {
+      // Pause auto-scrolling when the user touches any card
+      clearInterval(intervalId);
+    };
+
+    const handlePointerUp = () => {
+      // Resume auto-scrolling when the user releases the touch
+      startAutoScroll();
+    };
+
+    const startAutoScroll = () => {
+      intervalId = setInterval(() => {
+        if (embla) {
+          embla.scrollNext();
+        }
+      }, 3000); // Adjust the interval as needed (e.g., 3000ms for 3 seconds)
+    };
+
     // If Embla instance exists, enable autoplay
     if (embla) {
-      const intervalId = setInterval(() => {
-        embla.scrollNext();
-      }, 3000); // Adjust the interval as needed (e.g., 3000ms for 3 seconds)
+      startAutoScroll();
 
-      // Clear the interval when the component is unmounted
-      return () => clearInterval(intervalId);
+      // Add event listeners for touch events
+      embla.on("pointerDown", handlePointerDown);
+      embla.on("pointerUp", handlePointerUp);
+
+      // Clear the interval and remove the event listeners when the component is unmounted
+      return () => {
+        clearInterval(intervalId);
+        embla.off("pointerDown", handlePointerDown);
+        embla.off("pointerUp", handlePointerUp);
+      };
     }
   }, [embla]);
 
