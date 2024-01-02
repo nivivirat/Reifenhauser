@@ -36,18 +36,24 @@ const Slider = ({ children, options }) => {
 
     const startAutoScroll = () => {
       intervalId = setInterval(() => {
-        if (emblaApi) {
+        if (emblaApi && !emblaApi.dragging) {
           emblaApi.scrollNext();
         }
-      }, 5000); // Adjust the interval duration (in milliseconds) as needed
+      }, 7000); // Adjust the interval duration (in milliseconds) as needed
     };
 
     if (emblaApi) {
       startAutoScroll();
 
       emblaApi.on("scroll", handleScroll);
-      emblaApi.on("pointerDown", () => clearInterval(intervalId));
-      emblaApi.on("pointerUp", startAutoScroll);
+
+      emblaApi.on("pointerDown", () => {
+        clearInterval(intervalId);
+      });
+
+      emblaApi.on("pointerUp", () => {
+        startAutoScroll();
+      });
 
       // Clear the interval and remove the event listeners on component unmount
       return () => {
