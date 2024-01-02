@@ -68,7 +68,7 @@ export default function Media() {
 
 
       <div className="flex flex-col rounded-lg h-96  md:max-w-full md:flex-row media5 hhg animated-box animate__animated animate__fadeInRight animate__delay-2s">
-      <a href='https://packagingsouthasia.com/application/reifenhauser-india/'>
+      <a href='/blogs'>
         <Card className="flex flex-col rounded-lg   md:max-w-full md:flex-row media5">
         
           <CardHeader
@@ -110,12 +110,14 @@ export default function Media() {
           
         </Card></a>
       </div>
+      <div className="yuo">
       <div className="text-3xl flex-flex media3">Let’s Connect</div>
       <div className="text-[18px] flex-flex media4 -mb-24">Here’s what we've been up to recently.</div>
       <br></br>
+     
       <CardComponent>
       </CardComponent>
-
+      </div>
     </div>
 
   );
