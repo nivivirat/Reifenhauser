@@ -28,8 +28,8 @@ export default function AboutUs() {
                     <div className="font-semibold w-[90%] animate__animated animate__fadeInLeft animate__delay-0s">
                         <div className="text-black lg:text-[24px] md:text-[20px] text-[26px]">At RIMPL, we have gone beyond the industry's conventional notion of service.</div>
                         <div className="text-[#777777] text-[12px] hidden md:block">Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge</div>
-                        <div className='text-[#777777] text-[12px] hidden md:block'>machinery.</div>
-                        <div className='text-[#777777] text-[12px] md:hidden block'>Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge machinery.</div>
+                        <div className='text-[#777777] text-[12px] hidden md:block'>technology.</div>
+                        <div className='text-[#777777] text-[12px] md:hidden block'>Our expertise lies in facilitating global companies' access to the Indian Subcontinent with cutting-edge technology.</div>
                     </div>
                 </div>
 
