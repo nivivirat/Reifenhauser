@@ -23,7 +23,7 @@ export default function Principals() {
                     </div> */}
 
                     <p className="mt-2 text-primary font-semibold text-5xl mb-4 ">Our Principals</p>
-                    <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">We extend our gratitude to our principals for entrusting us as the bridge between global innovation and the thriving industrial community. Our extensive expertise spans across multiple industries, including Plastic Extrusion, Converting and Labels, Paper, Wire, and Cable.</p>
+                    <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">We extend our gratitude to our principals for entrusting us as the bridge between global innovation and the thriving industrial community. Our extensive expertise spans across multiple industries, including Plastic Extrusion, Converting and Labels, Paper, Wire, and Cable (Up until this moment).</p>
                 </div>
 
                 <img src={ourPrincipal} className='h-[400px] animate__animated animate__fadeInRight'></img>
@@ -93,7 +93,7 @@ export default function Principals() {
                 </div>
             </div>
 
-            {/* companies */}
+            {/* Converting Machinery */}
             <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Converting Machinery</p>
@@ -102,6 +102,31 @@ export default function Principals() {
                     {/* more cards */}
 
                     {convertingMachinaryData.map((machinery, index) => (
+                        (
+                            <CompanyCardsEcec
+                                key={index}
+                                companyName={machinery.company_name}
+                                img={machinery.img}
+                                backContent={machinery.backContent}
+                                back2={machinery.back2}
+                                back3={machinery.back3}
+                                backLink={machinery.backLink}
+                            />
+                        )
+                    ))}
+                </div>
+            </div>
+
+            {/* Labels */}
+            <div className='flex flex-col lg:gap-22 gap-16'>
+                <div>
+                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels</p>
+                </div>
+                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
+
+                    {/* more cards */}
+
+                    {labelsData.map((machinery, index) => (
                         (
                             <CompanyCardsEcec
                                 key={index}
@@ -141,7 +166,7 @@ export default function Principals() {
                 </div>
             </div>
 
-            {/* Slitting, Metallizing & Coating */}
+            {/* Slitting, Metallizing */}
             <div className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting &  Metallizing </p>
@@ -167,30 +192,7 @@ export default function Principals() {
             </div>
 
 
-            {/* Labels */}
-            <div className='flex flex-col lg:gap-22 gap-16'>
-                <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels</p>
-                </div>
-                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-
-                    {/* more cards */}
-
-                    {labelsData.map((machinery, index) => (
-                        (
-                            <CompanyCardsEcec
-                                key={index}
-                                companyName={machinery.company_name}
-                                img={machinery.img}
-                                backContent={machinery.backContent}
-                                back2={machinery.back2}
-                                back3={machinery.back3}
-                                backLink={machinery.backLink}
-                            />
-                        )
-                    ))}
-                </div>
-            </div>
+            
         </div>
     )
 }

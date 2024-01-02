@@ -63,9 +63,9 @@ export default function Footer() {
                         <ul className='flex flex-col gap-4 font-semibold'>
                             <li><a href='/principals'>Extrusion Machinery</a></li>
                             <li><a href='/principals'>Converting Machinery</a></li>
+                            <li><a href='/principals'>Labels</a></li>
                             <li><a href='/principals'>Ancillary</a></li>
                             <li><a href='/principals'>Slitting & Metallizing</a></li>
-                            <li><a href='/principals'>Labels</a></li>
                         </ul>
                     </div>
 

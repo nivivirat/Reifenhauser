@@ -20,11 +20,11 @@ export default function Banner() {
     const downData = [
         {
             top: "Number of Installations",
-            bottom: "1000+",
+            bottom: "700+",
         },
         {
             top: "Number of Installations",
-            bottom: "1000+",
+            bottom: "700+",
         }
         // {
         //     top: "Testimonials Received",
