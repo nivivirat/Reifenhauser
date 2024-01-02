@@ -187,12 +187,7 @@ line-height: normal;
   width:98%;
   font-family: Poppins;
 }
-@media (min-width: 500px) {
-.hhgg{
-  display:none;
-  visibility:hidden;
-}
-}
+
 .media7{
   text-align:left;
   /* margin-left:3%; */
