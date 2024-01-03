@@ -13,7 +13,7 @@ export default function Careers() {
     const [showForm, setShowForm] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [fileName, setFileName] = useState('');
-    const [formSuccess, setFormSuccess] = useState(true);
+    const [formSuccess, setFormSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
 
     const toggleForm = () => {
