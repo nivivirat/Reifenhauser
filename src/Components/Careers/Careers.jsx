@@ -13,7 +13,7 @@ export default function Careers() {
     const [showForm, setShowForm] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const [fileName, setFileName] = useState('');
-    const [formSuccess, setFormSuccess] = useState(false);
+    const [formSuccess, setFormSuccess] = useState(true);
     const [loading, setLoading] = useState(false);
 
     const toggleForm = () => {
@@ -201,7 +201,7 @@ export default function Careers() {
                         <div className='fixed md:top-[40%] top-[25%] left-[10%] w-[80%] md:h-[50%] h-[70%] flex items-center justify-center z-20'>
                             <div className='w-full h-full bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-7 place-items-center justify-center'>
                                 <img src={bluetick} className='md:h-[100px] md:w-[100px]'></img>
-                                <p className='text-xl text-primary'>You have submitted your profile successfully.</p>
+                                <p className='text-xl text-primary text-center'>You have submitted your profile successfully.</p>
                             </div>
                         </div>
                     )
