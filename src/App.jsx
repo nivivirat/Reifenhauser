@@ -11,6 +11,7 @@ import Events from './Components/Events/Events';
 import Testimonial from './Components/Testimonial/Testimonial';
 import Blog from './Components/Blog/Blog';
 import Careers from './Components/Careers/Careers';
+import Admin from './Components/Admin/Admin';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonial />} />
           <Route path="/blogs" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
+          <Route path="/admin" element={<Admin />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
