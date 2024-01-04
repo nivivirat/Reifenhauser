@@ -3,21 +3,26 @@ import { db } from '../../../../firebase';
 import EventForm from './EventForm';
 import { getDatabase, ref, onValue, set, push, update } from 'firebase/database'; // Update imports for v9 syntax
 import { Icon } from '@iconify/react';
+import ArchivedForm from './ArchivedForm';
 
 export default function AdminEvents() {
     const [eventsData, setEventsData] = useState({});
+    const [isCompletionFormOpen, setIsCompletionFormOpen] = useState(false);
     const [formData, setFormData] = useState({
         date: "",
         eventName: "",
         img: "",
         location: "",
-        uid: ""
+        uid: "",
+        completed: false
     });
 
     const [currentYearForNewEvent, setCurrentYearForNewEvent] = useState(null);
     const [currentYearForEditEvent, setCurrentYearForEditEvent] = useState(null);
 
     const [newEventForm, setNewEventForm] = useState(false);
+    const [editEventForm, setEditEventForm] = useState(false);
+    const [completeEventForm, setCompleteEventForm] = useState(false);
 
     // Function to fetch events data from Firebase
     const fetchEventsData = () => {
@@ -35,13 +40,6 @@ export default function AdminEvents() {
     }, []);
 
     const [selectedEvent, setSelectedEvent] = useState(null);
-
-    // Function to handle editing an event
-    const handleEditEvent = (eventUid) => {
-        // Logic to handle event editing goes here
-        // You can set the selected event for editing or perform any necessary operations
-        console.log(`Editing event with UID: ${eventUid}`);
-    };
 
     // Function to update an event
     const updateEvent = (eventUid, updatedEventData) => {
@@ -168,14 +166,56 @@ export default function AdminEvents() {
     };
 
     // delete confirmation
-    
+
     const deleteEventWithConfirmation = (year, eventUid) => {
         const shouldDelete = window.confirm('Are you sure you want to delete this event?');
-    
+
         if (shouldDelete) {
             deleteEvent(year, eventUid);
         }
     };
+
+    const toggleCompletionForm = () => {
+        setIsCompletionFormOpen(!isCompletionFormOpen);
+    };
+
+    const markEventAsCompleted = (year, eventUid, description, img) => {
+        // Update the event data with the completed field set to true, along with additional details
+        const updatedEventData = {
+            ...eventsData[year][eventUid],
+            completed: true,
+            description: description,
+            archievedImg: img
+        };
+
+        const eventsRef = ref(db, `events/${year}/${eventUid}`);
+        set(eventsRef, updatedEventData)
+            .then(() => {
+                console.log('Event marked as completed successfully');
+
+                // Update the local state to reflect the changes
+                const updatedEventsData = { ...eventsData };
+                updatedEventsData[year][eventUid] = updatedEventData;
+                setEventsData(updatedEventsData);
+            })
+            .catch((error) => {
+                console.error('Error marking event as completed: ', error);
+            });
+    };
+
+    // Function to handle marking an event as completed with user-provided description and image
+    const handleMarkEventAsCompleted = (year, eventUid) => {
+        const userDescription = prompt('Enter event description:');
+        const userImg = prompt('Enter event image URL:');
+
+        if (userDescription && userImg) {
+            markEventAsCompleted(year, eventUid, userDescription, userImg);
+        } else {
+            console.log('Description and image are required to mark the event as completed.');
+        }
+    };
+
+
 
     return (
         <div className="p-4 relative">
@@ -199,110 +239,130 @@ export default function AdminEvents() {
 
 
                         <div>
-                            {Object.values(events).map((event, index) => (
-                                <div key={index} className="bg-gray-100 flex-col border rounded-md p-2 px-10 mb-2 flex">
+                            {Object.values(events)
+                                .filter(event => !event.completed) // Filter events where 'completed' is false
+                                .map((event, index) => (
+                                    <div key={index} className="bg-gray-100 flex-col border rounded-md p-2 px-10 mb-2 flex">
 
-                                    {/* top */}
-                                    <div className='flex flex-row justify-between w-full py-5'>
-                                        <p className="font-semibold text-2xl"><span className="font-bold hover:text-primary">{event.eventName}</span></p>
-                                        <div className="flex gap-2 justify-center place-items-center">
-                                            <button
-                                                onClick={() => {
-                                                    handleEditEvent(event.uid);
-                                                    setCurrentYearForEditEvent(year);
-                                                    setSelectedEvent(event);
-                                                }}
-                                                title="Edit Event"
-                                                className="flex flex-row py-2 px-4 text-2xl hover:text-primary rounded-md"
-                                            >
-                                                <Icon icon="iconamoon:edit-duotone" />
-                                            </button>
+                                        {/* top */}
+                                        <div className='flex flex-row justify-between w-full py-5'>
+                                            <p className="font-semibold text-2xl"><span className="font-bold hover:text-primary">{event.eventName}</span></p>
+                                            <div className="flex gap-2 justify-center place-items-center">
+                                                <button
+                                                    onClick={() => {
+                                                        setCurrentYearForEditEvent(year);
+                                                        setSelectedEvent(event);
+                                                        console.log("tueere");
+                                                        setEditEventForm(true); // Update the state to true for the edit form
+                                                    }}
+                                                    title="Edit Event"
+                                                    className="flex flex-row py-2 px-4 text-2xl hover:text-primary rounded-md"
+                                                >
+                                                    <Icon icon="iconamoon:edit-duotone" />
+                                                </button>
 
-                                            {/* complete button */}
-                                            <button
-                                                onClick={() => {
 
-                                                }}
-                                                title="Mark Event as Completed"
-                                                className="py-2 px-4 rounded-md text-2xl hover:text-green-600"
-                                            >
-                                                <Icon icon="fluent-mdl2:completed-solid" />
-                                            </button>
+                                                {/* complete button */}
+                                                <button
+                                                    onClick={() => handleMarkEventAsCompleted(year, event.uid)}
+                                                    title="Mark Event as Completed"
+                                                    className="py-2 px-4 rounded-md text-2xl hover:text-green-600"
+                                                >
+                                                    <Icon icon="fluent-mdl2:completed-solid" />
+                                                </button>
 
-                                            {/* delete button */}
-                                            <button
-                                                onClick={() => deleteEventWithConfirmation(year, event.uid)}
-                                                title="Delete Event"
-                                                className="py-2 px-4 rounded-md text-3xl hover:text-red-600"
-                                            >
-                                                <Icon icon="mdi:delete" />
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                    {/* bottom */}
-                                    <div className='flex flex-row justify-between w-full text-[20px]'>
-                                        <div className="w-[50%] justify-center flex flex-col">
-                                            <p className="font-semibold">Date: <span className='font-normal'>{event.date}</span></p>
-                                            <p className="font-semibold">Location: <span className='font-normal'>{event.location}</span></p>
+                                                {/* delete button */}
+                                                <button
+                                                    onClick={() => deleteEventWithConfirmation(year, event.uid)}
+                                                    title="Delete Event"
+                                                    className="py-2 px-4 rounded-md text-3xl hover:text-red-600"
+                                                >
+                                                    <Icon icon="mdi:delete" />
+                                                </button>
+                                            </div>
                                         </div>
 
-                                        {event.img && (
-                                            <div className="w-[50%]">
-                                                <p className="font-semibold">Image:</p>
-                                                <img
-                                                    src={event.img}
-                                                    alt={`Event ${index}`}
-                                                    className="w-full h-auto object-cover rounded-md mt-2"
+                                        {/* bottom */}
+                                        <div className='flex flex-row justify-between w-full text-[20px]'>
+                                            <div className="w-[50%] justify-center flex flex-col">
+                                                <p className="font-semibold">Date: <span className='font-normal'>{event.date}</span></p>
+                                                <p className="font-semibold">Location: <span className='font-normal'>{event.location}</span></p>
+                                            </div>
+
+                                            {event.img && (
+                                                <div className="w-[50%]">
+                                                    <p className="font-semibold">Image:</p>
+                                                    <img
+                                                        src={event.img}
+                                                        alt={`Event ${index}`}
+                                                        className="w-full h-auto object-cover rounded-md mt-2"
+                                                    />
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        {/* Form to edit event details */}
+                                        {editEventForm && selectedEvent && event.uid === selectedEvent.uid && (
+                                            <div className=''>
+                                                <EventForm
+                                                    event={selectedEvent}
+                                                    onSubmit={(e) => {
+                                                        e.preventDefault();
+                                                        updateEvent(selectedEvent.uid, selectedEvent);
+                                                    }}
+                                                    onChange={(e) =>
+                                                        setSelectedEvent({
+                                                            ...selectedEvent,
+                                                            [e.target.name]: e.target.value,
+                                                        })
+                                                    }
+                                                    onClose={handleCloseForm}
+                                                    title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
                                                 />
                                             </div>
                                         )}
-                                    </div>
 
-                                    {/* Form to edit event details */}
-                                    {selectedEvent && event.uid === selectedEvent.uid && (
-                                        <div className=''>
+
+                                        {newEventForm && (
                                             <EventForm
-                                                event={selectedEvent}
+                                                event={formData}
                                                 onSubmit={(e) => {
                                                     e.preventDefault();
-                                                    updateEvent(selectedEvent.uid, selectedEvent);
+                                                    addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
                                                 }}
+                                                onChange={(e) =>
+                                                    setFormData({
+                                                        ...formData,
+                                                        [e.target.name]: e.target.value,
+                                                    })
+                                                }
+                                                onClose={() => {
+                                                    setNewEventForm(false);
+                                                    setCurrentYearForNewEvent(null); // Reset the current year after closing the form
+                                                }}
+                                                title={`Add New Event - ${currentYearForNewEvent}`}
+                                            />
+                                        )}
+
+                                        {completeEventForm && selectedEvent && (
+                                            <ArchivedForm
+                                                event={selectedEvent}
+                                                onSubmit={(formData) => handleCompletionFormSubmit(formData)}
                                                 onChange={(e) =>
                                                     setSelectedEvent({
                                                         ...selectedEvent,
                                                         [e.target.name]: e.target.value,
                                                     })
                                                 }
-                                                onClose={handleCloseForm}
-                                                title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
+                                                onClose={() => {
+                                                    setCompleteEventForm(false);
+                                                    setSelectedEvent(null); // Reset selected event after completion
+                                                }}
+                                                title="Complete Event"
                                             />
-                                        </div>
-                                    )}
-
-                                    {newEventForm && (
-                                        <EventForm
-                                            event={formData}
-                                            onSubmit={(e) => {
-                                                e.preventDefault();
-                                                addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
-                                            }}
-                                            onChange={(e) =>
-                                                setFormData({
-                                                    ...formData,
-                                                    [e.target.name]: e.target.value,
-                                                })
-                                            }
-                                            onClose={() => {
-                                                setNewEventForm(false);
-                                                setCurrentYearForNewEvent(null); // Reset the current year after closing the form
-                                            }}
-                                            title={`Add New Event - ${currentYearForNewEvent}`}
-                                        // title={"Add New Event"}
-                                        />
-                                    )}
-                                </div>
-                            ))}
+                                        )}
+                                    </div>
+                                ))}
 
                         </div>
                     </div>
