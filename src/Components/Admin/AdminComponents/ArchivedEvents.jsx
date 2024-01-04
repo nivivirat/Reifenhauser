@@ -282,7 +282,7 @@ export default function ArchivedEvents() {
                                                         })
                                                     }
                                                     onClose={handleCloseForm}
-                                                    title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
+                                                    title={`Edit Archived Event - ${currentYearForEditEvent}`} // Include the year in the title
                                                 />
                                             </div>
                                         )}

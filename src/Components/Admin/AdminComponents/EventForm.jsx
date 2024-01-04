@@ -5,14 +5,14 @@ import { Icon } from '@iconify/react';
 const EventForm = ({ event, onSubmit, onChange, onClose, title }) => {
     console.log(event);
 
-    const handleFileChange = (e) => {
+    const handleFileChange = (e, field) => {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = (e) => {
                 onChange({
                     target: {
-                        name: 'img',
+                        name: field,
                         value: e.target.result,
                     },
                 });
@@ -29,6 +29,7 @@ const EventForm = ({ event, onSubmit, onChange, onClose, title }) => {
                 </button>
                 <h2 className="text-2xl font-semibold text-center">{title}</h2>
                 <form onSubmit={onSubmit} className="flex flex-col gap-3">
+                    {/* Other input fields... */}
                     <label className="text-primary flex flex-col">
                         <span>Event Name:</span>
                         <input
@@ -64,7 +65,7 @@ const EventForm = ({ event, onSubmit, onChange, onClose, title }) => {
                         <input
                             type="file"
                             accept=".jpg, .png, image/jpeg, image/png"
-                            onChange={handleFileChange}
+                            onChange={(e) => handleFileChange(e, 'img')}
                             className="bg-white text-black py-2 px-4 rounded-md border border-gray-300"
                         />
                     </label>
@@ -82,7 +83,7 @@ const EventForm = ({ event, onSubmit, onChange, onClose, title }) => {
                         <input
                             type="file"
                             accept=".jpg, .png, image/jpeg, image/png"
-                            onChange={onChange}
+                            onChange={(e) => handleFileChange(e, 'archivedImg')}
                             className="bg-white text-black py-2 px-4 rounded-md border border-gray-300"
                             name="archivedImg"
                         />
