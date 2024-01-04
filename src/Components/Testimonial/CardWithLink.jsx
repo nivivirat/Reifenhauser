@@ -16,30 +16,30 @@ export function CardWithLink({ description, buttonText, pos, kl, poss, buttonTex
         <CardBody>
           {/* Your existing SVG and Typography components */}
           
-          <Typography className="text-left">{description}</Typography>
+          <Typography className="text-left text-black text-2xs">{description}</Typography>
         </CardBody>
       )}
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
-        <Typography variant="text" className="flex items-center gap-2 test1">
+        <Typography variant="text" className="flex items-center gap-2 text-[#013a98] test1">
             {buttonText}
             {/* Your existing SVG component */}
           </Typography>
-          <Typography variant="text" className="flex items-center gap-2 test90">
+          <Typography variant="text" className="flex items-center gap-2 text-[#013a98] test90 ">
             {buttonTextt}
             {/* Your existing SVG component */}
           </Typography>
-      <Typography variant="text" className="flex items-left gap-2 test2">
+      <Typography variant="text" className="flex items-left gap-2 text-[#013a98] test2">
             {pos}
             
           </Typography>
           
-          <Typography variant="text" className="flex items-right gap-2 test3">
+          <Typography variant="text" className="flex items-right gap-2 text-[#013a98] test3">
             {kl}
             
           </Typography>
           
-          <Typography variant="text" className="flex items-right gap-2 test4">
+          <Typography variant="text" className="flex items-right gap-2 text-[#013a98] test4">
             {poss}
             
           </Typography>
