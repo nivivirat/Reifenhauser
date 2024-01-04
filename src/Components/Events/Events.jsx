@@ -230,21 +230,24 @@ const Events = () => {
     transition: 'opacity 0.3s ease-in-out',
   };
 
-  const handleLowerCardHover = (event) => {
+ const handleLowerCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
-
-    // Display the hover box and bring it to the front
-    hoverInfo.style.display = 'block';
-    hoverInfo.style.zIndex = '999';
-
-    // Position the hover box below the card
-    const cardRect = event.currentTarget.getBoundingClientRect();
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    hoverInfo.style.top = `${cardRect.bottom + scrollTop - 10}px`; // 10px buffer
-
-    // Add animation for the box content
-    const boxContent = event.currentTarget.querySelector('.box-content');
-    boxContent.style.opacity = 1;
+    const image = hoverInfo.querySelector('img');
+  
+    if (image && image.complete && image.naturalWidth !== 0) {
+      // Display the hover box only if there is a complete image
+      hoverInfo.style.display = 'block';
+      hoverInfo.style.zIndex = '999';
+  
+      // Position the hover box below the card
+      const cardRect = event.currentTarget.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      hoverInfo.style.top = `${cardRect.bottom + scrollTop - 10}px`; // 10px buffer
+  
+      // Add animation for the box content
+      const boxContent = event.currentTarget.querySelector('.box-content');
+      boxContent.style.opacity = 1;
+    }
   };
 
   const handleLowerCardLeave = (event) => {
