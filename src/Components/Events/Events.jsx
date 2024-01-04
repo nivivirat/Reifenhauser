@@ -377,7 +377,7 @@ const Events = () => {
                     <div style={hoverInfoStyle2} className="hover-info cvv">
                       <p>{event.description}</p>
                       {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
-                      <img src={event.archievedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                      <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
                       {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
                 <img src={even12} alt="Additional Info Image " className=" ti bbb " /> */}
                     </div>

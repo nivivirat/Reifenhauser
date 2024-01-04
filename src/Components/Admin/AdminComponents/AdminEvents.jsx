@@ -14,7 +14,9 @@ export default function AdminEvents() {
         img: "",
         location: "",
         uid: "",
-        completed: false
+        completed: false,
+        archivedImg: "",
+        description: ""
     });
 
     const [currentYearForNewEvent, setCurrentYearForNewEvent] = useState(null);
@@ -175,46 +177,59 @@ export default function AdminEvents() {
         }
     };
 
+    const archiveEvent = (year, eventUid) => {
+        const eventsRef = ref(db, `events/${year}/${eventUid}`);
+    
+        // Update the completed field to true for the specified event
+        update(eventsRef, { completed: true })
+            .then(() => {
+                console.log('Event archived successfully');
+            })
+            .catch((error) => {
+                console.error('Error archiving event: ', error);
+            });
+    };
+
+    const archiveEventWithConfirmation = (year, eventUid) => {
+        const shouldArchive = window.confirm('Are you sure you want to archive this event?');
+
+        if (shouldArchive) {
+            archiveEvent(year, eventUid);
+        }
+    };
+
     const toggleCompletionForm = () => {
         setIsCompletionFormOpen(!isCompletionFormOpen);
     };
 
-    const markEventAsCompleted = (year, eventUid, description, img) => {
-        // Update the event data with the completed field set to true, along with additional details
+    // ... (previously defined code within AdminEvents component)
+
+    const handleMarkEventAsCompleted = (year, eventUid, description, archivedImg) => {
+        // Assuming you want to update the event data in the database and mark it as completed
         const updatedEventData = {
             ...eventsData[year][eventUid],
-            completed: true,
-            description: description,
-            archievedImg: img
+            completed: true, // Mark the event as completed
+            description: description, // Update the description field if needed
+            archivedImg: archivedImg, // Update the archived image if needed
         };
 
-        const eventsRef = ref(db, `events/${year}/${eventUid}`);
-        set(eventsRef, updatedEventData)
+        const eventRef = ref(db, `events/${year}/${eventUid}`);
+        update(eventRef, updatedEventData)
             .then(() => {
                 console.log('Event marked as completed successfully');
 
-                // Update the local state to reflect the changes
+                // You may also want to update the local state to reflect the completion
                 const updatedEventsData = { ...eventsData };
                 updatedEventsData[year][eventUid] = updatedEventData;
                 setEventsData(updatedEventsData);
+
+                setSelectedEvent(null); // Reset selected event after completion
+                setCompleteEventForm(false); // Close the complete event form after completion
             })
             .catch((error) => {
-                console.error('Error marking event as completed: ', error);
+                console.error('Error marking event as completed:', error);
             });
     };
-
-    // Function to handle marking an event as completed with user-provided description and image
-    const handleMarkEventAsCompleted = (year, eventUid) => {
-        const userDescription = prompt('Enter event description:');
-        const userImg = prompt('Enter event image URL:');
-
-        if (userDescription && userImg) {
-            markEventAsCompleted(year, eventUid, userDescription, userImg);
-        } else {
-            console.log('Description and image are required to mark the event as completed.');
-        }
-    };
-
 
 
     return (
@@ -264,7 +279,7 @@ export default function AdminEvents() {
 
                                                 {/* complete button */}
                                                 <button
-                                                    onClick={() => handleMarkEventAsCompleted(year, event.uid)}
+                                                    onClick={() => archiveEventWithConfirmation(year, event.uid)}
                                                     title="Mark Event as Completed"
                                                     className="py-2 px-4 rounded-md text-2xl hover:text-green-600"
                                                 >
@@ -344,23 +359,26 @@ export default function AdminEvents() {
                                             />
                                         )}
 
-                                        {completeEventForm && selectedEvent && (
-                                            <ArchivedForm
-                                                event={selectedEvent}
-                                                onSubmit={(formData) => handleCompletionFormSubmit(formData)}
+                                        {/* {completeEventForm && selectedEvent && (
+                                            <EventForm
+                                                event={formData}
+                                                onSubmit={(e) => {
+                                                    e.preventDefault();
+                                                    addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
+                                                }}
                                                 onChange={(e) =>
-                                                    setSelectedEvent({
-                                                        ...selectedEvent,
+                                                    setFormData({
+                                                        ...formData,
                                                         [e.target.name]: e.target.value,
                                                     })
                                                 }
                                                 onClose={() => {
-                                                    setCompleteEventForm(false);
-                                                    setSelectedEvent(null); // Reset selected event after completion
+                                                    setNewEventForm(false);
+                                                    setCurrentYearForNewEvent(null); // Reset the current year after closing the form
                                                 }}
-                                                title="Complete Event"
+                                                title={`Add New Event - ${currentYearForNewEvent}`}
                                             />
-                                        )}
+                                        )} */}
                                     </div>
                                 ))}
 

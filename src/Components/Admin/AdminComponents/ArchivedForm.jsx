@@ -23,33 +23,45 @@ const ArchivedForm = ({ event, onSubmit, onChange, onClose, title }) => {
 
     const handleFormSubmit = (e) => {
         e.preventDefault(); // Prevent default form submission behavior
-        onSubmit(formData); // Call the onSubmit function passed through props
+        onSubmit({
+            description: event.description,
+            archivedImg: event.archivedImg,
+        });
+    };
+
+    const handleInputChange = (e) => { // Renamed the function to handleInputChange
+        const { name, value } = e.target;
+        onChange({
+            target: {
+                name,
+                value,
+            },
+        });
     };
 
     return (
-        // <div className="absolute top-0 left-0 z-10 w-full h-[600px] bg-gray-200 bg-opacity-50 flex justify-center items-center">
         <div className="fixed top-0 left-0 z-10 w-full h-full bg-gray-200 bg-opacity-50 flex justify-center items-center overflow-auto">
             <div className="bg-white p-10 rounded-md relative flex flex-col gap-4">
                 <button className="absolute top-0 right-0 p-2" onClick={onClose}>
                     <Icon icon="mingcute:close-fill" />
                 </button>
                 <h2 className="text-2xl font-semibold text-center">{title}</h2>
-                <form onSubmit={onSubmit} className="flex flex-col gap-3">
+                <form onSubmit={handleFormSubmit} className="flex flex-col gap-3">
                     <label className="text-primary flex flex-col">
                         <span>Description:</span>
                         <textarea
                             name="description"
                             value={event.description}
-                            onChange={onChange}
+                            onChange={handleInputChange}
                             className="bg-white text-black py-2 px-4 rounded-md border border-gray-300"
                         />
                     </label>
                     <label className="text-primary flex flex-col">
                         <span>Upload Archived Image</span>
                         <input
-                            type="file"
-                            accept=".jpg, .png, image/jpeg, image/png"
-                            onChange={(e) => handleFileChange(e, 'archivedImg')}
+                            type="text"
+                            onChange={handleInputChange}
+                            value={event.archivedImg}
                             className="bg-white text-black py-2 px-4 rounded-md border border-gray-300"
                             name="archivedImg"
                         />
@@ -57,7 +69,6 @@ const ArchivedForm = ({ event, onSubmit, onChange, onClose, title }) => {
                     <button className="bg-primary text-base text-white py-2 px-4 rounded-md" type="submit">
                         Submit
                     </button>
-
                 </form>
             </div>
         </div>
