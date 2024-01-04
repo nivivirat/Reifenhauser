@@ -99,7 +99,7 @@ const Events = () => {
     display: 'flex',
 
     justifyContent: 'space-between',
-    width: '85%',
+    width: '95%',
     marginLeft: '2%',
 
   };
@@ -211,11 +211,17 @@ const Events = () => {
 
   const handleUpperCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
-    hoverInfo.style.display = 'block';
-
-    const triangle = event.currentTarget.querySelector('.triangle');
-    triangle.style.display = 'block';
+    const image = hoverInfo.querySelector('img');
+  
+    if (hoverInfo.textContent.trim() !== '' && image && image.complete && image.naturalWidth !== 0) {
+      // Display the hover box only if there is both text and a complete image
+      hoverInfo.style.display = 'block';
+  
+      const triangle = event.currentTarget.querySelector('.triangle');
+      triangle.style.display = 'block';
+    }
   };
+  
 
   const handleUpperCardLeave = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
