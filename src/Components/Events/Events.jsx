@@ -12,8 +12,9 @@ import even from "./Vector (1).svg";
 import aq from "./abg.svg";
 
 const Events = () => {
-
- 
+  const events2024 = eventsData.events["Events 2023"];
+  const allEvents = eventsData.events;
+  const [eventsDataState] = useState(eventsData);
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -227,41 +228,42 @@ const Events = () => {
           <p>Join us for a friendly rendezvous</p>
         </div>
       </div>
-      <div className="event3 text-3xl ">Events 2023</div>
-      {eventsData.map((event, index) => (
-     <div
-     key={index}
-     style={sectionStyle2}
-     className="section-container event100 mb-10 group ety ght "
-     onMouseEnter={handleLowerCardHover}
-     onMouseLeave={handleLowerCardLeave}
-   >    
-          <img className="eventi" src={evim} alt="Event Image" />
-     
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Event Name</h2>
-            <p  className="ety">{event.eventName}</p>
+   
+      {Object.keys(allEvents).map((year) => (
+          <div key={year}>
+            <div className={`event3 text-3xl`}> {year}</div>
+            {allEvents[year].map((event, eventIndex) => (
+              <div
+                key={eventIndex}
+                style={sectionStyle2}
+                className="section-container text-2xs event100 group ety "
+                onMouseEnter={handleLowerCardHover}
+                onMouseLeave={handleLowerCardLeave}
+              >
+                <img className="eventi" src={evim} alt="Event Image" />
+                <div style={columnStyle}>
+                  <h2 className="ety qasd mt-3">Event Name</h2>
+                  <p className="ety">{event.eventName}</p>
+                </div>
+                <div style={columnStyle}>
+                  <h2 className="ety qasd mt-3">Locations</h2>
+                  <p className="ety">{event.location}</p>
+                </div>
+                <div style={columnStyle}>
+                  <h2 className="ety qasd mt-3">Date</h2>
+                  <p className="ety">{event.date}</p>
+                </div>
+                <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
+                <div style={hoverInfoStyle} className="hover-info">
+                  <div style={triangleStyle} className="triangle"></div>
+                  <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                  {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                </div>
+              </div>
+            ))}
           </div>
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Locations</h2>
-            <p  className="ety">{event.location}</p>
-          </div>
-     
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Date</h2>
-            <p  className="ety">{event.date}</p>
-          </div>
-          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
-          <div style={hoverInfoStyle} className="hover-info">
-          <div style={triangleStyle} className="triangle"></div>
-         
-            
-            
-            <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
-          </div>
-        </div>
-      ))}
-      <div className="event3 text-3xl">Events 2024</div>
+        ))}
+      {/* <div className="event3 text-3xl">Events 2024</div>
       {eventsData2.map((event, index) => (
      <div
      key={index}
@@ -293,7 +295,7 @@ const Events = () => {
             <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
           </div>
         </div>
-      ))}
+      ))} */}
       <div className="event3 text-3xl">Archives of past events</div>
       <div style={cardContainerStyle} className="lk">
         {eventsData3.map((event, index) => (
@@ -319,10 +321,11 @@ const Events = () => {
             </div>
             <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
             <div style={hoverInfoStyle2} className="hover-info cvv">
-              <p>Team Reifenhauser India proudly showcased it's Principles at India's Premier Labeling Event!
-#LabelExpo2022</p>
-              <img src={even11} alt="Additional Info Image" className="gggp ti " />
-              <img src={even12} alt="Additional Info Image " className=" ti bbb " />
+              <p>{event.text}</p>
+             {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+             <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+              {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
+              <img src={even12} alt="Additional Info Image " className=" ti bbb " /> */}
             </div>
           </div>
         ))}
