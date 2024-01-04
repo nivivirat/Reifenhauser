@@ -13,9 +13,8 @@ import aq from "./abg.svg";
 import { getDatabase, ref, onValue } from 'firebase/database';
 
 const Events = () => {
-
-  // firebase db
-  const [events, setEvents] = useState({});
+  const [currentEvents, setCurrentEvents] = useState([]);
+  const [archiveEvents, setArchiveEvents] = useState([]);
 
   useEffect(() => {
     const database = getDatabase();
@@ -24,36 +23,47 @@ const Events = () => {
     onValue(eventsRef, (snapshot) => {
       if (snapshot.exists()) {
         const eventData = snapshot.val();
-
-        const allEvents = {};
+        const currentEventsObject = {};
+        const archiveEventsObject = {};
 
         for (const year in eventData) {
           if (Object.hasOwnProperty.call(eventData, year)) {
             const eventsOfYear = eventData[year];
-            const eventsArray = [];
+            const currentEventsArray = [];
+            const archiveEventsArray = [];
+
             for (const eventKey in eventsOfYear) {
               if (Object.hasOwnProperty.call(eventsOfYear, eventKey)) {
                 const event = eventsOfYear[eventKey];
-                eventsArray.push({
+                const eventDetails = {
                   year,
                   eventKey,
                   ...event,
-                });
+                };
+
+                if (event.completed === false) {
+                  currentEventsArray.push(eventDetails);
+                } else {
+                  archiveEventsArray.push(eventDetails);
+                }
               }
             }
-            allEvents[year] = eventsArray;
+
+            currentEventsObject[year] = currentEventsArray;
+            archiveEventsObject[year] = archiveEventsArray;
           }
         }
 
-        console.log(allEvents);
-        setEvents(allEvents);
+        setCurrentEvents(currentEventsObject);
+        setArchiveEvents(archiveEventsObject);
       }
     });
   }, []);
 
   useEffect(() => {
-    console.log(events);
-  }, [events])
+    console.log(currentEvents);
+    console.log(archiveEvents);
+  }, [currentEvents, archiveEvents])
 
   const containerStyle = {
     display: 'flex',
@@ -269,10 +279,10 @@ const Events = () => {
           </div>
         </div>
 
-        {Object.keys(events).map((year) => (
+        {Object.keys(currentEvents).map((year) => (
           <div key={year}>
             <div className={`event3 text-3xl`}> {year}</div>
-            {events[year].map((event, eventIndex) => (
+            {currentEvents[year].map((event, eventIndex) => (
               <div
                 key={eventIndex}
                 style={sectionStyle2}
@@ -337,38 +347,50 @@ const Events = () => {
         </div>
       ))} */}
         <div className="event3 text-3xl">Archives of past events</div>
-        <div style={cardContainerStyle} className="lk">
-          {eventsData3.map((event, index) => (
-            <div
-              key={index}
-              style={cardStyle}
-              className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-              onMouseEnter={handleUpperCardHover}
-              onMouseLeave={handleUpperCardLeave}
-            >
-              <div style={columnStyle3} className="event41 lm">
-                <h2 className="lm qasd">Event Name</h2>
-                <p className="lm">{event.eventName}</p>
+        <div style={cardContainerStyle} className="lk flex flex-row">
+
+          <div className="lk flex flex-row">
+            {Object.keys(archiveEvents).map((year) => (
+              <div key={year} className='flex flex-row'>
+                {archiveEvents[year].map((event, eventIndex) => (
+                  <div
+                    key={eventIndex}
+                    style={cardStyle}
+                    className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                    onMouseEnter={handleUpperCardHover}
+                    onMouseLeave={handleUpperCardLeave}
+                  >
+                    <div style={columnStyle3} className="event41 lm">
+                      <h2 className="lm qasd">Event Name</h2>
+                      <p className="lm">{event.eventName}</p>
+                    </div>
+                    <div style={columnStyle3} className="event411 lm">
+                      <h2 className="lm mt-4 qasd">Locations</h2>
+                      <p className="lm">{event.location}</p>
+                    </div>
+                    <br></br><br></br>
+                    <div style={columnStyle3} className="event412 lm">
+                      <h2 className="lm qasd">Date</h2>
+                      <p className="lm">{event.date}</p>
+                    </div>
+                    <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                    <div style={hoverInfoStyle2} className="hover-info cvv">
+                      <p>{event.description}</p>
+                      {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                      <img src={event.archievedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                      {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
+                <img src={even12} alt="Additional Info Image " className=" ti bbb " /> */}
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div style={columnStyle3} className="event411 lm">
-                <h2 className="lm mt-4 qasd">Locations</h2>
-                <p className="lm">{event.location}</p>
-              </div>
-              <br></br><br></br>
-              <div style={columnStyle3} className="event412 lm">
-                <h2 className="lm qasd">Date</h2>
-                <p className="lm">{event.date}</p>
-              </div>
-              <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-              <div style={hoverInfoStyle2} className="hover-info cvv">
-                <p>{event.text}</p>
-                {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
-                <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
-                {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
-              <img src={even12} alt="Additional Info Image " className=" ti bbb " /> */}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+
+          {/* {archiveEvents.map((event, index) => (
+            
+          ))} */}
         </div>
         <br></br><br></br><br></br><br></br>
       </div>
