@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Events.css';
-import eventsData from './eventsData.json';
-import eventsData2 from './eventsData2.json';
 import eventsData3 from './eventsData3.json';
 import evim from '../../assets/Images/Events/event1.svg';
 import even11 from '../../assets/Images/Events/Rectangle 6264 (2).svg';
@@ -11,10 +9,52 @@ import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
 import aq from "./abg.svg";
 
+// firebase
+import { getDatabase, ref, onValue } from 'firebase/database';
+
 const Events = () => {
-  const events2024 = eventsData.events["Events 2023"];
-  const allEvents = eventsData.events;
-  const [eventsDataState] = useState(eventsData);
+
+  // firebase db
+  const [events, setEvents] = useState({});
+
+  useEffect(() => {
+    const database = getDatabase();
+    const eventsRef = ref(database, 'events');
+
+    onValue(eventsRef, (snapshot) => {
+      if (snapshot.exists()) {
+        const eventData = snapshot.val();
+
+        const allEvents = {};
+
+        for (const year in eventData) {
+          if (Object.hasOwnProperty.call(eventData, year)) {
+            const eventsOfYear = eventData[year];
+            const eventsArray = [];
+            for (const eventKey in eventsOfYear) {
+              if (Object.hasOwnProperty.call(eventsOfYear, eventKey)) {
+                const event = eventsOfYear[eventKey];
+                eventsArray.push({
+                  year,
+                  eventKey,
+                  ...event,
+                });
+              }
+            }
+            allEvents[year] = eventsArray;
+          }
+        }
+
+        console.log(allEvents);
+        setEvents(allEvents);
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    console.log(events);
+  }, [events])
+
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
@@ -28,7 +68,7 @@ const Events = () => {
     borderRadius: '8px',
     display: 'flex',
     width: '95%',
-    height:'35%',
+    height: '35%',
     // flexDirection: 'row',
     justifyContent: 'space-between',
   };
@@ -39,19 +79,19 @@ const Events = () => {
     borderRadius: '8px',
     display: 'flex',
     width: '95%',
-    height:'35%',
+    height: '35%',
     // flexDirection: 'row',
     justifyContent: 'space-between',
- 
+
   };
 
   const cardContainerStyle = {
     display: 'flex',
-    
+
     justifyContent: 'space-between',
     width: '85%',
     marginLeft: '2%',
-    
+
   };
 
   const cardStyle = {
@@ -62,7 +102,7 @@ const Events = () => {
     height: '300px',
     position: 'relative',
     overflow: 'hidden',
-    
+
   };
 
   const columnStyle = {
@@ -72,19 +112,19 @@ const Events = () => {
     fontWeight: 'bold',
     marginTop: '-1%',
     textAlign: 'left',
-    width:'25%',
+    width: '25%',
   };
-  
+
 
   const columnStyle3 = {
     display: 'flex',
     flexDirection: 'column',
     color: '#013A98',
     fontWeight: 'bold',
-  
+
     textAlign: 'left',
-    
-  
+
+
   };
 
   const imageContainerStyle = {
@@ -125,7 +165,7 @@ const Events = () => {
     textAlign: 'center',
     display: 'none',
     width: '250px',
-    height:'200px',
+    height: '200px',
     zIndex: '5',
   };
   const hoverInfoStyle2 = {
@@ -141,9 +181,9 @@ const Events = () => {
     textAlign: 'center',
     display: 'none',
     width: '100%',
-    height:'100%',
+    height: '100%',
     zIndex: '5',
-    color:'white',
+    color: 'white',
   };
 
   const triangleStyle = {
@@ -210,29 +250,29 @@ const Events = () => {
   };
 
   return (
-    <> 
-    
-    <div style={containerStyle}>
-      <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeIn animate__delay-0s">
-        <img
-          src={yu}
-          alt="Rendezvous Image"
-          style={{
-            ...imageStyle,
-            objectFit: 'cover',
-            objectPosition: 'center 75%',
-          }}
-          className="event1"
-        />
-        <div className="event9" style={textInsideImage}>
-          <p>Join us for a friendly rendezvous</p>
+    <>
+
+      <div style={containerStyle}>
+        <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeIn animate__delay-0s">
+          <img
+            src={yu}
+            alt="Rendezvous Image"
+            style={{
+              ...imageStyle,
+              objectFit: 'cover',
+              objectPosition: 'center 75%',
+            }}
+            className="event1"
+          />
+          <div className="event9" style={textInsideImage}>
+            <p>Join us for a friendly rendezvous</p>
+          </div>
         </div>
-      </div>
-   
-      {Object.keys(allEvents).map((year) => (
+
+        {Object.keys(events).map((year) => (
           <div key={year}>
             <div className={`event3 text-3xl`}> {year}</div>
-            {allEvents[year].map((event, eventIndex) => (
+            {events[year].map((event, eventIndex) => (
               <div
                 key={eventIndex}
                 style={sectionStyle2}
@@ -263,7 +303,7 @@ const Events = () => {
             ))}
           </div>
         ))}
-      {/* <div className="event3 text-3xl">Events 2024</div>
+        {/* <div className="event3 text-3xl">Events 2024</div>
       {eventsData2.map((event, index) => (
      <div
      key={index}
@@ -296,44 +336,44 @@ const Events = () => {
           </div>
         </div>
       ))} */}
-      <div className="event3 text-3xl">Archives of past events</div>
-      <div style={cardContainerStyle} className="lk">
-        {eventsData3.map((event, index) => (
-          <div
-            key={index}
-            style={cardStyle}
-            className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-            onMouseEnter={handleUpperCardHover}
-            onMouseLeave={handleUpperCardLeave}
-          >
-            <div style={columnStyle3} className="event41 lm">
-              <h2 className="lm qasd">Event Name</h2>
-              <p className="lm">{event.eventName}</p>
-            </div>
-            <div style={columnStyle3} className="event411 lm">
-              <h2 className="lm mt-4 qasd">Locations</h2>
-              <p className="lm">{event.location}</p>
-            </div>
-            <br></br><br></br>
-            <div style={columnStyle3} className="event412 lm">
-              <h2 className="lm qasd">Date</h2>
-              <p className="lm">{event.date}</p>
-            </div>
-            <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-            <div style={hoverInfoStyle2} className="hover-info cvv">
-              <p>{event.text}</p>
-             {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
-             <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
-              {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
+        <div className="event3 text-3xl">Archives of past events</div>
+        <div style={cardContainerStyle} className="lk">
+          {eventsData3.map((event, index) => (
+            <div
+              key={index}
+              style={cardStyle}
+              className=" event45 relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+              onMouseEnter={handleUpperCardHover}
+              onMouseLeave={handleUpperCardLeave}
+            >
+              <div style={columnStyle3} className="event41 lm">
+                <h2 className="lm qasd">Event Name</h2>
+                <p className="lm">{event.eventName}</p>
+              </div>
+              <div style={columnStyle3} className="event411 lm">
+                <h2 className="lm mt-4 qasd">Locations</h2>
+                <p className="lm">{event.location}</p>
+              </div>
+              <br></br><br></br>
+              <div style={columnStyle3} className="event412 lm">
+                <h2 className="lm qasd">Date</h2>
+                <p className="lm">{event.date}</p>
+              </div>
+              <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+              <div style={hoverInfoStyle2} className="hover-info cvv">
+                <p>{event.text}</p>
+                {/* <img src={event.} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                {/* <img src={even11} alt="Additional Info Image" className="gggp ti " />
               <img src={even12} alt="Additional Info Image " className=" ti bbb " /> */}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        <br></br><br></br><br></br><br></br>
       </div>
-      <br></br><br></br><br></br><br></br>
-    </div> 
 
-    
+
     </>
   );
 }
