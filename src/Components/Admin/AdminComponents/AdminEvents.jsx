@@ -19,8 +19,6 @@ export default function AdminEvents() {
 
     const [newEventForm, setNewEventForm] = useState(false);
 
-    // need to add selected year useState
-
     // Function to fetch events data from Firebase
     const fetchEventsData = () => {
         const eventsRef = ref(db, 'events'); // Use ref from v9 syntax
@@ -148,6 +146,37 @@ export default function AdminEvents() {
         }
     };
 
+
+    // delete a event
+
+    const deleteEvent = (year, eventUid) => {
+        const eventsRef = ref(db, `events/${year}/${eventUid}`);
+
+        // Remove the event data from the database
+        set(eventsRef, null)
+            .then(() => {
+                console.log('Event deleted successfully');
+
+                // Remove the event from the local state
+                const updatedEventsData = { ...eventsData };
+                delete updatedEventsData[year][eventUid];
+                setEventsData(updatedEventsData);
+            })
+            .catch((error) => {
+                console.error('Error deleting event: ', error);
+            });
+    };
+
+    // delete confirmation
+    
+    const deleteEventWithConfirmation = (year, eventUid) => {
+        const shouldDelete = window.confirm('Are you sure you want to delete this event?');
+    
+        if (shouldDelete) {
+            deleteEvent(year, eventUid);
+        }
+    };
+
     return (
         <div className="p-4 relative">
 
@@ -176,7 +205,7 @@ export default function AdminEvents() {
                                     {/* top */}
                                     <div className='flex flex-row justify-between w-full py-5'>
                                         <p className="font-semibold text-2xl"><span className="font-bold hover:text-primary">{event.eventName}</span></p>
-                                        <div className="flex gap-2">
+                                        <div className="flex gap-2 justify-center place-items-center">
                                             <button
                                                 onClick={() => {
                                                     handleEditEvent(event.uid);
@@ -188,14 +217,25 @@ export default function AdminEvents() {
                                             >
                                                 <Icon icon="iconamoon:edit-duotone" />
                                             </button>
+
+                                            {/* complete button */}
                                             <button
                                                 onClick={() => {
-                                                    
+
                                                 }}
-                                                title="Mark event as completed"
+                                                title="Mark Event as Completed"
                                                 className="py-2 px-4 rounded-md text-2xl hover:text-green-600"
                                             >
                                                 <Icon icon="fluent-mdl2:completed-solid" />
+                                            </button>
+
+                                            {/* delete button */}
+                                            <button
+                                                onClick={() => deleteEventWithConfirmation(year, event.uid)}
+                                                title="Delete Event"
+                                                className="py-2 px-4 rounded-md text-3xl hover:text-red-600"
+                                            >
+                                                <Icon icon="mdi:delete" />
                                             </button>
                                         </div>
                                     </div>
