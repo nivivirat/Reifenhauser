@@ -284,7 +284,7 @@ const Events = () => {
             className="event1"
           />
           <div className="event9" style={textInsideImage}>
-            <p>Join us for a friendly rendezvous</p>
+            <p>Join us</p>
           </div>
         </div>
 
