@@ -280,16 +280,20 @@ export default function ArchivedEvents() {
                                                 <p className="font-semibold">Location: <span className='font-normal'>{event.location}</span></p>
                                             </div>
 
-                                            {event.img && (
-                                                <div className="w-[50%]">
-                                                    <p className="font-semibold">Image:</p>
-                                                    <img
-                                                        src={event.img}
-                                                        alt={`Event ${index}`}
-                                                        className="w-full h-auto object-cover rounded-md mt-2"
-                                                    />
+                                            <div className="w-[50%]">
+                                                <p className="font-semibold">Archived Images:</p>
+                                                <div className="flex flex-wrap gap-5">
+                                                    {Array.isArray(event.archivedImg) &&
+                                                        event.archivedImg.map((imgSrc, imgIndex) => (
+                                                            <img
+                                                                key={imgIndex}
+                                                                src={imgSrc}
+                                                                alt={`Archived Image ${imgIndex}`}
+                                                                className="h-[150px] w-[200px] object-cover rounded-md mt-2"
+                                                            />
+                                                        ))}
                                                 </div>
-                                            )}
+                                            </div>
                                         </div>
 
                                         {/* Form to edit event details */}
