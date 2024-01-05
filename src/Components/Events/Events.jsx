@@ -395,7 +395,7 @@ const Events = () => {
                         <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
                         <div style={hoverInfoStyle2} className="hover-info cvv">
                           <p>{event.description}</p>
-                          <div className='max-h-60 overflow-y-auto no-scrollbar'>
+                          <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
                             {Array.isArray(event.archivedImg) && event.archivedImg.map((image, imgIndex) => (
                               <img
                                 key={imgIndex}
