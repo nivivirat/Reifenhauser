@@ -326,39 +326,8 @@ const Events = () => {
           )
         ))}
 
-        {/* <div className="event3 text-3xl">Events 2024</div>
-      {eventsData2.map((event, index) => (
-     <div
-     key={index}
-     style={sectionStyle2}
-     className="section-container text-2xs event100 group ety "
-     onMouseEnter={handleLowerCardHover}
-     onMouseLeave={handleLowerCardLeave}
-   >    
-          <img className="eventi" src={evim} alt="Event Image" />
-     
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Event Name</h2>
-            <p  className="ety">{event.eventName}</p>
-          </div>
-          
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Locations</h2>
-            <p  className="ety">{event.location}</p>
-          </div>
-     
-          <div style={columnStyle}>
-            <h2  className="ety qasd mt-3">Date</h2>
-            <p  className="ety">{event.date}</p>
-          </div>
-          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
-          <div style={hoverInfoStyle} className="hover-info">
-          <div style={triangleStyle} className="triangle"></div>
-            
-            <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
-          </div>
-        </div>
-      ))} */}
+
+        {/* archives events */}
         <div className="event3 text-3xl">Archives of past events</div>
         <div style={cardContainerStyle} className="lk flex flex-row">
 
@@ -370,7 +339,7 @@ const Events = () => {
                     <div
                       key={eventIndex}
                       style={cardStyle}
-                      className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                      className="event45 w-[20%] border border-black relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
                       onMouseEnter={handleUpperCardHover}
                       onMouseLeave={handleUpperCardLeave}
                     >
@@ -391,12 +360,12 @@ const Events = () => {
                       <div style={hoverInfoStyle2} className="hover-info cvv">
                         <p>{event.description}</p>
                         {/* <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" /> */}
-                        {event.archivedImg.map((image, imgIndex) => (
+                        {Array.isArray(event.archivedImg) && event.archivedImg.map((image, imgIndex) => (
                           <img
                             key={imgIndex}
                             src={image}
                             alt={`Archived Image ${imgIndex}`}
-                            className="w-96 h-108 mt-1"
+                            className="w-96 h-auto mt-1"
                           />
                         ))}
                       </div>
