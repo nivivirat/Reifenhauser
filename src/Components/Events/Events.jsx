@@ -390,7 +390,15 @@ const Events = () => {
                       <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
                       <div style={hoverInfoStyle2} className="hover-info cvv">
                         <p>{event.description}</p>
-                        <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                        {/* <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                        {event.archivedImg.map((image, imageIndex) => (
+                          <img
+                            key={imageIndex}
+                            src={image}
+                            alt={`Archived Image ${imageIndex + 1}`}
+                            className="w-96 h-108 mt-1"
+                          />
+                        ))}
                       </div>
                     </div>
                   ))}
