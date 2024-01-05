@@ -14,7 +14,7 @@ export default function AdminEvents() {
         location: "",
         uid: "",
         completed: false,
-        archivedImg: "",
+        archivedImg: [],
         description: ""
     });
 
@@ -90,7 +90,7 @@ export default function AdminEvents() {
                 console.log('Event added successfully with UID:', newEventId);
 
                 // Reset formData after adding the event
-                setFormData({ date: '', eventName: '', img: '', location: '', uid: '' });
+                setFormData({ date: '', eventName: '', img: '', location: '', uid: '', desc: '', archivedImg: [] });
 
                 // Close the new event form after adding the event
                 setNewEventForm(false);
@@ -387,11 +387,13 @@ export default function AdminEvents() {
                                                         onChange={(e) =>
                                                             setSelectedEvent({
                                                                 ...selectedEvent,
-                                                                [e.target.name]: e.target.value,
+                                                                [e.target.name]: e.target.name === 'archivedImg'
+                                                                    ? [...selectedEvent.archivedImg, e.target.value] // If it's for images, add to the array
+                                                                    : e.target.value, // Otherwise, update normally
                                                             })
                                                         }
                                                         onClose={handleCloseForm}
-                                                        title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
+                                                        title={`Edit Event - ${currentYearForEditEvent}`}
                                                     />
                                                 </div>
                                             )}
