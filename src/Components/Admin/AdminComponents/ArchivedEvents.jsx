@@ -192,6 +192,29 @@ export default function ArchivedEvents() {
             });
     };
 
+    // Initialize a state to hold the count of incomplete events for each year
+    const [completeEventCounts, setCompleteEventCounts] = useState({});
+
+    // Function to calculate the count of incomplete events for a specific year
+    const calculateCompleteEventCount = (year) => {
+        const incompleteEventsCount = Object.values(eventsData[year] || {})
+            .filter(event => event.completed) // Filter events where 'completed' is false
+            .length;
+
+        // Update the count in the incompleteEventCounts state for the specific year
+        setCompleteEventCounts(prevCounts => ({
+            ...prevCounts,
+            [year]: incompleteEventsCount,
+        }));
+    };
+
+    // Call the function to calculate the count of incomplete events for each year
+    useEffect(() => {
+        Object.keys(eventsData).forEach(year => {
+            calculateCompleteEventCount(year);
+        });
+    }, [eventsData]);
+
 
 
     return (
@@ -202,7 +225,10 @@ export default function ArchivedEvents() {
                 {Object.entries(eventsData).map(([year, events]) => (
                     <div key={year} className="border m-10 rounded-md p-10 w-screen px-24 gap-10">
                         <div className='flex flex-row justify-between py-5'>
-                            <h3 className="text-3xl text-primary font-bold mb-2">{year}</h3>
+                            {/* <h3 className="text-3xl text-primary font-bold mb-2">{year}</h3> */}
+                            <h3 className="text-3xl text-primary font-bold mb-2">
+                                {year} ({completeEventCounts[year] || 0} events)
+                            </h3>
                         </div>
 
 
@@ -315,7 +341,7 @@ export default function ArchivedEvents() {
                     </div>
                 ))}
 
-                <div className="border rounded-md p-4 mx-10">
+                {/* <div className="border rounded-md p-4 mx-10">
                     <h3 className="font-semibold mb-2">Add New Year</h3>
                     <div className="flex gap-2">
                         <input
@@ -329,7 +355,7 @@ export default function ArchivedEvents() {
                             Add Year
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
 
         </div >
