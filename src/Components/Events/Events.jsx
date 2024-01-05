@@ -339,7 +339,7 @@ const Events = () => {
                     <div
                       key={eventIndex}
                       style={cardStyle}
-                      className="event45 w-[20%] border border-black relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                      className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
                       onMouseEnter={handleUpperCardHover}
                       onMouseLeave={handleUpperCardLeave}
                     >
