@@ -78,6 +78,7 @@ export default function AdminEvents() {
     };
 
     const addNewEvent = (year) => {
+        console.log("clekf");
         setNewEventForm(true);
         // If formData is a string, initialize it as an empty object
         const newEvent = typeof formData === 'string' ? {} : { ...formData };
@@ -375,74 +376,52 @@ export default function AdminEvents() {
                                                     </div>
                                                 )}
                                             </div>
-
-                                            {/* Form to edit event details */}
-                                            {editEventForm && selectedEvent && event.uid === selectedEvent.uid && (
-                                                <div className=''>
-                                                    <EventForm
-                                                        event={selectedEvent}
-                                                        onSubmit={(e) => {
-                                                            e.preventDefault();
-                                                            updateEvent(selectedEvent.uid, selectedEvent);
-                                                        }}
-                                                        onChange={(e) =>
-                                                            setSelectedEvent({
-                                                                ...selectedEvent,
-                                                                [e.target.name]: e.target.value,
-                                                            })
-                                                        }
-                                                        onClose={handleCloseForm}
-                                                        title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
-                                                    />
-                                                </div>
-                                            )}
-
-
-                                            {newEventForm && (
-                                                <EventForm
-                                                    event={formData}
-                                                    onSubmit={(e) => {
-                                                        e.preventDefault();
-                                                        addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
-                                                    }}
-                                                    onChange={(e) =>
-                                                        setFormData({
-                                                            ...formData,
-                                                            [e.target.name]: e.target.value,
-                                                        })
-                                                    }
-                                                    onClose={() => {
-                                                        setNewEventForm(false);
-                                                        setCurrentYearForNewEvent(null); // Reset the current year after closing the form
-                                                    }}
-                                                    title={`Add New Event - ${currentYearForNewEvent}`}
-                                                />
-                                            )}
-
-                                            {/* {completeEventForm && selectedEvent && (
-                                            <EventForm
-                                                event={formData}
-                                                onSubmit={(e) => {
-                                                    e.preventDefault();
-                                                    addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
-                                                }}
-                                                onChange={(e) =>
-                                                    setFormData({
-                                                        ...formData,
-                                                        [e.target.name]: e.target.value,
-                                                    })
-                                                }
-                                                onClose={() => {
-                                                    setNewEventForm(false);
-                                                    setCurrentYearForNewEvent(null); // Reset the current year after closing the form
-                                                }}
-                                                title={`Add New Event - ${currentYearForNewEvent}`}
-                                            />
-                                        )} */}
                                         </div>
                                     ))}
 
                             </div>
+                            {/* Form to edit event details */}
+                            {editEventForm && selectedEvent && event.uid === selectedEvent.uid && (
+                                <div className=''>
+                                    <EventForm
+                                        event={selectedEvent}
+                                        onSubmit={(e) => {
+                                            e.preventDefault();
+                                            updateEvent(selectedEvent.uid, selectedEvent);
+                                        }}
+                                        onChange={(e) =>
+                                            setSelectedEvent({
+                                                ...selectedEvent,
+                                                [e.target.name]: e.target.value,
+                                            })
+                                        }
+                                        onClose={handleCloseForm}
+                                        title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
+                                    />
+                                </div>
+                            )}
+
+
+                            {newEventForm && (
+                                <EventForm
+                                    event={formData}
+                                    onSubmit={(e) => {
+                                        e.preventDefault();
+                                        addNewEvent(currentYearForNewEvent); // Pass the current year when adding the new event
+                                    }}
+                                    onChange={(e) =>
+                                        setFormData({
+                                            ...formData,
+                                            [e.target.name]: e.target.value,
+                                        })
+                                    }
+                                    onClose={() => {
+                                        setNewEventForm(false);
+                                        setCurrentYearForNewEvent(null); // Reset the current year after closing the form
+                                    }}
+                                    title={`Add New Event - ${currentYearForNewEvent}`}
+                                />
+                            )}
                         </div>
                     )
                 ))}
