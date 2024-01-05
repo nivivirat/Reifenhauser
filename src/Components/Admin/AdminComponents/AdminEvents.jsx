@@ -280,9 +280,7 @@ export default function AdminEvents() {
 
             <h1 className="text-2xl font-bold mb-4 px-4">Current Events</h1>
             <div className="flex flex-wrap gap-4">
-                {/* {Object.entries(eventsData).map(([year, events]) => ( */}
-                {/* {Object.entries(eventsData).map(([year, events]) => (
-                    events && Object.values(events).filter(event => !event.completed).length > 0 && ( */}
+
                 {Object.entries(eventsData).map(([year, events]) => (
                     ((year === currentYearString) || Object.values(events).filter(event => !event.completed).length > 0) && (
                         <div key={year} className="border m-10 rounded-md p-10 w-screen px-24 gap-10">
@@ -371,36 +369,36 @@ export default function AdminEvents() {
                                                         <img
                                                             src={event.img}
                                                             alt={`Event ${index}`}
-                                                            className="w-full h-auto object-cover rounded-md mt-2"
+                                                            className="w-96 h-108 object-cover rounded-md mt-2"
                                                         />
                                                     </div>
                                                 )}
                                             </div>
+
+                                            {/* Form to edit event details */}
+                                            {editEventForm && selectedEvent && event.uid === selectedEvent.uid && (
+                                                <div className=''>
+                                                    <EventForm
+                                                        event={selectedEvent}
+                                                        onSubmit={(e) => {
+                                                            e.preventDefault();
+                                                            updateEvent(selectedEvent.uid, selectedEvent);
+                                                        }}
+                                                        onChange={(e) =>
+                                                            setSelectedEvent({
+                                                                ...selectedEvent,
+                                                                [e.target.name]: e.target.value,
+                                                            })
+                                                        }
+                                                        onClose={handleCloseForm}
+                                                        title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
+                                                    />
+                                                </div>
+                                            )}
                                         </div>
                                     ))}
 
                             </div>
-                            {/* Form to edit event details */}
-                            {editEventForm && selectedEvent && event.uid === selectedEvent.uid && (
-                                <div className=''>
-                                    <EventForm
-                                        event={selectedEvent}
-                                        onSubmit={(e) => {
-                                            e.preventDefault();
-                                            updateEvent(selectedEvent.uid, selectedEvent);
-                                        }}
-                                        onChange={(e) =>
-                                            setSelectedEvent({
-                                                ...selectedEvent,
-                                                [e.target.name]: e.target.value,
-                                            })
-                                        }
-                                        onClose={handleCloseForm}
-                                        title={`Edit Event - ${currentYearForEditEvent}`} // Include the year in the title
-                                    />
-                                </div>
-                            )}
-
 
                             {newEventForm && (
                                 <EventForm
