@@ -112,8 +112,9 @@ const Events = () => {
     height: '300px',
     position: 'relative',
     overflow: 'hidden',
-
+    width: '300px', // Change this value to the desired width
   };
+  
 
   const columnStyle = {
     display: 'flex',
@@ -131,7 +132,7 @@ const Events = () => {
     flexDirection: 'column',
     color: '#013A98',
     fontWeight: 'bold',
-
+    width: '95%',
     textAlign: 'left',
 
 
@@ -212,11 +213,11 @@ const Events = () => {
   const handleUpperCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
     const image = hoverInfo.querySelector('img');
-
+  
     if (hoverInfo.textContent.trim() !== '' && image && image.complete && image.naturalWidth !== 0) {
       // Display the hover box only if there is both text and a complete image
       hoverInfo.style.display = 'block';
-
+  
       const triangle = event.currentTarget.querySelector('.triangle');
       triangle.style.display = 'block';
     }
@@ -239,17 +240,17 @@ const Events = () => {
   const handleLowerCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
     const image = hoverInfo.querySelector('img');
-
+  
     if (image && image.complete && image.naturalWidth !== 0) {
       // Display the hover box only if there is a complete image
       hoverInfo.style.display = 'block';
       hoverInfo.style.zIndex = '999';
-
+  
       // Position the hover box below the card
       const cardRect = event.currentTarget.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       hoverInfo.style.top = `${cardRect.bottom + scrollTop - 10}px`; // 10px buffer
-
+  
       // Add animation for the box content
       const boxContent = event.currentTarget.querySelector('.box-content');
       boxContent.style.opacity = 1;
@@ -267,7 +268,11 @@ const Events = () => {
     const boxContent = event.currentTarget.querySelector('.box-content');
     boxContent.style.opacity = 0;
   };
-
+  const mediaQueryStyle = {
+    '@media (max-width: 900px)': {
+      flexDirection: 'column',
+    },
+  };
   return (
     <>
 
@@ -326,61 +331,79 @@ const Events = () => {
           )
         ))}
 
-
-        {/* archives events */}
+        {/* <div className="event3 text-3xl">Events 2024</div>
+      {eventsData2.map((event, index) => (
+     <div
+     key={index}
+     style={sectionStyle2}
+     className="section-container text-2xs event100 group ety "
+     onMouseEnter={handleLowerCardHover}
+     onMouseLeave={handleLowerCardLeave}
+   >    
+          <img className="eventi" src={evim} alt="Event Image" />
+     
+          <div style={columnStyle}>
+            <h2  className="ety qasd mt-3">Event Name</h2>
+            <p  className="ety">{event.eventName}</p>
+          </div>
+          
+          <div style={columnStyle}>
+            <h2  className="ety qasd mt-3">Locations</h2>
+            <p  className="ety">{event.location}</p>
+          </div>
+     
+          <div style={columnStyle}>
+            <h2  className="ety qasd mt-3">Date</h2>
+            <p  className="ety">{event.date}</p>
+          </div>
+          <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
+          <div style={hoverInfoStyle} className="hover-info">
+          <div style={triangleStyle} className="triangle"></div>
+            
+            <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+          </div>
+        </div>
+      ))} */}
         <div className="event3 text-3xl">Archives of past events</div>
-        <div style={cardContainerStyle} className="lk flex flex-row">
-
+        <div style={{ ...cardContainerStyle, ...mediaQueryStyle }} className="lk flex flex-row">
           <div className="lk flex flex-row">
             {Object.keys(archiveEvents).map((year) => (
               archiveEvents[year].length > 0 && (
-                <div key={year} className='flex flex-row'>
-                  {archiveEvents[year].map((event, eventIndex) => (
-                    <div
-                      key={eventIndex}
-                      style={cardStyle}
-                      className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-                      onMouseEnter={handleUpperCardHover}
-                      onMouseLeave={handleUpperCardLeave}
-                    >
-                      <div style={columnStyle3} className="event41 lm">
-                        <h2 className="lm qasd">Event Name</h2>
-                        <p className="lm">{event.eventName}</p>
+                <div key={year} className='flex flex-col'>
+                  <div className='flex flex-row'>
+                    {archiveEvents[year].map((event, eventIndex) => (
+                      <div
+                        key={eventIndex}
+                        style={cardStyle}
+                        className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                        onMouseEnter={handleUpperCardHover}
+                        onMouseLeave={handleUpperCardLeave}
+                      >
+                        <div style={columnStyle3} className="event41 lm">
+                          <h2 className="lm qasd">Event Name</h2>
+                          <p className="lm">{event.eventName}</p>
+                        </div>
+                        <div style={columnStyle3} className="event411 lm">
+                          <h2 className="lm mt-4 qasd">Locations</h2>
+                          <p className="lm">{event.location}</p>
+                        </div>
+                        <br></br><br></br>
+                        <div style={columnStyle3} className="event412 lm">
+                          <h2 className="lm qasd">Date</h2>
+                          <p className="lm">{event.date}</p>
+                        </div>
+                        <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                        <div style={hoverInfoStyle2} className="hover-info cvv">
+                          <p>{event.description}</p>
+                          <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" />
+                        </div>
                       </div>
-                      <div style={columnStyle3} className="event411 lm">
-                        <h2 className="lm mt-4 qasd">Locations</h2>
-                        <p className="lm">{event.location}</p>
-                      </div>
-                      <br></br><br></br>
-                      <div style={columnStyle3} className="event412 lm">
-                        <h2 className="lm qasd">Date</h2>
-                        <p className="lm">{event.date}</p>
-                      </div>
-                      <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-                      <div style={hoverInfoStyle2} className="hover-info cvv">
-                        <p>{event.description}</p>
-                        {/* <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" /> */}
-                        {Array.isArray(event.archivedImg) && event.archivedImg.map((image, imgIndex) => (
-                          <img
-                            key={imgIndex}
-                            src={image}
-                            alt={`Archived Image ${imgIndex}`}
-                            className="w-96 h-auto mt-1"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               )
             ))}
           </div>
-
-
-
-          {/* {archiveEvents.map((event, index) => (
-            
-          ))} */}
         </div>
         <br></br><br></br><br></br><br></br>
       </div>
