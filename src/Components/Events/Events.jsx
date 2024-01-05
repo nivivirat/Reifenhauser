@@ -175,7 +175,7 @@ const Events = () => {
     textAlign: 'center',
     display: 'none',
     width: '250px',
-    height: '200px',
+    height: '250px',
     zIndex: '5',
   };
   const hoverInfoStyle2 = {
@@ -212,11 +212,11 @@ const Events = () => {
   const handleUpperCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
     const image = hoverInfo.querySelector('img');
-
+  
     if (hoverInfo.textContent.trim() !== '' && image && image.complete && image.naturalWidth !== 0) {
       // Display the hover box only if there is both text and a complete image
       hoverInfo.style.display = 'block';
-
+  
       const triangle = event.currentTarget.querySelector('.triangle');
       triangle.style.display = 'block';
     }
@@ -239,17 +239,17 @@ const Events = () => {
   const handleLowerCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
     const image = hoverInfo.querySelector('img');
-
+  
     if (image && image.complete && image.naturalWidth !== 0) {
       // Display the hover box only if there is a complete image
       hoverInfo.style.display = 'block';
       hoverInfo.style.zIndex = '999';
-
+  
       // Position the hover box below the card
       const cardRect = event.currentTarget.getBoundingClientRect();
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       hoverInfo.style.top = `${cardRect.bottom + scrollTop - 10}px`; // 10px buffer
-
+  
       // Add animation for the box content
       const boxContent = event.currentTarget.querySelector('.box-content');
       boxContent.style.opacity = 1;
@@ -284,7 +284,7 @@ const Events = () => {
             className="event1"
           />
           <div className="event9" style={textInsideImage}>
-            <p>Join us</p>
+            <p>Join Us</p>
           </div>
         </div>
 
@@ -317,7 +317,7 @@ const Events = () => {
                   <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
                   <div style={hoverInfoStyle} className="hover-info">
                     <div style={triangleStyle} className="triangle"></div>
-                    <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                    <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" />
                     {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
                   </div>
                 </div>
@@ -390,7 +390,7 @@ const Events = () => {
                       <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
                       <div style={hoverInfoStyle2} className="hover-info cvv">
                         <p>{event.description}</p>
-                        <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
+                        <img src={event.archivedImg} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" />
                       </div>
                     </div>
                   ))}
