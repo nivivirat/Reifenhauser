@@ -312,7 +312,7 @@ const Events = () => {
                     <p className="ety">{event.eventName}</p>
                   </div>
                   <div style={columnStyle}>
-                    <h2 className="ety qasd mt-3">Locations</h2>
+                    <h2 className="ety qasd mt-3">Location</h2>
                     <p className="ety">{event.location}</p>
                   </div>
                   <div style={columnStyle}>
