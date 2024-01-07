@@ -90,7 +90,7 @@ export default function AdminEvents() {
                 console.log('Event added successfully with UID:', newEventId);
 
                 // Reset formData after adding the event
-                setFormData({ date: '', eventName: '', img: '', location: '', uid: '', desc: '', archivedImg: [] });
+                setFormData({ date: '', eventName: '', img: '', location: '', uid: '', desc: '', completed:false ,archivedImg: [] });
 
                 // Close the new event form after adding the event
                 setNewEventForm(false);

@@ -111,7 +111,7 @@ export default function ContactUs() {
             </div>
 
             {/* google map */}
-            <div className="lg:p-10 p-2 mt-3 lg:mt-16 md:h-[500px] h-[200px]">
+            <div className="lg:p-10 p-2 mt-3 lg:mt-24 md:h-[500px] h-[200px]">
                 {/* <GoogleMap /> */}
                 <div className="h-full w-full">
                     <iframe className="h-full w-full rounded-lg shadow-2xl" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.750602849548!2d72.8484055752075!3d19.16239118206004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b64d5011d99b%3A0x4eab1a26e4f94aec!2sReifenhauser%20India%20Marketing%20Private%20Limited!5e0!3m2!1sen!2sin!4v1700726050980!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
