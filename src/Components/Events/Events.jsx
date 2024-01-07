@@ -8,6 +8,7 @@ import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
 import aq from "./abg.svg";
+import Slider from "../Blog/slider";
 
 // firebase
 import { getDatabase, ref, onValue } from 'firebase/database';
@@ -368,6 +369,7 @@ const Events = () => {
         <div className="event3 text-3xl">Archives of past events</div>
         <div style={{ ...cardContainerStyle, ...mediaQueryStyle }} className="lk flex flex-row">
           <div className="lk flex flex-row">
+          <Slider options={{ align: "center" }}>
             {Object.keys(archiveEvents).map((year) => (
               archiveEvents[year].length > 0 && (
                 <div key={year} className='flex flex-col'>
@@ -420,7 +422,9 @@ const Events = () => {
                 </div>
               )
             ))}
+            </Slider>
           </div>
+          
         </div>
         <br></br><br></br><br></br><br></br>
       </div >
