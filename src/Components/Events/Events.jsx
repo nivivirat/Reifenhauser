@@ -11,6 +11,7 @@ import aq from "./abg.svg";
 
 // firebase
 import { getDatabase, ref, onValue } from 'firebase/database';
+import { Icon } from '@iconify/react';
 
 const Events = () => {
   const [currentEvents, setCurrentEvents] = useState([]);
@@ -401,9 +402,13 @@ const Events = () => {
                                 key={imgIndex}
                                 src={image}
                                 alt={`Archived Image ${imgIndex}`}
-                                className="w-96 h-auto mt-1"
+                                className="w-96 h-auto object-contain mt-1"
                               />
                             ))}
+                          </div>
+                          <div className='mt-2 text-white flex place-items-center justify-center animate-pulse'>
+                            <Icon icon="uil:scroll-h" />
+                            {/* <Icon icon="eos-icons:three-dots-loading" /> */}
                           </div>
                         </div>
 

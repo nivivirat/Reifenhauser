@@ -96,9 +96,10 @@ const EventForm = ({ event, onSubmit, onChange, onClose, title }) => {
                             type="file"
                             accept=".jpg, .png, image/jpeg, image/png"
                             onChange={(e) => handleFileChange(e, 'archivedImg')}
-                            className="bg-white text-black py-2 px-4 rounded-md border border-gray-300"
+                            className="bg-white text-black py-2 px-4 rounded-md border border-gray-300 placeholder:text-black"
                             name="archivedImg"
                             multiple  // Enable multiple file selection
+                            placeholder='min 3 - max 8 words'
                         />
                     </label>
                     <button className="bg-primary text-base text-white py-2 px-4 rounded-md" type="submit">
