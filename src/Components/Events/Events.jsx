@@ -394,7 +394,7 @@ const Events = () => {
                           <p className="lm">{event.date}</p>
                         </div>
                         <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-                        <div style={hoverInfoStyle2} className="hover-info cvv">
+                        <div style={hoverInfoStyle2} className="relative hover-info cvv">
                           <p>{event.description}</p>
                           <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
                             {Array.isArray(event.archivedImg) && event.archivedImg.map((image, imgIndex) => (
@@ -405,10 +405,12 @@ const Events = () => {
                                 className="w-96 h-auto object-contain mt-1"
                               />
                             ))}
-                          </div>
-                          <div className='mt-2 text-white flex place-items-center justify-center animate-pulse'>
-                            <Icon icon="uil:scroll-h" />
-                            {/* <Icon icon="eos-icons:three-dots-loading" /> */}
+                            <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse'>
+                              <Icon icon="ic:round-less-than" />
+                            </div>
+                            <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse'>
+                              <Icon icon="ic:round-greater-than" />
+                            </div>
                           </div>
                         </div>
 
