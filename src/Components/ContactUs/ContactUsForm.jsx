@@ -46,26 +46,33 @@ export default function ContactUsForm() {
                 timestamp: timestamp,
             };
     
-            push(contactUsRef, formDataWithTimestamp)
-                .then(() => {
-                    console.log("Form data saved successfully");
-                    setSuccessMessage("Submitted successfully");
-                    // Reset the form after submission
-                    setFormData({
-                        firstName: "",
-                        phoneNumber: "",
-                        email: "",
-                        message: "",
-                    });
+            const newFormRef = push(contactUsRef, formDataWithTimestamp);
     
-                    setTimeout(() => {
-                        setSuccessMessage("");
-                    }, 3000);
-                })
-                .catch((error) => {
-                    console.error("Error saving form data:", error);
-                    // setSuccessMessage("Submitted successfully");
-                });
+            // Get the UID of the newly created form
+            const formUID = newFormRef.key;
+    
+            if (formUID) {
+                set(newFormRef, { ...formDataWithTimestamp, id: formUID })
+                    .then(() => {
+                        console.log("Form data saved successfully");
+                        setSuccessMessage("Submitted successfully");
+                        // Reset the form after submission
+                        setFormData({
+                            firstName: "",
+                            phoneNumber: "",
+                            email: "",
+                            message: "",
+                        });
+    
+                        setTimeout(() => {
+                            setSuccessMessage("");
+                        }, 3000);
+                    })
+                    .catch((error) => {
+                        console.error("Error saving form data:", error);
+                        // Handle error message display or actions accordingly
+                    });
+            }
         }
     };
 
