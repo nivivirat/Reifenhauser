@@ -7,6 +7,8 @@ import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
 import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
+import { useMediaQuery } from 'react-responsive';
+
 import aq from "./abg.svg";
 import Slider from "../Blog/slider";
 
@@ -96,16 +98,21 @@ const Events = () => {
     justifyContent: 'space-between',
 
   };
+  const breakpoints = {
+    mobile: '(max-width: 900px)',
+    desktop: '(min-width: 901px)',
+  };
+  
+  const isMobile = useMediaQuery({ query: breakpoints.mobile });
 
   const cardContainerStyle = {
     display: 'flex',
-
     justifyContent: 'space-between',
     width: '95%',
     marginLeft: '2%',
-
+    flexDirection: isMobile ? 'column' : 'row',
   };
-
+  
   const cardStyle = {
     flex: 1,
     padding: '20px',
@@ -272,9 +279,12 @@ const Events = () => {
   };
   const mediaQueryStyle = {
     '@media (max-width: 900px)': {
-      flexDirection: 'column',
+      '.lk': {
+        flexDirection: 'column',
+      },
     },
   };
+  
   return (
     <>
 
@@ -367,7 +377,10 @@ const Events = () => {
         </div>
       ))} */}
         <div className="event3 text-3xl">Archives of past events</div>
-        <div style={{ ...cardContainerStyle, ...mediaQueryStyle }} className="lk flex flex-row">
+        <div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'column' : 'row' }} className="lk flex flex-row">
+  {/* ... existing code ... */}
+
+
           <div className="lk flex flex-row">
           <Slider options={{ align: "center" }}>
             {Object.keys(archiveEvents).map((year) => (
