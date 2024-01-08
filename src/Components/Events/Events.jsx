@@ -221,16 +221,20 @@ const Events = () => {
 
   const handleUpperCardHover = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
+    if (!hoverInfo) return;
+  
     const image = hoverInfo.querySelector('img');
-
-    if (hoverInfo.textContent.trim() !== '' && image && image.complete && image.naturalWidth !== 0) {
-      // Display the hover box only if there is both text and a complete image
-      hoverInfo.style.display = 'block';
-
-      const triangle = event.currentTarget.querySelector('.triangle');
+    if (!image || !image.complete || image.naturalWidth === 0) return;
+  
+    // Display the hover box only if there is both text and a complete image
+    hoverInfo.style.display = 'block';
+  
+    const triangle = hoverInfo.querySelector('.triangle');
+    if (triangle) {
       triangle.style.display = 'block';
     }
   };
+  
 
 
   const handleUpperCardLeave = (event) => {
@@ -412,14 +416,26 @@ const Events = () => {
                         <div style={hoverInfoStyle2} className="relative hover-info cvv">
                           <p>{event.description}</p>
                           <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
-                            {Array.isArray(event.archivedImg) && event.archivedImg.map((image, imgIndex) => (
-                              <img
-                                key={imgIndex}
-                                src={image}
-                                alt={`Archived Image ${imgIndex}`}
-                                className="w-96 h-auto object-contain mt-1"
-                              />
-                            ))}
+                          {Array.isArray(event.archivedImg) ? (
+  <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+    {event.archivedImg.map((image, imgIndex) => (
+      <img
+        key={imgIndex}
+        src={image}
+        alt={`Archived Image ${imgIndex}`}
+        className="w-96 h-auto object-contain mt-1"
+      />
+    ))}
+    {/* Add navigation arrows or any other controls if needed */}
+  </div>
+) : (
+  <img
+    src={event.archivedImg}
+    alt="Archived Image"
+    className="w-96 h-auto object-contain mt-1"
+  />
+)}
+
                             <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse'>
                               <Icon icon="ic:round-less-than" />
                             </div>
