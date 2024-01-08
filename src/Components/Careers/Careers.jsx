@@ -61,10 +61,13 @@ export default function Careers() {
         try {
             // Push form data to the database
             const newCareerRef = push(careersRef);
-            await set(newCareerRef, formData);
 
             // Get the unique ID generated for the form data
             const formUID = newCareerRef.key;
+
+            formData.id = formUID;
+
+            await set(ref(db, `careers/${formUID}`), formData);
 
             // Save a reference to the file in the database
             await set(ref(db, `resumes/${formUID}`), { fileURL: `resumes/${formUID}` });
