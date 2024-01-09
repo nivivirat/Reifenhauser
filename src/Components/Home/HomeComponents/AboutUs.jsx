@@ -39,7 +39,7 @@ export default function AboutUs() {
                                 <img className='h-full w-full object-cover rounded-[20px]' src={companies}></img>
                                 <div className='flex flex-col h-full w-full justify-center place-items-center text-[#295DB1] font-normal absolute bottom-0 xl:p-9 p-4 tracking-wide'>
                                     <span className='xl:text-[75px] md:text-[60px] text-[40px] font-bold'>30</span>
-                                    <span className='xl:text-[25px] pb-[4%] font-normal'>&nbsp;Companies</span>
+                                    <span className='xl:text-[25px] pb-[4%] font-normal'>&nbsp;principles </span>
                                 </div>
                             </div>
 

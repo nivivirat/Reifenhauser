@@ -139,7 +139,7 @@ export default function Careers() {
                         <div className='fixed md:top-[40%] top-[25%] left-[10%] w-[80%] md:h-[50%] h-[70%] flex items-center justify-center z-20'>
                             <div className='bg-white p-8 rounded-3xl shadow-lg flex flex-col gap-5'>
                                 <div className='flex flex-row justify-center'>
-                                    <p className='w-[90%] text-center text-primary font-semibold md:text-[18px]'>Please fill the details and submit your resume. We shall get back to you in case our team shortlists your profile</p>
+                                    <p className='w-[90%] text-center text-primary font-semibold md:text-[18px]'>Please fill the details and submit your resume. We shall get back to you</p>
                                     <div className='w-[10px] text-xl cursor-pointer md:ml-2' onClick={toggleForm}>
                                         <Icon icon="ph:x" />
                                     </div>
