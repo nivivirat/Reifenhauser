@@ -16,28 +16,36 @@ export default function Newsletter() {
 
     const handleSubmit = async () => {
         if (email.trim() !== '') {
-            setLoading(true); // Set loading to true on button click
+            setLoading(true);
             const emailRef = ref(db, 'newsletter-subscription');
-
+    
             try {
                 const snapshot = await get(emailRef);
                 const emails = snapshot.val();
-
-                if (!emails || !Object.values(emails).some((entry) => entry === email)) {
-                    const newEmail = push(emailRef);
-                    await set(newEmail, email);
+    
+                if (!emails || !Object.values(emails).some((entry) => entry.email === email)) {
+                    const timestamp = new Date().toISOString();
+                    const newEmailRef = push(emailRef); // Obtain the reference with the generated key
+                    const newEmailId = newEmailRef.key; // Extract the generated key (UID)
+    
+                    // Set the data with the generated ID (UID)
+                    await set(ref(db, `newsletter-subscription/${newEmailId}`), {
+                        email,
+                        timestamp,
+                        id: newEmailId // Include the ID field with the UID
+                    });
+    
                     setSuccessMessage('Email submitted successfully!');
                     setShowEmailInput(false);
                 } else {
-                    setSuccessMessage('Email is already subscribed to our newsletter !');
+                    setSuccessMessage('Email is already subscribed to our newsletter!');
                     setShowEmailInput(false);
                 }
-
-                // Clear success message and show email input after 3 seconds
+    
                 setTimeout(() => {
                     setSuccessMessage('');
                     setShowEmailInput(true);
-                    setLoading(false); // Reset loading to false after 3 seconds
+                    setLoading(false);
                 }, 3000);
             } catch (error) {
                 console.error('Error fetching data:', error);
@@ -49,7 +57,8 @@ export default function Newsletter() {
             setSuccessMessage('Please enter a valid email address!');
         }
     };
-
+    
+    
     return (
         <div className='md:shadow-sm shadow-2xl shadow-blue-500/50 w-screen text-white flex justify-center relative md:mt-[8%] mt-[40%]'>
             <div className='absolute -bottom-[50px] left-[10%] w-full'>
