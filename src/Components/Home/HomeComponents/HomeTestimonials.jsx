@@ -1,66 +1,94 @@
-import cardContent from '../../Testimonial/Content.json'
-import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, onValue } from 'firebase/database';
 import { Icon } from '@iconify/react';
-// import  { HomeTestimonialCard }  from './HomeTestimonalCard/HomeTestimonialCard';
 import Slider from './HomeTestimonalCard/Slider';
 import { CWL } from '../../Testimonial/CWL';
-import "./Test1.css"
+import PropTypes from 'prop-types';
 import {
-    Card,
-    CardBody,
-    CardFooter,
-    Typography,
-    Button,
+  Card,
+  Typography,
 } from "@material-tailwind/react";
 
-// import { CardWithLink } from '../../Testimonial/CardWithLink';
-export default function HomeTestimonials() {
-    // Use slice to get the first 3 items in the array
-    const first3Cards = cardContent.slice(0, 3);
-
-    return (
-        <div className="bg-base flex flex-col">
-            <div className="md:px-[3%] pt-10 font-semibold md:w-[50%] xl:text-3xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
-            <span>Here's what our <span className="text-primary">customers</span> say about us</span>
-
-            </div>
-
-            <div className="text-[#6B6B78] text-xs ">
-           <Slider options={{ align: "center" }}>
-          
-            {cardContent.map((card, index) => (
-                 <div key={index} className="flex-[0_0_80%] md:flex-[0_0_30%] ">
-                 <div >
-          <CWL
-            key={index}
-            // title={card.title}
-            description={card.description}
-            // buttonText={card.buttonText}
-            buttonTextt={card.buttonTextt}
-            pos={card.pos}
-            kl={card.kl}
-            poss={card.poss}
-          />
-           </div></div>
-        ))}
-       
-        </Slider>
-            </div>
-
-            <div className="w-full flex justify-center place-items-center mt-10 md:mb-10">
-                <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 mb-6 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
-                    <p>View All Testimonials</p>
-                    <div className="text-primary md:text-xl">
-                        <Icon icon="iconoir:arrow-tr" />
-                    </div>
-                </a>
-            </div>
-
-        </div>
-    );
-}
-HomeTestimonials.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    buttonText: PropTypes.string.isRequired,
+const firebaseConfig = {
+    apiKey: "AIzaSyDiNLjf19bW0-5cvkOtdlqYI7YiDzt3WA0",
+    authDomain: "reifenhauser-2d366.firebaseapp.com",
+    projectId: "reifenhauser-2d366",
+    storageBucket: "reifenhauser-2d366.appspot.com",
+    messagingSenderId: "1000320736803",
+    appId: "1:1000320736803:web:c9db2603f14597edf45b96",
+    measurementId: "G-80E388KDKZ",
   };
+export default function HomeTestimonials() {
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const firebaseApp = initializeApp(firebaseConfig);
+    const database = getDatabase(firebaseApp);
+    const testimonialsRef = ref(database, 'testimonials');
+
+    onValue(testimonialsRef, (snapshot) => {
+      const data = snapshot.val();
+      const testimonialsArray = [];
+
+      for (const uid in data) {
+        const testimonialData = data[uid];
+        const testimonial = {
+          uid,
+          buttonText: testimonialData?.buttonText || '',
+          pos: testimonialData?.pos || '',
+          kl: testimonialData?.kl || '',
+          poss: testimonialData?.poss || '',
+          description: testimonialData?.description || '',
+        };
+
+        testimonialsArray.push(testimonial);
+      }
+
+      setTestimonials(testimonialsArray);
+    });
+  }, []);
+
+  return (
+    <div className="bg-base flex flex-col">
+      <div className="md:px-[3%] pt-10 font-semibold md:w-[50%] xl:text-3xl text-2xl xl:font-semibold md:font-bold md:text-4xl w-full">
+        <span>Here's what our <span className="text-primary">customers</span> say about us</span>
+      </div>
+
+      <div className="text-[#6B6B78] text-xs ">
+        <Slider options={{ align: "center" }}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="flex-[0_0_80%] md:flex-[0_0_30%] ">
+              <div>
+                <CWL
+                  key={index}
+                  description={testimonial.description}
+                  buttonText={testimonial.buttonText}
+                  buttonTextt={testimonial.buttonTextt}
+                  pos={testimonial.pos}
+                  kl={testimonial.kl}
+                  poss={testimonial.poss}
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="w-full flex justify-center place-items-center mt-10 md:mb-10">
+        <a href="/testimonials" className="text-primary flex flex-row gap-2 p-3 mb-6 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary md:w-[17%] w-[60%]">
+          <p>View All Testimonials</p>
+          <div className="text-primary md:text-xl">
+            <Icon icon="iconoir:arrow-tr" />
+          </div>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+HomeTestimonials.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  buttonText: PropTypes.string.isRequired,
+};
