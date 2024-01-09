@@ -21,23 +21,23 @@ export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
       )}
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
-        <Typography variant="text" style={{ color: '#013A98' }} className="flex items-center gap-2 text-xs test1 text-black">
+        <Typography variant="text" className="flex items-center text-xs gap-2 test1 text-[#013a98]">
             {buttonText}
             {/* Your existing SVG component */}
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex items-center gap-2 text-xs test90 text-[#013a98]">
+          <Typography variant="text" className="flex items-center text-xs gap-2 test90 text-[#013a98]">
             {buttonTextt}
             {/* Your existing SVG component */}
           </Typography>
-      <Typography variant="text" style={{ color: '#013A98' }} className="flex items-left gap-2 text-xs test2 text-[#013a98]">
+      <Typography variant="text" className="flex items-left text-xs gap-2 test2 text-[#013a98]">
             {pos}
             
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex items-right gap-2 text-xs test3 text-[#013a98]">
+          <Typography variant="text" className="flex items-right text-xs gap-2 test3 text-[#013a98]">
             {kl}
             
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex items-right gap-2 text-xs test4 text-[#013a98]">
+          <Typography variant="text" className="flex items-right gap-2 text-xs test4 text-[#013a98]">
             {poss}
             
           </Typography>
