@@ -72,14 +72,14 @@ export default function CardComponent() {
                                         alt={mediaCard.title}
                                     />
                                     <h3  className="text-xs h-12 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
-                                        >{mediaCard.title}</h3>
+                                        >Know More</h3>
        <a
   className="text-xs h-12 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
-  href={`http://${mediaCard.title}`}  // Add the appropriate protocol
+  href={`${mediaCard.title}`}  // Add the appropriate protocol
   target="_blank"  // Optional: Opens the link in a new tab
   rel="noopener noreferrer"  // Recommended for security reasons when using target="_blank"
 >
-  {mediaCard.title}
+
 </a>
 
                                     
