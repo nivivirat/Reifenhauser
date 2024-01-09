@@ -12,8 +12,10 @@ import r3 from '../../../assets/Images/Home/banner/MaskGroup3.svg';
 import r4 from '../../../assets/Images/Home/banner/MaskGroup4.svg';
 import r5 from '../../../assets/Images/Home/banner/MaskGroup5.svg';
 import bannerData from '../data/bannerData.json';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 export default function Banner() {
+    const [bannerData, setBannerData] = useState([]);
     const [currentSection, setCurrentSection] = useState(0);
     const [downCurrentSection, setDownCurrentSection] = useState(0);
 
@@ -26,10 +28,6 @@ export default function Banner() {
             top: "Number of Installations",
             bottom: "700+",
         }
-        // {
-        //     top: "Testimonials Received",
-        //     bottom: "25+",
-        // }
     ]
 
     const handleNextSection = () => {
@@ -93,21 +91,39 @@ export default function Banner() {
         return () => clearInterval(interval);
     }, [images.length]);
 
+    useEffect(() => {
+        const db = getDatabase();
+        const homeDataRef = ref(db, 'HomeBanner');
+
+        onValue(homeDataRef, (snapshot) => {
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+                setBannerData(data);
+            } else {
+                // Handle case when no data exists
+                setBannerData([]);
+            }
+        });
+    }, []);
+
     return (
         <div className='xl:p-10 p-3 md:h-full'>
             <div className="rounded-lg relative overflow-clip md:h-[95%]">
                 {/* <img src={bannerbg} className=' md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img> */}
-               
+
                 <img src={king} className='pb-[1px] bg-white md:relative md:block hidden md:h-full md:w-full object-cover object-right-bottom rounded-[50px]'></img>
                 <img src={king} className='pb-[1px] md:relative md:hidden md:h-auto md:w-auto h-[400px] w-full object-cover object-right-bottom rounded-xl'></img>
-                 <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] md:w-[55%] w-[75%] md:p-0 p-4 z-10'>
-                    {currentSection === 0 ?
-                        <img src={thirtyYears} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]'></img>
-                        :
-                        <div className='md:text-[25px] sm:text-[20px] xl:text-[35px] text-[18px] lg:text-[30px] text-white font-semibold'>{bannerData[currentSection].text}</div>
-                    }
-                    <div className='2xl:text-[24px] xl:text-[20px] md:text-[16px] sm:text-[18px] text-[13px] lg:text-[17px] text-white md:font-thin font-thick mt-5'>{bannerData[currentSection].subtext}</div>
-
+                <div className='xl:p-0 absolute top-0 left-0 xl:top-[40px] md:top-[20px] md:left-[30px] md:w-[55%] w-[75%] md:p-0 p-4 z-10'>
+                    {bannerData[currentSection] && bannerData[currentSection].text === "" ? (
+                        <img src={bannerData[currentSection].image} className='lg:h-[180px] md:w-auto object-left md:h-[80px] sm:h-[120px] sm:w-[55%]' alt="Banner Image" />
+                    ) : (
+                        <div className='md:text-[25px] sm:text-[20px] xl:text-[35px] text-[18px] lg:text-[30px] text-white font-semibold'>
+                            {bannerData[currentSection] && bannerData[currentSection].text}
+                        </div>
+                    )}
+                    <div className='2xl:text-[24px] xl:text-[20px] md:text-[16px] sm:text-[18px] text-[13px] lg:text-[17px] text-white md:font-thin font-thick mt-5'>
+                        {bannerData[currentSection] && bannerData[currentSection].subtext}
+                    </div>
                     {/* <div className='md:absolute md:block md:left-[75%] lg:left-[72%] lg:bottom-0 -bottom-5 hidden text-center'>
                         <div className='text-white text-[12px]'>SCROLL</div>
                         <div className='border border-white h-[50px] w-[30px] rounded-[20px] ml-2'>
