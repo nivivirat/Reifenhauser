@@ -201,10 +201,10 @@ const Events = () => {
           className="event1"
         />
         <div className="event9" style={textInsideImage}>
-          <p>Join us for a friendly rendezvous</p>
+          <p>Join Us</p>
         </div>
       </div>
-      <div className="event3 text-3xl ">Events 2023</div>
+      {/* <div className="event3 text-3xl ">Events 2023</div>
       {eventsData.map((event, index) => (
      <div
      key={index}
@@ -237,7 +237,7 @@ const Events = () => {
             <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" />
           </div>
         </div>
-      ))}
+      ))} */}
       <div className="event3 text-3xl">Events 2024</div>
       {eventsData2.map((event, index) => (
      <div
