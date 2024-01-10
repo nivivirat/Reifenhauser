@@ -22,7 +22,7 @@ export default function Media() {
                     <p className="text-primary font-semibold">Media</p>
                 </div> */}
       <div className="flex-flex media1">Media</div>
-      <div className="text-[18px] flex-flex media2">Glimpse through the round up of the latest  trends in the packaging industry</div>
+      <div className="text-[18px] flex-flex media2">Glimpse through the round up of the latest  trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3 ">News & Updates</div>
       <div className="text-[18px] flex-flex media4 ">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
       <img className="media56" src={rimg} alt="image"></img>

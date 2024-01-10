@@ -1,70 +1,13 @@
-{
-  "events": {
-    "Events 2023": [
-      {
-        "date": "100th December,2023",
-        "eventName": "VDMS king",
-        "img": "",
-        "index": 0,
-        "location": "loki"
-      },
-      {
-        "date": "6th - 9th December, 2023",
-        "eventName": "Paper Ex Exhibition",
-        "img": "",
-        "location": "Delhi,India"
-      },
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      },
-      {
-        "date": "Dec 31",
-        "eventName": "",
-        "img": "",
-        "location": "Chennai"
-      }
-    ],
-    "Events 2024": [
-      {
-        "date": "6th - 9th December, 2023",
-        "eventName": "IPF Exhibition",
-        "location": "Bangladesh"
-      }
-    ],
-    "Events 2025": [
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      },
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      },
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      },
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      },
-      {
-        "date": "New Event Date",
-        "eventName": "New Event Name",
-        "img": "",
-        "location": "New Event Location"
-      }
-    ]
+[
+  {
+    "eventName": "VDMS Conference",
+    "location": "Mumbai,India",
+    "date": "6th December,2023"
+  },
+  {
+    "eventName": "Paper Ex Exhibition",
+    "location": "Delhi,India",
+    "date": "6th - 9th December, 2023"
   }
-}
+
+]
