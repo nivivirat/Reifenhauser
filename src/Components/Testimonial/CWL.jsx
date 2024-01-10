@@ -21,7 +21,7 @@ export function CWL({ description, buttonText, pos, kl, poss, buttonTextt }) {
       )}
       <CardFooter className="pt-0">
         <a href="#" className="inline-block">
-        <Typography variant="text" className="flex items-center text-xs gap-2 test1 text-[#013a98]">
+        <Typography variant="text" className="flex items-center text-xs gap-2 test90 text-[#013a98]">
             {buttonText}
             {/* Your existing SVG component */}
           </Typography>
