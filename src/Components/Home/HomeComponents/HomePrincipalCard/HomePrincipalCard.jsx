@@ -1,12 +1,13 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-export default function HomePincipalCard({ content }) {
+export default function HomePincipalCard({ content, destination }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <a
-            href="/principals"
+            href={destination}
             className="md:mb-6 mb-5 md:px-10 px-5 overflow-hidden relative flex flex-row justify-between place-items-center md:w-[49%] w-full md:h-[100px] h-[50px] rounded-lg bg-gradient-to-r from-blue-900 to-blue-400"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
@@ -25,3 +26,9 @@ export default function HomePincipalCard({ content }) {
         </a>
     );
 }
+
+// Prop type validation
+HomePincipalCard.propTypes = {
+    content: PropTypes.string.isRequired,
+    destination: PropTypes.string.isRequired,
+};

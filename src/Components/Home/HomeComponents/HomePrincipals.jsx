@@ -32,13 +32,14 @@ export default function HomePrincipals() {
             {/* card */}
             <div className="flex flex-wrap md:justify-between md:px-16 md:py-8">
 
-                <HomePrincipalCard content={"Extrusion Machinery"} />
+                <HomePrincipalCard content={"Extrusion Machinery"} destination={"/principals/#ExtrusionMachinery"}/>
 
-                <HomePrincipalCard content={"Ancillary"} />
+                <HomePrincipalCard content={"Ancillary"} destination={"/principals/#Ancillary"}/>
 
-                <HomePrincipalCard content={"Converting Machinery"} />
+                <HomePrincipalCard content={"Converting Machinery"} destination={"/principals/#ConvertingMachinery"}/>
 
-                <HomePrincipalCard content={"Slitting & Metallizing"} />
+                <HomePrincipalCard content={"Slitting & Metallizing"} destination={"/principals/#Slitting-Metallizing"}
+                />
 
             </div>
 
