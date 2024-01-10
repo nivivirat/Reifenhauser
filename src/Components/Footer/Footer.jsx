@@ -61,12 +61,13 @@ export default function Footer() {
                             <a href='/principals' className=''>Our Principals</a>
                         </p>
                         <ul className='flex flex-col gap-4 font-semibold'>
-                            <li><a href='/principals'>Extrusion Machinery</a></li>
-                            <li><a href='/principals'>Converting Machinery</a></li>
-                            <li><a href='/principals'>Labels</a></li>
-                            <li><a href='/principals'>Ancillary</a></li>
-                            <li><a href='/principals'>Slitting & Metallizing</a></li>
+                            <li><a href='/principals/#ExtrusionMachinery'>Extrusion Machinery</a></li>
+                            <li><a href='/principals/#ConvertingMachinery'>Converting Machinery</a></li>
+                            <li><a href='/principals/#Labels'>Labels</a></li>
+                            <li><a href='/principals/#Ancillary'>Ancillary</a></li>
+                            <li><a href='/principals/#Slitting-Metallizing'>Slitting & Metallizing</a></li>
                         </ul>
+
                     </div>
 
                 </div>

@@ -8,9 +8,23 @@ import ancillaryData from './Data/ancillaryData.json'
 import SMCData from './Data/SMCData.json'
 import ExtrusionMachineryCard from './ExtrusionMachineryCard';
 import CompanyCardsEcec from './CompanyCardsEcec';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Principals() {
+
+    useEffect(() => {
+        const url = window.location.href;
+        const hashIndex = url.lastIndexOf('#');
+        if (hashIndex !== -1) {
+            const heading = url.substring(hashIndex + 1); // Extract the heading from the URL after '#'
+            const element = document.getElementById(heading);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, []); // Run this effect only once on initial render
+
+
     return (
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
 
@@ -30,7 +44,7 @@ export default function Principals() {
             </div>
 
             {/* Extrusion Machinery  */}
-            <div className='flex flex-col lg:gap-24 gap-16 xl:mt-10'>
+            <div id='ExtrusionMachinery' className='flex flex-col lg:gap-24 gap-16 xl:mt-10'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Extrusion Machinery</p>
                 </div>
@@ -94,7 +108,7 @@ export default function Principals() {
             </div>
 
             {/* Converting Machinery */}
-            <div className='flex flex-col lg:gap-22 gap-16'>
+            <div id='ConvertingMachinery' className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Converting Machinery</p>
                 </div>
@@ -118,7 +132,7 @@ export default function Principals() {
             </div>
 
             {/* Labels */}
-            <div className='flex flex-col lg:gap-22 gap-16'>
+            <div id='Labels' className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels</p>
                 </div>
@@ -143,7 +157,7 @@ export default function Principals() {
             </div>
 
             {/* Ancillary */}
-            <div className='flex flex-col lg:gap-22 gap-16'>
+            <div id='Ancillary' className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Ancillary</p>
                 </div>
@@ -167,7 +181,7 @@ export default function Principals() {
             </div>
 
             {/* Slitting, Metallizing */}
-            <div className='flex flex-col lg:gap-22 gap-16'>
+            <div id='Slitting-Metallizing' className='flex flex-col lg:gap-22 gap-16'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting &  Metallizing </p>
                 </div>
@@ -192,7 +206,7 @@ export default function Principals() {
             </div>
 
 
-            
+
         </div>
     )
 }
