@@ -13,16 +13,27 @@ import React, { useEffect } from 'react';
 export default function Principals() {
 
     useEffect(() => {
-        const url = window.location.href;
-        const hashIndex = url.lastIndexOf('#');
-        if (hashIndex !== -1) {
-            const heading = url.substring(hashIndex + 1); // Extract the heading from the URL after '#'
-            const element = document.getElementById(heading);
-            if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
+        const scrollToHash = () => {
+            const url = window.location.href;
+            const hashIndex = url.lastIndexOf('#');
+            if (hashIndex !== -1) {
+                const heading = url.substring(hashIndex + 1);
+                const element = document.getElementById(heading);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
             }
-        }
-    }, []); // Run this effect only once on initial render
+        };
+
+        const delayScroll = setTimeout(() => {
+            scrollToHash();
+            clearTimeout(delayScroll);
+        }, 500); // Adjust the delay time if needed
+
+        return () => {
+            clearTimeout(delayScroll);
+        };
+    }, []);
 
 
     return (
