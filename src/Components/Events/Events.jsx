@@ -387,11 +387,15 @@ const Events = () => {
 <br></br>
 <div className="event3 text-3xl">Archives of past events</div>
 
-  <div className="w-screen" style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk flex flex-row overflow-x-auto">
-    {Object.keys(archiveEvents).map((year) => (
+
+
+<div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk overflow-x-auto">
+  {window.innerWidth <= 900 ? (
+    // If the window width is less than or equal to 900px, use the original code without the Slider
+    Object.keys(archiveEvents).map((year) => (
       archiveEvents[year].length > 0 && (
         <div key={year} className='flex flex-col'>
-          <div className='flex flex-row' style={{ overflowX: isMobile ? 'scroll' : 'visible' }}>
+          <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'scroll' }}>
             {archiveEvents[year].map((event, eventIndex) => (
               <div
                 key={eventIndex}
@@ -400,59 +404,119 @@ const Events = () => {
                 onMouseEnter={handleUpperCardHover}
                 onMouseLeave={handleUpperCardLeave}
               >
-            <div style={columnStyle3} className="event41 lm">
-              <h2 className="lm qasd">Event Name</h2>
-              <p className="lm">{event.eventName}</p>
-            </div>
-            <div style={columnStyle3} className="event411 lm">
-              <h2 className="lm mt-4 qasd">Locations</h2>
-              <p className="lm">{event.location}</p>
-            </div>
-            <br></br><br></br>
-            <div style={columnStyle3} className="event412 lm">
-              <h2 className="lm qasd">Date</h2>
-              <p className="lm">{event.date}</p>
-            </div>
-            <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-            <div style={hoverInfoStyle2} className="relative hover-info cvv">
-              <p>{event.description}</p>
-              <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
-                {Array.isArray(event.archivedImg) ? (
-                  <div>
-                    <img
-                      src={event.archivedImg[currentImageIndex]}
-                      alt={`Archived Image ${currentImageIndex}`}
-                      className="w-96 h-auto object-contain mt-1"
-                    />
-                    {/* Add navigation arrows */}
-                    <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handlePrevImage(event.archivedImg.length)}>
-                      <Icon icon="ic:round-less-than" />
-                    </div>
-                    <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handleNextImage(event.archivedImg.length)}>
-                      <Icon icon="ic:round-greater-than" />
+                <div style={columnStyle3} className="event41 lm">
+                  <h2 className="lm qasd">Event Name</h2>
+                  <p className="lm">{event.eventName}</p>
+                </div>
+                <div style={columnStyle3} className="event411 lm">
+                  <h2 className="lm mt-4 qasd">Locations</h2>
+                  <p className="lm">{event.location}</p>
+                </div>
+                <br></br><br></br>
+                <div style={columnStyle3} className="event412 lm">
+                  <h2 className="lm qasd">Date</h2>
+                  <p className="lm">{event.date}</p>
+                </div>
+                <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                <div style={hoverInfoStyle2} className="relative hover-info cvv">
+                  <p>{event.description}</p>
+                  <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+                    {Array.isArray(event.archivedImg) ? (
+                      <div>
+                        <img
+                          src={event.archivedImg[currentImageIndex]}
+                          alt={`Archived Image ${currentImageIndex}`}
+                          className="w-96 h-auto object-contain mt-1"
+                        />
+                        {/* Add navigation arrows */}
+                        <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handlePrevImage(event.archivedImg.length)}>
+                          <Icon icon="ic:round-less-than" />
+                        </div>
+                        <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handleNextImage(event.archivedImg.length)}>
+                          <Icon icon="ic:round-greater-than" />
+                        </div>
+                      </div>
+                    ) : (
+                      <img
+                        src={event.archivedImg}
+                        alt="Archived Image"
+                        className="w-96 h-auto object-contain mt-1"
+                      />
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )
+    )))
+   : (
+    // If the window width is above 900px, use the Slider component
+    <Slider>
+      {Object.keys(archiveEvents).map((year) => (
+        archiveEvents[year].length > 0 && (
+          <div key={year} className='flex flex-col'>
+            <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'visible' }}>
+              {archiveEvents[year].map((event, eventIndex) => (
+                <div
+                  key={eventIndex}
+                  style={cardStyle}
+                  className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                  onMouseEnter={handleUpperCardHover}
+                  onMouseLeave={handleUpperCardLeave}
+                >
+                  <div style={columnStyle3} className="event41 lm">
+                    <h2 className="lm qasd">Event Name</h2>
+                    <p className="lm">{event.eventName}</p>
+                  </div>
+                  <div style={columnStyle3} className="event411 lm">
+                    <h2 className="lm mt-4 qasd">Locations</h2>
+                    <p className="lm">{event.location}</p>
+                  </div>
+                  <br></br><br></br>
+                  <div style={columnStyle3} className="event412 lm">
+                    <h2 className="lm qasd">Date</h2>
+                    <p className="lm">{event.date}</p>
+                  </div>
+                  <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                  <div style={hoverInfoStyle2} className="relative hover-info cvv">
+                    <p>{event.description}</p>
+                    <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+                      {Array.isArray(event.archivedImg) ? (
+                        <div>
+                          <img
+                            src={event.archivedImg[currentImageIndex]}
+                            alt={`Archived Image ${currentImageIndex}`}
+                            className="w-96 h-auto object-contain mt-1"
+                          />
+                          {/* Add navigation arrows */}
+                          <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handlePrevImage(event.archivedImg.length)}>
+                            <Icon icon="ic:round-less-than" />
+                          </div>
+                          <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handleNextImage(event.archivedImg.length)}>
+                            <Icon icon="ic:round-greater-than" />
+                          </div>
+                        </div>
+                      ) : (
+                        <img
+                          src={event.archivedImg}
+                          alt="Archived Image"
+                          className="w-96 h-auto object-contain mt-1"
+                        />
+                      )}
                     </div>
                   </div>
-                ) : (
-                  <img
-                    src={event.archivedImg}
-                    alt="Archived Image"
-                    className="w-96 h-auto object-contain mt-1"
-                  />
-                )}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  )
-))}
+        )
+      ))}
+    </Slider>
+  )}
+</div>
 
-
-
-
-         
-          </div>
 
         <br></br><br></br><br></br><br></br>
       </div >
