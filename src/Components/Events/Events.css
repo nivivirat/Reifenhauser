@@ -8,6 +8,16 @@
   flex-wrap: wrap;
   justify-content: space-around;
 }
+/* .embla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  width: 120%;
+} */
 
 .event {
   width: 300px;
@@ -70,7 +80,7 @@
 }
 
 
-@media (min-width: 451px) {
+@media (min-width: 405px) {
 .evento{
     position:absolute;
     display:none;
@@ -157,6 +167,19 @@
   }
 }
 
+/* .embla {
+  overflow: hidden;
+  width: 100%;
+} */
+
+.embla__container {
+  display: flex;
+  overflow-x: auto;
+  /* scroll-snap-type: x mandatory; */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Add any additional styling based on your design requirements */
 
 .event3{
   
@@ -231,8 +254,8 @@ margin:auto;
   width:46%;
   height:239px;
   /* height:20%; */
-  margin-left:58%;
-  margin-top:-180px;
+  margin-left:60%;
+  margin-top:-147px;
   display: flex;
   flexDirection: row;
   justifyContent: 'space-between';
@@ -259,18 +282,26 @@ margin:auto;
 /* .event411{
   margin:4px 0;
 } */
+@media (max-width: 404px) {
+.evento {
+  position: absolute;
+  right:10px;
+
+ //top:50px;
+ //right:50px;
+  height: 186px;
+  width: 160px;
+
+  overflow: hidden; 
+  margin-top: 6%; 
+  margin-left:70%;
+}
+}
 @media (max-width: 450px) {
 
 
-.evento{
-  position:relative;
-  left:32vh;
-  top:-9%;
-  height:100px;
-  width:80px;
-  overflow:none;
-  margin-top:-80px;
-}
+
+  
 .cvv{
   font-size:8px;
 }
