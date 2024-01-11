@@ -53,7 +53,7 @@ const Slider = ({ children, options }) => {
   };
 
   return (
-    <div className="w-5/6 overflow-hidden relative" ref={emblaRef}>
+    <div className="w-6/6 overflow-hidden relative" ref={emblaRef}>
       <div className="flex">{children}</div>
     </div>
   );
