@@ -111,7 +111,7 @@ const Events = () => {
     justifyContent: 'space-between',
     width: '95%',
     marginLeft: '2%',
-    flexDirection: isMobile ? 'column' : 'row',
+    flexDirection: isMobile ? 'row' : 'row',
   };
 
   const cardStyle = {
@@ -386,23 +386,20 @@ const Events = () => {
         ))}
 <br></br>
 <div className="event3 text-3xl">Archives of past events</div>
-<div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'column' : 'row' }} className="lk flex flex-row">
-      {/* ... existing code ... */}
-      
-      <div className={isMobile ? '' : 'flex flex-row'} style={{ overflowX: isMobile ? 'scroll' : 'visible' }}>
-        {/* <Slider options={{ align: "center" }}> */}
-        {Object.keys(archiveEvents).map((year) => (
-  archiveEvents[year].length > 0 && (
-    <div key={year} className='flex flex-col overflow-x-auto'>
-      <div className='flex flex-row'>
-        {archiveEvents[year].map((event, eventIndex) => (
-          <div
-            key={eventIndex}
-            style={cardStyle}
-            className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-            onMouseEnter={handleUpperCardHover}
-            onMouseLeave={handleUpperCardLeave}
-          >
+
+  <div className="w-screen" style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk flex flex-row overflow-x-auto">
+    {Object.keys(archiveEvents).map((year) => (
+      archiveEvents[year].length > 0 && (
+        <div key={year} className='flex flex-col'>
+          <div className='flex flex-row' style={{ overflowX: isMobile ? 'scroll' : 'visible' }}>
+            {archiveEvents[year].map((event, eventIndex) => (
+              <div
+                key={eventIndex}
+                style={cardStyle}
+                className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                onMouseEnter={handleUpperCardHover}
+                onMouseLeave={handleUpperCardLeave}
+              >
             <div style={columnStyle3} className="event41 lm">
               <h2 className="lm qasd">Event Name</h2>
               <p className="lm">{event.eventName}</p>
@@ -454,10 +451,9 @@ const Events = () => {
 
 
 
-            {/* </Slider> */}
+         
           </div>
 
-        </div>
         <br></br><br></br><br></br><br></br>
       </div >
 
