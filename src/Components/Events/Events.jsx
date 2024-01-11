@@ -296,8 +296,7 @@ const Events = () => {
             </div>
             <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
             <div style={hoverInfoStyle2} className="hover-info cvv">
-              <p>Team Reifenhauser India proudly showcased it's Principles at India's Premier Labeling Event!
-#LabelExpo2022</p>
+              <p>{event.text}</p>
               <img src={even11} alt="Additional Info Image" className="gggp ti " />
               <img src={even12} alt="Additional Info Image " className=" ti bbb " />
             </div>
