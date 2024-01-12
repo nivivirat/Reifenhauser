@@ -1,14 +1,13 @@
-
 import React from "react";
 import Slider from "../Blog/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import './Media.css';
 import '../Blog/Blog.css'
-import img1 from'../../assets/Images/Media/Screenshot 2024-01-09 at 3.46 1.svg';
-import img3 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 1.svg';
-import img2 from'../../assets/Images/Media/Screenshot 2024-01-09 at 3.48 1.svg';
-import img4 from'../../assets/Images/Media/Screenshot 2023-12-13 at 11.04 1.svg';
+import img1 from '../../assets/Images/Media/Screenshot 2024-01-09 at 3.46 1.svg';
+import img3 from '../../assets/Images/Media/Screenshot 2023-12-13 at 11.03 1.svg';
+import img2 from '../../assets/Images/Media/Screenshot 2024-01-09 at 3.48 1 (1).svg';
+import img4 from '../../assets/Images/Media/Screenshot 2023-12-13 at 11.04 1.svg';
 
 export default function CardComponent() {
   const posts = [
@@ -44,7 +43,7 @@ export default function CardComponent() {
     speed: 500,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -54,8 +53,8 @@ export default function CardComponent() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 0,
         },
       },
@@ -71,16 +70,16 @@ export default function CardComponent() {
   };
 
   return (
-    <div className="w-screen fg flex flex-col md:gap-5 gap-[100px] pb-10 -mb-24 -mx-4 overflow-x-auto">
-      <Slider options={{ align: "center" }}>
+    <div className="w-screen fg flex flex-row md:gap-5 gap-[100px] pb-10 -mb-24 -mx-4 overflow-x-auto">
+      {/* <Slider options={{ align: "center" }}> */}
         {posts.map((testimonial, i) => (
           <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
             <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
-              <div className="h-auto w-auto bg-white shadow-lg rounded-lg my-40">
+              <div className="h-96 w-96 bg-white shadow-lg rounded-lg my-40">
                 <div className="flex justify-center md:justify-end -mt-16 relative">
                   <div style={{ height: '100%', width: '100%' }} className="relative">
                     <img
-                      className="object-cover border-2 w-full h-72"
+                      className="object-cover w-full h-96"
                       src={testimonial.img}
                       alt={testimonial.title}
                     />
@@ -96,7 +95,7 @@ export default function CardComponent() {
             </a>
           </div>
         ))}
-      </Slider>
+      {/* </Slider> */}
     </div>
   );
 }
