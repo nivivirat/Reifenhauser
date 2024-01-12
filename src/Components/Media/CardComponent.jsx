@@ -75,7 +75,7 @@ export default function CardComponent() {
         {posts.map((testimonial, i) => (
           <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
             <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
-              <div className="h-96 w-96 bg-white shadow-lg rounded-lg my-40">
+              <div className="h-96 w-96 bg-white  rounded-lg my-40">
                 <div className="flex justify-center md:justify-end -mt-16 relative">
                   <div style={{ height: '100%', width: '100%' }} className="relative">
                     <img
