@@ -70,10 +70,10 @@ export default function CardComponent() {
   };
 
   return (
-    <div className="w-screen fg flex flex-row md:gap-5 gap-[100px] pb-10 -mb-24 -mx-4 overflow-x-auto">
+    <div className="w-screen fg flex flex-row md:gap-1 gap-[100px] pb-10 -mb-24 -mx-4 overflow-x-auto">
       {/* <Slider options={{ align: "center" }}> */}
         {posts.map((testimonial, i) => (
-          <div key={i} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
+          <div key={i} className="flex-[0_0_20%] mx-2 mt-6">
             <a href={testimonial.link} target="_blank" rel="noopener noreferrer">
               <div className="h-96 w-96 bg-white  rounded-lg my-40">
                 <div className="flex justify-center md:justify-end -mt-16 relative">
