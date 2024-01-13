@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className='md:w-[30%] w-[100%] md:mt-0 mt-10 flex flex-col gap-5'>
                     <p className='text-white'>Get in Touch With Us</p>
 
-                    <a href="https://wa.me/919322338451" target="_blank" rel="noopener noreferrer" className='flex flex-row bg-base w-[200px] lg:w-[220px]  md:w-[220px] text-[30px] xl:w-[220px] xl:h-[70px] md:gap-4 rounded-lg justify-center place-items-center p-5'>
+                    <a href="https://wa.me/919322338415" target="_blank" rel="noopener noreferrer" className='flex flex-row bg-base w-[200px] lg:w-[220px]  md:w-[220px] text-[30px] xl:w-[220px] xl:h-[70px] md:gap-4 rounded-lg justify-center place-items-center p-5'>
                         <Icon icon="logos:whatsapp-icon" />
                         <div className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                             <p className='text-[#011C51]'>Say Hello!!</p>
@@ -41,7 +41,7 @@ export default function Footer() {
                             <li><a href='/testimonials'>Testimonials</a></li>
 
                         </ul>
-                        <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9     xl:mt-4'>
+                        <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
                             <p className='text-[12px]'>Connect with us on</p>
                             <div className='flex flex-row gap-2'>
                                 <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' target="_blank" rel="noopener noreferrer" className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>

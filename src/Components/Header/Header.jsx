@@ -66,7 +66,7 @@ export default function Header() {
                     </a>
                 </div>
 
-                <a href='https://wa.me/919322338451'  target="_blank" rel="noopener noreferrer" className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
+                <a href='https://wa.me/919322338415'  target="_blank" rel="noopener noreferrer" className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
                     <div className=''>
                         <img src={header_phone} alt='Phone' />
                     </div>
