@@ -23,9 +23,9 @@ export default function AboutUs() {
                             <p className=''>We continue to bring in the latest technology in the Indian Subcontinent</p>
                         </div>
 
-                        <div className='absolute bottom-0 right-0 xl:p-9 p-4 text-white w-[42%] xl:text-[16px] md:text-[10px] text-[12px] tracking-wide'>
+                        <div className='absolute bottom-0 right-0 xl:p-9 p-4 text-white md:w-[42%] w-[50%] xl:text-[16px] md:text-[10px] text-[9px] tracking-wide'>
                             <div className='bg-white rounded-[40px] p-1 flex justify-center place-items-center'>
-                                <a href='/contactUs' className='text-primary font-semibold'>Connect with us</a>
+                                <a href='/contactUs' className='text-primary text-[10px] font-semibold'>Connect with us</a>
                             </div>
                         </div>
 

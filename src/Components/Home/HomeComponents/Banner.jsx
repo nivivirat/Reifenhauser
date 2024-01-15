@@ -55,10 +55,10 @@ export default function Banner() {
             } else {
                 setCurrentSection(0);
             }
-        }, 6000); // 3000 milliseconds (3 seconds)
+        }, 4000); // 3000 milliseconds (3 seconds)
 
         return () => clearInterval(interval); // Cleanup on unmount
-    }, [currentSection]);
+    }, [currentSection, bannerData.length]);
 
     useEffect(() => {
         const interval = setInterval(() => {

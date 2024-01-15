@@ -15,7 +15,7 @@ export default function DirectorCard({ name, role, img }) {
         volkmar_kurk
     }
     return (
-        <div className="flex flex-col justify-center place-items-center">
+        <div className="flex flex-col justify-center place-items-center text-center">
             <div className="bg-[#9bc1ff] rounded-full">
                 <img src={images[img]} className="rounded-full md:pt-5 border-[#9bc1ff] md:h-[200px] h-[110px] w-[110px] bg-[#9bc1ff] md:w-[200px]"></img>
             </div>
