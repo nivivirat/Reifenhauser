@@ -91,10 +91,10 @@ export default function Header() {
                                 <div className=''>
                                     <img src={header_phone} alt='Phone' />
                                 </div>
-                                <div className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
+                                <a href='https://wa.me/919322338415'  target="_blank" rel="noopener noreferrer" className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                                     <p className='text-[#011C51]'>Service Helpline</p>
-                                    <p className='text-[#285196]'>+91 9322338451</p>
-                                </div>
+                                    <p className='text-[#285196]'>+91 9322338415</p>
+                                </a>
                             </div>
                         </div>
                     </div>
