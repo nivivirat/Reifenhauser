@@ -8,9 +8,21 @@ import ancillaryData from './Data/ancillaryData.json'
 import SMCData from './Data/SMCData.json'
 import ExtrusionMachineryCard from './ExtrusionMachineryCard';
 import CompanyCardsEcec from './CompanyCardsEcec';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { getDatabase, ref, onValue } from 'firebase/database';
 
 export default function Principals() {
+
+    const [principalsData, setPrincipalsData] = useState({});
+
+    useEffect(() => {
+        const database = getDatabase();
+        const principalsRef = ref(database, 'principals');
+
+        onValue(principalsRef, (snapshot) => {
+            setPrincipalsData(snapshot.val() || {});
+        });
+    }, []);
 
     useEffect(() => {
         const scrollToHash = () => {
@@ -35,17 +47,12 @@ export default function Principals() {
         };
     }, []);
 
-
     return (
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
 
             {/* our principals */}
             <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px]">
                 <div className="flex flex-col lg:w-[55%] animated-box animate__animated animate__fadeInLeft">
-                    {/* <div className="md:hidden flex-row flex gap-1">
-                        <p className="text-[#999999]">Home-</p>
-                        <p className="text-primary font-semibold">Contact Us</p>
-                    </div> */}
 
                     <p className="mt-2 text-primary font-semibold text-5xl mb-4 ">Our Principals</p>
                     <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">We extend our gratitude to our principals for entrusting us as the bridge between global innovation and the thriving industrial community. Our extensive expertise spans across multiple industries, including Plastic Extrusion, Converting and Labels, Paper, Wire, and Cable (Up until this moment).</p>
@@ -55,7 +62,7 @@ export default function Principals() {
             </div>
 
             {/* Extrusion Machinery  */}
-            <div id='ExtrusionMachinery' className='flex flex-col lg:gap-24 gap-16 xl:mt-10'>
+            {/* <div id='ExtrusionMachinery' className='flex flex-col lg:gap-24 gap-16 xl:mt-10'>
                 <div>
                     <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Extrusion Machinery</p>
                 </div>
@@ -71,11 +78,11 @@ export default function Principals() {
                                     link={extrusionmachinaryLink[0].link}
                                 />
                             </div>
-                        </div>
-                        {/* <div className='grid grid-rows-3'> */}
-                        <div className='grid lg:grid-rows-2 lg:grid-flow-row lg:px-10 lg:gap-10 gap-5 grid-cols-2 md:grid-rows-2'>
-                            {/* cards */}
-                            <div className='hidden lg:block'>
+                        </div> */}
+            {/* <div className='grid grid-rows-3'> */}
+            {/* <div className='grid lg:grid-rows-2 lg:grid-flow-row lg:px-10 lg:gap-10 gap-5 grid-cols-2 md:grid-rows-2'> */}
+            {/* cards */}
+            {/* <div className='hidden lg:block'>
                                 <ExtrusionMachineryCard
                                     heading={extrusionmachinaryLink[0].heading}
                                     sub={extrusionmachinaryLink[0].sub}
@@ -95,12 +102,12 @@ export default function Principals() {
                             ))}
 
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-                        {/* more cards */}
+            {/* <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'> */}
+            {/* more cards */}
 
-                        {CompanyDataExec.map((machinery, index) => (
+            {/* {CompanyDataExec.map((machinery, index) => (
                             (
                                 <CompanyCardsEcec
                                     key={index}
@@ -113,108 +120,74 @@ export default function Principals() {
                                 />
                             )
                         ))}
-                    </div>
+                    </div> */}
 
-                </div>
-            </div>
+            {/* </div>
+            </div> */}
 
             {/* Converting Machinery */}
-            <div id='ConvertingMachinery' className='flex flex-col lg:gap-22 gap-16'>
-                <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Converting Machinery</p>
-                </div>
-                <div className='grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-                    {/* more cards */}
+            {Object.entries(principalsData)
+                .sort(([, a], [, b]) => a.s_order - b.s_order)
+                .map(([section, sectionData]) => (
+                    <div key={section} className="mb-8 relative">
+                        <div>
+                            <p className="text-primary font-semibold lg:text-[55px] my-5 text-[35px]">{section}</p>
+                        </div>
+                        {section === 'Reifenhauser Machinary' && sectionData && Object.values(sectionData).length > 0 ? (
+                            <div className='flex flex-col lg:flex-row mt-[100px]'>
+                                <div className='flex flex-row justify-between'>
+                                    <img src={Rlogo} className='w-[35%] md:w-[10%] sm:w-[15%] lg:w-full'></img>
+                                    <div className='lg:hidden block w-[50%]'>
+                                        <ExtrusionMachineryCard
+                                            heading={Object.values(sectionData)[0].heading}
+                                            sub={Object.values(sectionData)[0].sub}
+                                            link={Object.values(sectionData)[0].link}
+                                        />
+                                    </div>
+                                </div>
+                                <div className='grid lg:grid-rows-2 lg:grid-flow-row lg:px-10 lg:gap-10 gap-5 grid-cols-2 md:grid-rows-2'>
+                                    <div className='hidden lg:block'>
+                                        <ExtrusionMachineryCard
+                                            heading={Object.values(sectionData)[0].heading}
+                                            sub={Object.values(sectionData)[0].sub}
+                                            link={Object.values(sectionData)[0].link}
+                                        />
+                                    </div>
+                                    {Object.values(sectionData).slice(1).map((machinery, index) => (
+                                        <React.Fragment key={index}>
+                                            {machinery && (
+                                                <ExtrusionMachineryCard
+                                                    heading={machinery.heading}
+                                                    sub={machinery.sub}
+                                                    link={machinery.link}
+                                                />
+                                            )}
+                                        </React.Fragment>
+                                    ))}
+                                </div>
+                            </div>
+                        ) : (
+                            <div className="grid lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10">
+                                {Object.entries(sectionData)
+                                    .filter(([key]) => key !== 's_order')
+                                    .sort(([, a], [, b]) => a.order - b.order)
+                                    .map(([itemId, item]) => (
+                                        <CompanyCardsEcec
+                                            key={itemId}
+                                            companyName={item.company_name}
+                                            img={item.img}
+                                            backContent={item.backContent}
+                                            back2={item.back2}
+                                            back3={item.back3}
+                                            backLink={item.backLink}
+                                        />
+                                    ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
 
-                    {convertingMachinaryData.map((machinery, index) => (
-                        (
-                            <CompanyCardsEcec
-                                key={index}
-                                companyName={machinery.company_name}
-                                img={machinery.img}
-                                backContent={machinery.backContent}
-                                back2={machinery.back2}
-                                back3={machinery.back3}
-                                backLink={machinery.backLink}
-                            />
-                        )
-                    ))}
-                </div>
-            </div>
 
-            {/* Labels */}
-            <div id='Labels' className='flex flex-col lg:gap-22 gap-16'>
-                <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Labels</p>
-                </div>
-                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-
-                    {/* more cards */}
-
-                    {labelsData.map((machinery, index) => (
-                        (
-                            <CompanyCardsEcec
-                                key={index}
-                                companyName={machinery.company_name}
-                                img={machinery.img}
-                                backContent={machinery.backContent}
-                                back2={machinery.back2}
-                                back3={machinery.back3}
-                                backLink={machinery.backLink}
-                            />
-                        )
-                    ))}
-                </div>
-            </div>
-
-            {/* Ancillary */}
-            <div id='Ancillary' className='flex flex-col lg:gap-22 gap-16'>
-                <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Ancillary</p>
-                </div>
-                <div className='grid lg:grid-rows-2 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-                    {/* more cards */}
-
-                    {ancillaryData.map((machinery, index) => (
-                        (
-                            <CompanyCardsEcec
-                                key={index}
-                                companyName={machinery.company_name}
-                                img={machinery.img}
-                                backContent={machinery.backContent}
-                                back2={machinery.back2}
-                                back3={machinery.back3}
-                                backLink={machinery.backLink}
-                            />
-                        )
-                    ))}
-                </div>
-            </div>
-
-            {/* Slitting, Metallizing */}
-            <div id='Slitting-Metallizing' className='flex flex-col lg:gap-22 gap-16'>
-                <div>
-                    <p className="text-primary font-semibold lg:text-[55px] text-[35px]">Slitting &  Metallizing </p>
-                </div>
-                <div className='grid lg:grid-rows-1 lg:grid-cols-4 grid-cols-2 lg:grid-flow-row gap-10'>
-
-                    {/* more cards */}
-
-                    {SMCData.map((machinery, index) => (
-                        (
-                            <CompanyCardsEcec
-                                key={index}
-                                companyName={machinery.company_name}
-                                img={machinery.img}
-                                backContent={machinery.backContent}
-                                back2={machinery.back2}
-                                back3={machinery.back3}
-                                backLink={machinery.backLink}
-                            />
-                        )
-                    ))}
-                </div>
-            </div>
 
 
 
