@@ -13,16 +13,16 @@ export function CardWithLink({ title, testimonial }) {
       </CardBody>
       <CardFooter className="pt-0 text-blue">
         <a href="#" className="inline-block">
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex  items-center -ml-3 gap-2 test90">
+          <Typography variant="text" style={{ color: '#013A98', fontSize: '14px' }} className="flex  items-center -ml-3 gap-2 test90">
             {testimonial.buttonText}
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex items-left gap-2 mt-8 test2">
+          <Typography variant="text" style={{ color: '#013A98', fontSize: '14px' }} className="flex items-left gap-2 mt-8 test2">
             {testimonial.pos}
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex items-right gap-2 -mb-1 test3">
+          <Typography variant="text" style={{ color: '#013A98', fontSize: '14px' }} className="flex items-right gap-2 -mb-1 test3">
             {testimonial.kl}
           </Typography>
-          <Typography variant="text" style={{ color: '#013A98' }} className="flex  items-right gap-2 test4">
+          <Typography variant="text" style={{ color: '#013A98', fontSize: '14px' }} className="flex  items-right gap-2 test4">
             {testimonial.poss}
           </Typography>
         </a>
