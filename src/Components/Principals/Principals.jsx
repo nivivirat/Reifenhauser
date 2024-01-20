@@ -30,7 +30,9 @@ export default function Principals() {
             const hashIndex = url.lastIndexOf('#');
             if (hashIndex !== -1) {
                 const heading = url.substring(hashIndex + 1);
+                console.log(heading);
                 const element = document.getElementById(heading);
+                console.log(element);
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
@@ -38,9 +40,11 @@ export default function Principals() {
         };
 
         const delayScroll = setTimeout(() => {
+            console.log("donneee");
             scrollToHash();
             clearTimeout(delayScroll);
-        }, 500); // Adjust the delay time if needed
+
+        }, 4000); // Adjust the delay time if needed
 
         return () => {
             clearTimeout(delayScroll);
@@ -130,9 +134,11 @@ export default function Principals() {
                 .sort(([, a], [, b]) => a.s_order - b.s_order)
                 .map(([section, sectionData]) => (
                     <div key={section} className="mb-8 relative">
-                        <div>
+                        <div id={section === 'Extrusion Machinery' ? 'ExtrusionMachinery' : section === 'Converting Machinery' ? 'ConvertingMachinery' : section === 'Labels' ? 'Labels' : section === 'Ancillary' ? 'Ancillary' : section === 'Slitting & Metallizing' ? 'Slitting-Metallizing' : ''}>
                             <p className="text-primary font-semibold lg:text-[55px] my-5 text-[35px]">{section}</p>
                         </div>
+
+
                         {section === 'Reifenhauser Machinary' && sectionData && Object.values(sectionData).length > 0 ? (
                             <div className='flex flex-col lg:flex-row mt-[100px]'>
                                 <div className='flex flex-row justify-between'>
