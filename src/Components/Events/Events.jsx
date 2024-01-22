@@ -293,6 +293,25 @@ const Events = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
+  const handleNextImage = (length) => {
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % length;
+      console.log("next");
+      return newIndex;
+    });
+  };
+
+  const handlePrevImage = (length) => {
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex - 1 + length) % length;
+      console.log("pre");
+      return newIndex;
+    });
+  };
+
+
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   function ImageSlider({ images }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
