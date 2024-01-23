@@ -12,8 +12,9 @@ export default function Header() {
     }
 
     return (
-        <div className='w-screen md:border-b shadow-md md:border-[#b8becb]'>
-            <div className='w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5'>
+        // <div className='w-screen md:border-b shadow-md md:border-[#b8becb] md:block fixed'>
+        <div className = 'z-50 md:h-auto h-[85px] bg-white md:border-b shadow-md md:border-[#b8becb] md:block fixed md:static inset-0 md:relative'>
+            <div className = 'w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5' >
                 <div className='cursor-pointer' onClick={handleLogoClick}>
                     <img className='sm:h-[70px] sm:w-[120px] h-12 w-20' src='https://res.cloudinary.com/dzhdarh4q/image/upload/v1699014385/Reifenhauser/ReifenhauserLogo_hhc7wi.svg' alt='Logo' />
                     <p className="sm:pl-[15%] font-display text-primary italic text-[12px] sm:text-14 leading-normal tracking-tighter font-serif">
@@ -100,17 +101,17 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Mobile Menu Button */}
-                <div className='md:hidden text-primary'>
-                    <button
-                        className="px-2 pt-2 text-3xl focus:outline-none"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    >
-                        <Icon icon="iconamoon:menu-burger-horizontal" />
-                    </button>
-                    <p className='font-semibold'>Menu</p>
-                </div>
-            </div>
-        </div>
+    {/* Mobile Menu Button */ }
+    <div className='md:hidden text-primary'>
+        <button
+            className="px-2 pt-2 text-3xl focus:outline-none"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+            <Icon icon="iconamoon:menu-burger-horizontal" />
+        </button>
+        <p className='font-semibold'>Menu</p>
+    </div>
+            </div >
+        </div >
     );
 }

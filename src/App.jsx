@@ -16,7 +16,7 @@ import Admin from './Components/Admin/Admin';
 function App() {
   return (
     <BrowserRouter>
-      <div className="font-poppins w-screen overflow-clip no-vertical-scroll">
+      <div className="font-poppins w-screen overflow-clip no-vertical-scroll md:mt-0 mt-[90px]">
         <Header /> {/* Render the Header component outside of <Routes> */}
 
         <Routes>
