@@ -60,7 +60,7 @@ export default function Newsletter() {
     
     
     return (
-        <div className='md:shadow-sm shadow-2xl shadow-blue-500/50 w-screen text-white flex justify-center relative md:mt-[8%] mt-[40%]'>
+        <div className='md:shadow-sm shadow-2xl shadow-blue-500/50 w-screen text-white flex justify-center relative md:mt-[18%] xl:mt-[8%] sm:mt-[29%] mt-[47%]'>
             <div className='absolute -bottom-[30px] left-[10%] w-full'>
                 <div className='md:w-[80%] md:h-[180px] h-[230px] w-[75%] flex md:flex-row flex-col md:justify-between justify-center md:gap-0 gap-2 md:px-10 place-items-center md:p-5 m-3 relative bg-gradient-to-r from-blue-900 to-blue-400 rounded-2xl'>
                     <img src={newsletter} className='absolute right-0 bottom-0'></img>
