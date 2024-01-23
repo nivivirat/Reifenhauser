@@ -16,7 +16,7 @@ export default function Services() {
                 </div> */}
                 <div className="tr">
     <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
-              <div className="flex flex-col p-6 ">
+              <div className="flex flex-col p-6 -mt-12">
 <br></br><br></br>
                 <h5 className="mb-2 text-5xl text-4xl leading-tight q ll animated-box animate__animated animate__fadeInLeft">
                 Our Services
