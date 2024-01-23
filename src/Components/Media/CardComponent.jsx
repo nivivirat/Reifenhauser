@@ -18,7 +18,7 @@ const firebaseConfig = {
     messagingSenderId: "1000320736803",
     appId: "1:1000320736803:web:c9db2603f14597edf45b96",
     measurementId: "G-80E388KDKZ",
-  };
+};
 
 const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase(firebaseApp);
@@ -63,33 +63,33 @@ export default function CardComponent() {
             <Slider options={{ align: "center" }}>
                 {mediaData.map((mediaCard) => (
                     <div key={mediaCard.uid} className="flex-[0_0_90%] md:flex-[0_0_23%] mx-2">
-                     <a href={mediaCard.link} target="_blank" rel="noopener noreferrer">
-              <div className="h-80 w-80 bg-white  rounded-lg my-40">
-                <div className="flex justify-center md:justify-end -mt-16 relative">
-                                <div style={{ height: '100%', width: '100%' }} className="relative">
-                                    <img
-                                        className="object-fit w-full h-96"
-                                        src={mediaCard.img}
-                                        alt={mediaCard.title}
-                                    />
-                                    <h3  className="text-xs h-8 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
+                        <a href={mediaCard.link} target="_blank" rel="noopener noreferrer">
+                            <div className="h-80 w-80 bg-white  rounded-lg my-40">
+                                <div className="flex justify-center md:justify-end -mt-16 relative">
+                                    <div style={{ height: '100%', width: '100%' }} className="relative">
+                                        <img
+                                            className="object-cover w-auto h-80"
+                                            src={mediaCard.img}
+                                            alt={mediaCard.title}
+                                        />
+                                        <h3 className="text-xs h-8 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
                                         >Know More</h3>
-       <a
-  className="text-xs h-12 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
-  href={`${mediaCard.title}`}  // Add the appropriate protocol
-  target="_blank"  // Optional: Opens the link in a new tab
-  rel="noopener noreferrer"  // Recommended for security reasons when using target="_blank"
->
+                                        <a
+                                            className="text-xs h-12 w-full font-semibold text-white media77 absolute bottom-0 left-0 opacity-0 transition-opacity duration-300"
+                                            href={`${mediaCard.title}`}  // Add the appropriate protocol
+                                            target="_blank"  // Optional: Opens the link in a new tab
+                                            rel="noopener noreferrer"  // Recommended for security reasons when using target="_blank"
+                                        >
 
-</a>
+                                        </a>
 
-                                    
+
+                                    </div>
                                 </div>
-                            </div>
-                            <div>
-                                {/* Other content goes here */}
-                            </div>
-                        </div></a>
+                                <div>
+                                    {/* Other content goes here */}
+                                </div>
+                            </div></a>
                     </div>
                 ))}
             </Slider>
