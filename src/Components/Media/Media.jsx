@@ -1,8 +1,6 @@
-// Media.js
-
-import './Media.css';
 import React, { useState, useEffect } from 'react';
 import { db, ref, get } from '../../firebase';
+import { Link, useNavigate } from 'react-router-dom';
 import rimg from '../../assets/Images/Media/R.svg';
 import CardComponent from "./CardComponent";
 import {
@@ -14,6 +12,7 @@ import {
 
 export default function Media() {
   const [mediaData, setMediaData] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,17 +40,27 @@ export default function Media() {
     fetchData();
   }, []);
 
+  const handleCardClick = (item) => {
+    if (item.routerlink) {
+      // If routerlink is not empty, navigate to the external link
+      window.location.href = item.routerlink;
+    } else {
+      // If routerlink is empty, navigate to the internal Blog component
+      navigate(`/media/${item.id}`);
+    }
+  };
+
   return (
     <div className="App">
       <div className="flex-flex media1">Media</div>
       <div className="text-[18px] flex-flex media2">Glimpse through the round up of the latest trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3">News & Updates</div>
       <div className="text-[18px] flex-flex media4">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
-     
+
 
       {mediaData.map((item) => (
         <div className="flex flex-col rounded-lg md:max-w-full md:flex-row media5 mr--9" key={item.id}>
-          <a href={`http://${item.routerlink}`}>
+          <div onClick={() => handleCardClick(item)}>
             <Card className="flex flex-col rounded-lg md:max-w-full md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
               <CardHeader
                 shadow={false}
@@ -78,7 +87,7 @@ export default function Media() {
                 </Typography>
               </CardBody>
             </Card>
-          </a>
+          </div>
         </div>
       ))}
 

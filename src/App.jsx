@@ -12,6 +12,7 @@ import Testimonial from './Components/Testimonial/Testimonial';
 import Blog from './Components/Blog/Blog';
 import Careers from './Components/Careers/Careers';
 import Admin from './Components/Admin/Admin';
+import MainBlog from './Components/Blog/MainBlog';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
+          <Route path="/media/:id" element={<MainBlog />} />
           <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/Principals" element={<Principals />} />
