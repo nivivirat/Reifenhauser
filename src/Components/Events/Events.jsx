@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from 'react';
+import './Events.css';
+import eventsData3 from './eventsData3.json';
+import evim from '../../assets/Images/Events/event1.svg';
+import even11 from '../../assets/Images/Events/Rectangle 6264 (2).svg';
+import even12 from '../../assets/Images/Events/Rectangle 6265 (5).svg';
+import vg from '../../assets/Images/Events/b.svg';
+import yu from '../../assets/Images/Events/a.svg';
+import even from "./Vector (1).svg";
 import { useMediaQuery } from 'react-responsive';
+
+import aq from "./abg.svg";
+import Slider from "./slider";
+
+// firebase
 import { getDatabase, ref, onValue } from 'firebase/database';
 import { Icon } from '@iconify/react';
-import './Events.css';
-import Slider from "./slider";
-import aq from "./abg.svg";
-import even from "./Vector (1).svg";
-import evim from '../../assets/Images/Events/event1.svg';
 
 const Events = () => {
   const [currentEvents, setCurrentEvents] = useState([]);
   const [archiveEvents, setArchiveEvents] = useState([]);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const cardContainerStyle = {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '95%',
-    marginLeft: '2%',
-    flexDirection: isMobile ? 'row' : 'row',
-  };
 
   useEffect(() => {
     const database = getDatabase();
@@ -65,10 +64,54 @@ const Events = () => {
     });
   }, []);
 
+  useEffect(() => {
+    console.log(currentEvents);
+    console.log(archiveEvents);
+  }, [currentEvents, archiveEvents])
+
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
     marginBottom: '100px', // Margin to prevent hover box from being cut off by the footer
+
+  };
+
+  const sectionStyle = {
+    margin: '1% auto',
+    color: 'white',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'flex',
+    width: '95%',
+    height: '35%',
+    // flexDirection: 'row',
+    justifyContent: 'space-between',
+  };
+  const sectionStyle2 = {
+    margin: '1% auto',
+    color: 'white',
+    padding: '10px',
+    borderRadius: '8px',
+    display: 'flex',
+    width: '95%',
+    height: '35%',
+    // flexDirection: 'row',
+    justifyContent: 'space-between',
+
+  };
+  const breakpoints = {
+    mobile: '(max-width: 900px)',
+    desktop: '(min-width: 901px)',
+  };
+
+  const isMobile = useMediaQuery({ query: breakpoints.mobile });
+
+  const cardContainerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '95%',
+    marginLeft: '2%',
+    flexDirection: isMobile ? 'row' : 'row',
   };
 
   const cardStyle = {
@@ -80,6 +123,101 @@ const Events = () => {
     position: 'relative',
     overflow: 'hidden',
     width: '250px', // Change this value to the desired width
+  };
+
+
+  const columnStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#013A98',
+    fontWeight: 'bold',
+    marginTop: '-1%',
+    textAlign: 'left',
+    width: '25%',
+  };
+
+
+  const columnStyle3 = {
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#013A98',
+    fontWeight: 'bold',
+    width: '95%',
+    textAlign: 'left',
+
+
+  };
+
+  const imageContainerStyle = {
+    textAlign: 'center',
+    position: 'relative',
+    height: '30vh',
+    margin: '1%',
+  };
+
+  const imageStyle = {
+    width: '100%',
+    height: '100%',
+    borderRadius: '8px',
+    position: 'relative',
+  };
+
+  const textInsideImage = {
+    marginLeft: '3px%',
+    position: 'absolute',
+    top: '18%',
+    left: '6%',
+    // transform: 'translate(-50%, -50%)',
+    fontSize: '24px',
+    fontWeight: 'bold',
+    color: 'white',
+    zIndex: '2',
+  };
+
+  const hoverInfoStyle = {
+    position: 'absolute',
+    top: '90%',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    padding: '20px',
+    backgroundColor: 'rgba(1, 58, 152, 0.12)',
+    borderRadius: '8px',
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+    display: 'none',
+    width: '250px',
+    height: '250px',
+    zIndex: '5',
+  };
+  const hoverInfoStyle2 = {
+    position: 'absolute',
+    top: '0%',
+    left: '50%',
+    font: '3px',
+    transform: 'translateX(-50%)',
+    padding: '20px',
+    backgroundColor: '#013A98',
+    borderRadius: '8px',
+    boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
+    textAlign: 'center',
+    display: 'none',
+    width: '100%',
+    height: '100%',
+    zIndex: '5',
+    color: 'white',
+  };
+
+  const triangleStyle = {
+    position: 'absolute',
+    top: '-10px',
+    left: '50%',
+    backgroundColor: 'rgba(1, 58, 152, 0.12)',
+    marginLeft: '-10px', // half of the triangle's width
+    width: '0',
+    height: '0',
+    borderTop: '10px solid #fff', // height of the triangle
+    borderLeft: '10px solid transparent',
+    borderRight: '10px solid transparent',
   };
 
   const handleUpperCardHover = (event) => {
@@ -98,12 +236,19 @@ const Events = () => {
     }
   };
 
+
+
   const handleUpperCardLeave = (event) => {
     const hoverInfo = event.currentTarget.querySelector('.hover-info');
     hoverInfo.style.display = 'none';
 
     const triangle = event.currentTarget.querySelector('.triangle');
     triangle.style.display = 'none';
+  };
+
+  const boxContentStyle = {
+    opacity: 0,
+    transition: 'opacity 0.3s ease-in-out',
   };
 
   const handleLowerCardHover = (event) => {
@@ -137,8 +282,37 @@ const Events = () => {
     const boxContent = event.currentTarget.querySelector('.box-content');
     boxContent.style.opacity = 0;
   };
+  const mediaQueryStyle = {
+    '@media (max-width: 900px)': {
+      '.lk': {
+        flexDirection: 'column',
+      },
+    },
+  };
+  const issMobile = window.innerWidth < 1310;
 
-  const ImageSlider = ({ images }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = (length) => {
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex + 1) % length;
+      console.log("next");
+      return newIndex;
+    });
+  };
+
+  const handlePrevImage = (length) => {
+    setCurrentImageIndex((prevIndex) => {
+      const newIndex = (prevIndex - 1 + length) % length;
+      console.log("pre");
+      return newIndex;
+    });
+  };
+
+
+  // const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  function ImageSlider({ images }) {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handlePrevImage = () => {
@@ -170,86 +344,216 @@ const Events = () => {
         </div>
       </div>
     );
-  };
+  }
 
-  const isMobile = useMediaQuery({ query: '(max-width: 900px)' });
+  function ImageSlider1({ images }) {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const issMobile = window.innerWidth < 1310;
+    const handlePrevImage = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    };
+
+    const handleNextImage = () => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    return (
+      <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+        <div>
+          <img
+            src={images[currentImageIndex].img} // Use the URL from the current image object
+            alt={`Archived Image ${currentImageIndex}`}
+            className="w-96 h-auto object-contain mt-1 aspect-w-1 aspect-h-1"
+          />
+
+          {/* Add navigation arrows */}
+          <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handlePrevImage}>
+            <Icon icon="ic:round-less-than" />
+          </div>
+          <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handleNextImage}>
+            <Icon icon="ic:round-greater-than" />
+          </div>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
-    <div style={containerStyle}>
-      {/* Render current events */}
-      {Object.keys(currentEvents).map((year) => (
-        currentEvents[year].length > 0 && (
-          <div key={year}>
-            <div className={`event3 text-3xl`}>{year}</div>
-            {currentEvents[year].map((event, eventIndex) => (
-              <div
-                key={eventIndex}
-                style={cardStyle}
-                className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-                onMouseEnter={handleUpperCardHover}
-                onMouseLeave={handleUpperCardLeave}
-              >
-                <div style={columnStyle3} className="event41 lm">
-                  <h2 className="lm qasd">Event Name</h2>
-                  <p className="lm">{event.eventName}</p>
-                </div>
-                <div style={columnStyle3} className="event411 lm">
-                  <h2 className="lm mt-4 qasd">Locations</h2>
-                  <p className="lm">{event.location}</p>
-                </div>
-                <br></br><br></br>
-                <div style={columnStyle3} className="event412 lm">
-                  <h2 className="lm qasd">Date</h2>
-                  <p className="lm">{event.date}</p>
-                </div>
-                <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-                <div style={hoverInfoStyle2} className="relative hover-info cvv">
-                  <p>{event.description}</p>
-                  <ImageSlider images={event.archivedImg} />
-                </div>
-              </div>
-            ))}
-          </div>
-        )
-      ))}
+    <>
 
-      {/* Render archived events */}
-      <div className="event3 text-3xl">Archives of past events</div>
-      <div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk overflow-x-auto">
-        {window.innerWidth <= 900 ? (
-          // If the window width is less than or equal to 900px, use the original code without the Slider
-          Object.keys(archiveEvents).map((year) => (
-            archiveEvents[year].length > 0 && (
-              <div key={year} className='flex flex-col'>
-                <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'scroll' }}>
-                  {archiveEvents[year].map((event, eventIndex) => (
-                    <EventCard key={eventIndex} event={event} />
-                  ))}
+      <div style={containerStyle}>
+        <div style={imageContainerStyle} className="image-container  animate__animated animate__fadeIn animate__delay-0s">
+          <img
+            src={yu}
+            alt="Rendezvous Image"
+            style={{
+              ...imageStyle,
+              objectFit: 'cover',
+              objectPosition: 'center 75%',
+            }}
+            className="event1"
+          />
+          <div className="event9" style={textInsideImage}>
+            <p>Join Us</p>
+          </div>
+        </div>
+
+        {Object.keys(currentEvents).map((year) => (
+          // Only render the year section if there are events in currentEvents for that year
+          currentEvents[year].length > 0 && (
+            <div key={year}>
+              <div className={`event3 text-3xl`}>{year}</div>
+              {currentEvents[year].map((event, eventIndex) => (
+                <div
+                  key={eventIndex}
+                  style={sectionStyle2}
+                  className="section-container text-2xs event100 group ety"
+                  onMouseEnter={handleLowerCardHover}
+                  onMouseLeave={handleLowerCardLeave}
+                >
+                  <img className="eventi" src={evim} alt="Event Image" />
+                  <div style={columnStyle}>
+                    <h2 className="ety qasd mt-3">Event Name</h2>
+                    <p className="ety">{event.eventName}</p>
+                  </div>
+                  <div style={columnStyle}>
+                    <h2 className="ety qasd mt-3">Location</h2>
+                    <p className="ety">{event.location}</p>
+                  </div>
+                  <div style={columnStyle}>
+                    <h2 className="ety qasd mt-3">Date</h2>
+                    <p className="ety">{event.date}</p>
+                  </div>
+                  <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
+                  <div style={hoverInfoStyle} className="hover-info">
+                    <div style={triangleStyle} className="triangle"></div>
+                    <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" />
+                    {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                  </div>
                 </div>
-              </div>
-            )
-          )))
-         : (
-          // If the window width is above 900px, use the Slider component
-          <Slider>
-            {Object.keys(archiveEvents).map((year) => (
+              ))}
+            </div>
+          )
+        ))}
+        <br></br>
+        <div className="event3 text-3xl">Archives of past events</div>
+
+
+
+        <div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk overflow-x-auto">
+          {window.innerWidth <= 900 ? (
+            // If the window width is less than or equal to 900px, use the original code without the Slider
+            Object.keys(archiveEvents).map((year) => (
               archiveEvents[year].length > 0 && (
                 <div key={year} className='flex flex-col'>
-                  <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'visible' }}>
+                  <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'scroll' }}>
                     {archiveEvents[year].map((event, eventIndex) => (
-                      <EventCard key={eventIndex} event={event} />
+                      <div
+                        key={eventIndex}
+                        style={cardStyle}
+                        className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                        onMouseEnter={handleUpperCardHover}
+                        onMouseLeave={handleUpperCardLeave}
+                      >
+                        <div style={columnStyle3} className="event41 lm">
+                          <h2 className="lm qasd">Event Name</h2>
+                          <p className="lm">{event.eventName}</p>
+                        </div>
+                        <div style={columnStyle3} className="event411 lm">
+                          <h2 className="lm mt-4 qasd">Locations</h2>
+                          <p className="lm">{event.location}</p>
+                        </div>
+                        <br></br><br></br>
+                        <div style={columnStyle3} className="event412 lm">
+                          <h2 className="lm qasd">Date</h2>
+                          <p className="lm">{event.date}</p>
+                        </div>
+                        <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                        <div style={hoverInfoStyle2} className="relative hover-info cvv">
+                          <p>{event.description}</p>
+                          <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+                            {Array.isArray(event.archivedImg) ? (
+                              <div>
+                                <img
+                                  src={event.archivedImg[currentImageIndex]}
+                                  alt={`Archived Image ${currentImageIndex}`}
+                                  className="w-96 h-auto object-contain mt-1"
+                                />
+                                {/* Add navigation arrows */}
+                                <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handlePrevImage(event.archivedImg.length)}>
+                                  <Icon icon="ic:round-less-than" />
+                                </div>
+                                <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handleNextImage(event.archivedImg.length)}>
+                                  <Icon icon="ic:round-greater-than" />
+                                </div>
+                              </div>
+                            ) : (
+                              <img
+                                src={event.archivedImg}
+                                alt="Archived Image"
+                                className="w-96 h-auto object-contain mt-1"
+                              />
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
               )
-            ))}
-          </Slider>
-        )}
-      </div>
-    </div>
+            )))
+            : (
+              // If the window width is above 900px, use the Slider component
+              <Slider>
+                {Object.keys(archiveEvents).map((year) => (
+                  archiveEvents[year].length > 0 && (
+                    <div key={year} className='flex flex-col'>
+                      <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'visible' }}>
+                        {archiveEvents[year].map((event, eventIndex) => (
+                          <div
+                            key={eventIndex}
+                            style={cardStyle}
+                            className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                            onMouseEnter={handleUpperCardHover}
+                            onMouseLeave={handleUpperCardLeave}
+                          >
+                            <div style={columnStyle3} className="event41 lm">
+                              <h2 className="lm qasd">Event Name</h2>
+                              <p className="lm">{event.eventName}</p>
+                            </div>
+                            <div style={columnStyle3} className="event411 lm">
+                              <h2 className="lm mt-4 qasd">Locations</h2>
+                              <p className="lm">{event.location}</p>
+                            </div>
+                            <br></br><br></br>
+                            <div style={columnStyle3} className="event412 lm">
+                              <h2 className="lm qasd">Date</h2>
+                              <p className="lm">{event.date}</p>
+                            </div>
+                            <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                            <div style={hoverInfoStyle2} className="relative hover-info cvv">
+                              <p>{event.description}</p>
+                              <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
+
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                ))}
+              </Slider>
+            )}
+        </div>
+
+
+        <br></br><br></br><br></br><br></br>
+      </div >
+
+
+    </>
   );
-};
+}
 
 export default Events;
