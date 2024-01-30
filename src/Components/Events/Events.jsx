@@ -347,6 +347,7 @@ const Events = () => {
   }
 
   function ImageSlider1({ images }) {
+    
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handlePrevImage = () => {
@@ -534,8 +535,12 @@ const Events = () => {
                             <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
                             <div style={hoverInfoStyle2} className="relative hover-info cvv">
                               <p>{event.description}</p>
-                              <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
+                              {event.archivedImg && Object.keys(event.archivedImg).length > 0 && (
+                                <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
+                              )}
 
+
+                              {/* <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} /> */}
                             </div>
                           </div>
                         ))}
