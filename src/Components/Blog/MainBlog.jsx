@@ -43,7 +43,7 @@ const MainBlog = () => {
   }
 
   return (
-    <div>
+    <div className='p-10'>
       <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
       <img src={innerContent.Image} alt="Blog" />
     </div>

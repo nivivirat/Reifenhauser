@@ -347,7 +347,7 @@ const Events = () => {
   }
 
   function ImageSlider1({ images }) {
-    
+
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     const handlePrevImage = () => {
@@ -368,10 +368,10 @@ const Events = () => {
           />
 
           {/* Add navigation arrows */}
-          <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handlePrevImage}>
+          <div className='absolute p-3 cursor-pointer text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handlePrevImage}>
             <Icon icon="ic:round-less-than" />
           </div>
-          <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handleNextImage}>
+          <div className='absolute p-3 cursor-pointer top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={handleNextImage}>
             <Icon icon="ic:round-greater-than" />
           </div>
         </div>
