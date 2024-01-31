@@ -462,7 +462,7 @@ const Events = () => {
                           <p className="lm">{event.eventName}</p>
                         </div>
                         <div style={columnStyle3} className="event411 lm">
-                          <h2 className="lm mt-4 qasd">Locations</h2>
+                          <h2 className="lm mt-4 qasd">Location</h2>
                           <p className="lm">{event.location}</p>
                         </div>
                         <br></br><br></br>
@@ -473,30 +473,9 @@ const Events = () => {
                         <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
                         <div style={hoverInfoStyle2} className="relative hover-info cvv">
                           <p>{event.description}</p>
-                          <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
-                            {Array.isArray(event.archivedImg) ? (
-                              <div>
-                                <img
-                                  src={event.archivedImg[currentImageIndex]}
-                                  alt={`Archived Image ${currentImageIndex}`}
-                                  className="w-96 h-auto object-contain mt-1"
-                                />
-                                {/* Add navigation arrows */}
-                                <div className='absolute text-[20px] top-[45%] mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handlePrevImage(event.archivedImg.length)}>
-                                  <Icon icon="ic:round-less-than" />
-                                </div>
-                                <div className='absolute top-[45%] text-[20px] right-3 mt-2 text-white flex place-items-center justify-center animate-pulse' onClick={() => handleNextImage(event.archivedImg.length)}>
-                                  <Icon icon="ic:round-greater-than" />
-                                </div>
-                              </div>
-                            ) : (
-                              <img
-                                src={event.archivedImg}
-                                alt="Archived Image"
-                                className="w-96 h-auto object-contain mt-1"
-                              />
-                            )}
-                          </div>
+                          {event.archivedImg && Object.keys(event.archivedImg).length > 0 && (
+                            <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
+                          )}
                         </div>
                       </div>
                     ))}
@@ -524,7 +503,7 @@ const Events = () => {
                               <p className="lm">{event.eventName}</p>
                             </div>
                             <div style={columnStyle3} className="event411 lm">
-                              <h2 className="lm mt-4 qasd">Locations</h2>
+                              <h2 className="lm mt-4 qasd">Location</h2>
                               <p className="lm">{event.location}</p>
                             </div>
                             <br></br><br></br>
