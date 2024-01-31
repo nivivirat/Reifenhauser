@@ -59,7 +59,7 @@ export default function Media() {
 
 
       {mediaData.map((item) => (
-        <div className="flex flex-col rounded-lg w-screen md:flex-row media5 mr--9" key={item.id}>
+        <div className="flex flex-col rounded-lg md:flex-row media5 mr--9" key={item.id}>
           <div onClick={() => handleCardClick(item)}>
             <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
               <CardHeader
@@ -75,7 +75,7 @@ export default function Media() {
               </CardHeader>
               <CardBody>
                 <div className="flex flex-col justify-start p-2 s">
-                  <Typography variant="h4" className="mb-8 media7 text-2xl">
+                  <Typography variant="h4" className="mb-8 media7 text-2xl flex flex-col">
                     {item.heading}
                   </Typography>
                   <Typography color="gray" className="mb-8 media17 flex flex-col text-[18px]">
