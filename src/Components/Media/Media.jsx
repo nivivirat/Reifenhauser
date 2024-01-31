@@ -59,9 +59,9 @@ export default function Media() {
 
 
       {mediaData.map((item) => (
-        <div className="flex flex-col rounded-lg md:max-w-full md:flex-row media5 mr--9" key={item.id}>
+        <div className="flex flex-col rounded-lg w-screen md:flex-row media5 mr--9" key={item.id}>
           <div onClick={() => handleCardClick(item)}>
-            <Card className="flex flex-col rounded-lg md:max-w-full md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
+            <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
               <CardHeader
                 shadow={false}
                 floated={false}
