@@ -185,8 +185,8 @@ const Events = () => {
     boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.1)',
     textAlign: 'center',
     display: 'none',
-    width: '250px',
-    height: '250px',
+    width: '300px',
+    height: '300px',
     zIndex: '5',
   };
   const hoverInfoStyle2 = {
@@ -290,24 +290,6 @@ const Events = () => {
     },
   };
   const issMobile = window.innerWidth < 1310;
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  const handleNextImage = (length) => {
-    setCurrentImageIndex((prevIndex) => {
-      const newIndex = (prevIndex + 1) % length;
-      console.log("next");
-      return newIndex;
-    });
-  };
-
-  const handlePrevImage = (length) => {
-    setCurrentImageIndex((prevIndex) => {
-      const newIndex = (prevIndex - 1 + length) % length;
-      console.log("pre");
-      return newIndex;
-    });
-  };
 
 
   // const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -429,7 +411,7 @@ const Events = () => {
                   <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
                   <div style={hoverInfoStyle} className="hover-info">
                     <div style={triangleStyle} className="triangle"></div>
-                    <img src={event.img} alt="Bottom Card Image jkg" className="w-96 h-48 mt-1" />
+                    <img src={event.img} alt="Bottom Card Image jkg" className="w-[270px] h-[250px] object-cover object-center mt-1" />
                     {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
                   </div>
                 </div>
