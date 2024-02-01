@@ -21,6 +21,10 @@ const MainBlog = () => {
   const { id } = useParams();
   const [innerContent, setInnerContent] = useState(null);
 
+  const [heading, setHeading] = useState(null);
+  const [desc, setDesc] = useState(null);
+  const [date, setDate] = useState(null);
+
   useEffect(() => {
     const dbRef = ref(database, `Media/${id}`);
     const unsubscribe = onValue(dbRef, (snapshot) => {
@@ -38,14 +42,50 @@ const MainBlog = () => {
     };
   }, [id]);
 
+  // for heading
+
+  useEffect(() => {
+    const dbRef = ref(database, `media/${id}`);
+    const unsubscribe = onValue(dbRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data && data.heading) {
+        setHeading(data.heading);
+      }
+      if (data && data.description) {
+        setDesc(data.description);
+      }
+      if (data && data.date) {
+        setDate(data.date);
+      }
+    }, (error) => {
+      console.error('Error fetching data:', error);
+    });
+
+    // Cleanup function to unsubscribe from the listener
+    return () => {
+      unsubscribe();
+    };
+  }, [id]);
+
   if (!innerContent) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className='p-10 flex flex-col place-items-center justify-center'>
-      <img src={innerContent.Image} alt="Blog" className='py-5'/>
-      <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
+    <div className='p-10 flex flex-col justify-center place-items-center'>
+      <div>
+        <p className='text-center text-[#183B56] font-bold text-[26px] px-[15%] w-screen'>{heading}</p>
+      </div>
+      <div>
+        <p className='text-[#183B56] font-semibold py-5 text-center w-screen'>{desc}</p>
+      </div>
+      <div>
+        <p className='text-[#0078A6] w-screen text-center'>{date}</p>
+      </div>
+      <div className='flex flex-col place-items-center justify-center'>
+        <img src={innerContent.Image} alt="Blog" className='py-5' />
+        <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
+      </div>
     </div>
   );
 };
