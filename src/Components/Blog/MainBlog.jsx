@@ -43,9 +43,9 @@ const MainBlog = () => {
   }
 
   return (
-    <div className='p-10'>
+    <div className='p-10 flex flex-col place-items-center justify-center'>
+      <img src={innerContent.Image} alt="Blog" className='py-5'/>
       <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
-      <img src={innerContent.Image} alt="Blog" />
     </div>
   );
 };
