@@ -382,43 +382,47 @@ const Events = () => {
           </div>
         </div>
 
-        {Object.keys(currentEvents).map((year) => (
-          // Only render the year section if there are events in currentEvents for that year
-          currentEvents[year].length > 0 && (
-            <div key={year}>
-              <div className={`event3 text-3xl`}>{year}</div>
-              {currentEvents[year].map((event, eventIndex) => (
-                <div
-                  key={eventIndex}
-                  style={sectionStyle2}
-                  className="section-container text-2xs event100 group ety"
-                  onMouseEnter={handleLowerCardHover}
-                  onMouseLeave={handleLowerCardLeave}
-                >
-                  <img className="eventi" src={evim} alt="Event Image" />
-                  <div style={columnStyle}>
-                    <h2 className="ety qasd mt-3">Event Name</h2>
-                    <p className="ety">{event.eventName}</p>
-                  </div>
-                  <div style={columnStyle}>
-                    <h2 className="ety qasd mt-3">Location</h2>
-                    <p className="ety">{event.location}</p>
-                  </div>
-                  <div style={columnStyle}>
-                    <h2 className="ety qasd mt-3">Date</h2>
-                    <p className="ety">{event.date}</p>
-                  </div>
-                  <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
-                  <div style={hoverInfoStyle} className="hover-info">
-                    <div style={triangleStyle} className="triangle"></div>
-                    <img src={event.img} alt="Bottom Card Image jkg" className="w-[270px] h-[250px] object-cover object-center mt-1" />
-                    {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )
-        ))}
+        {Object.keys(currentEvents)
+          .sort((a, b) => currentEvents[a].order - currentEvents[b].order)
+          .map((year) => (
+            // Only render the year section if there are events in currentEvents for that year
+            currentEvents[year].length > 0 && (
+              <div key={year}>
+                <div className={`event3 text-3xl`}>{year}</div>
+                {currentEvents[year]
+                  .sort((a, b) => a.order - b.order)
+                  .map((event, eventIndex) => (
+                    <div
+                      key={eventIndex}
+                      style={sectionStyle2}
+                      className="section-container text-2xs event100 group ety"
+                      onMouseEnter={handleLowerCardHover}
+                      onMouseLeave={handleLowerCardLeave}
+                    >
+                      <img className="eventi" src={evim} alt="Event Image" />
+                      <div style={columnStyle}>
+                        <h2 className="ety qasd mt-3">Event Name</h2>
+                        <p className="ety">{event.eventName}</p>
+                      </div>
+                      <div style={columnStyle}>
+                        <h2 className="ety qasd mt-3">Location</h2>
+                        <p className="ety">{event.location}</p>
+                      </div>
+                      <div style={columnStyle}>
+                        <h2 className="ety qasd mt-3">Date</h2>
+                        <p className="ety">{event.date}</p>
+                      </div>
+                      <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
+                      <div style={hoverInfoStyle} className="hover-info">
+                        <div style={triangleStyle} className="triangle"></div>
+                        <img src={event.img} alt="Bottom Card Image jkg" className="w-[270px] h-[250px] object-cover object-center mt-1" />
+                        {/* <img src={vg} alt="Bottom Card Image jkg" className="w-96 h-108 mt-1" /> */}
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            )
+          ))}
         <br></br>
         <div className="event3 text-3xl">Archives of past events</div>
 
@@ -427,52 +431,15 @@ const Events = () => {
         <div style={{ ...cardContainerStyle, flexDirection: window.innerWidth <= 900 ? 'row' : 'row' }} className="lk overflow-x-auto">
           {window.innerWidth <= 900 ? (
             // If the window width is less than or equal to 900px, use the original code without the Slider
-            Object.keys(archiveEvents).map((year) => (
-              archiveEvents[year].length > 0 && (
-                <div key={year} className='flex flex-col'>
-                  <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'scroll' }}>
-                    {archiveEvents[year].map((event, eventIndex) => (
-                      <div
-                        key={eventIndex}
-                        style={cardStyle}
-                        className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
-                        onMouseEnter={handleUpperCardHover}
-                        onMouseLeave={handleUpperCardLeave}
-                      >
-                        <div style={columnStyle3} className="event41 lm">
-                          <h2 className="lm qasd">Event Name</h2>
-                          <p className="lm">{event.eventName}</p>
-                        </div>
-                        <div style={columnStyle3} className="event411 lm">
-                          <h2 className="lm mt-4 qasd">Location</h2>
-                          <p className="lm">{event.location}</p>
-                        </div>
-                        <br></br><br></br>
-                        <div style={columnStyle3} className="event412 lm">
-                          <h2 className="lm qasd">Date</h2>
-                          <p className="lm">{event.date}</p>
-                        </div>
-                        <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
-                        <div style={hoverInfoStyle2} className="relative hover-info cvv">
-                          <p>{event.description}</p>
-                          {event.archivedImg && Object.keys(event.archivedImg).length > 0 && (
-                            <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
-                          )}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )
-            )))
-            : (
-              // If the window width is above 900px, use the Slider component
-              <Slider>
-                {Object.keys(archiveEvents).map((year) => (
-                  archiveEvents[year].length > 0 && (
-                    <div key={year} className='flex flex-col'>
-                      <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'visible' }}>
-                        {archiveEvents[year].map((event, eventIndex) => (
+            Object.keys(archiveEvents)
+              .sort((a, b) => archiveEvents[a].order - archiveEvents[b].order)
+              .map((year) => (
+                archiveEvents[year].length > 0 && (
+                  <div key={year} className='flex flex-col'>
+                    <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'scroll' }}>
+                      {archiveEvents[year]
+                        .sort((a, b) => a.order - b.order)
+                        .map((event, eventIndex) => (
                           <div
                             key={eventIndex}
                             style={cardStyle}
@@ -499,16 +466,61 @@ const Events = () => {
                               {event.archivedImg && Object.keys(event.archivedImg).length > 0 && (
                                 <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
                               )}
-
-
-                              {/* <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} /> */}
                             </div>
                           </div>
                         ))}
-                      </div>
                     </div>
-                  )
-                ))}
+                  </div>
+                )
+              )))
+            : (
+              // If the window width is above 900px, use the Slider component
+              <Slider>
+                {Object.keys(archiveEvents)
+                  .sort((a, b) => archiveEvents[a].order - archiveEvents[b].order)
+                  .map((year) => (
+                    archiveEvents[year].length > 0 && (
+                      <div key={year} className='flex flex-col'>
+                        <div className='flex flex-row' style={{ overflowX: issMobile ? 'scroll' : 'visible' }}>
+                          {archiveEvents[year]
+                            .sort((a, b) => a.order - b.order)
+                            .map((event, eventIndex) => (
+                              <div
+                                key={eventIndex}
+                                style={cardStyle}
+                                className="event45 w-[20%] relative group lm gggg flex flex-col animate__animated animate__fadeIn animate__delay-1s"
+                                onMouseEnter={handleUpperCardHover}
+                                onMouseLeave={handleUpperCardLeave}
+                              >
+                                <div style={columnStyle3} className="event41 lm">
+                                  <h2 className="lm qasd">Event Name</h2>
+                                  <p className="lm">{event.eventName}</p>
+                                </div>
+                                <div style={columnStyle3} className="event411 lm">
+                                  <h2 className="lm mt-4 qasd">Location</h2>
+                                  <p className="lm">{event.location}</p>
+                                </div>
+                                <br></br><br></br>
+                                <div style={columnStyle3} className="event412 lm">
+                                  <h2 className="lm qasd">Date</h2>
+                                  <p className="lm">{event.date}</p>
+                                </div>
+                                <img className="eventj flex-flex-col" src={even} alt="Bottom Card Image" />
+                                <div style={hoverInfoStyle2} className="relative hover-info cvv">
+                                  <p>{event.description}</p>
+                                  {event.archivedImg && Object.keys(event.archivedImg).length > 0 && (
+                                    <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} />
+                                  )}
+
+
+                                  {/* <ImageSlider1 images={Object.values(event.archivedImg).sort((a, b) => a.order - b.order)} /> */}
+                                </div>
+                              </div>
+                            ))}
+                        </div>
+                      </div>
+                    )
+                  ))}
               </Slider>
             )}
         </div>
