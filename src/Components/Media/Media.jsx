@@ -78,7 +78,7 @@ export default function Media() {
                   <Typography variant="h4" className="mb-8 media7 text-2xl flex flex-col">
                     {item.heading}
                   </Typography>
-                  <Typography color="gray" className="mb-8 media17 flex flex-col text-[18px]">
+                 <Typography color="gray" className="mb-8 media7 mr-12 flex flex-col text-[18px]">
                     {item.description}
                   </Typography>
                 </div>
