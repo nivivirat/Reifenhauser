@@ -58,10 +58,10 @@ export default function Media() {
       <div className="text-[18px] flex-flex media4">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
 
 
-      {mediaData.slice().reverse().map((item) => (
-        <div className="flex flex-col rounded-lg md:flex-row media5 mr--9" key={item.id}>
+      {mediaData.map((item) => (
+        <div className="flex flex-col rounded-lg md:flex-row media5 mr-8" key={item.id}>
           <div onClick={() => handleCardClick(item)}>
-            <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
+            <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
               <CardHeader
                 shadow={false}
                 floated={false}
@@ -70,7 +70,7 @@ export default function Media() {
                 <img
                   src={item.img}
                   alt="card-image mediax"
-                  className="h-full max-w-full rounded-l-md object-fit rounded-t-lg object-cover md:rounded-none md:rounded-l-lg sm:max-w-full media6"
+                  className="h-full max-w-full -ml-1 mr-2  rounded-l-md object-fit rounded-t-lg object-cover md:rounded-none md:rounded-l-lg sm:max-w-full media6"
                 />
               </CardHeader>
               <CardBody>
@@ -78,7 +78,7 @@ export default function Media() {
                   <Typography variant="h4" className="mb-8 media7 text-2xl flex flex-col">
                     {item.heading}
                   </Typography>
-                  <Typography color="gray" className="mb-8 media17 flex flex-col text-[18px]">
+                  <Typography color="gray" className="mb-8 media17 mr-12 flex flex-col text-[18px]">
                     {item.description}
                   </Typography>
                 </div>
