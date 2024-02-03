@@ -412,7 +412,7 @@ const Events = () => {
                         <h2 className="ety qasd mt-3">Date</h2>
                         <p className="ety">{event.date}</p>
                       </div>
-                      <img className="evento flex-flex-col" src={aq} alt="Bottom Card Image" />
+                 
                       <div style={hoverInfoStyle} className="hover-info">
                         <div style={triangleStyle} className="triangle"></div>
                         <img src={event.img} alt="Bottom Card Image jkg" className="w-[270px] h-[250px] object-cover object-center mt-1" />
