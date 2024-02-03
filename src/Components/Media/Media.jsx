@@ -58,7 +58,7 @@ export default function Media() {
       <div className="text-[18px] flex-flex media4">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
 
 
-      {mediaData.map((item) => (
+      {mediaData.slice().reverse().map((item) => (
         <div className="flex flex-col rounded-lg md:flex-row media5 mr-8" key={item.id}>
           <div onClick={() => handleCardClick(item)}>
             <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
