@@ -82,8 +82,8 @@ const MainBlog = () => {
       <div>
         <p className='text-[#0078A6] w-screen text-center'>{date}</p>
       </div>
-      <div className='flex flex-col place-items-center justify-center'>
-        <img src={innerContent.Image} alt="Blog" className='py-5' />
+      <div className='flex flex-col justify-center'>
+        <img src={innerContent.Image} alt="Blog" className='py-5 mx-[100px] my-10 object-contain' />
         <div dangerouslySetInnerHTML={{ __html: innerContent.HTMLContent }} />
       </div>
     </div>
