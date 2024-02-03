@@ -65,7 +65,7 @@ export default function CardComponent() {
                                 <div className="flex justify-center md:justify-end -mt-16 relative">
                                     <div style={{ height: '100%', width: '100%' }} className="relative">
                                         <img
-                                            className="object-cover w-full h-96"
+                                         className="object-cover w-96 h-80 object-cover"
                                             src={mediaCard.img}
                                             alt={mediaCard.title}
                                         />
