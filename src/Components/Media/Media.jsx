@@ -40,9 +40,9 @@ export default function Media() {
     fetchData();
   }, []);
   const generateRoute = (media) => {
-    if (media && media.uid) {
+    if (1) {
       const sanitizedHeading = media.heading.replace(/\s+/g, '-');
-      return `/media/${media.uid}/${sanitizedHeading}`;
+      return `/media/${media.id}/${sanitizedHeading}`;
     } else {
       // Handle the case where uid is undefined
       console.error('Invalid media object:', media);
@@ -58,7 +58,7 @@ export default function Media() {
       navigate(generateRoute(item)); // Pass the correct parameter (item) here
     }
   };
-  
+
 
   return (
     <div className="App">
