@@ -61,45 +61,47 @@ export default function Media() {
 
 
   return (
-    <div className="App">
-      <div className="flex-flex media1">Media</div>
-      <div className="text-[18px] flex-flex media2">Glimpse through the round up of the latest trends in the packaging industry</div>
-      <div className="text-3xl flex-flex media3">Articles</div>
-      <div className="text-[18px] flex-flex media4">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
+    <div className="App w-screen flex flex-col">
+      <div className="flex-flex media1 mr-36 w-[90%] text-center">Media</div>
+      <div className="md:text-[18px] text-[16px] flex-flex media2 w-[90%]">Glimpse through the round up of the latest trends in the packaging industry</div>
+      <div className="text-3xl flex-flex media3 w-[90%]">Articles</div>
+      <div className="md:text-[18px] text-[14px] flex-flex media4 mb-10 w-[90%]">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
 
 
-      {mediaData.slice().reverse().map((item) => (
-        <div className="flex flex-col rounded-lg md:flex-row media5 mr-8" key={item.id}>
-          <div onClick={() => handleCardClick(item)}>
-            <Card className="flex flex-col rounded-lg w-screen md:flex-row media5 mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
-              <CardHeader
-                shadow={false}
-                floated={false}
-                className="m-0 sm:w-2/5 md:w-2/5 lg:w-2/5 shrink-0  object-fit flex items-center"
-              >
-                <img
-                  src={item.img}
-                  alt="card-image mediax"
-                  className="h-full max-w-full -ml-1 mr-2  rounded-l-md object-fit rounded-t-lg object-cover md:rounded-none md:rounded-l-lg sm:max-w-full media6"
-                />
-              </CardHeader>
-              <CardBody>
-                <div className="flex flex-col justify-start p-2 s">
-                  <Typography variant="h4" className="mb-8 media7 text-2xl flex flex-col">
-                    {item.heading}
+      <div className='flex flex-col gap-10'>
+        {mediaData.slice().reverse().map((item) => (
+          <div className="flex flex-col rounded-lg md:flex-row mr-8 w-[90%]" key={item.id}>
+            <div className='w-full' onClick={() => handleCardClick(item)}>
+              <Card className="w-[100%] flex flex-col rounded-lg md:flex-row mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
+                <CardHeader
+                  shadow={false}
+                  floated={false}
+                  className="m-0 sm:w-2/5 md:w-2/5 lg:w-2/5 shrink-0 object-fit flex items-center"
+                >
+                  <img
+                    src={item.img}
+                    alt="card-image mediax"
+                    className="h-full max-w-full -ml-1 mr-2  rounded-l-md object-fit rounded-t-lg object-cover md:rounded-none md:rounded-l-lg sm:max-w-full media6"
+                  />
+                </CardHeader>
+                <CardBody>
+                  <div className="flex flex-col justify-start p-2 s">
+                    <Typography variant="h4" className="mb-8 media7 text-2xl flex flex-col">
+                      {item.heading}
+                    </Typography>
+                    <Typography color="gray" className="mb-8 media17 mr-12 flex flex-col text-[18px]">
+                      {item.description}
+                    </Typography>
+                  </div>
+                  <Typography color="gray" className="mb-8 font-[600] media9 text-[18px] media17">
+                    {item.date}
                   </Typography>
-                  <Typography color="gray" className="mb-8 media17 mr-12 flex flex-col text-[18px]">
-                    {item.description}
-                  </Typography>
-                </div>
-                <Typography color="gray" className="mb-8 font-[600] media9 text-[18px] media17">
-                  {item.date}
-                </Typography>
-              </CardBody>
-            </Card>
+                </CardBody>
+              </Card>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
 
       <div className="">
         <div className="text-3xl flex-flex media3">Social Media</div>
