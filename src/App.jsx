@@ -13,6 +13,7 @@ import Blog from './Components/Blog/Blog';
 import Careers from './Components/Careers/Careers';
 import Admin from './Components/Admin/Admin';
 import MainBlog from './Components/Blog/MainBlog';
+import PageNotFound from './Components/404/PageNotFound';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
