@@ -117,7 +117,7 @@ export default function Careers() {
                 </div>
             </div>
             <div className=''>
-                <img src={grpImg} className='px-[10%]' alt='Group' />
+                <img src={grpImg} className='md:px-[10%]' alt='Group' />
             </div>
             <div className='w-full flex md:flex-row flex-col-reverse justify-center place-items-center'>
                 <div className='md:w-[40%] md:p-10'>
