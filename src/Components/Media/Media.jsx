@@ -39,16 +39,26 @@ export default function Media() {
 
     fetchData();
   }, []);
-
+  const generateRoute = (media) => {
+    if (1) {
+      const sanitizedHeading = media.heading.replace(/\s+/g, '-');
+      return `/media/${media.id}/${sanitizedHeading}`;
+    } else {
+      // Handle the case where uid is undefined
+      console.error('Invalid media object:', media);
+      return '/error'; // or any other fallback route
+    }
+  };
   const handleCardClick = (item) => {
     if (item.routerlink) {
       // If routerlink is not empty, navigate to the external link
       window.location.href = item.routerlink;
     } else {
       // If routerlink is empty, navigate to the internal Blog component
-      navigate(`/media/${item.id}`);
+      navigate(generateRoute(item)); // Pass the correct parameter (item) here
     }
   };
+
 
   return (
     <div className="App">
