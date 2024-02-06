@@ -55,7 +55,7 @@ export default function Home() {
             )}
 
 
-            <div className={`${bannerHeight === '90%' ? 'md:-mt-[10%]' : ''}`}>
+            <div className={`${bannerHeight === '90%' ? 'md:-mt-[12%]' : ''}`}>
                 {/* about us */}
                 <AboutUs />
             </div>
