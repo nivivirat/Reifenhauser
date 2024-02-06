@@ -388,7 +388,7 @@ const Events = () => {
             // Only render the year section if there are events in currentEvents for that year
             currentEvents[year].length > 0 && (
               <div key={year}>
-                <div className={`event3 text-3xl`}>{year}</div>
+                <div className={`event3 text-2xl`}>{year}</div>
                 {currentEvents[year]
                   .sort((a, b) => a.order - b.order)
                   .map((event, eventIndex) => (
@@ -424,7 +424,7 @@ const Events = () => {
             )
           ))}
         <br></br>
-        <div className="event3 text-3xl">Archives of past events</div>
+        <div className="event3 text-2xl">Archives of past events</div>
 
 
 
