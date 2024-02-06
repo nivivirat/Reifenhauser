@@ -18,7 +18,8 @@ import PageNotFound from './Components/404/PageNotFound';
 function App() {
   return (
     <BrowserRouter>
-      <div className="font-poppins w-screen overflow-clip no-vertical-scroll">
+      {/* <div className="font-poppins w-screen overflow-clip no-vertical-scroll"> */}
+      <div className="font-poppins w-screen overflow-clip no-vertical-scroll md:mt-0 mt-[90px]">
         <Header /> {/* Render the Header component outside of <Routes> */}
 
         <Routes>

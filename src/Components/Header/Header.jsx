@@ -12,8 +12,9 @@ export default function Header() {
     }
 
     return (
-        <div className='w-screen md:border-b shadow-md md:border-[#b8becb]'>
-            <div className='w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5'>
+        // <div className='w-screen md:border-b shadow-md md:border-[#b8becb] md:block fixed'>
+        <div className='z-50 md:h-auto h-[85px] bg-white md:border-b shadow-md md:border-[#b8becb] md:block fixed md:static inset-0 md:relative'>
+            <div className='w-full flex flex-row justify-between place-items-center px-5 pt-2 md:px-5 lg:pt-3 lg:pb-2 lg:px-5' >
                 <div className='cursor-pointer' onClick={handleLogoClick}>
                     <img className='sm:h-[70px] sm:w-[120px] h-12 w-20' src='https://res.cloudinary.com/dzhdarh4q/image/upload/v1699014385/Reifenhauser/ReifenhauserLogo_hhc7wi.svg' alt='Logo' />
                     <p className="sm:pl-[15%] font-display text-primary italic text-[12px] sm:text-14 leading-normal tracking-tighter font-serif">
@@ -66,7 +67,7 @@ export default function Header() {
                     </a>
                 </div>
 
-                <a href='https://wa.me/919322338415'  target="_blank" rel="noopener noreferrer" className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
+                <a href='https://wa.me/919322338415' target="_blank" rel="noopener noreferrer" className='xl:w-[250px] lg:w-[230px] md:flex hidden flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
                     <div className=''>
                         <img src={header_phone} alt='Phone' />
                     </div>
@@ -91,7 +92,7 @@ export default function Header() {
                                 <div className=''>
                                     <img src={header_phone} alt='Phone' />
                                 </div>
-                                <a href='https://wa.me/919322338415'  target="_blank" rel="noopener noreferrer" className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
+                                <a href='https://wa.me/919322338415' target="_blank" rel="noopener noreferrer" className='flex flex-col md:text-[14px] lg:text-[16px] text-[13px] font-semibold'>
                                     <p className='text-[#011C51]'>Service Helpline</p>
                                     <p className='text-[#285196]'>+91 9322338415</p>
                                 </a>
