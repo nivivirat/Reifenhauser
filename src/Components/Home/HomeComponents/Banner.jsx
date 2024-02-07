@@ -140,7 +140,7 @@ export default function Banner() {
                             {bannerData.map((_, index) => (
                                 <div
                                     key={index}
-                                    className={`md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer ${currentSection === index ? 'bg-white' : 'bg-[#275DB6]'
+                                    className={`md:flex hidden md:w-10 md:h-2 w-4 h-1 mx-1 rounded-full cursor-pointer ${currentSection === index ? 'bg-white' : 'bg-[#275DB6]'
                                         }`}
                                     onClick={() => setCurrentSection(index)}
                                 ></div>
