@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import PageNotFound from '../404/PageNotFound'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -68,7 +69,9 @@ const MainBlog = () => {
   }, [id]);
 
   if (!innerContent) {
-    return <div>Loading...</div>;
+    return <div>
+      <PageNotFound />
+    </div>;
   }
 
   return (
