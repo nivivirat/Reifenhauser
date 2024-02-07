@@ -26,7 +26,7 @@ export default function Home() {
 
     let bannerHeight;
     
-    if (screenHeight > 610 && screenHeight < 720 && screenWidth > 768) {
+    if (screenHeight > 610 && screenHeight < 790 && screenWidth > 768) {
         bannerHeight = '90%';
     } else if(screenWidth < 768)
     {
