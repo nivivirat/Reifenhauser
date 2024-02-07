@@ -72,7 +72,7 @@ const Events = () => {
   const containerStyle = {
     display: 'flex',
     flexDirection: 'column',
-    marginBottom: '100px', // Margin to prevent hover box from being cut off by the footer
+    marginBottom: '-50px', // Margin to prevent hover box from being cut off by the footer
 
   };
 
