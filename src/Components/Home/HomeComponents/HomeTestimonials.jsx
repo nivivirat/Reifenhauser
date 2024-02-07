@@ -33,6 +33,8 @@ const firebaseConfig = {
 export default function HomeTestimonials() {
   const [testimonials, setTestimonials] = useState([]);
 
+  const [isHovered, setIsHovered] = useState(false);
+
   useEffect(() => {
     const firebaseApp = initializeApp(firebaseConfig);
     const database = getDatabase(firebaseApp);
