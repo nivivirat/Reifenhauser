@@ -70,7 +70,7 @@ export default function Media() {
 
       <div className='flex flex-col gap-10'>
         {mediaData.slice().reverse().map((item) => (
-          <div className="flex flex-col rounded-lg md:flex-row mr-8 w-[90%]" key={item.id}>
+          <div className="flex flex-col rounded-lg md:flex-row mr-8 w-[90%] cursor-pointer" key={item.id}>
             <div className='w-full' onClick={() => handleCardClick(item)}>
               <Card className="w-[100%] flex flex-col rounded-lg md:flex-row mr-12 animated-box animate__animated animate__fadeInLeft animate__delay-0.2s">
                 <CardHeader
