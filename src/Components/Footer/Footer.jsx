@@ -90,20 +90,20 @@ export default function Footer() {
                 </a>
 
 
-                <div className='flex lg:hidden flex-col gap-3 justify-start'>
-                    <p className='text-[12px]'>Connect with us on</p>
-                    <div className='flex flex-row gap-2'>
-                        <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
-                            <Icon icon="mdi:linkedin" />
-                        </a>
-                        <a href='https://www.facebook.com/RIML01' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
-                            <Icon icon="uil:facebook" />
-                        </a>
-                        <a href='https://www.instagram.com/rimplindia/' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
-                            <Icon icon="iconoir:instagram" />
-                        </a>
-                    </div>
-                </div>
+                      <div className='flex lg:hidden flex-col gap-3 justify-start'>
+    <p className='text-[12px]'>Connect with us on</p>
+    <div className='flex flex-row gap-2'>
+        <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' target='_blank' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
+            <Icon icon="mdi:linkedin" />
+        </a>
+        <a href='https://www.facebook.com/RIML01' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
+            <Icon icon="uil:facebook" />
+        </a>
+        <a href='https://www.instagram.com/rimplindia/' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
+            <Icon icon="iconoir:instagram" />
+        </a>
+    </div>
+</div>
 
                 <p className='opacity-40 md:hidden block'>© 2024 — Copyright</p>
             </div>
