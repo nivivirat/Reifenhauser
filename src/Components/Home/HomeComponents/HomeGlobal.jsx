@@ -17,7 +17,7 @@ export default function HomeGlobal() {
             <p className='lg:text-4xl md:text-2xl text-xl p-3 text-center tracking-wider'>
                 Ingraining technology in and around India since years
             </p>
-           <div className='md:p-10 p-2 px-4 pb-14 md:mb-12 mb-8 w-full h-full  flex justify-center'>
+         <div className='md:p-10 p-2 px-4 pb-14 md:mb-12 mb-12 w-full h-full  flex justify-center'>
                 <div className='md:w-[70%] w-[450px] h-[500px] relative'>
 
                     {/* Sri Lanka */}
