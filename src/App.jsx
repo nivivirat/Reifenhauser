@@ -14,6 +14,7 @@ import Careers from './Components/Careers/Careers';
 import Admin from './Components/Admin/Admin';
 import MainBlog from './Components/Blog/MainBlog';
 import PageNotFound from './Components/404/PageNotFound';
+import TermsConditions from './Components/TermsConditions/TermsConditions';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/blogs" element={<Blog />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/TermsConditions" element={<TermsConditions />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
 

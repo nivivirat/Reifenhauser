@@ -39,6 +39,7 @@ export default function Footer() {
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
                             <li><a href='/testimonials'>Testimonials</a></li>
+                            <li><a href='/TermsConditions'>Privacy Policy</a></li>
 
                         </ul>
                         <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
