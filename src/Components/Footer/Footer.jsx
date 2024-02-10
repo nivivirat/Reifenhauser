@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 
 export default function Footer() {
     return (
-        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[450px] md:p-14 lg:px-24 md:px-10 p-10 w-full'>
+        <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[460px] md:p-14 lg:px-24 md:px-10 p-10 w-full'>
 
             {/* top */}
             <div className='flex md:flex-row flex-col-reverse justify-between h-[90%] w-full'>
@@ -39,7 +39,6 @@ export default function Footer() {
                             <li><a href='/aboutUs'>About Us</a></li>
                             <li><a href='/events'>Events</a></li>
                             <li><a href='/testimonials'>Testimonials</a></li>
-                            <li><a href='/TermsConditions'>Privacy Policy</a></li>
 
                         </ul>
                         <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
@@ -91,22 +90,33 @@ export default function Footer() {
                 </a>
 
 
-                      <div className='flex lg:hidden flex-col gap-3 justify-start'>
-    <p className='text-[12px]'>Connect with us on</p>
-    <div className='flex flex-row gap-2'>
-        <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' target='_blank' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
-            <Icon icon="mdi:linkedin" />
-        </a>
-        <a href='https://www.facebook.com/RIML01' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
-            <Icon icon="uil:facebook" />
-        </a>
-        <a href='https://www.instagram.com/rimplindia/' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
-            <Icon icon="iconoir:instagram" />
-        </a>
-    </div>
-</div>
+                <div className='flex lg:hidden flex-col gap-3 justify-start'>
+                    <p className='text-[12px]'>Connect with us on</p>
+                    <div className='flex flex-row gap-2'>
+                        <a href='https://www.linkedin.com/company/reifenhauserindia/?viewAsMember=true' target='_blank' className='rounded-full p-2 pl-1.5 text-center bg-white h-10 w-10 text-[26px] text-[#275AAD]'>
+                            <Icon icon="mdi:linkedin" />
+                        </a>
+                        <a href='https://www.facebook.com/RIML01' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#0C59B4]'>
+                            <Icon icon="uil:facebook" />
+                        </a>
+                        <a href='https://www.instagram.com/rimplindia/' target='_blank' className='rounded-full p-2 text-center bg-white h-10 w-10 text-[26px] text-[#ED26FE]'>
+                            <Icon icon="iconoir:instagram" />
+                        </a>
+                    </div>
+                </div>
 
-                <p className='opacity-40 md:hidden block'>© 2024 — Copyright</p>
+                <div className='flex flex-row justify-between md:hidden sm:text-[16px] text-[12px]'>
+                    <p className='opacity-40 md:hidden block'>© 2024 — Copyright</p>
+                    <a href='/TermsConditions' className='opacity-40'>Privacy Policy</a>
+                </div>
+
+
+
+            </div>
+            <div className='hidden md:flex md:flex-row opacity-40 pt-1 pb-1'>
+                <p className='block'>© 2024 — Copyright</p>
+                <p className='px-3'>|</p>
+                <a href='/TermsConditions' className=''>Privacy Policy</a>
             </div>
         </div>
     )
