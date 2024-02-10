@@ -12,10 +12,11 @@ import Testimonial from './Components/Testimonial/Testimonial';
 import Blog from './Components/Blog/Blog';
 import Careers from './Components/Careers/Careers';
 import Admin from './Components/Admin/Admin';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <div className="font-poppins w-screen overflow-clip no-vertical-scroll md:mt-0 mt-[90px]">
         <Header /> {/* Render the Header component outside of <Routes> */}
 
@@ -38,7 +39,7 @@ function App() {
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
