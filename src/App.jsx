@@ -12,7 +12,7 @@ import Media from './Components/Media/Media';
 import Principals from './Components/Principals/Principals';
 import Services from './Components/Services/Services';
 import Testimonial from './Components/Testimonial/Testimonial';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
