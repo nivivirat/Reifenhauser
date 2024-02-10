@@ -30,37 +30,37 @@ export default function Header() {
                         About Us
                     </a>
                     <a
-                        href='/services'
+                        href='/#/services'
                         className={`hover:text-primary ${location.pathname === '/services' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/services'
                     >
                         Services
                     </a>
                     <a
-                        href='/principals'
+                        href='/#/principals'
                         className={`hover:text-primary ${location.pathname === '/principals' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/principals'
                     >
                         Principals
                     </a>
                     <a
-                        href='/events'
+                        href='/#/events'
                         className={`hover:text-primary ${location.pathname === '/events' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/events'
                     >
                         Events
                     </a>
                     <a
-                        href='/media'
+                        href='/#/media'
                         className={`hover:text-primary ${location.pathname === '/media' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/media'
                     >
                         Media
                     </a>
                     <a
-                        href='/careers'
+                        href='/#/careers'
                         className={`hover:text-primary ${location.pathname === '/careers' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/careers'
                     >
                         Careers
                     </a>
                     <a
-                        href='/contactUs'
+                        href='/#/contactUs'
                         className={`hover:text-primary ${location.pathname === '/contactUs' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/contactUs'
                     >
                         Contact us
@@ -80,13 +80,13 @@ export default function Header() {
                     <div className='w-[100%] h-full p-4'>
                         <div className='flex flex-col h-[85%] justify-between'>
                             <ul className='flex flex-col gap-8'>
-                                <li><a href='/aboutUs'>About Us</a></li>
-                                <li><a href='/services'>Services</a></li>
-                                <li><a href='/principals'>Principals</a></li>
-                                <li><a href='/events'>Events</a></li>
-                                <li><a href='/media'>Media</a></li>
-                                <li><a href='/careers'>Careers</a></li>
-                                <li><a href='/contactUs'>Contact us</a></li>
+                                <li><a href='/#/aboutUs'>About Us</a></li>
+                                <li><a href='/#/services'>Services</a></li>
+                                <li><a href='/#/principals'>Principals</a></li>
+                                <li><a href='/#/events'>Events</a></li>
+                                <li><a href='/#/media'>Media</a></li>
+                                <li><a href='/#/careers'>Careers</a></li>
+                                <li><a href='/#/contactUs'>Contact us</a></li>
                             </ul>
                             <div className='xl:w-[250px] lg:w-[230px] flex flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
                                 <div className=''>
