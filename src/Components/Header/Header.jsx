@@ -24,7 +24,7 @@ export default function Header() {
 
                 <div className='md:flex hidden space-x-3 lg:space-x-7 xl:space-x-12 text-[12px] lg:text-[18px] text-[#666666] font-semibold'>
                     <a
-                        href='/aboutUs'
+                        href='/#/aboutUs'
                         className={`hover:text-primary ${location.pathname === '/aboutUs' ? 'text-primary' : ''}`} // Apply 'text-primary' if current path is '/aboutUs'
                     >
                         About Us
