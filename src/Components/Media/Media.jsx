@@ -43,7 +43,7 @@ export default function Media() {
   const generateRoute = (media) => {
     if (1) {
       const sanitizedHeading = media.heading.replace(/\s+/g, '-');
-      return `/media/${media.id}/${sanitizedHeading}`;
+      return `/#/media/${media.id}/${sanitizedHeading}`;
     } else {
       console.error('Invalid media object:', media);
       return '/error';

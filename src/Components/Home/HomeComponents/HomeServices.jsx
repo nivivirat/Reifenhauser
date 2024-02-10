@@ -33,10 +33,10 @@ export default function HomeServices() {
         <div className="xl:p-10 xl:pb-0 p-3 flex flex-col xl:gap-5 md:gap-4 gap-5 md:mt-0 mt-5 md:ml-10 animated-box animate__animated animate__fadeInRight animate__delay-3s">
             <div className="text-primary flex flex-row justify-between">
 
-                <a href='/services' className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Services</a>
+                <a href='/#/services' className="xl:text-3xl text-2xl xl:font-extrabold font-normal md:font-extrabold md:text-4xl">Services</a>
 
                 {/* mobile 24 x 7 Service Available */}
-                <a href='/services' className="md:hidden flex flex-row justify-center place-items-center p-x rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[30%] w-[40%]">
+                <a href='/#/services' className="md:hidden flex flex-row justify-center place-items-center p-x rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[30%] w-[40%]">
                     <img src={customerService} className='h-8 w-8'></img>
                     <p className='text-white text-[8px]'>24 x 7 Service Available</p>
                 </a>
@@ -49,7 +49,7 @@ export default function HomeServices() {
                     <span className='text-primary'>customer service excellence </span>
                 </div>
 
-                <a href='/services' className="hidden md:flex h-[60px] flex-row gap-2 justify-center place-items-center rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[20%] w-[40%]">
+                <a href='/#/services' className="hidden md:flex h-[60px] flex-row gap-2 justify-center place-items-center rounded-md bg-gradient-to-r from-blue-900 to-blue-400 md:w-[20%] w-[40%]">
                     <img src={customerService} className='h-8 w-8'></img>
                     <p className='text-white text-[16px]'>24 x 7 Service Available</p>
                 </a>

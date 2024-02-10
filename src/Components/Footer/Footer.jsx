@@ -33,12 +33,12 @@ export default function Footer() {
                 <div className='md:w-[70%] md:mt-4 w-[100%] flex flex-row md:justify-center gap-[15%] md:gap-[20%] lg:gap-[30%] xl:gap-[50%] justify-between'>
                     <div>
                         <ul className='flex flex-col gap-3 font-semibold'>
-                            <li><a href='/services'>Services</a></li>
-                            <li><a href='/media'>Media</a></li>
-                            <li><a href='/careers'>Careers</a></li>
-                            <li><a href='/aboutUs'>About Us</a></li>
-                            <li><a href='/events'>Events</a></li>
-                            <li><a href='/testimonials'>Testimonials</a></li>
+                            <li><a href='/#/services'>Services</a></li>
+                            <li><a href='/#/media'>Media</a></li>
+                            <li><a href='/#/careers'>Careers</a></li>
+                            <li><a href='/#/aboutUs'>About Us</a></li>
+                            <li><a href='/#/events'>Events</a></li>
+                            <li><a href='/#/testimonials'>Testimonials</a></li>
 
                         </ul>
                         <div className='flex-col gap-3 justify-start lg:flex hidden absolute lg:mt-9 xl:mt-4'>
@@ -58,14 +58,14 @@ export default function Footer() {
                     </div>
                     <div>
                         <p className='font-semibold pb-8 uppercase'>
-                            <a href='/principals' className=''>Our Principals</a>
+                            <a href='/#/principals' className=''>Our Principals</a>
                         </p>
                         <ul className='flex flex-col gap-4 font-semibold'>
-                            <li><a href='/principals/#ExtrusionMachinery'>Extrusion Machinery</a></li>
-                            <li><a href='/principals/#ConvertingMachinery'>Converting Machinery</a></li>
-                            <li><a href='/principals/#Labels'>Labels</a></li>
-                            <li><a href='/principals/#Ancillary'>Ancillary</a></li>
-                            <li><a href='/principals/#Slitting-Metallizing'>Slitting & Metallizing</a></li>
+                            <li><a href='/#/principals/#ExtrusionMachinery'>Extrusion Machinery</a></li>
+                            <li><a href='/#/principals/#ConvertingMachinery'>Converting Machinery</a></li>
+                            <li><a href='/#/principals/#Labels'>Labels</a></li>
+                            <li><a href='/#/principals/#Ancillary'>Ancillary</a></li>
+                            <li><a href='/#/principals/#Slitting-Metallizing'>Slitting & Metallizing</a></li>
                         </ul>
 
                     </div>
@@ -77,7 +77,7 @@ export default function Footer() {
 
             {/* bottom */}
             <div className='flex md:flex-row flex-col gap-[20px] md:mt-0 mt-7 md:gap-[225px]'>
-                <a href='/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
+                <a href='/#/contactUs' className='cursor-pointer bg-base h-[70px] overflow-hidden w-[280px] md:w-[300px] text-primary flex flex-row rounded-lg justify-between place-items-center'>
                     <div className='flex flex-row p-4'>
                         <p className='md:text-[22px] text-[18px] font-semibold'>Contact Us</p>
                         <div className='text-[25px]'>
@@ -107,7 +107,7 @@ export default function Footer() {
 
                 <div className='flex flex-row justify-between md:hidden sm:text-[16px] text-[12px]'>
                     <p className='opacity-40 md:hidden block'>© 2024 — Copyright</p>
-                    <a href='/TermsConditions' className='opacity-40'>Privacy Policy</a>
+                    <a href='/#/TermsConditions' className='opacity-40'>Privacy Policy</a>
                 </div>
 
 
@@ -116,7 +116,7 @@ export default function Footer() {
             <div className='hidden md:flex md:flex-row opacity-40 pt-1 pb-1'>
                 <p className='block'>© 2024 — Copyright</p>
                 <p className='px-3'>|</p>
-                <a href='/TermsConditions' className=''>Privacy Policy</a>
+                <a href='/#/TermsConditions' className=''>Privacy Policy</a>
             </div>
         </div>
     )

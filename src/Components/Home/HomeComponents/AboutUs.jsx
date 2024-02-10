@@ -25,7 +25,7 @@ export default function AboutUs() {
 
                         <div className='absolute bottom-0 right-0 xl:p-9 p-4 text-white md:w-[42%] w-[50%] xl:text-[16px] md:text-[10px] text-[9px] tracking-wide'>
                             <div className='bg-white rounded-[40px] p-1 flex justify-center place-items-center'>
-                                <a href='/contactUs' className='text-primary text-[10px] font-semibold'>Connect with us</a>
+                                <a href='/#/contactUs' className='text-primary text-[10px] font-semibold'>Connect with us</a>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@ export default function AboutUs() {
                         <span className='text-black'>At RIMPL, we have gone beyond the industry's</span>
                         <span className='text-primary'> conventional notion of service.</span>
                     </div>
-                    <a href='/aboutUs' className="flex justify-center place-items-center text-white text-[14px] p-3 rounded-xl xl:w-[25%] w-[40%] bg-gradient-to-r from-blue-900 to-blue-400">
+                    <a href='/#/aboutUs' className="flex justify-center place-items-center text-white text-[14px] p-3 rounded-xl xl:w-[25%] w-[40%] bg-gradient-to-r from-blue-900 to-blue-400">
                         Read more
                     </a>
 
