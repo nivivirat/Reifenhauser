@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/ContactUs/ContactUs';
@@ -18,7 +18,7 @@ import TermsConditions from './Components/TermsConditions/TermsConditions';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       {/* <div className="font-poppins w-screen overflow-clip no-vertical-scroll"> */}
       <div className="font-poppins w-screen overflow-clip no-vertical-scroll md:mt-0 mt-[90px]">
         <Header /> {/* Render the Header component outside of <Routes> */}
@@ -45,7 +45,7 @@ function App() {
 
         <Footer /> {/* Render the Footer component outside of <Routes> */}
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
