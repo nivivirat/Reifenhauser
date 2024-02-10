@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { db, ref, get } from '../../firebase';
 import { Link, useNavigate } from 'react-router-dom';
@@ -39,26 +40,28 @@ export default function Media() {
 
     fetchData();
   }, []);
+
   const generateRoute = (media) => {
     if (1) {
       const sanitizedHeading = media.heading.replace(/\s+/g, '-');
       return `/media/${media.id}/${sanitizedHeading}`;
     } else {
-      // Handle the case where uid is undefined
       console.error('Invalid media object:', media);
-      return '/error'; // or any other fallback route
-    }
-  };
-  const handleCardClick = (item) => {
-    if (item.routerlink) {
-      // If routerlink is not empty, navigate to the external link
-      window.location.href = item.routerlink;
-    } else {
-      // If routerlink is empty, navigate to the internal Blog component
-      navigate(generateRoute(item)); // Pass the correct parameter (item) here
+      return '/error';
     }
   };
 
+  const handleCardClick = (item) => {
+    if (item.routerlink) {
+      // If routerlink is present, open link in new tab
+      window.open(item.routerlink, '_blank');
+    } else {
+      // If routerlink is empty, navigate to the internal route in a new tab
+      const route = generateRoute(item);
+      window.open(route, '_blank');
+    }
+  };
+  
 
   return (
     <div className="App w-screen flex flex-col">
@@ -66,7 +69,6 @@ export default function Media() {
       <div className="md:text-[18px] text-[16px] flex-flex media2 w-[90%]">Glimpse through the round up of the latest trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3 w-[90%]">Articles</div>
       <div className="md:text-[18px] text-[14px] flex-flex media4 mb-10 w-[90%]">Our platform serves as a hub for insights, trends, and stories who lead the company forward.</div>
-
 
       <div className='flex flex-col gap-10'>
         {mediaData.slice().reverse().map((item) => (
@@ -93,7 +95,7 @@ export default function Media() {
                       {item.description}
                     </Typography>
                   </div>
-                  <Typography color="gray" className="mb-8 font-[600] media9 text-[18px] media17">
+                  <Typography color="gray" className="mb-8 font-[600] media9 md:-ml-4 text-[18px] media17">
                     {item.date}
                   </Typography>
                 </CardBody>
