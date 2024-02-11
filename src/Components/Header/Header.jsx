@@ -77,16 +77,16 @@ export default function Header() {
                     </div>
                 </a>
                 <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0 z-50' : 'translate-x-full z-0'}`}>
-                    <div className='w-[100%] h-full p-4'>
+                    <div className='w-[100%] h-[95%] p-4'>
                         <div className='flex flex-col h-[85%] justify-between'>
                             <ul className='flex flex-col gap-8'>
-                                <li><a href='/#/aboutUs'>About Us</a></li>
-                                <li><a href='/#/services'>Services</a></li>
-                                <li><a href='/#/principals'>Principals</a></li>
-                                <li><a href='/#/events'>Events</a></li>
-                                <li><a href='/#/media'>Media</a></li>
-                                <li><a href='/#/careers'>Careers</a></li>
-                                <li><a href='/#/contactUs'>Contact us</a></li>
+                                <li><a href='/#/aboutUs' onClick={() => setMobileMenuOpen(false)}>About Us</a></li>
+                                <li><a href='/#/services' onClick={() => setMobileMenuOpen(false)}>Services</a></li>
+                                <li><a href='/#/principals' onClick={() => setMobileMenuOpen(false)}>Principals</a></li>
+                                <li><a href='/#/events' onClick={() => setMobileMenuOpen(false)}>Events</a></li>
+                                <li><a href='/#/media' onClick={() => setMobileMenuOpen(false)}>Media</a></li>
+                                <li><a href='/#/careers' onClick={() => setMobileMenuOpen(false)}>Careers</a></li>
+                                <li><a href='/#/contactUs' onClick={() => setMobileMenuOpen(false)}>Contact us</a></li>
                             </ul>
                             <div className='xl:w-[250px] lg:w-[230px] flex flex-row bg-base rounded-lg p-2 px-3 border-[#c8d1db] border-2 justify-center place-items-center gap-5'>
                                 <div className=''>
@@ -107,8 +107,13 @@ export default function Header() {
                         className="px-2 pt-2 text-3xl focus:outline-none"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
-                        <Icon icon="iconamoon:menu-burger-horizontal" />
+                        {mobileMenuOpen ? (
+                            <Icon icon="maki:cross" />
+                        ) : (
+                            <Icon icon="iconamoon:menu-burger-horizontal" />
+                        )}
                     </button>
+
                     <p className='font-semibold'>Menu</p>
                 </div>
             </div>

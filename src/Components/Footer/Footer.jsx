@@ -1,6 +1,22 @@
 import { Icon } from '@iconify/react';
+import { useEffect } from 'react';
 
 export default function Footer() {
+    
+    useEffect(() => {
+        const handleScrollToTop = () => {
+            window.scrollTo(0, 0);
+        };
+
+        // Attach the event listener when the component mounts
+        window.addEventListener('hashchange', handleScrollToTop);
+
+        // Detach the event listener when the component unmounts
+        return () => {
+            window.removeEventListener('hashchange', handleScrollToTop);
+        };
+    }, []);
+    
     return (
         <div className='bg-primary xl:flex flex-col mg:gap-0 gap-5 text-white lg:h-[460px] md:p-14 lg:px-24 md:px-10 p-10 w-full'>
 

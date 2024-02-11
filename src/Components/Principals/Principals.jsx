@@ -39,7 +39,7 @@ export default function Principals() {
             scrollToHash();
             clearTimeout(delayScroll);
 
-        }, 4000); // Adjust the delay time if needed
+        }, 2000); // Adjust the delay time if needed
 
         return () => {
             clearTimeout(delayScroll);

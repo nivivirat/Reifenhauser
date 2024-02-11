@@ -149,7 +149,7 @@ export default function Banner() {
 
 
                         <div className='mt-10 md:mt-5 bg-white xl:mt-[40px] lg:mt-[60px] md:w-[150px] sm:w-[120px] md:text-[18px] sm:text-[12px] text-[8px] text-center rounded-lg md:p-4 sm:p-2 p-1 text-[#00295F] font-bold'>
-                            <a className='h-full w-full' href="/aboutUs">
+                            <a className='h-full w-full' href="/#/aboutUs">
                                 Know More
                             </a>
                         </div>

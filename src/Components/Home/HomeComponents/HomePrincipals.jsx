@@ -32,13 +32,13 @@ export default function HomePrincipals() {
             {/* card */}
             <div className="flex flex-wrap md:justify-between md:px-16 md:py-8">
 
-                <HomePrincipalCard content={"Extrusion Machinery"} destination={"/principals/#ExtrusionMachinery"}/>
+                <HomePrincipalCard content={"Extrusion Machinery"} destination={"/#/principals/#ExtrusionMachinery"}/>
 
-                <HomePrincipalCard content={"Ancillary"} destination={"/principals/#Ancillary"}/>
+                <HomePrincipalCard content={"Ancillary"} destination={"/#/principals/#Ancillary"}/>
 
-                <HomePrincipalCard content={"Converting Machinery"} destination={"/principals/#ConvertingMachinery"}/>
+                <HomePrincipalCard content={"Converting Machinery"} destination={"/#/principals/#ConvertingMachinery"}/>
 
-                <HomePrincipalCard content={"Slitting & Metallizing"} destination={"/principals/#Slitting-Metallizing"}
+                <HomePrincipalCard content={"Slitting & Metallizing"} destination={"/#/principals/#Slitting-Metallizing"}
                 />
 
             </div>
@@ -46,7 +46,7 @@ export default function HomePrincipals() {
             <div className="w-full flex justify-center place-items-center"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
-                <a href="/principals" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary">
+                <a href="/#/principals" className="text-primary flex flex-row gap-2 p-3 md:rounded-lg rounded-2xl justify-center place-items-center font-medium border border-primary">
                     <p>View All Principals</p>
                     {/* <div className="text-primary md:text-xl"> */}
                     <div className={`text-primary md:text-xl transition-transform duration-300 ease-in-out ${isHovered ? 'rotate-45' : ''

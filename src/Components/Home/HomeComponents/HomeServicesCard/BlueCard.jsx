@@ -15,7 +15,7 @@ const BlueCard = ({ title, img, selected, handleLocationClick , content }) => {
 
     return (
         <a
-            href='/services'
+            href='/#/services'
             onMouseEnter={() => handleLocationClick(title)}
             className={`flex flex-row md:gap-5 gap-3 rounded-3xl bg-gradient-to-r from-blue-900 to-blue-400 md:h-[200px] h-[150px] md:p-6 p-3 transition-opacity duration-300 ${selected === title ? 'opacity-100' : 'opacity-0'}`}
         >
