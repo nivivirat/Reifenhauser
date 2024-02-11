@@ -24,25 +24,29 @@ export default function Principals() {
             const hashIndex = url.lastIndexOf('#');
             if (hashIndex !== -1) {
                 const lastHash = url.substring(hashIndex + 1);
-                const heading = lastHash.indexOf('#') === 0 ? lastHash.substring(1) : lastHash; // Remove the leading '#' if present
-                console.log(heading);
+                const heading = lastHash.indexOf('#') === 0 ? lastHash.substring(1) : lastHash;
                 const element = document.getElementById(heading);
-                console.log(element);
                 if (element) {
                     element.scrollIntoView({ behavior: 'smooth' });
                 }
             }
         };
 
-        const delayScroll = setTimeout(() => {
-            console.log("donneee");
-            scrollToHash();
-            clearTimeout(delayScroll);
+        const handleUrlChange = () => {
+            console.log("URL changed");
+            const delayScroll = setTimeout(() => {
+                console.log("done");
+                scrollToHash();
+                clearTimeout(delayScroll);
+            }, 2000); // Adjust the delay time if needed
+        };
 
-        }, 2000); // Adjust the delay time if needed
+        // Attach the event listener when the component mounts
+        window.addEventListener('hashchange', handleUrlChange);
 
+        // Detach the event listener when the component unmounts
         return () => {
-            clearTimeout(delayScroll);
+            window.removeEventListener('hashchange', handleUrlChange);
         };
     }, []);
 
