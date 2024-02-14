@@ -27,10 +27,10 @@ export default function CompanyCardsEcec({ companyName, img, backContent, back2,
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
                 onClick={handleClick}
-                className='border border-[#b3b3b3] rounded-[20px] flex justify-center place-items-center content-center h-[110px]'
+                className='overflow-hidden border border-[#b3b3b3] rounded-[20px] flex justify-center place-items-center content-center h-[110px]'
             >
                 {card ?
-                   <img src={img} alt={companyName} className='w-24 h-auto' />
+                   <img src={img} alt={companyName} className='w-[130px] h-auto' />
                     :
                     <div className='w-full flex-col gap-3 bg-[#e5eaea] border border-[#b3b3b3] rounded-[20px] flex justify-center place-items-center content-center h-[110px]'>
                         <p className='text-[#013A98] text-center md:text-[10px] text-[9px] px-4 font-medium'>{backContent}</p>
