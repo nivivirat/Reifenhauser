@@ -61,7 +61,7 @@ export default function Principals() {
                     <p className="text-[#183B56] lg:opacity-100 opacity-80 text-[18px] lg:mt-4">We extend our gratitude to our principals for entrusting us as the bridge between global innovation and the thriving industrial community. Our extensive expertise spans across multiple industries, including Plastic Extrusion, Converting and Labels, Paper, Wire, and Cable (Up until this moment).</p>
                 </div>
 
-                <img src={ourPrincipal} className='h-[400px] animate__animated animate__fadeInRight'></img>
+                <img src={ourPrincipal} alt='Trusted Global Principal’s - Reifenhauser India Blown film & cast sheet coating' className='h-[400px] animate__animated animate__fadeInRight'></img>
             </div>
 
             {/* Converting Machinery */}

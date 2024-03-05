@@ -63,27 +63,27 @@ export default function HomeServices() {
                 {HomeServiceData.map((card, index) => (
                     <div className='md:w-[47%] md:block hidden' key={card.id} onMouseEnter={() => handleDelayedLocationClick(card.title)}>
                         {selected === card.title ? (
-                            <BlueCard title={card.title} content={card.content} img={card.img} selected={selected} handleLocationClick={handleLocationClick} />
+                            <BlueCard title={card.title} content={card.content} img={card.img} alt={card.alt} selected={selected} handleLocationClick={handleLocationClick} />
                         )
                             :
                             (
-                                <GreyCard content={card.title} selected={selected} handleLocationClick={handleLocationClick} />
+                                <GreyCard content={card.title} selected={selected} alt={card.alt} handleLocationClick={handleLocationClick} />
                             )
                         }
                     </div>
                 ))}
 
                 <div className='md:hidden block'>
-                    <BlueCard title="Global Services" content="Continuous support, expert guidance for seamless machinery operations, ensuring efficiency." img="GlobalServices" selected={selected} handleLocationClick={handleLocationClick} />
+                    <BlueCard title="Global Services" content="Continuous support, expert guidance for seamless machinery operations, ensuring efficiency." img="GlobalServices" alt="Worldwide/Global Service Excellence - Reifenhäuser India" selected={selected} handleLocationClick={handleLocationClick} />
                 </div>
                 <div className='md:hidden block'>
-                    <GreyCard content="Breakdown Maintenance" img="BreakdownMaintenance" selected={selected} handleLocationClick={handleLocationClick} />
+                    <GreyCard content="Breakdown Maintenance" img="BreakdownMaintenance" alt="Efficient Breakdown Maintenance Services - Reifenhauser India cast sheet coating" selected={selected} handleLocationClick={handleLocationClick} />
                 </div>
                 <div className='md:hidden block'>
-                    <GreyCard content="Installation & Commissioning" img="Installation_Commissioning" selected={selected} handleLocationClick={handleLocationClick} />
+                    <GreyCard content="Installation & Commissioning" img="Installation_Commissioning" alt="Professional Installation & Commissioning - Reifenhauser India" selected={selected} handleLocationClick={handleLocationClick} />
                 </div>
                 <div className='md:hidden block'>
-                    <GreyCard content="Preventive Maintenance Service & AMC" img="PMS_AMC" selected={selected} handleLocationClick={handleLocationClick} />
+                    <GreyCard content="Preventive Maintenance Service & AMC" img="PMS_AMC" alt="Proactive Preventive Maintenance Solutions - Reifenhauser India" selected={selected} handleLocationClick={handleLocationClick} />
                 </div>
 
                 {/* Card */}

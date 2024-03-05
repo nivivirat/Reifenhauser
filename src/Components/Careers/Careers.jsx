@@ -117,11 +117,11 @@ export default function Careers() {
                 </div>
             </div>
             <div className=''>
-                <img src={grpImg} className='md:px-[10%]' alt='Group' />
+                <img src={grpImg} className='md:px-[10%]' alt='Join a Visionary Team - Careers at Reifenhauser India' />
             </div>
             <div className='w-full flex md:flex-row flex-col-reverse justify-center place-items-center'>
                 <div className='md:w-[40%] md:p-10'>
-                    <img src={managingDirector} className='md:px-10 p-10' alt='Managing Director' />
+                    <img src={managingDirector} className='md:px-10 p-10' alt='Managing Director Mr. Manish Mehta - Reifenhauser India' />
                 </div>
                 <div className='md:p-10 md:w-[60%] flex flex-col md:gap-6 p-2'>
                     <p className='text-primary opacity-90 italic md:text-[24px] text-[18px] md:p-0 p-4'>“A vibrant work culture and a team building spirit is what you will perceive while working with us. Your journey will certainly be memorable and unforgettable when you commence on a fresh note. While we work hard, we celebrate harder!”</p>

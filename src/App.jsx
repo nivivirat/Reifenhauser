@@ -26,7 +26,7 @@ function App() {
         <Routes>
           {/* Define routes for other pages */}
           {/* <Route path="/" element={<Header />} /> */}
-          <Route path="/media/:id/:heading" element={<MainBlog />} />
+          <Route path="/media/:id/:heading" element={<MainBlog />} /> 
           <Route path="/" element={<Home />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/Principals" element={<Principals />} />

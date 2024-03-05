@@ -45,19 +45,19 @@ export default function AboutUs() {
             <div className='md:flex hidden md:flex-row lg:gap-[40px] md:gap-[30px] justify-between md:overflow-auto overflow-x-scroll'>
                 <div className='md:w-[70%] w-full'>
                     <div className="md:overflow-hidden">
-                        <img src={aboutUs1} className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right animate__animated animate__fadeInLeft animate__delay-0s' alt="Image 1" />
+                        <img src={aboutUs1} alt='Best Converting Machine & Labels Machinery in India' className='md:h-[300px] lg:h-[400px] object-cover w-full h-full object-right animate__animated animate__fadeInLeft animate__delay-0s' />
                     </div>
                 </div>
                 <div className='md:w-[40%] w-full animate__animated animate__fadeInRight animate__delay-0s animate__animated animate__fadeInLeft animate__delay-0s'>
                     <div className="md:overflow-hidden overflow-x-scroll">
-                        <img src={aboutUs2} className='md:h-[300px] lg:h-[400px] object-cover' alt="Image 2" />
+                        <img src={aboutUs2} alt="Visionary Leadership and Cutting-Edge Technologies - Reifenhauser India" className='md:h-[300px] lg:h-[400px] object-cover' alt="Image 2" />
                     </div>
                 </div>
             </div>
 
             <div className='md:hidden gap-3 flex flex-row overflow-x-scroll h-[150px] w-screen'>
-                <img src={aboutUs1} alt="" className='object-cover' />
-                <img src={aboutUs2} alt="" className='' />
+                <img src={aboutUs1} alt='Best Converting Machine & Labels Machinery in India' className='object-cover' />
+                <img src={aboutUs2} alt="Visionary Leadership and Cutting-Edge Technologies - Reifenhauser India" className='' />
             </div>
 
             {/* Our Story */}

@@ -1,27 +1,30 @@
 [
-    {
-      "id": 1,
-      "title": "Global Services",
-      "img": "GlobalServices",
-      "content" : "Continuous support, expert guidance for seamless machinery operations, ensuring efficiency."
-    },
-    {
-      "id": 2,
-      "title": "Breakdown Maintenance",
-      "img" : "BreakdownMaintenance",
-      "content" : "Swift, expert resolution for machinery faults, minimizing downtime and ensuring optimal performance."
-    },
-    {
-      "id": 3,
-      "title": "Installation & Commissioning",
-      "img": "Installation_Commissioning",
-      "content" : "Efficient setup, regular maintenance ensure smooth operations, minimizing unexpected issues."
-    },
-    {
-      "id": 4,
-      "title": "Preventive Maintenance Service & AMC",
-      "img":"PMS_AMC",
-      "content" : "Thorough AMC assures uptime, exceeding expectations with comprehensive service."
-    }
+  {
+    "id": 1,
+    "title": "Global Services",
+    "img": "GlobalServices",
+    "alt": "Worldwide/Global Service Excellence - Reifenhäuser India",
+    "content": "Continuous support, expert guidance for seamless machinery operations, ensuring efficiency."
+  },
+  {
+    "id": 2,
+    "title": "Breakdown Maintenance",
+    "img": "BreakdownMaintenance",
+    "alt": "Efficient Breakdown Maintenance Services - Reifenhauser India cast sheet coating",
+    "content": "Swift, expert resolution for machinery faults, minimizing downtime and ensuring optimal performance."
+  },
+  {
+    "id": 3,
+    "title": "Installation & Commissioning",
+    "img": "Installation_Commissioning",
+    "alt":"Professional Installation & Commissioning - Reifenhauser India",
+    "content": "Efficient setup, regular maintenance ensure smooth operations, minimizing unexpected issues."
+  },
+  {
+    "id": 4,
+    "title": "Preventive Maintenance Service & AMC",
+    "img": "PMS_AMC",
+    "alt": "Proactive Preventive Maintenance Solutions - Reifenhauser India",
+    "content": "Thorough AMC assures uptime, exceeding expectations with comprehensive service."
+  }
 ]
-  
