@@ -3,6 +3,7 @@ import { db, ref, get } from '../../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 import rimg from '../../assets/Images/Media/R.svg';
 import CardComponent from "./CardComponent";
+import { Helmet } from 'react-helmet';
 import {
   Card,
   CardHeader,
@@ -60,10 +61,16 @@ export default function Media() {
       window.open(route, '_blank');
     }
   };
-  
+
 
   return (
     <div className="App w-screen flex flex-col">
+
+      <Helmet>
+        <title>Insights on Plastic Extrusion and Converting | Reifenhauser India</title>
+        <link rel="canonical" href="https://reifenhauserindia.com/#/media" />
+      </Helmet>
+
       <div className="flex-flex media1 mr-36 w-[90%] text-center">Media</div>
       <div className="md:text-[18px] text-[16px] flex-flex media2 w-[90%]">Glimpse through the round up of the latest trends in the packaging industry</div>
       <div className="text-3xl flex-flex media3 w-[90%]">Articles</div>

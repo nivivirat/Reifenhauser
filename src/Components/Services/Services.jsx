@@ -6,10 +6,18 @@ import Serv3 from '../../assets/Images/Services/Frame 21509 (2).svg';
 import Serv1 from '../../assets/Images/Services/Frame 21509.svg';
 import Serv4 from '../../assets/Images/Services/Frame 21509 (3).svg';
 import Serv5 from '../../assets/Images/Services/Frame 21509 (4).svg';
+import { Helmet } from 'react-helmet';
 
 export default function Services() {
   return (
     <div className="App mt-8 ">
+
+      <Helmet>
+        <title>Transforming Industries with Disruptive Technologies | Reifenhauser India</title>
+        <meta name="description" content="Revolutionise industries with disruptive technologies at Reifenhauser India. best solutions driving transformation and innovation in the global" />
+        <link rel="canonical" href="https://reifenhauserindia.com/#/services" />
+      </Helmet>
+
       <div className="tr">
         <div className="flex flex-col hr rounded-lg bg-white md:max-w-8xl md:flex-row mm">
           <div className="flex flex-col p-6 ">

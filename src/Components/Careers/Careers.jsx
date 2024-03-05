@@ -7,6 +7,7 @@ import { Icon } from '@iconify/react';
 import { db } from '../../../firebase';
 import { getDatabase, ref, push, set } from 'firebase/database';
 import bluetick from '../../assets/Images/Careers/bluetick.svg'
+import { Helmet } from 'react-helmet';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import ref from firebase/storage
 
 export default function Careers() {
@@ -108,6 +109,13 @@ export default function Careers() {
 
     return (
         <div className='lg:p-10 p-5 flex flex-col lg:gap-10 gap-8'>
+
+            <Helmet>
+                <title>Join Our Visionary Team | Careers at Reifenhauser India</title>
+                <meta name="description" content="Join our team and shape the future with careers at Reifenhauser India. Explore opportunities to contribute skills and dynamic company" />
+                <link rel="canonical" href="https://reifenhauserindia.com/#/careers" />
+            </Helmet>
+
             <div className='bg-[#cfe1ff] lg:h-[500px] xl:h-[400px] h-[250px] lg:rounded-[25px] rounded-[20px] overflow-clip relative'>
                 <img src={one} className='h-full w-full md:object-cover' alt='One' />
                 <div className='absolute z-10 top-0 flex flex-col justify-center place-items-center w-full lg:gap-8 md:gap-6 gap-5 p-10'>

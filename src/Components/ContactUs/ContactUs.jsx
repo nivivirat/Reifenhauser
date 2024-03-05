@@ -4,10 +4,17 @@ import phone from '../../assets/Images/ContactUs/phone1.svg'
 import map from '../../assets/Images/ContactUs/map.svg'
 import bluebg from '../../assets/Images/ContactUs/bluebg.svg'
 import { Icon } from "@iconify/react"
+import { Helmet } from 'react-helmet';
 
 export default function ContactUs() {
     return (
         <div className="lg:p-10 p-5">
+
+            <Helmet>
+                <title>24x7 Support for Your Machines | Contact Reifenhauser India</title>
+                <meta name="description" content="Experience 24x7 support for machines with Reifenhauser India. Contact us for reliable assistance and service, optimal performance for equipment" />
+                <link rel="canonical" href="https://reifenhauserindia.com/#/contactUs" />
+            </Helmet>
 
             <div className="flex flex-row lg:gap-[10%]">
 

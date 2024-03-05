@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { CardWithLink } from './CardWithLink';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, onValue } from 'firebase/database';
+import { Helmet } from 'react-helmet';
 
 const firebaseConfig = {
   apiKey: "AIzaSyDiNLjf19bW0-5cvkOtdlqYI7YiDzt3WA0",
@@ -69,6 +70,13 @@ function Testimonial() {
 
   return (
     <div className="App">
+
+      <Helmet>
+        <title>Success Stories in Plastic Extrusion | Reifenhauser India</title>
+        <meta name="description" content="Discover success stories in plastic extrusion with Reifenhauser India. Explore how our innovative solutions have transformed industries India" />
+        <link rel="canonical" href="https://reifenhauserindia.com/#/testimonials" />
+      </Helmet>
+
       <p className="text-xl test11">Testimonials</p>
       <p className="text-3xl mt-8 test112">
         <strong>See what our users say about us</strong>

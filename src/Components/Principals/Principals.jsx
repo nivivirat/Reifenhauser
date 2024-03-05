@@ -4,6 +4,7 @@ import ourPrincipal from '../../assets/Images/Principals/OurPrincipal/ourPrincip
 import Rlogo from '../../assets/Images/Principals/Rlogo.svg';
 import CompanyCardsEcec from './CompanyCardsEcec';
 import ExtrusionMachineryCard from './ExtrusionMachineryCard';
+import { Helmet } from 'react-helmet';
 
 export default function Principals() {
 
@@ -52,6 +53,12 @@ export default function Principals() {
 
     return (
         <div className="p-6 lg:p-10 flex flex-col lg:gap-10 gap-8 md:mx-[50px]">
+
+            <Helmet>
+                <title>Global Expertise in Extrusion and Converting | Reifenhauser India</title>
+                <meta name="description" content="Explore global expertise in extrusion and converting with Reifenhauser India. cutting-edge solutions and innovative technology leadership" />
+                <link rel="canonical" href="https://reifenhauserindia.com/#/principals" />
+            </Helmet>
 
             {/* our principals */}
             <div className="w-full xl:mt-10 flex lg:flex-row flex-col lg:gap-0 gap-10 lg:h-[380px] place-items-center justify-between lg:px-[10px]">

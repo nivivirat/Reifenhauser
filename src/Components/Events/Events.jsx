@@ -8,6 +8,7 @@ import vg from '../../assets/Images/Events/b.svg';
 import yu from '../../assets/Images/Events/a.svg';
 import even from "./Vector (1).svg";
 import { useMediaQuery } from 'react-responsive';
+import { Helmet } from 'react-helmet';
 
 import aq from "./abg.svg";
 import Slider from "./slider";
@@ -342,6 +343,13 @@ const Events = () => {
 
     return (
       <div className='max-h-60 flex flex-row overflow-x-auto no-scrollbar'>
+
+        <Helmet>
+          <title>Exploring Industry Advancements | Events at Reifenhauser India</title>
+          <meta name="description" content="Stay updated on industry advancements through events at Reifenhauser India. Explore insightful gatherings, where innovation meets expertise" />
+          <link rel="canonical" href="https://reifenhauserindia.com/#/events" />
+        </Helmet>
+
         <div>
           <img
             src={images[currentImageIndex].img} // Use the URL from the current image object
@@ -412,7 +420,7 @@ const Events = () => {
                         <h2 className="ety qasd mt-3">Date</h2>
                         <p className="ety">{event.date}</p>
                       </div>
-                 
+
                       <div style={hoverInfoStyle} className="hover-info">
                         <div style={triangleStyle} className="triangle"></div>
                         <img src={event.img} alt="Bottom Card Image jkg" className="w-[270px] h-[250px] object-cover object-center mt-1" />

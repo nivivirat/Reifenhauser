@@ -6,6 +6,7 @@ import HomeServices from './HomeComponents/HomeServices';
 import HomeTestimonials from './HomeComponents/HomeTestimonials';
 import HomeGlobal from './HomeComponents/HomeGlobal';
 import Newsletter from './HomeComponents/Newsletter';
+import { Helmet } from 'react-helmet';
 
 export default function Home() {
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
@@ -25,11 +26,10 @@ export default function Home() {
     }, []);
 
     let bannerHeight;
-    
+
     if (screenHeight > 610 && screenHeight < 790 && screenWidth > 768) {
         bannerHeight = '90%';
-    } else if(screenWidth < 768)
-    {
+    } else if (screenWidth < 768) {
         bannerHeight = "400px"
     } else {
         bannerHeight = '600px'
@@ -37,6 +37,12 @@ export default function Home() {
 
     return (
         <div className='flex flex-col xl:gap-[50px] lg:gap-[30px] md:gap-[20px] gap-[10px]'>
+
+            <Helmet>
+                <title>Innovative Plastic Extrusion Solutions | Reifenhauser India</title>
+                <meta name="description" content="Discover Plastic Flexible Packaging Industry solutions by Reifenhauser India. manufacturing. Partner for excellence in plastic extrusion" />
+                <link rel="canonical" href="https://www.reifenhauserindia.com/" />
+            </Helmet>
 
             {bannerHeight === '90%' && (
                 <div className='md:h-screen'>

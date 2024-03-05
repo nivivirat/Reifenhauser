@@ -5,10 +5,17 @@ import aboutUs2mobile from '../../assets/Images/AboutUs/aboutUs2mobile.jpg'
 import aboutUs2 from '../../assets/Images/AboutUs/aboutUs2.svg'
 import boardOfDirectors from './Data/boardOfDirectors.json'
 import DirectorCard from './DirectorCard'
+import { Helmet } from 'react-helmet';
 
 export default function AboutUs() {
     return (
         <div className="lg:p-10 p-5 flex flex-col gap-10 md:mx-[50px]">
+
+            <Helmet>
+                <title>Visionary Leadership and Technology Expertise | About Reifenhauser India</title>
+                <meta name="description" content="Experience leadership technology expertise at Reifenhauser India. commitment to excellence and innovation in plastic extrusion solutions" />
+                <link rel="canonical" href="https://www.reifenhauserindia.com/#/aboutUs" />
+            </Helmet>
 
             {/* <div className="lg:text-[20px] text-[16px] ">
                 <p className="lg:block hidden text-primary font-semibold">About Us</p>
@@ -71,19 +78,19 @@ export default function AboutUs() {
                 <div className='md:gap-6 gap-2 flex flex-col md:text-[16px] text-[18px] md:pr-[100px] font-medium'>
                     <div className='text-primary'>
                         <p>
-                        Since its establishment in 1994, Reifenhäuser India Marketing Private Limited (RIMPL) has been under the management of Mr. Manish Mehta and his family, in close collaboration with Reifenhäuser GmbH & Co. KG Maschinenfabrik. </p>
+                            Since its establishment in 1994, Reifenhäuser India Marketing Private Limited (RIMPL) has been under the management of Mr. Manish Mehta and his family, in close collaboration with Reifenhäuser GmbH & Co. KG Maschinenfabrik. </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                        From its inception, RIMPL has proactively harnessed the potential of plastic extrusion machines in India and globally. Guided by the visionary leadership of our founder, Mr. Manish Mehta, we continuously introduce cutting-edge technologies to the Indian subcontinent. Our extensive expertise spans multiple industries, including Plastic Extrusion, Converting and Labels, Paper, as well as Wire & Cable.   </p>
+                            From its inception, RIMPL has proactively harnessed the potential of plastic extrusion machines in India and globally. Guided by the visionary leadership of our founder, Mr. Manish Mehta, we continuously introduce cutting-edge technologies to the Indian subcontinent. Our extensive expertise spans multiple industries, including Plastic Extrusion, Converting and Labels, Paper, as well as Wire & Cable.   </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                        At RIMPL, we are introducing 'Disruptive Technologies,' expanding the minds and horizons of our customers, guiding them toward new arenas, and helping them venture into new avenues. </p>
+                            At RIMPL, we are introducing 'Disruptive Technologies,' expanding the minds and horizons of our customers, guiding them toward new arenas, and helping them venture into new avenues. </p>
                     </div>
                     <div className='text-[#555555]'>
                         <p>
-                        Moving beyond the conventional definition of service within the industry, we have transcended boundaries. We have assembled a 24X7, fully equipped after-sales service team, providing technical support and preventive maintenance for machines to all our customers. </p>
+                            Moving beyond the conventional definition of service within the industry, we have transcended boundaries. We have assembled a 24X7, fully equipped after-sales service team, providing technical support and preventive maintenance for machines to all our customers. </p>
                     </div>
                 </div>
             </div>
