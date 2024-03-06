@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import one from '../../assets/Images/Careers/one.svg';
 import grpImg from '../../assets/Images/Careers/grpImg.svg';
 import managingDirector from '../../assets/Images/Careers/managingDir.svg';
 import resume from '../../assets/Images/Careers/resume.svg';
 import { Icon } from '@iconify/react';
 import { db } from '../../../firebase';
-import { getDatabase, ref, push, set } from 'firebase/database';
+import { getDatabase, ref, push, set, get } from 'firebase/database';
 import bluetick from '../../assets/Images/Careers/bluetick.svg'
 import { Helmet } from 'react-helmet';
 import { getStorage, ref as storageRef, uploadBytes, getDownloadURL } from 'firebase/storage'; // Import ref from firebase/storage
@@ -16,6 +16,28 @@ export default function Careers() {
     const [fileName, setFileName] = useState('');
     const [formSuccess, setFormSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    const [careerImg, setCareerImg] = useState(null);
+
+    useEffect(() => {
+        const keyFiguresRef = ref(db, 'CareerImg/img');
+
+        get(keyFiguresRef)
+            .then((snapshot) => {
+                if (snapshot.exists()) {
+                    const imgURL = snapshot.val();
+                    setCareerImg(imgURL);
+                }
+            })
+            .catch((error) => {
+                console.error('Error fetching career image:', error);
+                // Handle error if necessary
+            })
+            .finally(() => {
+                // Additional cleanup or actions if needed
+            });
+    }, []);
+
 
     const toggleForm = () => {
         setShowForm(!showForm);
@@ -125,7 +147,7 @@ export default function Careers() {
                 </div>
             </div>
             <div className=''>
-                <img src={grpImg} className='md:px-[10%]' alt='Join a Visionary Team - Careers at Reifenhauser India' />
+                <img src={careerImg} className='md:w-[1417px] md:h-[729px] md:px-[10%] object-contain' alt='Join a Visionary Team - Careers at Reifenhauser India' />
             </div>
             <div className='w-full flex md:flex-row flex-col-reverse justify-center place-items-center'>
                 <div className='md:w-[40%] md:p-10'>
