@@ -147,7 +147,8 @@ export default function Careers() {
                 </div>
             </div>
             <div className=''>
-                <img src={careerImg} className='md:w-[1417px] md:h-[729px] md:px-[10%] object-contain' alt='Join a Visionary Team - Careers at Reifenhauser India' />
+                <p className='text-primary text-center font-bold text-3xl pt-10 pb-3'>Life @ RIMPL</p>
+                <img src={careerImg} className='md:w-[1417px] md:h-auto md:px-[10%] object-contain' alt='Join a Visionary Team - Careers at Reifenhauser India' />
             </div>
             <div className='w-full flex md:flex-row flex-col-reverse justify-center place-items-center'>
                 <div className='md:w-[40%] md:p-10'>
@@ -212,7 +213,7 @@ export default function Careers() {
                                         />
                                         <div className='flex flex-row absolute md:top-7 top-3 gap-2 opacity-30 z-10 place-items-center justify-center'>
                                             <img src={resume} alt='Resume' />
-                                            <p className={`${file ? 'text-primary' : ''}`}>{fileName || 'Upload Your Resume'}</p> {/* Apply primary color if file is uploaded */}
+                                            <p className={`${file ? 'text-primary' : ''}`}>{fileName || 'Upload Your Resume (pdf/doc/docx)'}</p> {/* Apply primary color if file is uploaded */}
                                         </div>
                                     </div>
 

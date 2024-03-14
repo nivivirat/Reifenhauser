@@ -7,6 +7,7 @@ import HomeTestimonials from './HomeComponents/HomeTestimonials';
 import HomeGlobal from './HomeComponents/HomeGlobal';
 import Newsletter from './HomeComponents/Newsletter';
 import { Helmet } from 'react-helmet';
+import HomeYoutTubeVideo from './HomeComponents/HomeYoutTubeVideo/HomeYoutTubeVideo';
 
 export default function Home() {
     const [screenHeight, setScreenHeight] = useState(window.innerHeight);
@@ -78,6 +79,8 @@ export default function Home() {
 
             {/* global */}
             <HomeGlobal />
+
+            <HomeYoutTubeVideo />
 
             <Newsletter />
 
