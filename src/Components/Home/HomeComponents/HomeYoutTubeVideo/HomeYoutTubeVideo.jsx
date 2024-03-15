@@ -45,24 +45,35 @@ export default function HomeYouTubeVideo() {
     };
 
     return (
-        <div className='flex justify-center flex-row md:pb-10'>
+        <div className='flex justify-center flex-row md:pb-10 md:mb-0 mb-24'>
             {videos.length > 0 && (
                 <div className='flex flex-row items-center'>
-                    <button className='text-primary px-4 py-2 rounded-l' onClick={goToPreviousVideo}>
+                    <button className='text-primary text-3xl px-1 py-2 rounded-r' onClick={goToPreviousVideo}>
                         <Icon icon="grommet-icons:form-previous" />
                     </button>
                     <iframe
                         width="700"
                         height="415"
-                        src={`https://www.youtube.com/embed/${extractVideoId(videos[currentIndex].link)}`}
+                        src={`https://www.youtube.com/embed/${extractVideoId(videos[currentIndex].link)}?controls=0`}
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
+                        className='md:w-[700px] md:h-[415px] w-full h-full'
                     ></iframe>
-                    <button className='text-primary px-4 py-2 rounded-r' onClick={goToNextVideo}>
+                    <button className='text-primary text-3xl px-1 py-2 rounded-r' onClick={goToNextVideo}>
                         <Icon icon="grommet-icons:form-next" />
                     </button>
+                    <iframe
+                        width="200"
+                        height="115"
+                        src={`https://www.youtube.com/embed/${extractVideoId(videos[(currentIndex + 1) % videos.length].link)}?controls=0`}
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className='hidden md:block ml-10 md:w-[200px] md:h-[115px] w-full h-full'
+                    ></iframe>
                 </div>
             )}
         </div>
