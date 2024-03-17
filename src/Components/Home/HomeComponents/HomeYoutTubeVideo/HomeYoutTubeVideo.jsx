@@ -47,7 +47,7 @@ export default function HomeYouTubeVideo() {
     return (
         <div className='flex justify-center flex-row md:pb-10 md:mb-0 mb-24'>
             {videos.length > 0 && (
-                <div className='flex flex-row items-center'>
+                <div className='flex flex-row items-center gap-3'>
                     <button className='text-primary text-3xl px-1 py-2 rounded-r' onClick={goToPreviousVideo}>
                         <Icon icon="grommet-icons:form-previous" />
                     </button>
@@ -64,16 +64,6 @@ export default function HomeYouTubeVideo() {
                     <button className='text-primary text-3xl px-1 py-2 rounded-r' onClick={goToNextVideo}>
                         <Icon icon="grommet-icons:form-next" />
                     </button>
-                    <iframe
-                        width="200"
-                        height="115"
-                        src={`https://www.youtube.com/embed/${extractVideoId(videos[(currentIndex + 1) % videos.length].link)}?controls=0`}
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                        className='hidden md:block ml-10 md:w-[200px] md:h-[115px] w-full h-full'
-                    ></iframe>
                 </div>
             )}
         </div>
