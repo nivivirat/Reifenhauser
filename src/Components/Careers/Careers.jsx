@@ -147,7 +147,7 @@ export default function Careers() {
                 </div>
             </div>
             <div className=''>
-                <p className='text-primary text-center font-bold text-3xl pt-10 pb-3'>Life @ RIMPL</p>
+                <p className='text-primary text-center font-bold md:text-[80px] text-2xl md:pt-10 pb-4 md:pb-14'>Life @ RIMPL</p>
                 <img src={careerImg} className='md:w-[1417px] md:h-auto md:px-[10%] object-contain' alt='Join a Visionary Team - Careers at Reifenhauser India' />
             </div>
             <div className='w-full flex md:flex-row flex-col-reverse justify-center place-items-center'>
