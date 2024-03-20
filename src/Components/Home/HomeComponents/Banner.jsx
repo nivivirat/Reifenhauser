@@ -185,14 +185,14 @@ export default function Banner() {
                 </div>
 
 
-                <div className='absolute flex flex-row -mb-5 justify-center place-items-center md:gap-10 text-white sm:bottom-0 -right-8 xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[10%] z-0 opacity-80'>
+                <div className='absolute flex flex-row -mb-5 justify-center place-items-center md:gap-10 text-white sm:bottom-0 -right-8 md:-right-5 xl:-right-4 xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[10%] z-0 opacity-80'>
                     <div className='flex flex-row md:gap-7 gap-1 md:mr-0 mr-10'>
-                        <div>
+                        <div className='mt-3'>
                             <p className='text-[10px] font-medium md:text-[12px] lg:text-[18px]'>Number of <br></br>Installations</p>
                             <p className='md:text-[32px] text-[28px] font-semibold'>{downData[downCurrentSection].bottom}</p>
                         </div>
                         <vr className='bg-white text-white w-0.5 opacity-50 md:my-2'></vr>
-                        <img src={thirtyYears} className='lg:mb-0 md:h-[100px] h-[60px] mt-2'></img>
+                        <img src={thirtyYears} className='lg:mb-0 md:h-[95px] h-[60px] mt-3'></img>
                     </div>
                     <div className='md:flex flex-col gap-2 hidden'>
                         {/* <div
