@@ -13,6 +13,8 @@ import r4 from '../../../assets/Images/Home/banner/MaskGroup4.svg';
 import r5 from '../../../assets/Images/Home/banner/MaskGroup5.svg';
 import bannerData from '../data/bannerData.json';
 import { getDatabase, ref, onValue } from 'firebase/database';
+// import thirtyYears from '../../../assets/Images/Home/banner/30years.png';
+// import thirtyYears from '../../../assets/Images/Home/banner/thirtyYears.png';
 
 export default function Banner() {
     const [bannerData, setBannerData] = useState([]);
@@ -183,10 +185,14 @@ export default function Banner() {
                 </div>
 
 
-                <div className='absolute flex flex-row -mb-5 justify-center place-items-center md:gap-10 text-white sm:right-[5%] xl-right-[4%] md:right-[6%] sm:bottom-0 right-[15%] xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[10%] z-0 opacity-80'>
-                    <div>
-                        <p className='text-[10px] font-medium md:text-[12px] lg:text-[18px]'>{downData[downCurrentSection].top}</p>
-                        <p className='text-[32px] font-semibold'>{downData[downCurrentSection].bottom}</p>
+                <div className='absolute flex flex-row -mb-5 justify-center place-items-center md:gap-10 text-white sm:bottom-0 -right-8 xl:bottom-10 lg:bottom-7 md:bottom-3 bottom-[10%] z-0 opacity-80'>
+                    <div className='flex flex-row md:gap-7 gap-1 md:mr-0 mr-10'>
+                        <div>
+                            <p className='text-[10px] font-medium md:text-[12px] lg:text-[18px]'>Number of <br></br>Installations</p>
+                            <p className='md:text-[32px] text-[28px] font-semibold'>{downData[downCurrentSection].bottom}</p>
+                        </div>
+                        <vr className='bg-white text-white w-0.5 opacity-50 md:my-2'></vr>
+                        <img src={thirtyYears} className='lg:mb-0 md:h-[100px] h-[60px] mt-2'></img>
                     </div>
                     <div className='md:flex flex-col gap-2 hidden'>
                         {/* <div
