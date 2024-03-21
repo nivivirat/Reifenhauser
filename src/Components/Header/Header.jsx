@@ -78,7 +78,7 @@ export default function Header() {
                 </a>
                 <div className={`md:hidden w-screen fixed top-20 right-0 justify-start h-screen bg-base transition-transform transform ${mobileMenuOpen ? 'translate-x-0 z-50' : 'translate-x-full z-0'}`}>
                     <div className='w-[100%] h-[95%] p-4'>
-                        <div className='flex flex-col h-[85%] justify-between'>e
+                        <div className='flex flex-col h-[85%] justify-between'>
                             <ul className='flex flex-col gap-8'>
                                 <li><a href='/#/aboutUs' onClick={() => setMobileMenuOpen(false)}>About Us</a></li>
                                 <li><a href='/#/services' onClick={() => setMobileMenuOpen(false)}>Services</a></li>
